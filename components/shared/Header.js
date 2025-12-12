@@ -45,7 +45,7 @@ export default function Header({ locale }) {
   };
 
   return (
-    <Disclosure as="nav" className="dark:border-gray-800 bg-white dark:bg-zinc-900">
+    <Disclosure as="nav" className="dark:bg-black bg-white">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4">
