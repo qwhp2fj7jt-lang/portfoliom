@@ -85,10 +85,10 @@ export default function Header({ locale }) {
               <div className="flex items-center space-x-4">
                 <SearchBar navigation={navigation} lang={lang}/>
                 <Menu as="div" className="relative">
-                  <Menu.Button         className="px-2 outline-none  py-1 border border-gray-100 inline-flex items-center gap-1 dark:bg-zinc-800 rounded-md px-1 py-1 shadow-sm   cursor-pointer">
+                  <Menu.Button         className="px-2 outline-none   border border-gray-100 dark:border-zinc-700 inline-flex items-center gap-1 dark:bg-zinc-800 rounded-md px-1 py-1 shadow-sm   cursor-pointer">
                     {lang.toUpperCase()}
                   </Menu.Button>
-                  <Menu.Items className="absolute right-0 mt-2 border border-gray-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-black dark:text-gray-200 rounded-md shadow-lg w-28">
+                  <Menu.Items className="absolute right-0 mt-2 border border-gray-200  bg-white dark:bg-zinc-900 text-black dark:text-gray-200 rounded-md shadow-lg w-28">
                     {["tr", "en"].map((lng) => (
                       <Menu.Item key={lng}>
                         {({ active }) => (

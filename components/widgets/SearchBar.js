@@ -9,7 +9,7 @@ export default function SearchBar({lang, navigation }) {
   return (
     <div className="relative ">
       <div
-        className="px-3  py-1 border border-gray-100 inline-flex items-center gap-1 dark:bg-zinc-800  rounded-full px-1 py-1 shadow-sm   cursor-pointer"
+        className="px-3  py-1 border border-gray-100 inline-flex items-center gap-1 dark:bg-zinc-800  rounded-full px-1 py-1 shadow-sm  dark:border-zinc-700  cursor-pointer"
         onClick={() => setOpen(true)}
       >
         <svg
