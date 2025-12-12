@@ -14,7 +14,7 @@ export default function SearchBar({lang, navigation }) {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-4 h-4 text-gray-500 dark:text-white"
+          className="w-4 h-4 text-gray-700 dark:text-gray-300"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth="2"
@@ -27,7 +27,7 @@ export default function SearchBar({lang, navigation }) {
           />
         </svg>
 
-        <div className="flex items-center dark:text-white  rounded-md text-gray-400 text-[15px] ">
+        <div className="flex items-center text-gray-700 dark:text-gray-300  rounded-md text-gray-400 text-[15px] ">
           <span>⌘</span>
           <span>K</span>
         </div>
