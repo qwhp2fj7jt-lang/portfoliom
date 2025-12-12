@@ -18,10 +18,7 @@ export const metadata = {
     url: "https://zeynepbas.dev",
     siteName: "Zeynep Baş",
     type: "website",
-    images: [{ url: "/images/avatar.jpg", width: 1200, height: 630, alt: "Zeynep Baş - Mid Frontend Developer" }],
-    icons: {
-      icon: "/favicon.ico",   
-    }
+    images: [{ url: "/images/avatar.jpg", width: 1200, height: 630, alt: "Zeynep Baş - Mid Frontend Developer" }]
   }
 };
 
