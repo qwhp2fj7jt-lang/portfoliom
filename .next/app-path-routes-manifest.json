@@ -1,9 +1,0 @@
-{
-  "/_not-found/page": "/_not-found",
-  "/favicon.ico/route": "/favicon.ico",
-  "/[locale]/about/page": "/[locale]/about",
-  "/[locale]/blog/page": "/[locale]/blog",
-  "/[locale]/home/page": "/[locale]/home",
-  "/[locale]/page": "/[locale]",
-  "/[locale]/projects/page": "/[locale]/projects"
-}
