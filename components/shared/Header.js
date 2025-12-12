@@ -80,7 +80,11 @@ export default function Header({ locale }) {
                   })}
                 </div>
               </div>
-              <Menu as="div" className="relative">
+
+   
+              <div className="flex items-center space-x-4">
+                <SearchBar navigation={navigation} lang={lang}/>
+                <Menu as="div" className="relative">
                   <Menu.Button className="px-3 py-1 text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-zinc-800 rounded-md text-sm">
                     {lang.toUpperCase()}
                   </Menu.Button>
@@ -101,10 +105,6 @@ export default function Header({ locale }) {
                     ))}
                   </Menu.Items>
                 </Menu>
-   
-              <div className="flex items-center space-x-4">
-                <SearchBar navigation={navigation} lang={lang}/>
-
                 <button
                   onClick={toggleTheme}
                   className="p-2 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-md transition"
@@ -116,7 +116,7 @@ export default function Header({ locale }) {
                   )}
                 </button>
 
-                
+          
               </div>
             </div>
           </div>
