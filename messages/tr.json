@@ -1,0 +1,59 @@
+{
+  "AboutCard": {
+    "title": "⚡ Teknik Yaklaşım",
+    "paragraph1": "React konusunda uzmanlaşmış bir Frontend geliştiricisiyim ve {tech} konularında deneyim sahibiyim. Temiz ve yeniden kullanılabilir kodlarla yüksek performanslı, responsive ve erişilebilir kullanıcı arayüzleri oluşturuyorum.",
+    "paragraph2": "RESTful API entegrasyonlarında deneyimliyim ve {tools} gibi araçlarla Agile ekiplerde çalıştım. Bireysel ve takım projelerinde iki yılı aşkın tecrübeye sahibim; açık kaynak projelere katkıda bulunuyor ve yeteneklerimi sürekli geliştiriyorum.",
+    "paragraph3": "Analitik düşünme ve problem çözme odaklıyım; kullanıcı dostu ve sürdürülebilir çözümler yaratırken React ekosistemi ve modern web teknolojileri konusundaki uzmanlığımı ilerletmeyi hedefliyorum.",
+    "buttonAbout": "Detaylı teknik bilgi →"
+  },
+  "Blog": {
+    "buttonBlog": "Tüm yazıları göster →",
+        "loading":"Yakında",
+       "post":"Son Gönderi",
+                      "pages":"Sayfalar",
+                      "search":"Sayfa veya blog yazısı ara..."
+  },
+  "Projects": {
+    "projectTitle": "Projeler",
+    "experience": "Deneyim",
+    "allProject": "Tüm projeleri göster→",
+    "openToWork": "Yeni fırsatlara açığım"
+  },
+  "Footer": {
+    "footerParagraf1": "Next.js, React ve Tailwind CSS ile geliştirildi.",
+    "footerParagraf2": "Keyifle kodlanmıştır."
+  },
+  "AboutMe": {
+    "about": "Hakkımda",
+    "greeting": "Merhaba! Ben Zeynep, Yazılım Geliştiricisiyim. Kod ve tasarımı birleştirerek fikirleri hızlı ve etkili kullanıcı arayüzlerine dönüştürmeyi seviyorum."
+  },
+  "AboutSkills": {
+    "interestsTitle": "🎯 İlgi Alanlarım",
+    "skills1": "Kodlama ve yazılım geliştirme",
+    "skills2": "Figma ile prototipi React'ta geliştirmek",
+    "skills3": "Figma ile prototipi React'ta geliştirmek",
+    "toolsTitle": "🛠 Teknoloji ve Araçlar",
+    "tools1": "Frontend: React, TypeScript, Next.js 14, Tailwind CSS, Zustand, Context API",
+    "tools2": "Backend: Node.js, Express, MongoDB",
+    "tools3": "Tasarım: Figma, UI/UX prototip tasarımı",
+    "tools4": "Araçlar: Git, GitHub, VS Code, Postman"
+  },
+  "ProjectApproach": {
+    "title": "Proje Geliştirme Yaklaşımı",
+    "paragraph1": "Modern frontend yaklaşımlarını uygulamalı projelere dönüştürerek açık kaynak ekosistemine katkı sağlıyorum. Özellikle Next.js tabanlı boilerplate yapıları ve çeşitli yardımcı araçlar geliştirerek geliştiricilerin işini kolaylaştırmayı hedefliyorum.",
+    "paragraph2": "Kişisel blogumda ise frontend teknikleri, pratik çözümler ve proje deneyimlerimi paylaşarak toplulukla bilgi ve deneyim alışverişinde bulunuyorum."
+  },
+  "Contact": {
+    "title": "İletişim",
+    "paragraph1": "Benimle iletişime geçmek için",
+    "paragraph2": "adresim üzerinden iletişime geçebilirsiniz."
+  },
+  "MyGoal": {
+    "title": "Hedeflerim",
+    "content": "Senior frontend geliştirici olarak ilerlemek, daha büyük ve ölçeklenebilir projelerde sorumluluk alarak kendimi sürekli geliştirmek istiyorum."
+  },
+  "Services": {
+    "title": "Hizmetlerim",
+    "content": "React ve Next.js ile modern, hızlı ve ölçeklenebilir web uygulamaları geliştiriyorum. Ürününüz için teknik katkı sağlamak veya yeni bir proje başlatmak isterseniz iletişim bölümünden bana ulaşabilirsiniz."
+  }
+}

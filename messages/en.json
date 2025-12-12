@@ -1,0 +1,61 @@
+{
+  "AboutCard": {
+    "title": "⚡ Technical Approach",
+    "paragraph1": "I am a Frontend developer specialized in React with experience in {tech}. I build high-performance, responsive, and accessible user interfaces with clean and reusable code.",
+    "paragraph2": "I have experience with RESTful API integrations and have worked in Agile teams using tools like {tools}. I have over two years of experience in individual and team projects; I also contribute to open-source projects and continuously improve my skills.",
+    "paragraph3": "I am analytical and problem-solving oriented; while creating user-friendly and sustainable solutions, I aim to advance my expertise in the React ecosystem and modern web technologies.",
+    "buttonAbout": "Detailed technical information →"
+  },
+  "Blog": {
+    "buttonBlog": "Show all posts →",
+        "loading":"Soon",
+               "post":"Latest post",
+               "pages":"Pages",
+               "search":"Search for pages or blog posts..."
+  },
+  "Projects": {
+    "projectTitle": "Projects",
+    "experience": "Experience",
+    "allProject": "Show all projects→",
+    "openToWork": "I am open to new opportunities"
+  },
+  "Footer": {
+    "footerParagraf1": "Next.js was developed using React and Tailwind CSS.",
+    "footerParagraf2": "It was coded with pleasure."
+  },
+  "AboutMe": {
+    "about": "About",
+    "greeting": "Hello! I’m Zeynep, a Software Developer. I enjoy combining code and design to quickly and effectively transform ideas into user-friendly interfaces."
+  },
+  "AboutSkills": {
+    "interestsTitle": "🎯 My Interests",
+    "skills1": "Coding and software development",
+    "skills2": "Developing Figma prototypes in React",
+    "skills3": "Developing Figma prototypes in React",
+    "toolsTitle": "🛠 Technologies and Tools",
+    "tools1": "Frontend: React, TypeScript, Next.js 14, Tailwind CSS, Zustand, Context API",
+    "tools2": "Backend: Node.js, Express, MongoDB",
+    "tools3": "Design: Figma, UI/UX prototype design",
+    "tools4": "Tools: Git, GitHub, VS Code, Postman"
+  },
+    "ProjectApproach": {
+      "title": "Project Development Approach",
+      "paragraph1": "I turn modern frontend approaches into practical projects and contribute to the open-source ecosystem. In particular, I aim to make developers' work easier by creating Next.js-based boilerplate structures and various supporting tools.",
+      "paragraph2": "On my personal blog, I share frontend techniques, practical solutions, and project experiences, exchanging knowledge and insights with the community."
+    },
+      "Contact": {
+        "title": "Contact",
+        "paragraph1": "You can contact me via",
+        "paragraph2": "my email."
+      },
+"MyGoal": {
+  "title": "My Goals",
+  "content": "I aim to progress as a senior frontend developer, taking responsibility in larger and more scalable projects while continuously improving myself."
+},
+"Services": {
+  "title": "My Services",
+  "content": "I develop modern, fast, and scalable web applications with React and Next.js. If you want to make a technical contribution to your product or start a new project, you can reach me through the contact section."
+}
+
+      
+}

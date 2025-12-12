@@ -1,0 +1,34 @@
+[
+  {
+    "icon": "/images/project/hizmetKap.jpeg",
+    "width": 200,
+    "height": 200,
+    "baslik": "Hizmet Kap",
+    "description": "💻 Teknik detaylar:\nNext.js 14 ile hızlı ve SEO uyumlu sayfalar\nTailwind CSS ile modern ve responsive tasarım\nMaterial UI ve Icons ile zengin kullanıcı arayüzü\nAxios ile backend API iletişimi\nSocket.IO ile gerçek zamanlı mesajlaşma\nReact-Leaflet & Leaflet ile konum entegrasyonu\nReact-Toastify ile bildirim sistemi\nKullanıcı ve ilan verileri MongoDB üzerinden yönetiliyor\n🔧 Bu projede ayrıca localStorage ile sayfa kontrolleri, JWT ile güvenli giriş sistemi ve modern web geliştirme teknikleri uyguladım.\n📂 Gerçek kullanıcı ihtiyaçları için full-stack bir uygulama olarak tasarlandı.",
+    "adres": "https://github.com/zeynepbass/HizmetKap"
+  },
+  {
+    "icon": "/images/project/workist.jpeg",
+    "width": 200,
+    "height": 200,
+    "baslik": "Workist",
+    "description": "⚙️ Kullanılan Teknolojiler:\nFrontend: React.js, Context API, Tailwind CSS, FontAwesome\nBackend: Node.js, Express.js\nGerçek Zamanlı İletişim: Socket.io\nHTTP İletişimi: Axios\nDepolama & Oturum: LocalStorage\nYardımcı Araçlar: useMemo, useRef gibi ileri React Hook'ları\nGüvenlik: Authentication & Authorization\n💡 Amaçlarım:\nTemiz ve sürdürülebilir kod yapısı kurmak\nKullanıcı merkezli arayüzler geliştirmek\nGerçek zamanlı etkileşimleri başarılı şekilde entegre etmek\nFull-stack yetkinliğimi geliştirmek",
+    "adres": "https://github.com/zeynepbass/workist"
+  },
+  {
+    "icon": "/images/project/StackDiyet.jpeg",
+    "width": 200,
+    "height": 200,
+    "baslik": "Stack Diyet",
+    "description": "🛠️ Kullanılan Teknolojiler:\nFrontend: React.js, Tailwind CSS, FontAwesome\nBackend: Node.js\nState Management: Zustand\nEmail Gönderimi: React EmailJS\nVeri Yönetimi: MongoDB & Express.js\nBu proje ile kullanıcı deneyimi, interaktif gönderi sistemi ve gerçek zamanlı etkileşim özelliklerini uygulama fırsatı buldum.\n🧠 Her adımını öğrenerek ve deneyimleyerek geliştirdim.",
+    "adres": "https://github.com/zeynepbass/stack-diyet"
+  },
+  {
+    "icon": "/images/project/fatura.jpeg",
+    "width": 200,
+    "height": 200,
+    "baslik": "Fatura Entegrasyonu",
+    "description": "Bu projede şu özellikler bulunuyor:\nKullanıcı Yönetimi: Giriş & kayıt\nSipariş Yönetimi: Sepet, sipariş oluşturma, sipariş takibi\nFatura Entegrasyonu: Fatura oluşturma, yazdırma\nKategori & Ürün Yönetimi: CRUD işlemleri\nGeri bildirimlerinizi duymaktan memnuniyet duyarım! 💻🌟",
+    "adres": "https://github.com/zeynepbass/react-fatura-application"
+  }
+]

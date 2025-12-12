@@ -1,0 +1,65 @@
+[
+    {
+      "icon": "/images/icons/bootstrap.png",
+      "width": 48,
+      "height": 48,
+      "opacity": 0.9
+    },
+    {
+      "icon": "/images/icons/css.png",
+      "width": 64,
+      "height": 64,
+      "opacity": 1
+    },
+    {
+      "icon": "/images/icons/docker.png",
+      "width": 64,
+      "height": 64,
+      "opacity": 1
+    },
+    {
+      "icon": "/images/icons/html.webp",
+      "width": 64,
+      "height": 64,
+      "borderRadius": 8,
+      "opacity": 1
+    },
+    {
+      "icon": "/images/icons/mongodb.png",
+      "width": 64,
+      "height": 64,
+      "opacity": 0.7
+    },
+    {
+      "icon": "/images/icons/next.png",
+      "width": 64,
+      "height": 64,
+      "opacity": 0.7
+    },
+    {
+      "icon": "/images/icons/nodejs.png",
+      "width": 64,
+      "height": 64,
+      "opacity": 0.7
+    },
+
+    {
+      "icon": "/images/icons/react-native.png",
+      "width": 64,
+      "height": 64,
+      "opacity": 0.7
+    },
+    {
+      "icon": "/images/icons/react.svg",
+      "width": 64,
+      "height": 64,
+      "opacity": 0.7
+    },
+    {
+      "icon": "/images/icons/tailwindcss-logo.png",
+      "width": 64,
+      "height": 64,
+      "opacity": 0.7
+    }
+  ]
+  
