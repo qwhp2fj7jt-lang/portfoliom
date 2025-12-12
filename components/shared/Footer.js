@@ -10,7 +10,7 @@ export default function Footer() {
           <p>{t("footerParagraf1")}</p>
           <p className="flex items-center gap-2">
           {t("footerParagraf2")}
-  Keyifle kodlanmıştır.
+
 
   <img
     src="/images/footer/latte.png"
