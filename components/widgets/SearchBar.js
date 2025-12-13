@@ -27,7 +27,7 @@ export default function SearchBar({lang, navigation }) {
           />
         </svg>
 
-        <div className="flex items-center text-gray-700 dark:text-gray-300  rounded-md text-gray-400 text-[15px] ">
+        <div className="flex items-center border border-white dark:border-gray-600 pl-1 pr-1 text-gray-700 dark:text-gray-300  rounded-md text-gray-400 text-[15px] ">
           <span>⌘</span>
           <span>K</span>
         </div>

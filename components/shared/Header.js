@@ -59,7 +59,7 @@ export default function Header({ locale }) {
               </div>
 
 
-              <div className="hidden sm:flex justify-center bg-zinc-50 dark:bg-zinc-900 text-black dark:text-gray-200 rounded-xl p-2">
+              <div className="hidden sm:flex justify-center  text-black dark:text-gray-200 rounded-xl p-2">
                 <div className="flex space-x-6">
                   {navigation.map((item) => {
                     const isActive = active === item.href;
@@ -70,8 +70,8 @@ export default function Header({ locale }) {
                         onClick={() => setActive(item.href)}
                         className={`px-3 py-2 text-sm transition ${
                           isActive
-                            ? "text-black dark:text-white font-semibold"
-                            : "text-gray-400 hover:text-black dark:hover:text-white"
+                            ? "text-black dark:text-white font-semibold rounded-md hover:bg-zinc-50 dark:hover:bg-zinc-900"
+                            : "text-gray-400 hover:text-black dark:hover:text-white rounded-md hover:bg-zinc-50 dark:hover:bg-zinc-900"
                         }`}
                       >
                         {item.name[lang]}
@@ -85,10 +85,10 @@ export default function Header({ locale }) {
               <div className="flex items-center space-x-4">
                 <SearchBar navigation={navigation} lang={lang}/>
                 <Menu as="div" className="relative">
-                  <Menu.Button         className="px-2 outline-none   border border-gray-100 dark:border-zinc-700 inline-flex items-center gap-1 dark:bg-zinc-800 rounded-md px-1 py-1 shadow-sm   cursor-pointer">
+                  <Menu.Button         className="px-2 outline-none inline-flex items-center gap-1  dark:bg-zinc-800 rounded-md px-1 py-1 shadow-sm   cursor-pointer border border-white dark:border-gray-600 text-gray-700 dark:text-gray-300  rounded-md">
                     {lang.toUpperCase()}
                   </Menu.Button>
-                  <Menu.Items className="absolute right-0 mt-2 border border-gray-200  bg-white dark:bg-zinc-900 text-black dark:text-gray-200 rounded-md shadow-lg w-28">
+                  <Menu.Items className="absolute right-0 mt-2 rounded-md    dark:bg-zinc-800 dark:hover:bg-zinc-900 rounded-md text-black dark:text-gray-200 rounded-md shadow-lg w-28">
                     {["tr", "en"].map((lng) => (
                       <Menu.Item key={lng}>
                         {({ active }) => (
@@ -107,7 +107,7 @@ export default function Header({ locale }) {
                 </Menu>
                 <button
                   onClick={toggleTheme}
-                  className="p-2 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-md transition"
+                  className="p-2  rounded-md hover:bg-zinc-50 dark:hover:bg-zinc-900 transition"
                 >
                   {theme === "light" ? (
                     <MoonIcon className="h-5 w-5 text-gray-800" />

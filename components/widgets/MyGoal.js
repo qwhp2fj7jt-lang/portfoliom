@@ -8,7 +8,7 @@ export default function MyGoal() {
 
             <div
 
-              className="p-6 rounded-2xl shadow-md  dark:bg-zinc-800 bg-white justify-between  flex items-start gap-4"
+              className="lg:p-6 p-4 rounded-2xl shadow-md  dark:bg-zinc-800 bg-white justify-between  flex items-start gap-4 dark:text-white text-gray-700 text-sm md:text-base "
             >
               <div>
                 <h2 className="text-xl font-bold mb-1 dark:text-white">
