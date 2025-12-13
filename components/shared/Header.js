@@ -85,7 +85,7 @@ export default function Header({ locale }) {
               <div className="flex items-center space-x-4">
                 <SearchBar navigation={navigation} lang={lang}/>
                 <Menu as="div" className="relative">
-                  <Menu.Button         className="px-2 outline-none inline-flex items-center gap-1  dark:bg-zinc-800 rounded-md px-1 py-1 shadow-sm   cursor-pointer border border-white dark:border-gray-600 text-gray-700 dark:text-gray-300  rounded-md">
+                  <Menu.Button         className=" outline-none  inline-flex items-center gap-1  dark:bg-zinc-800 rounded-md px-2 shadow-sm   cursor-pointer border border-white dark:border-zinc-700 text-gray-700 dark:text-gray-300  rounded-md">
                     {lang.toUpperCase()}
                   </Menu.Button>
                   <Menu.Items className="absolute right-0 mt-2 rounded-md    dark:bg-zinc-8Project Development Approach00 dark:hover:bg-zinc-900 rounded-md text-black dark:text-gray-200 rounded-md shadow-lg w-28">
