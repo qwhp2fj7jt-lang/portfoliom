@@ -7,7 +7,7 @@ export default function Projects(){
 
 
 
-    <div className="container mx-auto px-6 md:px-20 py-10">
+    <div className="container mx-auto px-5 lg:px-10 py-10">
      <Card project={project} />
      </div>
     )

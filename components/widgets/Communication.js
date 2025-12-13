@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 export default function Communication() {
   const t = useTranslations("Contact"); 
   return (
-    <div className="mx-auto px-6 md:px-20 py-5">
+    <div className="mx-auto px-5 lg:px-10 py-5">
       <h3 className="dark:text-white text-xl md:text-2xl font-semibold mb-4 text-gray-800 flex items-center gap-2">
         {t("title")}
       </h3>

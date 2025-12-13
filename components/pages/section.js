@@ -8,7 +8,7 @@ export default function HomeRoute() {
   const locale = params?.locale || "tr";
 
   return (
-    <div className="container mx-auto px-6 md:px-20 py-10">
+    <div className="container mx-auto px-5 lg:px-10 py-10">
       <Hero locale={locale}/>
       <Skills />
       <Blog locale={locale}/>

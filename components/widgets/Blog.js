@@ -35,7 +35,7 @@ export default function Blog({locale}) {
   ];
 
   return (
-<div className="container mx-auto px-6 md:px-20 py-10 pointer-events-none opacity-60 cursor-not-allowed">
+<div className="container mx-auto px-5 lg:px-10 py-10 pointer-events-none opacity-60 cursor-not-allowed">
   <h2 className="text-3xl font-bold mb-10 dark:text-white text-gray-800">Blog</h2>
 
   <div className="space-y-8">
