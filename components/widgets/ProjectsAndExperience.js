@@ -37,8 +37,8 @@ export default function ProjectsAndExperience({locale}) {
         </div>
 
         <div className="space-y-4">
-          <div className="flex  gap-4 p-4 rounded-xl  transition cursor-pointer">
-            <div className="w-14 h-14 rounded-lg overflow-hidden bg-gray-100 flex  justify-center">
+          <div className="flex  gap-4 p-2 rounded-xl  transition cursor-pointer">
+            <div className="w-14 h-14 rounded-lg overflow-hidden bg-gray-100 flex hidden md:block justify-center">
               <Image
                 src="/images/exadus_logo.jpeg"
                 width={56}
@@ -75,7 +75,8 @@ export default function ProjectsAndExperience({locale}) {
           <hr className="border-gray-200 dark:border-gray-800 " />
 
           <div className="flex  gap-4 p-4 rounded-xl  transition cursor-pointer">
-            <div className="w-14 h-14 rounded-lg overflow-hidden bg-gray-100 flex  justify-center">    <Image
+          <div className="w-14 h-14 rounded-lg overflow-hidden bg-gray-100 flex hidden md:block justify-center">
+                <Image
                 src="/images/ferofen_biliim_a__logo.jpeg"
                 width={56}
                 height={56}
@@ -111,7 +112,8 @@ export default function ProjectsAndExperience({locale}) {
           <hr className="border-gray-200 dark:border-gray-800 " />
 
           <div className="flex  gap-4 p-4 rounded-xl  transition cursor-pointer">
-            <div className="w-14 h-14 rounded-lg overflow-hidden bg-gray-100 flex  justify-center">    <Image
+          <div className="w-14 h-14 rounded-lg overflow-hidden bg-gray-100 flex hidden md:block justify-center">
+                <Image
                 src="/images/1631302268256.jpeg"
                 width={56}
                 height={56}

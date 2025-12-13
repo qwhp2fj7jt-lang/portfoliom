@@ -47,9 +47,9 @@ export default function SearchBar({lang, navigation }) {
              data-closed:translate-y-4 data-closed:opacity-0
              data-enter:duration-300 data-enter:ease-out
              data-leave:duration-200 data-leave:ease-in
-             sm:my-8 sm:w-full sm:max-w-xl data-closed:sm:translate-y-0 data-closed:sm:scale-95"
+             sm:my-8 w-full sm:max-w-xl data-closed:sm:translate-y-0 data-closed:sm:scale-95"
             >
-              <div className=" dark:bg-zinc-800 border-b border-gray-50 px-4 py-3 flex items-center gap-2 bg-gray-50">
+              <div className=" dark:bg-zinc-800 border-b border-gray-50 px-4 py-4 flex items-center gap-2 bg-gray-50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="dark:text-white w-5 h-5 text-gray-400"
@@ -80,7 +80,7 @@ export default function SearchBar({lang, navigation }) {
               </div>
 
               <div className="px-4 py-4 max-h-[300px] overflow-y-auto custom-scroll ">
-                <h3 className="text-sm font-medium dark:text-white text-gray-500 mb-2">
+                <h3 className="text-sm font-medium dark:text-white  mb-2">
                  {t("pages")} 
                 </h3>
 
@@ -88,17 +88,17 @@ export default function SearchBar({lang, navigation }) {
                   {navigation.map((item) => (
                 <li
                 key={item.name}
-                className=" flex items-center gap-3 p-3 rounded-md hover:bg-gray-100 dark:hover:bg-zinc-600 cursor-pointer transition"
+                className=" flex items-center gap-2 text-gray-500 rounded-md hover:bg-gray-100 dark:hover:bg-zinc-600 cursor-pointer transition"
               >
                 <div
                   className="w-5 h-5"
                   dangerouslySetInnerHTML={{ __html: item.svg }}
                 />
               
-                <div className="flex-1 min-w-0">
+                <div className="flex-1 min-w-0 pb-2">
                   <Link
                     href={`/${lang}/${item.href}`}
-                    className=" dark:text-white text-sm font-semibold text-gray-900"
+                    className=" dark:text-white text-sm text-gray-500  font-semibold "
                   >
                  {item.name[lang]}
                   </Link>
@@ -108,7 +108,7 @@ export default function SearchBar({lang, navigation }) {
                   ))}
                 </ul>
 
-                <h3 className="text-sm font-medium text-gray-500 mb-2">
+                <h3 className="text-sm font-medium  mb-2">
                  {t("post")}
                 </h3>
 
