@@ -8,7 +8,7 @@ export default function Communication() {
   const t = useTranslations("Contact"); 
   return (
     <div className="mx-auto px-5 lg:px-10 py-5">
-      <h3 className="dark:text-white text-xl md:text-2xl font-semibold mb-4 text-gray-800 flex items-center gap-2">
+      <h3 className="dark:text-white text-xl md:text-2xl font-semibold mb-5 text-gray-800 flex items-center gap-2">
         {t("title")}
       </h3>
       <p className="dark:text-white text-gray-700 text-sm md:text-base  leading-relaxed">

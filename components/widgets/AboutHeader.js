@@ -7,7 +7,7 @@ export default function AboutHeader() {
 
   return (
     <>
-      <h2 className="text-3xl dark:text-white md:text-4xl font-bold mb-8 text-gray-800">
+      <h2 className="text-3xl dark:text-white md:text-4xl font-bold mb-5 text-gray-800">
         {t("about") }
       </h2>
 
