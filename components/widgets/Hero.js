@@ -12,9 +12,8 @@ export default function Hero({locale}) {
     const t = useTranslations("AboutCard");
   
   return (
+    <>
 
-
-    <div className="container mx-auto px-5 lg:px-10 py-10">
       <div className="flex items-center gap-6">
 
 
@@ -63,7 +62,7 @@ export default function Hero({locale}) {
      <AboutCard />
 
     <Button text={t("buttonAbout")}  onClick={() => router.push(`/${locale}/about`)}/>
-      </div>
-    </div>
+      </div>    </>
+
   );
 }

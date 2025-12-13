@@ -10,15 +10,15 @@ export default function ProjectsAndExperience({locale}) {
   const router = useRouter();
   const t = useTranslations("Projects");
   return (
-    <section className="w-full mt-20">
-        <div className="container mx-auto px-5 lg:px-10 py-10">
+
+        <>
   
 
 
           <Card project={project}/>
 
 
-        <div className="mt-0">
+        <div className="mb-0">
           <Button text={t("allProject")}  onClick={() => router.push(`/${locale}/projects`)}/>
         </div>
 
@@ -143,7 +143,7 @@ export default function ProjectsAndExperience({locale}) {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </>
+
   );
 }

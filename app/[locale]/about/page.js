@@ -15,22 +15,24 @@ import { fields } from "@/shared";
 export default function About() {
   return (
     <div className="container mx-auto px-5 lg:px-10 py-10">
-      <div className="mx-auto px-5 lg:px-10 py-5">
+
         <AboutHeader />
         <Fields fields={fields} />
-      </div>
-      <div className=" px-5 lg:px-10 py-5">
+
+
         <AboutCard />
-      </div>
 
       <Skills />
       <OpenSource />
       <Communication />
-      <div className="mx-auto px-5 lg:px-10 py-5">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-1 mt-6">
+      <div className="flex flex-col gap-1 md:flex-row">
+
+
+
       <MyGoal />
-      <MyServices />      </div>
+
+      <MyServices />   
       </div>
-    </div>
+      </div>
   );
 }

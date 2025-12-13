@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 export default function OpenSource() {
   const t = useTranslations("ProjectApproach"); 
   return (
-    <div className="container mx-auto px-5 lg:px-10 py-10">
+    <>
       <h2 className="dark:text-white text-2xl font-bold mb-4 text-gray-800 underline decoration-gray-100">
         {t("title")}
       </h2>
@@ -17,6 +17,6 @@ export default function OpenSource() {
       </p>
 
       <img src="/images/openSource.png" width="100%" height="40" />
-    </div>
+    </>
   );
 }
