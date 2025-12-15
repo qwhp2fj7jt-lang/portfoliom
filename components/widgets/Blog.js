@@ -42,7 +42,7 @@ export default function Blog({locale}) {
     {blogPosts.map((item) => (
       <div
         key={item.id}
-        className="flex flex-col md:flex-row items-start gap-6 group hover:bg-gray-50 p-4 rounded-lg transition"
+        className="flex flex-col md:flex-row items-start gap-6 group  p-4 rounded-lg transition"
       >
         <span className="text-gray-400 text-xl w-10">{item.id}</span>
         <div>
@@ -55,7 +55,7 @@ export default function Blog({locale}) {
       </div>
     ))}
   </div>
-  <Button text={t("buttonBlog")}   onClick={() => router.push(`/${locale}/blog`)}/>
+  <Button text={t("buttonBlog")}     onClick={() => router.push(`/${locale}/blog`)}  disabled={true} />
 
 <br/><br/>
 </>
