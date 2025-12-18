@@ -33,7 +33,7 @@ export default function Hero({locale}) {
         <div>
           <h1 className="text-3xl font-semibold">Zeynep Baş</h1>
 
-          <p className="text-gray-500 mt-1">Frontend Developer</p>
+          <p className="text-gray-500 mt-1">Mid Frontend Developer</p>
 
 
           <div className="flex items-center space-x-4 mt-4 text-gray-600">
