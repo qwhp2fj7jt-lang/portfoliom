@@ -3,34 +3,57 @@ import { getMessages } from "next-intl/server";
 import { Header, Footer } from "@/shared";
 import "./globals.css"; 
 
+
 export const metadata = {
   metadataBase: new URL("https://zeynepbas.dev"),
+  alternates: { canonical: "/" },
 
-  alternates: { canonical: "https://zeynepbas.dev" },
-  title: { template: `%s | Zeynep Baş`, default: `Zeynep Baş - Mid Frontend Developer` },
-  description: "React ve Next.js ile modern, hızlı ve ölçeklenebilir web uygulamaları geliştiren Mid frontend geliştirici Zeynep Baş'ın portföy sitesi.",
-  keywords: ["Frontend","React","Next.js","TypeScript","Tailwind CSS","Zeynep Baş","Mid Frontend Developer"],
+  title: {
+    template: "%s | Zeynep Baş",
+    default: "Zeynep Baş - Mid Frontend Developer",
+  },
+
+  description:
+    "React ve Next.js ile modern, hızlı ve ölçeklenebilir web uygulamaları geliştiren Mid frontend geliştirici Zeynep Baş'ın portföy sitesi.",
+
+  keywords: [
+    "Frontend",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Zeynep Baş",
+    "Mid Frontend Developer",
+  ],
+
   authors: [{ name: "Zeynep Baş", url: "https://zeynepbas.dev" }],
   creator: "Zeynep Baş",
+
   openGraph: {
     title: "Zeynep Baş - Mid Frontend Developer",
-    description: "React ve Next.js ile modern, hızlı ve ölçeklenebilir web uygulamaları geliştiren Mid frontend geliştirici Zeynep Baş'ın portföy sitesi.",
+    description:
+      "React ve Next.js ile modern, hızlı ve ölçeklenebilir web uygulamaları geliştiren Mid frontend geliştirici Zeynep Baş'ın portföy sitesi.",
     url: "https://zeynepbas.dev",
     siteName: "Zeynep Baş",
     type: "website",
     images: [
       {
-        url: "/public/images/avatar.jpg",
+        url: "/images/avatar.jpg",
         width: 1200,
         height: 630,
         alt: "Zeynep Baş - Mid Frontend Developer",
       },
     ],
-  
-  }, 
-  icons: { icon: "/zeynepbas.ico" },
+  },
 
+  icons: {
+    icon: [
+      { url: "/zeynepbas.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+  },
 };
+
 
 export default async function LocaleLayout({ children, params: { locale } }) {
   const messages = await getMessages(locale);
