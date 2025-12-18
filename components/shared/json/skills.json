@@ -25,7 +25,7 @@
       "opacity": 1
     },
     {
-      "icon": "/images/icons/mongodb.png",
+      "icon": "/images/icons/npm.png",
       "width": 64,
       "height": 64,
       "opacity": 0.7
@@ -37,7 +37,7 @@
       "opacity": 0.7
     },
     {
-      "icon": "/images/icons/nodejs.png",
+      "icon": "/images/icons/shadcn.png",
       "width": 64,
       "height": 64,
       "opacity": 0.7
