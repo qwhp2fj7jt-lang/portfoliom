@@ -44,12 +44,7 @@ export const metadata = {
         alt: "Zeynep Baş - Mid Frontend Developer",
       },
     ],
-  },
-  icons: {
-    icon: [
-      { url: "/favicon.ico" }
-    ],
-  },
+  }
 };
 
 
