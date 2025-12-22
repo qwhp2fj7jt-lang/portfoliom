@@ -6,7 +6,7 @@ import "./globals.css";
 
 export const metadata = {
   metadataBase: new URL("https://zeynepbas.dev"),
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/tr" },
 
   title: {
     template: "%s | Zeynep Baş",
