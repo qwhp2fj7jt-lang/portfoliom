@@ -6,5 +6,7 @@ export default createMiddleware({
 });
 
 export const config = {
-  matcher: ["/", "/(tr|en)/:path*"],
+  matcher: [
+    "/((?!_next|favicon.ico|icon.png|images|robots.txt).*)",
+  ],
 };
