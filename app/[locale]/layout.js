@@ -6,7 +6,10 @@ import "./globals.css";
 
 export const metadata = {
   metadataBase: new URL("https://zeynepbas.dev"),
-  alternates: { canonical: "/" },
+
+  alternates: {
+    canonical: "/tr",
+  },
 
   title: {
     template: "%s | Zeynep Baş",
@@ -16,43 +19,20 @@ export const metadata = {
   description:
     "React ve Next.js ile modern, hızlı ve ölçeklenebilir web uygulamaları geliştiren Mid frontend geliştirici Zeynep Baş'ın portföy sitesi.",
 
-  keywords: [
-    "Frontend",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Tailwind CSS",
-    "Zeynep Baş",
-    "Mid Frontend Developer",
-  ],
-
-  authors: [{ name: "Zeynep Baş", url: "https://zeynepbas.dev" }],
-  creator: "Zeynep Baş",
-
   openGraph: {
     title: "Zeynep Baş - Mid Frontend Developer",
     description:
       "React ve Next.js ile modern, hızlı ve ölçeklenebilir web uygulamaları geliştiren Mid frontend geliştirici Zeynep Baş'ın portföy sitesi.",
-    url: "https://zeynepbas.dev",
+    url: "https://zeynepbas.dev/tr",
     siteName: "Zeynep Baş",
     type: "website",
-    images: [
-      {
-        url: "/images/avatar.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Zeynep Baş - Mid Frontend Developer",
-      },
-    ],
   },
 
   icons: {
-    icon: [
-      { url: "/zeynepbas.ico" },
-      { url: "/icon.png", type: "image/png" },
-    ],
+    icon: "/favicon.ico",
   },
 };
+
 
 
 export default async function LocaleLayout({ children, params: { locale } }) {
