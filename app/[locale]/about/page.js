@@ -10,14 +10,14 @@ import {
   Fields,
   AboutHeader
 } from "@/widgets";
-import { fields } from "@/shared";
+
 
 export default function About() {
   return (
     <div className="container mx-auto px-5 lg:px-10 py-10">
 
         <AboutHeader />
-        <Fields fields={fields} />
+        <Fields />
 
 
         <AboutCard />
