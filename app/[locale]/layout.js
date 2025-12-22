@@ -52,9 +52,7 @@ export async function generateMetadata({ params: { locale } }) {
   };
 }
 
-/**
- * ✅ LAYOUT
- */
+
 export default async function LocaleLayout({ children, params: { locale } }) {
   const messages = await getMessages(locale);
 
