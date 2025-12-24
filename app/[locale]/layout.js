@@ -11,9 +11,9 @@ export async function generateMetadata({ params: { locale } }) {
     metadataBase: new URL(baseUrl),
 
     alternates: {
-      canonical: `/${locale}`,
+      canonical: `/`,
       languages: {
-        tr: `${baseUrl}/tr`,
+        tr: `${baseUrl}/`,
         en: `${baseUrl}/en`,
       },
     },
@@ -33,7 +33,7 @@ export async function generateMetadata({ params: { locale } }) {
       title: "Zeynep Baş - Mid Frontend Developer",
       description:
         "React ve Next.js ile modern, hızlı ve ölçeklenebilir web uygulamaları geliştiren Mid frontend geliştirici Zeynep Baş'ın portföy sitesi.",
-      url: `${baseUrl}/${locale}`,
+        url: baseUrl,
       siteName: "Zeynep Baş",
       type: "website",
       images: [
