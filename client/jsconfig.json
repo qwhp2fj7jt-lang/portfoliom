@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/shared/*": ["shared/*"],
+      "@/shared": ["shared/index"],
+      "@/features/*": ["features/*"],
+      "@/widgets/*": ["components/widgets/*"],
+      "@/widgets": ["components/widgets/index"],
+      "@/atoms/*": ["components/atoms/*"],      
+      "@/atoms": ["components/atoms/index"],
+      "@/molecules/*": ["components/molecules/*"],
+      "@/molecules": ["components/molecules/index"],
+
+      "@/*": ["./*"] 
+    }
+  }
+}

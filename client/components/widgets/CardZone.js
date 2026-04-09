@@ -1,0 +1,217 @@
+
+"use client"
+import {
+  HeartIcon,
+  ArrowRightIcon,
+  ChatBubbleBottomCenterIcon,
+} from "@heroicons/react/24/solid";
+import {AboutHeader} from "@/molecules";
+import { Button } from "@/atoms";
+import useZone from "@/shared/hooks/useZone"
+export default function CardZone({posts}) {
+const { localPosts,
+  activeCard,
+  expandedPost,
+  setExpandedPost,
+  handleLikeClick,
+  setActiveCard,
+  showModal,
+  setShowModal,
+  commentInputs,
+  setCommentInputs,
+  tempNickname, setTempNickname,
+  user,
+  handleComment,
+  saveNickname}=useZone({posts});
+  return (
+    <>
+      <AboutHeader
+        baslik="    Zeynep Zone"
+        paragraf="Zeynep Baş’ın paylaşımlarını keşfedebileceğin ve etkileşime geçebileceğin dijital alan."
+      />
+      <div className="mx-auto max-w-6xl py-6 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {localPosts.length === 0 && (
+          <p className="text-center text-gray-400 col-span-full">
+            Gönderi bulunamadı
+          </p>
+        )}
+
+        {localPosts.map((post, index) => {
+          const isOpen = activeCard === index;
+          const isExpanded = expandedPost === index;
+
+          return (
+            <div key={post._id} className="flex flex-col h-full">
+              <div
+                className={`flex flex-col h-full bg-white dark:bg-zinc-900 shadow-md overflow-hidden border border-gray-200 dark:border-gray-800 ${
+                  isOpen ? "rounded-b-none" : "rounded-xl"
+                }`}
+              >
+                <div className="w-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center">
+                  <img
+                    src={post?.image}
+                    alt="Post"
+                    className="w-full h-64 sm:h-72 md:h-80 object-cover"
+                  />
+                </div>
+
+                <div className="p-4 flex flex-col flex-1">
+                  <div className="flex items-center gap-3 mb-3">
+                    <img
+                      src="/images/avatar.png"
+                      className="w-9 h-9 rounded-full object-cover"
+                      alt="avatar"
+                    />
+                    <div>
+                      <p className="text-sm font-semibold text-black dark:text-white">
+                        {post.name}
+                      </p>
+                      <a
+                        href={`https://www.google.com/maps?q=${encodeURIComponent(
+                          post.konum
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-sm text-gray-400 hover:text-yellow-400 transition"
+                      >
+                        <span>📍</span>
+                        <span>{post.konum || "Konumu gör"}</span>
+                      </a>
+                      <span className="text-xs text-gray-500 dark:text-gray-400">
+                        {post.nickname}
+                      </span>
+                    </div>
+                  </div>
+
+                  <p
+                    className={`text-sm leading-relaxed ${
+                      isExpanded ? "" : "line-clamp-2"
+                    } text-gray-700 dark:text-gray-300`}
+                  >
+                    {post.description}
+                  </p>
+
+                  <Button
+                    onClick={() => setExpandedPost(isExpanded ? null : index)}
+                    text={isExpanded ? "Kapat" : "Devamını gör"}
+                  />
+
+                  <div className="border-t border-gray-200 dark:border-gray-800 pt-3 mt-4 flex items-center justify-between">
+                    <div className="flex gap-5">
+                      <button
+                        onClick={() => handleLikeClick(post._id)}
+                        className={`flex items-center gap-1 transition ${
+                          post.likes?.includes(user.nickname)
+                            ? "text-red-500"
+                            : "text-gray-600 dark:text-gray-400 hover:text-red-400"
+                        }`}
+                      >
+                        <HeartIcon className="w-5 h-5" />
+                        <span className="text-sm">
+                          {post.likes?.length || 0}
+                        </span>
+                      </button>
+
+                      <button
+                        onClick={() => setActiveCard(isOpen ? null : index)}
+                        className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-gray-400 transition"
+                      >
+                        <ChatBubbleBottomCenterIcon className="w-5 h-5" />
+                        <span className="text-sm">
+                          {post.comments?.length || 0}
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {isOpen && (
+                <div className="bg-white dark:bg-zinc-900 rounded-b-xl border border-t-0 border-gray-200 dark:border-gray-800 p-3">
+                  <div className="space-y-2 mb-3 max-h-40 overflow-y-auto">
+                    {post.comments?.length === 0 ? (
+                      <p className="text-gray-500 text-xs italic">
+                        Henüz yorum yok
+                      </p>
+                    ) : (
+                      post.comments.map((c, i) => (
+                        <div
+                          key={i}
+                          className="text-sm text-gray-700 dark:text-gray-300"
+                        >
+                          <span className="font-semibold mr-2">
+                            {c.nickname}:
+                          </span>
+                          {c.text}
+                        </div>
+                      ))
+                    )}
+                  </div>
+
+                  <div className="flex gap-2 border-t pt-2 border-gray-200 dark:border-gray-800">
+                    <input
+                      type="text"
+                      value={commentInputs[post._id] || ""}
+                      onChange={(e) =>
+                        setCommentInputs((prev) => ({
+                          ...prev,
+                          [post._id]: e.target.value,
+                        }))
+                      }
+                      placeholder="Yorum yap..."
+                      className="flex-1 bg-gray-50 dark:bg-zinc-800 border-none rounded-full px-3 py-1 text-sm focus:ring-1 focus:ring-blue-500 outline-none"
+                    />
+                    <button
+                      onClick={() => handleComment(post._id)}
+                      className="text-black dark:text-white hover:scale-110 transition"
+                    >
+                      <ArrowRightIcon className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })}
+        {showModal && (
+          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+            <div className="bg-white dark:bg-zinc-900 p-5 rounded-xl w-80">
+              <h2 className="text-lg font-semibold mb-3 text-black dark:text-white">
+                Nickname Gir
+              </h2>
+
+              <input
+                type="text"
+                placeholder="Nickname..."
+                value={tempNickname}
+                onChange={(e) => setTempNickname(e.target.value)}
+                className="w-full border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 mb-4 bg-white dark:bg-zinc-800 text-black dark:text-white"
+              />
+
+              <div className="flex justify-end gap-2">
+                <button
+                  onClick={() => setShowModal(false)}
+                  className="px-3 py-1 text-sm text-gray-500"
+                >
+                  İptal
+                </button>
+
+                <button
+                  onClick={() => {
+                    if (!tempNickname) return;
+
+                    saveNickname(tempNickname);
+                    setShowModal(false);
+                  }}
+                  className="px-4 py-1 bg-black  text-white dark:bg-white dark:text-black rounded-lg text-sm"
+                >
+                  Kaydet
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
