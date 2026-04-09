@@ -31,7 +31,7 @@ export const postService = {
   postGet: async () => {
     return request("/posts", {
       method: "GET",
-      cache: "no-store",
+      next: { revalidate: 10 }
     });
   },
 
