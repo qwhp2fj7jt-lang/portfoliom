@@ -75,9 +75,8 @@ export async function generateMetadata() {
       url: baseUrl,
       image: `${baseUrl}/images/avatar.png`,
       sameAs: [
-        "https://www.linkedin.com/in/zeynepbas",
-        "https://github.com/zeynepbas",
-        "https://twitter.com/zeynepbas",
+        "https://www.linkedin.com/in/zeynepbass",
+        "https://github.com/zeynepbasss"
       ],
       jobTitle: "Frontend Engineer",
       worksFor: {
