@@ -6,5 +6,6 @@ export default function sitemap() {
     { url: `${baseUrl}/about`, lastModified: new Date() },
     { url: `${baseUrl}/projects`, lastModified: new Date() },
     { url: `${baseUrl}/blog`, lastModified: new Date() },
+    { url: `${baseUrl}/zone`, lastModified: new Date() },
   ];
 }
