@@ -11,7 +11,7 @@ export default function Footer() {
         
 
         <div className="flex flex-col gap-2 text-sm text-gray-500 dark:text-gray-400">
-          <p><a href="https://github.com/zeynepbass/milk" target="_blank" className="text-yellow-400 hover:underline">@milk</a> Core Web Vitals ve feature-based alt yapısı kullanıldı.</p>
+          <p><a href="https://github.com/zeynepbass/milk" target="_blank" className="text-yellow-500 hover:underline">@milk</a> Core Web Vitals ve feature-based alt yapısı kullanıldı.</p>
           <p className="font-medium text-gray-600 dark:text-gray-300">
             Next.js, React ve Tailwind CSS ile geliştirildi.
           </p>

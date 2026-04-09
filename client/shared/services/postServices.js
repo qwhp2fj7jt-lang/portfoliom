@@ -1,36 +1,51 @@
 import { API_BASE_URL } from "@/shared/contants/api";
+
+if (!API_BASE_URL) {
+  throw new Error("API_BASE_URL is not defined");
+}
+
+const request = async (url, options = {}) => {
+  const res = await fetch(`${API_BASE_URL}${url}`, {
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+    ...options,
+  });
+
+  if (!res.ok) {
+    let errorMessage = "API error";
+
+    try {
+      const errorData = await res.json();
+      errorMessage = errorData?.message || errorMessage;
+    } catch (e) {}
+
+    throw new Error(errorMessage);
+  }
+
+  return res.json();
+};
+
 export const postService = {
   postGet: async () => {
-    const res = await fetch(`${API_BASE_URL}/posts`, {
+    return request("/posts", {
       method: "GET",
-      headers: { "Content-Type": "application/json" }
+      cache: "no-store",
     });
-  
-    if (!res.ok) throw new Error("API error");
-  
-    return res.json();
   },
+
   postLike: async ({ postId, nickname }) => {
-    const res = await fetch(`${API_BASE_URL}/posts/like/${postId}`, {
+    return request(`/posts/like/${postId}`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nickname }),
     });
-
-    if (!res.ok) throw new Error("API error");
-
-    return res.json();
   },
 
   postComment: async ({ postId, nickname, text }) => {
-    const res = await fetch(`${API_BASE_URL}/posts/comment/${postId}`, {
+    return request(`/posts/comment/${postId}`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nickname, text }),
     });
-
-    if (!res.ok) throw new Error("API error");
-
-    return res.json();
   },
 };
