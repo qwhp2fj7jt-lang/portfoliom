@@ -23,7 +23,7 @@ const pathname=usePathname();
   }, [theme]);
 
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
-
+console.log(navigation)
   return (
     <>
       <nav className="dark:bg-black/80 bg-white/80 backdrop-blur-sm sticky top-0 z-20">
@@ -104,26 +104,30 @@ const pathname=usePathname();
           <p className="text-center font-semibold">Menü</p>
           <div className="w-4 h-1 bg-gray-300 rounded-full mx-auto"></div>
 
-          {navigation.map((item) => {
-            const isActive = pathname === item.href;
-            <Link
+          {navigation?.map((item) => {
+          const isActive = (href) => pathname === href;
+            return(
+                <Link
               key={item.href}
               href={item.href}
               onClick={() => setMobileOpen(false)}
-              className={`text-sm font-medium transition ${
-                isActive
-                  ? "text-blue-500 border-b-2 border-blue-500"
-                  : "text-gray-500"
-              }`}
-            
-            >
-              {/* rounded-lg px-4 py-3 flex items-center text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors */}
+              className={`px-3 py-2 text-sm transition  flex items-center ${
+    
+                isActive(item.href)
+  
+                ? "text-black dark:text-white font-semibold "
+                : "text-gray-400 hover:text-black dark:hover:text-white"
+            }`}
+          >
+
               <span
                 className="mr-2 w-5 h-5"
                 dangerouslySetInnerHTML={{ __html: item.svg }}
               />
               {item.name}
-            </Link>
+            </Link> 
+            )
+         
           })}
         </Dialog.Panel>
       </Dialog>
