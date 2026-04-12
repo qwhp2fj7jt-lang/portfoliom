@@ -39,16 +39,15 @@ export default function CardZone({ posts }) {
         )}
 
         {localPosts.map((post, index) => {
-          const isOpen = activeCard === index;
-          const isExpanded = expandedPost === index;
-
+const isOpen = activeCard === post._id;
+const isExpanded = expandedPost === post._id;
           return (
             <div key={post._id} className="flex flex-col">
               <div
-                className={`flex flex-col h-full bg-white dark:bg-zinc-900 shadow-md overflow-hidden border border-gray-200 dark:border-gray-800 ${
+                className={`flex flex-col bg-white dark:bg-zinc-900 shadow-md overflow-hidden border border-gray-200 dark:border-gray-800 ${
                   isOpen
-                    ? "rounded-b-none max-h-[300px] "
-                    : "rounded-xl max-h-full"
+                    ? "rounded-b-none"
+                    : "rounded-xl h-full"
                 }`}
               >
                 <div className="w-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center">
@@ -96,7 +95,7 @@ export default function CardZone({ posts }) {
                   </p>
 
                   <Button
-                    onClick={() => setExpandedPost(isExpanded ? null : index)}
+                    onClick={() => setExpandedPost(isExpanded ? null : post._id)}
                     text={isExpanded ? "Kapat" : "Devamını gör"}
                   />
 
@@ -117,7 +116,7 @@ export default function CardZone({ posts }) {
                       </button>
 
                       <button
-                        onClick={() => setActiveCard(isOpen ? null : index)}
+onClick={() => setActiveCard(isOpen ? null : post._id)}
                         className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-gray-400 transition"
                       >
                         <ChatBubbleBottomCenterIcon className="w-5 h-5" />
