@@ -48,7 +48,7 @@ export default function CardZone({ posts }) {
                 className={`flex flex-col h-full bg-white dark:bg-zinc-900 shadow-md overflow-hidden border border-gray-200 dark:border-gray-800 ${
                   isOpen
                     ? "rounded-b-none max-h-[300px] "
-                    : "rounded-xl max-h-0"
+                    : "rounded-xl max-h-full"
                 }`}
               >
                 <div className="w-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center">
