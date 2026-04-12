@@ -41,7 +41,7 @@ const { localPosts,
           const isExpanded = expandedPost === index;
 
           return (
-            <div key={post._id} className="flex flex-col h-full">
+            <div key={post._id} className="flex flex-col">
               <div
                 className={`flex flex-col h-full bg-white dark:bg-zinc-900 shadow-md overflow-hidden border border-gray-200 dark:border-gray-800 ${
                   isOpen ? "rounded-b-none h-[39vh]" : "rounded-xl h-full"
