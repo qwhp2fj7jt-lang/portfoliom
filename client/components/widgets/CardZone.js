@@ -128,7 +128,7 @@ const { localPosts,
 
               {isOpen && (
                 <div className="bg-white dark:bg-zinc-900 rounded-b-xl border border-t-0 border-gray-200 dark:border-gray-800 p-3">
-                  <div className="space-y-2 mb-3 max-h-40 overflow-y-auto">
+                  <div className="space-y-2 mb-3 overflow-y-auto">
                     {post.comments?.length === 0 ? (
                       <p className="text-gray-500 text-xs italic">
                         Henüz yorum yok
