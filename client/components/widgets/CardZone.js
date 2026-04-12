@@ -44,7 +44,7 @@ const { localPosts,
             <div key={post._id} className="flex flex-col">
               <div
                 className={`flex flex-col h-full bg-white dark:bg-zinc-900 shadow-md overflow-hidden border border-gray-200 dark:border-gray-800 ${
-                  isOpen ? "rounded-b-none h-[39vh]" : "rounded-xl h-full"
+                  isOpen ? "rounded-b-none max-h-[300px] " : "rounded-xl max-h-0"
                 }`}
               >
                 <div className="w-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center">
@@ -128,7 +128,7 @@ const { localPosts,
 
               {isOpen && (
                 <div className="bg-white dark:bg-zinc-900 rounded-b-xl border border-t-0 border-gray-200 dark:border-gray-800 p-3">
-                  <div className="space-y-2 mb-3 overflow-y-auto">
+                  <div className="space-y-2 mb-3 max-h-40 overflow-y-auto">
                     {post.comments?.length === 0 ? (
                       <p className="text-gray-500 text-xs italic">
                         Henüz yorum yok
