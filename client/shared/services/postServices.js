@@ -38,6 +38,7 @@ export const postService = {
   postLike: async ({ postId, nickname }) => {
     return request(`/posts/like/${postId}`, {
       method: "POST",
+      next: "no-store",
       body: JSON.stringify({ nickname }),
     });
   },
@@ -45,6 +46,7 @@ export const postService = {
   postComment: async ({ postId, nickname, text }) => {
     return request(`/posts/comment/${postId}`, {
       method: "POST",
+      next: { revalidate: 0 },
       body: JSON.stringify({ nickname, text }),
     });
   },
