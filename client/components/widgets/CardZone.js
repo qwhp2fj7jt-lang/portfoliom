@@ -1,28 +1,30 @@
-
-"use client"
+"use client";
 import {
   HeartIcon,
   ArrowRightIcon,
   ChatBubbleBottomCenterIcon,
 } from "@heroicons/react/24/solid";
-import {AboutHeader} from "@/molecules";
+import { AboutHeader } from "@/molecules";
 import { Button } from "@/atoms";
-import useZone from "@/shared/hooks/useZone"
-export default function CardZone({posts}) {
-const { localPosts,
-  activeCard,
-  expandedPost,
-  setExpandedPost,
-  handleLikeClick,
-  setActiveCard,
-  showModal,
-  setShowModal,
-  commentInputs,
-  setCommentInputs,
-  tempNickname, setTempNickname,
-  user,
-  handleComment,
-  saveNickname}=useZone({posts});
+import useZone from "@/shared/hooks/useZone";
+export default function CardZone({ posts }) {
+  const {
+    localPosts,
+    activeCard,
+    expandedPost,
+    setExpandedPost,
+    handleLikeClick,
+    setActiveCard,
+    showModal,
+    setShowModal,
+    commentInputs,
+    setCommentInputs,
+    tempNickname,
+    setTempNickname,
+    user,
+    handleComment,
+    saveNickname,
+  } = useZone({ posts });
   return (
     <>
       <AboutHeader
@@ -44,7 +46,9 @@ const { localPosts,
             <div key={post._id} className="flex flex-col">
               <div
                 className={`flex flex-col h-full bg-white dark:bg-zinc-900 shadow-md overflow-hidden border border-gray-200 dark:border-gray-800 ${
-                  isOpen ? "rounded-b-none max-h-[300px] " : "rounded-xl max-h-0"
+                  isOpen
+                    ? "rounded-b-none max-h-[300px] "
+                    : "rounded-xl max-h-0"
                 }`}
               >
                 <div className="w-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center">
