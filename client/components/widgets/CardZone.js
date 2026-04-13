@@ -8,7 +8,7 @@ import { AboutHeader } from "@/molecules";
 import { Button } from "@/atoms";
 import useZone from "@/shared/hooks/useZone";
 import Image from "next/image";
-import blur from "@/public/images/loading-blur.png";
+import blur from "../../public/images/loading-blur.png";
 export default function CardZone({ posts }) {
   const {
     localPosts,
