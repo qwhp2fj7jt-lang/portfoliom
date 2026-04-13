@@ -51,15 +51,14 @@ export default function CardZone({ posts }) {
               >
       <div className="w-full bg-gray-100 dark:bg-zinc-800">
   <div className="relative w-full h-64 sm:h-72 md:h-80">
-    <Image
-      src={post?.image}
-      alt="Post"
-      fill
-      placeholder="blur"
-      blurDataURL="https://zeynepbas.dev/zone/images/blur.png"
-      className="object-cover"
-
-    />
+  <Image
+  src={post?.image}
+  alt="Post"
+  fill
+  placeholder="blur"
+  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTEhIVFRUVFRUVFRUVFRUVFRUWFxUXFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFRAQFS0dHR0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJ8BPgMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAQIDBAYAB//EADkQAAEDAgMFBQYEBgIDAAAAAAEAAgMEEQUSITFBBhMiUWFxgZEUkaGxwdHwFCNCUmJy8RYzQ1Oi/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAEDAgQF/8QAJhEBAQEAAgICAgMBAAAAAAAAAAECEQMhEjFBEyJRYXGBkf/aAAwDAQACEQMRAD8A9xREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERA//2Q=="
+  className="object-cover"
+/>
   </div>
 </div>
 
