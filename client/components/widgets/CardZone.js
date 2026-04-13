@@ -52,15 +52,17 @@ const isExpanded = expandedPost === post._id;
                 }`}
               >
                 <div className="w-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center">
-                <div className="relative w-full h-64 sm:h-72 md:h-80">               <Image
+                <div className="relative w-full h-64 sm:h-72 md:h-80">       
+                          <Image
     src={post?.image}
     alt="Post"
     fill
     placeholder="blur"
-    blurDataURL="/images/blur.png"
+    blurDataURL="https://zeynepbas.dev/zone/images/blur.png"
     className="object-cover"
   />
-                </div>                </div>
+                </div>         
+                       </div>
 
                 <div className="p-4 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-3">
