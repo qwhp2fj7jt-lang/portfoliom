@@ -40,29 +40,28 @@ export default function CardZone({ posts }) {
         )}
 
         {localPosts.map((post, index) => {
-const isOpen = activeCard === post._id;
-const isExpanded = expandedPost === post._id;
+          const isOpen = activeCard === post._id;
+          const isExpanded = expandedPost === post._id;
           return (
             <div key={post._id} className="flex flex-col">
               <div
                 className={`flex flex-col bg-white dark:bg-zinc-900 shadow-md overflow-hidden border border-gray-200 dark:border-gray-800 ${
-                  isOpen
-                    ? "rounded-b-none"
-                    : "rounded-xl"
+                  isOpen ? "rounded-b-none" : "rounded-xl"
                 }`}
               >
-                <div className="w-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center">
-                <div className="relative w-full h-64 sm:h-72 md:h-80">       
-                          <Image
-    src={post?.image}
-    alt="Post"
-    fill
-    placeholder="blur"
-    blurDataURL="https://zeynepbas.dev/zone/images/blur.png"
-    className="object-cover"
-  />
-                </div>         
-                       </div>
+      <div className="w-full bg-gray-100 dark:bg-zinc-800">
+  <div className="relative w-full h-64 sm:h-72 md:h-80">
+    <Image
+      src={post?.image}
+      alt="Post"
+      fill
+      placeholder="blur"
+      blurDataURL="https://zeynepbas.dev/zone/images/blur.png"
+      className="object-cover"
+      priority={index < 3}
+    />
+  </div>
+</div>
 
                 <div className="p-4 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-3">
@@ -101,7 +100,9 @@ const isExpanded = expandedPost === post._id;
                   </p>
 
                   <Button
-                    onClick={() => setExpandedPost(isExpanded ? null : post._id)}
+                    onClick={() =>
+                      setExpandedPost(isExpanded ? null : post._id)
+                    }
                     text={isExpanded ? "Kapat" : "Devamını gör"}
                   />
 
@@ -122,7 +123,7 @@ const isExpanded = expandedPost === post._id;
                       </button>
 
                       <button
-onClick={() => setActiveCard(isOpen ? null : post._id)}
+                        onClick={() => setActiveCard(isOpen ? null : post._id)}
                         className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-gray-400 transition"
                       >
                         <ChatBubbleBottomCenterIcon className="w-5 h-5" />
@@ -136,8 +137,8 @@ onClick={() => setActiveCard(isOpen ? null : post._id)}
               </div>
 
               {isOpen && (
-  <div className="bg-white dark:bg-zinc-900 rounded-b-xl border border-gray-200 dark:border-gray-800 p-3">
-    <div className="space-y-2 mb-3 max-h-64 overflow-y-auto pr-1">
+                <div className="bg-white dark:bg-zinc-900 rounded-b-xl border border-gray-200 dark:border-gray-800 p-3">
+                  <div className="space-y-2 mb-3 max-h-64 overflow-y-auto pr-1">
                     {post.comments?.length === 0 ? (
                       <p className="text-gray-500 text-xs italic">
                         Henüz yorum yok
