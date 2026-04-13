@@ -40,7 +40,7 @@ export default function CardZone({ posts }) {
           </p>
         )}
 
-        {localPosts.map((post, index) => {
+        {localPosts.map((post) => {
           const isOpen = activeCard === post._id;
           const isExpanded = expandedPost === post._id;
           return (
@@ -57,7 +57,7 @@ export default function CardZone({ posts }) {
   alt="Post"
   fill
   placeholder="blur"
-blurDataURL={blur}
+blurDataURL={blur.blurDataURL}
   className="object-cover"
 />
   </div>
