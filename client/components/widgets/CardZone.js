@@ -57,8 +57,8 @@ export default function CardZone({ posts }) {
   alt="Post"
   fill
   unoptimized
-  placeholder="blur"
-  blurDataURL={blur.blurDataURL}
+  priority
+  sizes="(max-width: 768px) 100vw, 50vw"
   className="object-cover"
 />
   </div>
