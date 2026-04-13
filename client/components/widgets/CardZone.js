@@ -7,6 +7,7 @@ import {
 import { AboutHeader } from "@/molecules";
 import { Button } from "@/atoms";
 import useZone from "@/shared/hooks/useZone";
+import Image from "next/image";
 export default function CardZone({ posts }) {
   const {
     localPosts,
@@ -51,11 +52,13 @@ const isExpanded = expandedPost === post._id;
                 }`}
               >
                 <div className="w-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center">
-                  <img
-                    src={post?.image}
-                    alt="Post"
-                    className="w-full h-64 sm:h-72 md:h-80 object-cover"
-                  />
+                <Image
+  src={post?.image}
+  alt="Post"
+  width={800}
+  height={400}
+  className="w-full h-64 sm:h-72 md:h-80 object-cover"
+/>
                 </div>
 
                 <div className="p-4 flex flex-col flex-1">
