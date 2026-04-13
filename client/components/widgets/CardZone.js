@@ -8,6 +8,7 @@ import { AboutHeader } from "@/molecules";
 import { Button } from "@/atoms";
 import useZone from "@/shared/hooks/useZone";
 import Image from "next/image";
+import blur from "@/public/images/loading-blur.png";
 export default function CardZone({ posts }) {
   const {
     localPosts,
@@ -56,7 +57,7 @@ export default function CardZone({ posts }) {
   alt="Post"
   fill
   placeholder="blur"
-blurDataURL="/images/loading-blur.png"
+blurDataURL={blur}
   className="object-cover"
 />
   </div>
