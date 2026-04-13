@@ -57,9 +57,7 @@ const isExpanded = expandedPost === post._id;
   alt="Post"
   width={800}
   height={400}
-  fill
-  priority={index < 3}
-  placeholder="blur"
+    placeholder="blur"
   blurDataURL="/images/blur.png"
   className="w-full h-64 sm:h-72 md:h-80 object-cover"
 />
