@@ -58,7 +58,7 @@ export default function CardZone({ posts }) {
       placeholder="blur"
       blurDataURL="https://zeynepbas.dev/zone/images/blur.png"
       className="object-cover"
-      priority={index < 3}
+
     />
   </div>
 </div>
