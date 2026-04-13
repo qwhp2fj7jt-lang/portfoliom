@@ -56,8 +56,9 @@ export default function CardZone({ posts }) {
   src={post?.image}
   alt="Post"
   fill
+  unoptimized
   placeholder="blur"
-blurDataURL={blur.blurDataURL}
+  blurDataURL={blur.blurDataURL}
   className="object-cover"
 />
   </div>

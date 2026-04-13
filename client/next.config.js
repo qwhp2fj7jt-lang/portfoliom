@@ -1,6 +1,11 @@
-
 module.exports = {
   images: {
-    domains: ["zeynepbas.dev"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "portfoliom-4p84.onrender.com",
+        pathname: "/uploads/**",
+      },
+    ],
   },
 };
