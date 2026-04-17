@@ -160,7 +160,7 @@ export default function CardZone({ posts }) {
                           key={i}
                           className="text-sm text-gray-700 dark:text-gray-300"
                         >
-                          <span className="font-semibold mr-2">
+                          <span className="font-semibold mr-1">
                             {c.nickname}:
                           </span>
                           {c.text}
