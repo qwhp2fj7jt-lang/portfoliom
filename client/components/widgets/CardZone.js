@@ -111,7 +111,7 @@ export default function CardZone({ posts }) {
                   </p>
 
                   <Button
-                  className="hover:text-yellow-400"
+            
                     onClick={() =>
                       setExpandedPost(isExpanded ? null : post._id)
                     }
