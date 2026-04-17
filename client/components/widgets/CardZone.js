@@ -36,7 +36,7 @@ export default function CardZone({ posts }) {
         baslik="    Zeynep Zone"
         paragraf="Zeynep Baş’ın paylaşımlarını keşfedebileceğin ve etkileşime geçebileceğin dijital alan."
       />
-      <div className="mx-auto max-w-6xl py-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mx-auto max-w-6xl py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {localPosts.length === 0 && (
           <p className="text-center text-gray-400 col-span-full">
             Gönderi bulunamadı
