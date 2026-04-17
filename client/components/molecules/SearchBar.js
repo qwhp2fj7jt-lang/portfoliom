@@ -1,9 +1,18 @@
 "use client";
-import { useState } from "react";
+import {useMemo, useState } from "react";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import Link from "next/link";
 export default function SearchBar({ navigation }) {
   const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
+
+  const filteredNavigation = useMemo(() => {
+    if (!query.trim()) return navigation;
+  
+    return navigation.filter((item) =>
+      item.name.toLowerCase().includes(query.toLowerCase())
+    );
+  }, [navigation, query]);
 
   return (
     <div className="relative ">
@@ -66,12 +75,17 @@ export default function SearchBar({ navigation }) {
 
                 <input
                   type="text"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
                   placeholder="Sayfa veya blog yazısı ara..."
-                  className=" dark:placeholder:text-white flex-1 bg-transparent  border-none outline-none text-gray-700 placeholder:text-gray-400"
+                  className="dark:placeholder:text-white flex-1 bg-transparent border-none outline-none text-gray-700 dark:text-white placeholder:text-gray-400"
                 />
 
                 <button
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    setOpen(false);
+                    setQuery("");
+                  }}
                   className="dark:text-white text-gray-400 hover:text-gray-600 cursor-pointer"
                 >
                   ✕
@@ -82,29 +96,39 @@ export default function SearchBar({ navigation }) {
                 <h3 className="text-sm font-medium dark:text-white  mb-2">
                   Sayfalar
                 </h3>
+                <ul role="list" className="space-y-1">
+                  {filteredNavigation.length > 0 ? (
+                    filteredNavigation.map((item) => (
+                      <li
+                        key={item.name}
+                        className="flex items-center gap-2 text-gray-500 rounded-md hover:bg-gray-100 dark:hover:bg-zinc-600 cursor-pointer transition"
+                      >
+                        <div
+                          className="w-5 h-5"
+                          dangerouslySetInnerHTML={{ __html: item.svg }}
+                        />
 
-                <ul role="list" className="space-y-1 ">
-                  {navigation.map((item) => (
-                    <li
-                      key={item.name}
-                      className=" flex items-center gap-2 text-gray-500 rounded-md hover:bg-gray-100 dark:hover:bg-zinc-600 cursor-pointer transition"
-                    >
-                      <div
-                        className="w-5 h-5"
-                        dangerouslySetInnerHTML={{ __html: item.svg }}
-                      />
-
-                      <div className="flex-1 min-w-0 pb-2">
-                        <Link
-                          href={`${item.href}`}
-                          className=" dark:text-white text-sm text-gray-500  font-semibold "
-                        >
-                          {item.name}
-                        </Link>
-                      </div>
-                    </li>
-                  ))}
+                        <div className="flex-1 min-w-0 pb-2">
+                          <Link
+                            href={item.href}
+                            onClick={() => {
+                              setOpen(false);
+                              setQuery("");
+                            }}
+                            className="dark:text-white text-sm text-gray-500 font-semibold"
+                          >
+                            {item.name}
+                          </Link>
+                        </div>
+                      </li>
+                    ))
+                  ) : (
+                    <p className="text-sm text-gray-400 text-center py-4">
+                      Sonuç bulunamadı
+                    </p>
+                  )}
                 </ul>
+
 
                 <h3 className="text-sm font-medium  mb-2">Son Gönderi</h3>
 
