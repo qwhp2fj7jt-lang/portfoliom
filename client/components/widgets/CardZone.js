@@ -54,11 +54,11 @@ export default function CardZone({ posts }) {
                   <div className="relative w-full h-64 sm:h-72 md:h-80">
                     <Image
                       src={post?.image}
-<<<<<<< HEAD
-                      alt="Post"
-=======
+
+
+
                       alt={post.konum?.split("/")[0].trim()}
->>>>>>> 83a0edc6430fe3d5faa091f8cb0d888b153edc82
+
                       fill
                       unoptimized
                       priority
