@@ -50,21 +50,21 @@ export default function CardZone({ posts }) {
                   isOpen ? "rounded-b-none" : "rounded-xl"
                 }`}
               >
-      <div className="w-full bg-gray-100 dark:bg-zinc-800">
-  <div className="relative w-full h-64 sm:h-72 md:h-80">
-  <Image
-  src={post?.image}
-  alt="Post"
-  fill
-  unoptimized
-  priority
-  placeholder="blur" 
-  blurDataURL={blur.blurDataURL}
-  sizes="(max-width: 768px) 100vw, 50vw"
-  className="object-cover"
-/>
-  </div>
-</div>
+                <div className="w-full bg-gray-100 dark:bg-zinc-800">
+                  <div className="relative w-full h-64 sm:h-72 md:h-80">
+                    <Image
+                      src={post?.image}
+                      alt="Post"
+                      fill
+                      unoptimized
+                      priority
+                      placeholder="blur"
+                      blurDataURL={blur.blurDataURL}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
 
                 <div className="p-4 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-3">
@@ -73,27 +73,28 @@ export default function CardZone({ posts }) {
                       className="w-9 h-9 rounded-full object-cover"
                       alt="avatar"
                     />
-                    <div><div className="flex justify-between items-center w-full">
-  <p className="text-sm font-semibold text-black dark:text-white">
-    {post.name}
-  </p>
+                    <div className="w-full">
+                      <div className="flex items-center justify-between w-full">
+                        <p className="text-sm font-semibold text-black dark:text-white">
+                          {post.name}
+                        </p>
 
-  <span className="text-xs text-gray-500 dark:text-gray-400">
-    {post.nickname}
-  </span>
-</div>
+                        <span className="text-xs text-gray-500 dark:text-gray-400 ml-auto">
+                          {post.nickname}
+                        </span>
+                      </div>
+
                       <a
                         href={`https://www.google.com/maps?q=${encodeURIComponent(
                           post.konum
                         )}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-sm text-gray-400 hover:text-yellow-400 transition"
+                        className="mt-1 flex items-center gap-1 text-sm text-gray-400 hover:text-yellow-400 transition"
                       >
                         <span>📍</span>
                         <span>{post.konum || "Konumu gör"}</span>
                       </a>
-                  
                     </div>
                   </div>
 
