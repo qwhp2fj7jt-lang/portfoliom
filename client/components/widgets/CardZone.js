@@ -3,6 +3,7 @@ import {
   HeartIcon,
   ArrowRightIcon,
   ChatBubbleBottomCenterIcon,
+  XMarkIcon
 } from "@heroicons/react/24/solid";
 import { AboutHeader } from "@/molecules";
 import { Button } from "@/atoms";
