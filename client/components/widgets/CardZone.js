@@ -64,7 +64,7 @@ export default function CardZone({ posts }) {
                       blurDataURL={blur.blurDataURL}
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
-                      onClick={() => setSelectedImage(post.image)}
+                      onClick={() => setSelectedImage(post?.image)}
                     />
                   </div>
                 </div>
