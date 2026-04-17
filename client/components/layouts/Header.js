@@ -14,15 +14,31 @@ import navigation from "@/shared/json/navigation";
 import { usePathname } from "next/navigation";
 export default function Header() {
   const [theme, setTheme] = useState("light");
-
   const [mobileOpen, setMobileOpen] = useState(false);
-const pathname=usePathname();
+  
+  const pathname = usePathname();
+  
   useEffect(() => {
-    if (theme === "dark") document.documentElement.classList.add("dark");
-    else document.documentElement.classList.remove("dark");
+    const savedTheme = localStorage.getItem("theme");
+  
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
+  
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  
+    localStorage.setItem("theme", theme);
   }, [theme]);
-
-  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
+  
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
   return (
     <>
       <nav className="dark:bg-black/80 bg-white/80 backdrop-blur-sm sticky top-0 z-20">
