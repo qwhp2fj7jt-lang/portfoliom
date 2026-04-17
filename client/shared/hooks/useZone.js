@@ -6,7 +6,7 @@ export default function useZone({posts}){
     const [activeCard, setActiveCard] = useState(null);
     const [expandedPost, setExpandedPost] = useState(null);
     const [commentInputs, setCommentInputs] = useState({});
-  
+    const [selectedImage, setSelectedImage] = useState(null);
     const [localPosts, setLocalPosts] = useState(posts || []);
     const [user, setUser] = useState({ nickname: "" });
     const [showModal, setShowModal] = useState(false);
@@ -108,6 +108,8 @@ export default function useZone({posts}){
         tempNickname, setTempNickname,
         user,
         handleComment,
-        saveNickname
+        saveNickname,
+        selectedImage, 
+        setSelectedImage
     }
 }

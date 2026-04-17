@@ -26,7 +26,9 @@ export default function CardZone({ posts }) {
     user,
     handleComment,
     saveNickname,
+    selectedImage, setSelectedImage
   } = useZone({ posts });
+
   return (
     <>
       <AboutHeader
@@ -54,11 +56,7 @@ export default function CardZone({ posts }) {
                   <div className="relative w-full h-64 sm:h-72 md:h-80">
                     <Image
                       src={post?.image}
-
-
-
                       alt={post.konum?.split("/")[0].trim()}
-
                       fill
                       unoptimized
                       priority
@@ -66,6 +64,7 @@ export default function CardZone({ posts }) {
                       blurDataURL={blur.blurDataURL}
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
+                      onClick={() => setSelectedImage(post.image)}
                     />
                   </div>
                 </div>
@@ -234,6 +233,26 @@ export default function CardZone({ posts }) {
           </div>
         )}
       </div>
+      {selectedImage && (
+        <div className="fixed inset-0 z-[999] bg-black/90 flex items-center justify-center p-4">
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-5 right-5 text-white hover:text-yellow-400 transition"
+          >
+            <XMarkIcon className="w-8 h-8" />
+          </button>
+
+          <div className="relative w-full max-w-5xl h-[80vh]">
+            <Image
+              src={selectedImage}
+              alt="Büyük görsel"
+              fill
+              unoptimized
+              className="object-contain rounded-xl"
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }
