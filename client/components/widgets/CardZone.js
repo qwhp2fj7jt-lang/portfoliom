@@ -73,14 +73,15 @@ export default function CardZone({ posts }) {
                       className="w-9 h-9 rounded-full object-cover"
                       alt="avatar"
                     />
-                    <div><div className="flex justify-between">
+                    <div><div className="flex justify-between items-center w-full">
+  <p className="text-sm font-semibold text-black dark:text-white">
+    {post.name}
+  </p>
 
-                      <p className="text-sm font-semibold text-black dark:text-white">
-                        {post.name}
-                      </p>
-                      <span className="text-xs text-gray-500 dark:text-gray-400">
-                        {post.nickname}
-                      </span></div>
+  <span className="text-xs text-gray-500 dark:text-gray-400">
+    {post.nickname}
+  </span>
+</div>
                       <a
                         href={`https://www.google.com/maps?q=${encodeURIComponent(
                           post.konum
