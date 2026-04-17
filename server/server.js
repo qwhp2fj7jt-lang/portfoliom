@@ -33,7 +33,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/posts", postRoutes);
 app.use("/users", userRoutes);
 app.get("/test", (req, res) => {
-    console.log("TEST ROUTE HIT");
+
     res.send("OK");
   });
 app.listen(PORT, () => {

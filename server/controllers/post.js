@@ -65,7 +65,6 @@ exports.getPosts = async (req, res) => {
   try {
     const posts = await Post.find().sort({ createdAt: -1 });
     res.json(posts);
-    console.log(req.json)
   } catch (error) {
     res.status(500).json({ message: "Server error", error: error.message });
   }

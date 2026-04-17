@@ -23,7 +23,6 @@ const pathname=usePathname();
   }, [theme]);
 
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
-console.log(navigation)
   return (
     <>
       <nav className="dark:bg-black/80 bg-white/80 backdrop-blur-sm sticky top-0 z-20">
