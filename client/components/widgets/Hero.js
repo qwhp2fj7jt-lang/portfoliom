@@ -16,7 +16,7 @@ export default function Hero() {
 
         <div className="relative">
           <img
-            src="/images/E8702FBE-57E9-4442-A196-457594EFDC5F.jpeg"
+            src="/images/profile.jpeg"
             alt="Avatar"
             className="w-32 h-32 shadow-md rounded-full"
           />
