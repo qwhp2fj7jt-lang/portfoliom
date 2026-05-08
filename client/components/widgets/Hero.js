@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import {AboutCard} from "@/molecules";
 import {CustomButton} from "@/atoms"
-import { CursorArrowRippleIcon } from "@heroicons/react/24/outline";
+import { CodeBracketIcon } from "@heroicons/react/24/outline";
 
 export default function Hero() {
     const router=useRouter()
@@ -18,12 +18,12 @@ export default function Hero() {
           <img
             src="/images/profile.jpeg"
             alt="Avatar"
-            className="w-32 h-32 shadow-md rounded-full"
+            className="w-32 h-32 shadow-md rounded-full  p-1  border border-gray-100 dark:border-gray-800"
           />
           <span className="absolute bottom-0 left-2 w-6 h-6 p-1 bg-white shadow-md dark:bg-zinc-900 
  rounded-full flex items-center justify-center text-white text-xs">
+<CodeBracketIcon className="dark:text-yellow-500 text-primary w-4 h-4" />
 
-          <CursorArrowRippleIcon className=" dark:text-yellow-500 text-primary" />
           </span>
         </div>
 
