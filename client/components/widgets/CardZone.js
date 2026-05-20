@@ -120,12 +120,13 @@ export default function CardZone({ posts }) {
 
                   <div className="border-t border-gray-200 dark:border-gray-800 pt-3 mt-4 flex items-center justify-between">
                     <div className="flex gap-5">
+
                       <button
                         onClick={() => handleLikeClick(post._id)}
-                        className={`flex items-center gap-1 transition ${
+                        className={`flex items-center gap-1  transition ${
                           post.likes?.includes(user.nickname)
                             ? "text-red-500"
-                            : "text-gray-600 dark:text-gray-400 hover:text-red-400"
+                            : "text-gray-600  hover:text-red-400 "
                         }`}
                       >
                         <HeartIcon className="w-5 h-5" />
@@ -136,7 +137,7 @@ export default function CardZone({ posts }) {
 
                       <button
                         onClick={() => setActiveCard(isOpen ? null : post._id)}
-                        className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-gray-400 transition"
+                        className="flex items-center gap-1 text-gray-600  hover:text-gray-400 transition"
                       >
                         <ChatBubbleBottomCenterIcon className="w-5 h-5" />
                         <span className="text-sm">

@@ -27,6 +27,7 @@ export default function Communication() {
           href="mailto:baszynpp@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 hover:dark:bg-zinc-900 transition"
         >
           <button data-slot="button" aria-label="GitHub profilini ziyaret et">
             <svg
@@ -35,7 +36,7 @@ export default function Communication() {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="size-4 mt-2"
+              className="size-4"
             >
               <path
                 strokeLinecap="round"
@@ -75,7 +76,7 @@ export default function Communication() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub profilini ziyaret et"
-          className=" inline-flex items-center justify-center rounded-md  hover:bg-gray-100 transition"
+          className="inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 hover:dark:bg-zinc-900 transition"
         >
           <svg
             width="1em"
