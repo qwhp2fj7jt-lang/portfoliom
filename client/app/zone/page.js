@@ -27,7 +27,15 @@ export async function generateMetadata() {
       index: true,
       follow: true,
     },
-
+    keywords: [
+      "Zeynep Baş",
+      "zone",
+      "frontend",
+      "react",
+      "next.js",
+      "web development",
+      "javascript",
+    ],
     openGraph: {
       title: "Zeynep Zone",
       description:

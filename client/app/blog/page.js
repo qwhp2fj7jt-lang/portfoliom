@@ -9,7 +9,16 @@ export async function generateMetadata() {
       default: "Blog",
       template: "%s | Zeynep Baş",
     },
-    description: "Yakında",
+    keywords: [
+      "Zeynep Baş",
+      "blog",
+      "frontend",
+      "react",
+      "next.js",
+      "web development",
+      "javascript",
+    ],
+    description: "Zeynep Baş'ın frontend, React, Next.js ve web geliştirme üzerine yazdığı blog yazıları.",
     authors: [{ name: "Zeynep Baş", url: baseUrl }],
     creator: "Zeynep Baş",
     alternates: { canonical: `${baseUrl}/blog` },
@@ -17,7 +26,7 @@ export async function generateMetadata() {
 
     openGraph: {
       title: "Blog – Zeynep Baş",
-      description: "Yakında",
+      description: "Zeynep Baş'ın frontend, React, Next.js ve web geliştirme üzerine yazdığı blog yazıları.",
       url: `${baseUrl}/blog`,
       siteName: "Zeynep Baş",
       type: "website",
