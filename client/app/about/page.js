@@ -1,7 +1,7 @@
 
 import Abouts from "@/features/about";
 export async function generateMetadata() {
-  const baseUrl = "https://zeynepbas.dev";
+  const baseUrl = "https://portfoliom-4p84.onrender.com";
 
   return {
     metadataBase: new URL(baseUrl),

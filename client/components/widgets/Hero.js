@@ -21,7 +21,7 @@ export default function Hero() {
             className="w-32 h-32 shadow-md rounded-full  p-1  border border-gray-100 dark:border-gray-800"
           />
           <span className="absolute bottom-0 left-2 w-6 h-6 p-1 bg-white shadow-md dark:bg-zinc-900 
- rounded-full flex items-center justify-center text-white text-xs">
+ rounded-full flex items-center justify-center text-white dark:text-gray-300 text-xs">
 <CodeBracketIcon className="dark:text-yellow-500 text-primary w-4 h-4" />
 
           </span>

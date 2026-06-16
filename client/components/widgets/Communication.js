@@ -12,7 +12,7 @@ export default function Communication() {
       Benimle iletişime geçmek için{" "}
       <a
         href="mailto:baszynpp@gmail.com"
-        className="dark:text-white underline decoration-gray-150"
+        className="dark:text-gray-300 underline decoration-gray-150"
       >
         baszynpp@gmail.com
       </a>{" "}

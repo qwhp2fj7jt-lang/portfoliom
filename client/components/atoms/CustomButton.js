@@ -3,7 +3,7 @@ export default function CustomButton({ text, onClick ,disabled}) {
     <div className="mt-10 text-left">
       <button
 className={`
-  border dark:text-white border-gray-300 
+  border dark:text-gray-300 border-gray-300 
   px-6 py-2 rounded-lg text-sm 
   transition-transform duration-200
   ${disabled 

@@ -12,7 +12,7 @@ import {
 import { SearchBar } from "@/molecules";
 import navigation from "@/shared/json/navigation";
 import { usePathname } from "next/navigation";
-export default function Header() {
+export default function Header({posts}) {
   const [theme, setTheme] = useState("light");
   const [mobileOpen, setMobileOpen] = useState(false);
   
@@ -41,7 +41,7 @@ export default function Header() {
   };
   return (
     <>
-      <nav className="dark:bg-black/80 bg-white/80 backdrop-blur-sm sticky top-0 z-20">
+      <nav className="dark:bg-black bg-white/80 backdrop-blur-sm sticky top-0 z-20">
         <div className="mx-auto max-w-6xl ">
           <div className="flex h-16 items-center justify-between">
             <button
@@ -64,8 +64,8 @@ export default function Header() {
     
                         isActive(item.href)
           
-                        ? "text-black dark:text-white font-semibold"
-                        : "text-gray-400 hover:text-black dark:hover:text-white"
+                        ? "text-black dark:text-gray-300 font-semibold"
+                        : "text-gray-400 hover:text-black dark:hover:text-white dark:text-gray-300"
                     }`}
                   >
                     {item.name}
@@ -75,7 +75,7 @@ export default function Header() {
             </div>
 
             <div className="flex items-center space-x-4 pr-3">
-              <SearchBar navigation={navigation} />
+              <SearchBar navigation={navigation}  posts={posts[posts.length - 1]} />
 
               <button
                 onClick={toggleTheme}
@@ -91,7 +91,7 @@ export default function Header() {
                 href="https://github.com/zeynepbass"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="hover:text-gray-900 dark:hover:text-white dark:text-gray-300 transition-colors"
               >
                 <svg
                   className="w-5 h-5 "
@@ -130,8 +130,8 @@ export default function Header() {
     
                 isActive(item.href)
   
-                ? "text-black dark:text-white font-semibold "
-                : "text-gray-400 hover:text-black dark:hover:text-white"
+                ? "text-black dark:text-gray-300 font-semibold "
+                : "text-gray-400 hover:text-black dark:hover:text-white dark:text-gray-300"
             }`}
           >
 

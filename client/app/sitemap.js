@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://zeynepbas.dev";
+  const baseUrl = "https://portfoliom-4p84.onrender.com";
 
   return [
     { url: `${baseUrl}`, lastModified: new Date() },

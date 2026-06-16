@@ -59,9 +59,9 @@ export default function ProjectsAndExperience() {
                   { name: "Material-UI", icon: "/images/icons/blog-mui.png" },
                   { name: "Agile ve Scrum", icon: "/images/icons/agile.png" },
                 ].map((item, index) => (
-                  <div key={index} className=" dark:bg-zinc-900  dark:text-white flex items-center gap-2 p-2 bg-zinc-50 rounded-xl">
+                  <div key={index} className=" dark:bg-zinc-900  dark:text-gray-300 flex items-center gap-2 p-2 bg-zinc-50 rounded-xl">
                   <img src={item.icon} alt={item.name} className="w-4 h-4 rounded-lg" />
-                  <span className="text-gray-700 text-[12px] dark:text-white">{item.name}</span>
+                  <span className="text-gray-700 text-[12px] dark:text-gray-300">{item.name}</span>
                 </div>
                 ))}
               </div>
@@ -93,9 +93,9 @@ export default function ProjectsAndExperience() {
                   { name: "CSS3", icon: "/images/icons/css.png" },
                   { name: "Context API", icon: "/images/icons/contextApi.jpeg" },
                 ].map((item, index) => (
-                       <div key={index} className=" dark:bg-zinc-900  dark:text-white flex items-center gap-2 p-2 bg-zinc-50 rounded-xl">
+                       <div key={index} className=" dark:bg-zinc-900  dark:text-gray-300 flex items-center gap-2 p-2 bg-zinc-50 rounded-xl">
                     <img src={item.icon} alt={item.name} className="w-4 h-4 rounded-lg" />
-                    <span className="text-gray-700 text-[12px] dark:text-white">{item.name}</span>
+                    <span className="text-gray-700 text-[12px] dark:text-gray-300">{item.name}</span>
                   </div>
                   ))}
               </div>
@@ -126,9 +126,9 @@ export default function ProjectsAndExperience() {
                   { name: "CSS3", icon: "/images/icons/css.png" },
                   { name: "bootstrap", icon: "/images/icons/bootstrap.png" },
                 ].map((item, index) => (
-                  <div key={index} className=" dark:bg-zinc-900  dark:text-white flex items-center gap-2 p-2 bg-zinc-50 rounded-xl">
+                  <div key={index} className=" dark:bg-zinc-900  dark:text-gray-300 flex items-center gap-2 p-2 bg-zinc-50 rounded-xl">
                   <img src={item.icon} alt={item.name} className="w-4 h-4 rounded-lg" />
-                  <span className="text-gray-700 text-[12px] dark:text-white">{item.name}</span>
+                  <span className="text-gray-700 text-[12px] dark:text-gray-300">{item.name}</span>
                 </div>
                   ))}
               </div>

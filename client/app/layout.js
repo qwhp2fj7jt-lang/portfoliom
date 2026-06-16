@@ -1,9 +1,9 @@
 
 import { Header, Footer } from "@/components/layouts";
 import "./globals.css";
-
+import { postArticles } from "@/shared/services/postArticles";
 export async function generateMetadata() {
-  const baseUrl = "https://zeynepbas.dev";
+  const baseUrl = "https://portfoliom-4p84.onrender.com";
 
   return {
     metadataBase: new URL(baseUrl),
@@ -91,14 +91,14 @@ export async function generateMetadata() {
 
 
 export default async function LocaleLayout({ children}) {
-
+  const posts = await postArticles.articlesGet();
   return (
     <html>
-      <body className="antialiased bg-white dark:bg-black text-black dark:text-white">
+      <body className="antialiased bg-white dark:bg-gray-black text-black dark:text-gray-300">
 
 
 
-          <Header  />
+          <Header posts={posts}  />
           <main className="min-h-screen">{children}</main>
           <Footer />
 

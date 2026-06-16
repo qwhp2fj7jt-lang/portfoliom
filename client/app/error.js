@@ -12,7 +12,7 @@ export default function Error({ error, reset }) {
 
       <button
         onClick={() => reset()}
-        className="mt-4 px-4 py-2 bg-black text-white rounded-lg"
+        className="mt-4 px-4 py-2 bg-black text-white dark:text-gray-300 rounded-lg"
       >
         Tekrar dene
       </button>

@@ -28,7 +28,7 @@ export default function Card({ project }) {
 
       <div className="mx-auto max-w-6xl  grid grid-cols-1  mt-5 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {project &&
-          project.map((item, index) => <ProjectCard key={index} item={item} />)}
+          project.map((item, index) => <ProjectCard key={item._id} item={item} />)}
       </div>
     </>
   );
@@ -45,7 +45,7 @@ function ProjectCard({ item }) {
       />
 
       <div className="p-4">
-        <h2 className="text-gray-900 dark:text-white font-bold text-lg mb-2">
+        <h2 className="text-gray-900 dark:text-gray-300 font-bold text-lg mb-2">
           {item.baslik}
         </h2>
 
@@ -76,7 +76,7 @@ function ProjectCard({ item }) {
             <a
               href={item.adres}
               target="_blank"
-              className="text-gray-700 dark:text-white font-medium hover:underline break-all"
+              className="text-gray-700 dark:text-gray-300 font-medium hover:underline break-all"
             >
               {item.adres}
             </a>

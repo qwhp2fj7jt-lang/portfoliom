@@ -2,7 +2,8 @@
 import {useMemo, useState } from "react";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import Link from "next/link";
-export default function SearchBar({ navigation }) {
+import { FileText } from "lucide-react";
+export default function SearchBar({ navigation,posts }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
 
@@ -44,7 +45,7 @@ export default function SearchBar({ navigation }) {
       <Dialog open={open} onClose={setOpen} className="relative z-10">
         <DialogBackdrop
           transition
-          className="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
+          className="fixed inset-0 bg-gray-500/40 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
         />
 
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
@@ -60,7 +61,7 @@ export default function SearchBar({ navigation }) {
               <div className=" dark:bg-zinc-900 border-b border-gray-50 px-4 py-4 flex items-center gap-2 bg-gray-50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="dark:text-white w-5 h-5 text-gray-400"
+                  className="dark:text-gray-300 w-5 h-5 text-gray-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -78,7 +79,7 @@ export default function SearchBar({ navigation }) {
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Sayfa veya blog yazısı ara..."
-                  className="dark:placeholder:text-white flex-1 bg-transparent border-none outline-none text-gray-700 dark:text-white placeholder:text-gray-400"
+                  className="dark:placeholder:text-white dark:text-gray-300 flex-1 bg-transparent border-none outline-none text-gray-700  placeholder:text-gray-400"
                 />
 
                 <button
@@ -86,14 +87,14 @@ export default function SearchBar({ navigation }) {
                     setOpen(false);
                     setQuery("");
                   }}
-                  className="dark:text-white text-gray-400 hover:text-gray-600 cursor-pointer"
+                  className="dark:text-gray-300 text-gray-400 hover:text-gray-600 cursor-pointer"
                 >
                   ✕
                 </button>
               </div>
 
               <div className="px-4 py-4 max-h-[300px] overflow-y-auto custom-scroll ">
-                <h3 className="text-sm font-medium dark:text-white  mb-2">
+                <h3 className="text-sm font-medium dark:text-gray-300  mb-2">
                   Sayfalar
                 </h3>
                 <ul role="list" className="space-y-1">
@@ -115,7 +116,7 @@ export default function SearchBar({ navigation }) {
                               setOpen(false);
                               setQuery("");
                             }}
-                            className="dark:text-white text-sm text-gray-500 font-semibold"
+                            className="dark:text-gray-300 text-sm text-gray-500 font-semibold"
                           >
                             {item.name}
                           </Link>
@@ -131,8 +132,22 @@ export default function SearchBar({ navigation }) {
 
 
                 <h3 className="text-sm font-medium  mb-2">Son Gönderi</h3>
+                <div
 
-                <p className="text-center text-gray-400">Yakında</p>
+          className="flex flex-col md:flex-row items-start gap-6 group  rounded-lg transition"
+        >
+     
+          <div>
+            <Link
+              href={`/blog/${posts.slug}`}
+                            className="dark:text-gray-300 flex gap-2 text-sm text-gray-500 font-semibold cursor-context-menu"
+            >
+<FileText size={15} /> {posts.title}
+            </Link>
+       
+
+          </div>
+        </div>
               </div>
             </DialogPanel>
           </div>

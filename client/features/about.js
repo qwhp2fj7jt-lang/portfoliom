@@ -51,14 +51,14 @@ export default function About() {
       <Communication />
       <div className="flex flex-col gap-4 md:flex-row">
   
-  <div className="lg:p-6 p-4 rounded-2xl shadow-md dark:bg-zinc-900 bg-white flex items-start gap-4 dark:text-white text-gray-700 text-sm md:text-base">
+  <div className="lg:p-6 p-4 rounded-2xl shadow-md dark:bg-zinc-900 bg-white flex items-start gap-4 dark:text-gray-300 text-gray-700 text-sm md:text-base">
     <MyGoal
       baslik="Hedeflerim"
       paragraf="Senior frontend geliştirici olarak ilerlemek, daha büyük ve ölçeklenebilir projelerde sorumluluk alarak kendimi sürekli geliştirmek istiyorum."
     />
   </div>
 
-  <div className="lg:p-6 p-4 rounded-2xl shadow-md dark:bg-zinc-900 bg-white flex items-start gap-4 dark:text-white text-gray-700 text-sm md:text-base">
+  <div className="lg:p-6 p-4 rounded-2xl shadow-md dark:bg-zinc-900 bg-white flex items-start gap-4 dark:text-gray-300 text-gray-700 text-sm md:text-base">
     <MyGoal
       baslik="Hizmetlerim"
       paragraf="React ve Next.js ile modern, hızlı ve ölçeklenebilir web uygulamaları geliştiriyorum. Ürününüz için teknik katkı sağlamak veya yeni bir proje başlatmak isterseniz iletişim bölümünden bana ulaşabilirsiniz"

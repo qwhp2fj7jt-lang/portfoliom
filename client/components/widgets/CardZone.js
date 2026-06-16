@@ -79,11 +79,11 @@ export default function CardZone({ posts }) {
                     />
                     <div className="w-full">
                       <div className="flex items-center justify-between w-full">
-                        <p className="text-sm font-semibold text-black dark:text-white">
+                        <p className="text-sm font-semibold text-black dark:text-gray-300">
                           {post.name}
                         </p>
 
-                        <span className="text-xs text-gray-500 dark:text-gray-400 ml-auto">
+                        <span className="text-xs text-gray-500 dark:text-gray-300 ml-auto">
                           {post.nickname}
                         </span>
                       </div>
@@ -186,7 +186,7 @@ export default function CardZone({ posts }) {
                     />
                     <button
                       onClick={() => handleComment(post._id)}
-                      className="text-black dark:text-white hover:scale-110 transition"
+                      className="text-black dark:text-gray-300 hover:scale-110 transition"
                     >
                       <ArrowRightIcon className="w-5 h-5" />
                     </button>
@@ -199,7 +199,7 @@ export default function CardZone({ posts }) {
         {showModal && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
             <div className="bg-white dark:bg-zinc-900 p-5 rounded-xl w-80">
-              <h2 className="text-lg font-semibold mb-3 text-black dark:text-white">
+              <h2 className="text-lg font-semibold mb-3 text-black dark:text-gray-300">
                 Nickname Gir
               </h2>
 
@@ -208,7 +208,7 @@ export default function CardZone({ posts }) {
                 placeholder="Nickname..."
                 value={tempNickname}
                 onChange={(e) => setTempNickname(e.target.value)}
-                className="w-full border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 mb-4 bg-white dark:bg-zinc-800 text-black dark:text-white"
+                className="w-full border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 mb-4 bg-white dark:bg-zinc-800 text-black dark:text-gray-300"
               />
 
               <div className="flex justify-end gap-2">
@@ -226,7 +226,7 @@ export default function CardZone({ posts }) {
                     saveNickname(tempNickname);
                     setShowModal(false);
                   }}
-                  className="px-4 py-1 bg-black  text-white dark:bg-white dark:text-black rounded-lg text-sm"
+                  className="px-4 py-1 bg-black  text-white dark:text-gray-300 dark:bg-white  rounded-lg text-sm"
                 >
                   Kaydet
                 </button>
@@ -239,7 +239,7 @@ export default function CardZone({ posts }) {
         <div className="fixed inset-0 z-[999] bg-black/90 flex items-center justify-center p-4">
           <button
             onClick={() => setSelectedImage(null)}
-            className="absolute top-5 right-5 text-white hover:text-yellow-400 transition"
+            className="absolute top-5 right-5 text-white dark:text-gray-300 hover:text-yellow-400 transition"
           >
             <XMarkIcon className="w-8 h-8" />
           </button>
