@@ -105,7 +105,6 @@ export default async function LocaleLayout({ children}) {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592493088244067"
           crossOrigin="anonymous"
         />
-
       </body>
     </html>
   );
