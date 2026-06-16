@@ -96,9 +96,6 @@ export default async function LocaleLayout({ children}) {
   return (
     <html>
       <body className="antialiased bg-white dark:bg-gray-black text-black dark:text-gray-300">
-
-
-
           <Header posts={posts}  />
           <main className="min-h-screen">{children}</main>
           <Footer />
