@@ -1,5 +1,5 @@
 export default async function sitemap() {
-  const baseUrl = "https://portfoliom-4p84.onrender.com";
+  const baseUrl = "https://www.zeynepbas.dev";
 
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/articles`,
