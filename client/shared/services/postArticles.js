@@ -1,8 +1,8 @@
-import { API_BASE_URL } from "@/shared/contants/api";
+import { NEXT_PUBLIC_API_BASE_URL } from "@/shared/contants/api";
 
 
 const request = async (url, options = {}) => {
-  const res = await fetch(`${API_BASE_URL}${url}`, {
+  const res = await fetch(`${NEXT_PUBLIC_API_BASE_URL}${url}`, {
     headers: {
       "Content-Type": "application/json",
       ...options.headers,

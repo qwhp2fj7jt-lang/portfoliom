@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+const NEXT_PUBLIC_API_BASE_URL = process.env.NEXT_PUBLIC_NEXT_PUBLIC_API_BASE_URL;
 
 export default function useArticles({ articles }) {
   const [blog, setBlog] = useState([]);
@@ -23,7 +23,7 @@ export default function useArticles({ articles }) {
 
 
         const response = await axios.get(
-          `${API_BASE_URL}/category`
+          `${NEXT_PUBLIC_API_BASE_URL}/category`
         );
 
         setCategories(response.data);
