@@ -1,6 +1,7 @@
 
 import { Header, Footer } from "@/components/layouts";
 import "./globals.css";
+import Script from "next/script";
 import { postArticles } from "@/shared/services/postArticles";
 export async function generateMetadata() {
   const baseUrl = "https://portfoliom-4p84.onrender.com";
@@ -101,7 +102,12 @@ export default async function LocaleLayout({ children}) {
           <Header posts={posts}  />
           <main className="min-h-screen">{children}</main>
           <Footer />
-
+          <Script
+          async
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592493088244067"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );
