@@ -6,8 +6,8 @@ export default async function sitemap() {
     { cache: "force-cache" }
   );
 
-  const articles = await res.json();
-
+  const data = await res.json();
+const articles=data?.article
   const blogUrls =
     articles?.map((item) => ({
       url: `${baseUrl}/blog/${item.article.slug}`,
