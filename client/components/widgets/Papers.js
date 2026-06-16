@@ -6,7 +6,6 @@ import { BlogSubSelect } from "@/atoms";
 import { List } from "@/molecules";
 export default function Papers({ articles }) {
   const { blog, categories } = useArticles({ articles });
-
   const filtrele = [
     {
       _id: 1,
