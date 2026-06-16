@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft, Calendar } from "lucide-react";
+import AdSenseAd from "@/components/AdSenseAd";
 export default function CardList({ article }) {
   const blog = article?.article;
   const imageUrl = blog?.image?.url;
@@ -97,6 +98,7 @@ export default function CardList({ article }) {
           </section>
         ))}
       </div>
+      <AdSenseAd />
     </div>
   );
 }
