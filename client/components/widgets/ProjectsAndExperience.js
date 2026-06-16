@@ -11,7 +11,6 @@ export default function ProjectsAndExperience() {
   return (
 
         <>
-  
 
 
           <Card project={project}/>

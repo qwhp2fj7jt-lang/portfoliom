@@ -1,5 +1,4 @@
 import { Hero, ProjectsAndExperience, Blog } from "@/widgets";
-
 import { Skills } from "@/components/molecules";
 export default function HomeRoute({ articles }) {
   return (
