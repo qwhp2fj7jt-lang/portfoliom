@@ -3,15 +3,17 @@ export default async function sitemap() {
 
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/articles`,
-    { cache: "no-store" }
+    { cache: "force-cache" }
   );
 
   const articles = await res.json();
 
   const blogUrls =
-    articles?.map((article) => ({
-      url: `${baseUrl}/blog/${article.article.slug}`,
-      lastModified: new Date(article.article.updatedAt || article.article.createdAt),
+    articles?.map((item) => ({
+      url: `${baseUrl}/blog/${item.article.slug}`,
+      lastModified: new Date(
+        item.article.updatedAt || item.article.createdAt
+      ),
     })) || [];
 
   return [
@@ -35,7 +37,6 @@ export default async function sitemap() {
       url: `${baseUrl}/zone`,
       lastModified: new Date(),
     },
-
 
     ...blogUrls,
   ];
