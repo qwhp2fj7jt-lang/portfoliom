@@ -1,32 +1,36 @@
 import Link from "next/link";
-export default function List({ blog }) {
+
+export default function List({ blog = [] }) {
   return (
-    < >
+    <div className="flex flex-col gap-4">
       {blog.map((item, index) => (
         <div
           key={item._id}
-          className="flex flex-row items-center group rounded-lg transition"
+          className="flex items-start gap-4 rounded-lg transition group"
         >
-          <span className="text-gray-400 text-xl w-10 h-10 flex items-center justify-center dark:text-gray-100">
-            {(index + 1).toString().padStart(2, "0")}
+          <span className="w-10 text-xl text-gray-400 dark:text-gray-100 flex justify-center">
+            {String(index + 1).padStart(2, "0")}
           </span>
-          <div>
-            <Link
-              href={`/blog/${item.slug}`}
-              className="text-lg font-medium group-hover:underline cursor-pointer"
+
+          <div className="flex-1">
+          <Link href={`/blog/${item.slug}`}
+              className="text-lg font-medium group-hover:underline"
             >
               {item.title}
             </Link>
-            <p className="text-gray-500 text-sm mb-1 dark:text-gray-100">
-              {" "}
-              {new Date(item.createdAt).toLocaleDateString("tr-TR")}
+
+            <p className="text-xs text-gray-500 dark:text-gray-300 mt-1">
+              {item.createdAt
+                ? new Date(item.createdAt).toLocaleDateString("tr-TR")
+                : ""}
             </p>
-            <p className="text-gray-700 text-sm dark:text-gray-100">
+
+            <p className="text-sm text-gray-700 dark:text-gray-100 mt-1">
               {item.subtitle}
             </p>
           </div>
         </div>
-      ))}{" "}
-    </>
+      ))}
+    </div>
   );
 }
