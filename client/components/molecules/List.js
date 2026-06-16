@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function List({ blog }) {
   return (
-    <div >
+    < >
       {blog.map((item, index) => (
         <div
           key={item._id}
@@ -27,6 +27,6 @@ export default function List({ blog }) {
           </div>
         </div>
       ))}{" "}
-    </div>
+    </>
   );
 }
