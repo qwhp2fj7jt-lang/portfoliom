@@ -5,7 +5,7 @@ export default function List({ blog }) {
       {blog.map((item, index) => (
         <div
           key={item._id}
-          className="flex flex-row items-start gap-6 group  p-4 rounded-lg transition"
+          className="flex flex-row items-center group rounded-lg transition"
         >
           <span className="text-gray-400 text-xl w-10 h-10 flex items-center justify-center dark:text-gray-100">
             {(index + 1).toString().padStart(2, "0")}
