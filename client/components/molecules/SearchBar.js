@@ -1,15 +1,15 @@
 "use client";
-import {useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import Link from "next/link";
 import { FileText } from "lucide-react";
-export default function SearchBar({ navigation,posts }) {
+export default function SearchBar({ navigation, posts }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
 
   const filteredNavigation = useMemo(() => {
     if (!query.trim()) return navigation;
-  
+
     return navigation.filter((item) =>
       item.name.toLowerCase().includes(query.toLowerCase())
     );
@@ -130,24 +130,17 @@ export default function SearchBar({ navigation,posts }) {
                   )}
                 </ul>
 
-
                 <h3 className="text-sm font-medium  mb-2">Son Gönderi</h3>
-                <div
-
-          className="flex flex-col md:flex-row items-start gap-6 group  rounded-lg transition"
-        >
-     
-          <div>
-            <Link
-              href={`/blog/${posts.slug}`}
-                            className="dark:text-gray-300 flex gap-2 text-sm text-gray-500 font-semibold cursor-context-menu"
-            >
-<FileText size={15} /> {posts.title}
-            </Link>
-       
-
-          </div>
-        </div>
+                <div className="flex flex-col md:flex-row items-start gap-6 group  rounded-lg transition">
+                  <div>
+                    <Link
+                      href={`/blog/${posts.slug}`}
+                      className="dark:text-gray-300 flex gap-2 text-sm text-gray-500 font-semibold cursor-context-menu"
+                    >
+                      <FileText size={15} /> {posts.title}
+                    </Link>
+                  </div>
+                </div>
               </div>
             </DialogPanel>
           </div>

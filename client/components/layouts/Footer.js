@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 lg:px-12 py-12 flex flex-col md:flex-row md:justify-between md:items-center gap-8">
         
 
-        <div className="flex flex-col gap-2 text-sm text-gray-500 dark:text-gray-300 items-center">
+      <div className="flex flex-col gap-2 text-sm text-gray-500 dark:text-gray-300 items-start sm:items-center">
           <p><a href="https://github.com/zeynepbass/milk" target="_blank" className="text-yellow-500 underline">@milk</a> Core Web Vitals ve feature-based alt yapısı kullanıldı.</p>
           <p className="font-medium text-gray-600 dark:text-gray-300 underline">
             Next.js, React ve Tailwind CSS ile geliştirildi.
@@ -29,7 +29,7 @@ export default function Footer() {
         </div>
 
 
-        <div className="flex items-center gap-5 text-sm text-gray-500 dark:text-gray-300">
+        <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-300">
           <a
             href="https://github.com/zeynepbass"
             target="_blank"

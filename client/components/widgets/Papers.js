@@ -11,16 +11,17 @@ export default function Papers({ articles }) {
     {
       _id: 1,
       name: "asc",
-      label: "Eskiden Yeniye",
+      label: "Yeniden Eskiye",
     },
     {
       _id: 2,
       name: "desc",
-      label: "Yeniden Eskiye",
+      label: "Eskiden Yeniye",
+
     },
   ];
 
-  const [sort, setSort] = useState("desc");
+  const [sort, setSort] = useState("asc");
   const [selectedCategory, setSelectedCategory] = useState("");
   const filteredData = useMemo(() => {
     if (!selectedCategory) return blog;
@@ -46,9 +47,9 @@ export default function Papers({ articles }) {
 
   return (
     <>
-      <h2 className="text-3xl font-bold mb-10">Blog</h2>
+      <h2 className="text-3xl font-bold mb-6">Blog</h2>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between gap-2">
         <BlogSubSelect
           title="Kategori"
           filtrele={categories}
