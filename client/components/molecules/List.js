@@ -16,7 +16,7 @@ export default function List({ blog = [] }) {
           <Link href={`/blog/${item.slug}`}
               className="text-lg font-medium group-hover:underline"
             >
-              {item.title}
+              {item.title && item.title}
             </Link>
 
             <p className="text-xs text-gray-500 dark:text-gray-300 mt-1">

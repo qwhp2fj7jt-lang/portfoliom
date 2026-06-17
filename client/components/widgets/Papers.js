@@ -10,7 +10,7 @@ export default function Papers({ articles }) {
 
   const sortOptions = [
     {
-      title: "Sıralama",
+
       slug: "sort",
       subCategories: [
         {
