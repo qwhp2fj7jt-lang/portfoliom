@@ -135,7 +135,7 @@ export default function SearchBar({ navigation, posts }) {
                   <div>
                     <Link
                       href={`/blog/${posts.slug}`}
-                      className="dark:text-gray-300 flex gap-2 text-sm text-gray-500 font-semibold cursor-context-menu"
+                      className="dark:text-gray-300 flex gap-2 text-sm text-gray-500 font-semibold hover:underline cursor-context-menu"
                     >
                       <FileText size={15} /> {posts.title}
                     </Link>
