@@ -4,44 +4,51 @@ import { useState, useMemo } from "react";
 import useArticles from "@/shared/hooks/useArticles";
 import { BlogSubSelect } from "@/atoms";
 import { List } from "@/molecules";
+
 export default function Papers({ articles }) {
   const { blog, categories } = useArticles({ articles });
-  const filtrele = [
-    {
-      _id: 1,
-      name: "asc",
-      label: "Yeniden Eskiye",
-    },
-    {
-      _id: 2,
-      name: "desc",
-      label: "Eskiden Yeniye",
 
+  const sortOptions = [
+    {
+      title: "Sıralama",
+      slug: "sort",
+      subCategories: [
+        {
+          _id: 1,
+          name: "Eskiden Yeniye",
+          slug: "eskiden yeniye",
+          label: "Eskiden Yeniye",
+        },
+        {
+          _id: 2,
+          name: "Yeniden Eskiye",
+          slug: "yeniden eskiye",
+          label: "Yeniden Eskiye",
+    
+        },
+      ],
     },
   ];
 
-  const [sort, setSort] = useState("asc");
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const filteredData = useMemo(() => {
-    if (!selectedCategory) return blog;
+  const [sort, setSort] = useState("eskiden yeniye");
+  const [selectedCategory, setSelectedCategory] = useState("Tümü");
 
-    return blog.filter((item) => {
-      return item.category === selectedCategory;
-    });
+  const filteredData = useMemo(() => {
+    if (!selectedCategory || selectedCategory === "Tümü") {
+      return blog;
+    }
+
+    return blog.filter((item) => item.category === selectedCategory);
   }, [blog, selectedCategory]);
 
   const sortedData = useMemo(() => {
     const data = [...filteredData];
 
-    if (sort === "asc") {
+    if (sort === "eskiden yeniye") {
       return data.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
     }
 
-    if (sort === "desc") {
-      return data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-    }
-
-    return data;
+    return data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
   }, [filteredData, sort]);
 
   return (
@@ -56,14 +63,17 @@ export default function Papers({ articles }) {
           onChange={setSelectedCategory}
         />
 
+
         <BlogSubSelect
           title="Sırala"
-          filtrele={filtrele}
+          filtrele={sortOptions}
           value={sort}
           onChange={setSort}
         />
       </div>
-<br/>
+
+      <br />
+
       <List blog={sortedData} />
     </>
   );

@@ -1,15 +1,13 @@
 const Category = require("../models/Category");
 
-// CREATE
 exports.createCategory = async (req, res) => {
   try {
-    const { name,label, slug, icon } = req.body;
+    const { title, slug,subCategories } = req.body;
 
     const category = await Category.create({
-      name,
-      label,
+      title,
       slug,
-      icon,
+      subCategories,
     });
 
     res.status(201).json(category);

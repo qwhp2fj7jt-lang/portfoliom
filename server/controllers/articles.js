@@ -1,23 +1,23 @@
 const Article = require("../models/Article");
 
-// 📌 Tüm makaleleri listele (filtre: en yeni / en eski)
 exports.getAllArticles = async (req, res) => {
   try {
-    const sort = req.query.sort || "desc";
-    const category = req.query.category;
+    const { sort = "desc", category, subCategory } = req.query;
 
-    // SORT
-    const sortOption =
-      sort === "asc"
-        ? { createdAt: 1 }
-        : { createdAt: -1 };
-
-    // FILTER
     const filter = {};
 
     if (category && category !== "all") {
       filter.category = category;
     }
+
+    if (subCategory && subCategory !== "all") {
+      filter.subCategory = subCategory;
+    }
+
+    const sortOption =
+      sort === "asc"
+        ? { createdAt: 1 }
+        : { createdAt: -1 };
 
     const articles = await Article.find(filter).sort(sortOption);
 
@@ -26,8 +26,6 @@ exports.getAllArticles = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
-
-// 📌 Tek makale detay
 exports.getArticleBySlug = async (req, res) => {
   try {
     const article = await Article.findOne({
