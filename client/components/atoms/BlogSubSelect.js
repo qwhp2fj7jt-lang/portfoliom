@@ -28,13 +28,13 @@ export default function BlogSubSelect({
 
         <SelectContent className="w-full sm:w-56 bg-white dark:bg-gray-900 dark:ring-gray-800 ring-gray-200">
           <SelectGroup>
-            {filtrele?.map((category) => (
+            {filtrele && filtrele.map((category) => (
               <div key={category.slug}>
                 <div className="px-2 py-1 text-xs font-bold text-gray-500">
                   {category.title}
                 </div>
 
-                {category.subCategories?.map((sub) => (
+                {category && category.subCategories.map((sub) => (
                   <SelectItem key={sub.slug} value={sub.slug}>
                     {sub.icon} {sub.label}
                   </SelectItem>
