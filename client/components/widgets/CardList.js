@@ -1,6 +1,8 @@
+"use client";
 import Link from "next/link";
 import { ArrowLeft, Calendar } from "lucide-react";
 import AdSenseAd from "@/components/AdSenseAd";
+import { useState } from "react";
 import {
   Select,
   SelectContent,
@@ -9,11 +11,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
+import PdfMakers from "@/widgets/PdfMakers"
 export default function CardList({ article }) {
   const blog = article?.article;
   const imageUrl = blog?.image?.url;
-
+  const [openPdf, setOpenPdf] = useState(false);
+  const [pdfUrl, setPdfUrl] = useState("");
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       <Link
@@ -34,15 +37,20 @@ export default function CardList({ article }) {
             <SelectValue placeholder="İçindekiler" />
           </SelectTrigger>
           {blog?.pdf?.url && (
-            <a
-              href={`${process.env.NEXT_PUBLIC_API_URL}${blog.pdf.url}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center cursor-pointer px-4 py-1 rounded-xl border border-gray-200 hover:bg-gray-50 transition"
+            <button
+              onClick={() => {
+                setPdfUrl(
+                  `${process.env.NEXT_PUBLIC_API_URL}${blog.pdf.url}`
+                );
+                setOpenPdf(true);
+              }}
+              className="inline-flex items-center text-xs sm:text-sm px-3 py-1 border rounded-xl hover:bg-gray-50"
             >
               📄 PDF Görüntüle
-            </a>
+            </button>
           )}
+
+  <PdfMakers openPdf={openPdf} setOpenPdf={setOpenPdf} pdfUrl={pdfUrl}/>
           <SelectContent className="w-56 bg-white dark:bg-gray-900">
             <SelectGroup>
               {article?.tableOfContents?.map((item) => (
