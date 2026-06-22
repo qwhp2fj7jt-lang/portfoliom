@@ -13,7 +13,7 @@ export default function BlogSubSelect({
   value,
   onChange,
 }) {
-  console.log(value)
+
   return (
     
     <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 w-full sm:w-auto">
