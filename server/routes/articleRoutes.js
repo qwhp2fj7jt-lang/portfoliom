@@ -1,19 +1,22 @@
 const express = require("express");
 const router = express.Router();
-
+const upload = require("../middlewares/upload.js");
 const {
   getAllArticles,
   getArticleBySlug,
   createArticle,
 } = require("../controllers/articles");
 
-// 📌 Liste + filtre
+
 router.get("/", getAllArticles);
 
-// 📌 Detay sayfa
+
 router.get("/:slug", getArticleBySlug);
 
-// 📌 Makale ekleme
-router.post("/", createArticle);
+router.post(
+  "/",
+  upload.single("pdf"),
+  createArticle
+);
 
 module.exports = router;

@@ -10,7 +10,10 @@ const ContentItemSchema = new mongoose.Schema({
   text: String,
   subItems: [String],
 });
-
+const PdfSchema = new mongoose.Schema({
+  url: String,
+  name: String,
+});
 const SectionSchema = new mongoose.Schema({
   heading: String,
   subtitle: String,
@@ -29,6 +32,7 @@ const ArticleSchema = new mongoose.Schema(
       index: true,
     },
 
+    pdf: PdfSchema, 
     image: ImageSchema,
     sections: [SectionSchema],
 

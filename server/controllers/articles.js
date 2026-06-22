@@ -57,9 +57,23 @@ exports.getArticleBySlug = async (req, res) => {
 // 📌 Makale oluştur
 exports.createArticle = async (req, res) => {
   try {
-    const newArticle = await Article.create(req.body);
+    const articleData = {
+      ...req.body,
+    };
+
+    if (req.file) {
+      articleData.pdf = {
+        url: `/uploads/pdfs/${req.file.filename}`,
+        name: req.file.originalname,
+      };
+    }
+
+    const newArticle = await Article.create(articleData);
+
     res.status(201).json(newArticle);
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    res.status(500).json({
+      message: err.message,
+    });
   }
 };

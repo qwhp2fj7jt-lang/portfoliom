@@ -78,7 +78,7 @@ export default function Header({ posts }) {
 
   <SearchBar
     navigation={navigation}
-    posts={posts[posts.length - 1]}
+    posts={posts[0]}
   />
 
 

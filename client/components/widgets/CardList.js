@@ -16,8 +16,6 @@ export default function CardList({ article }) {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
-      
-
       <Link
         href="/blog"
         className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8"
@@ -26,28 +24,29 @@ export default function CardList({ article }) {
         Bloga Dön
       </Link>
 
+      <h1 className="text-4xl font-bold tracking-tight">{blog.title}</h1>
 
+      <p className="mt-2 text-xl text-muted-foreground">{blog.subtitle}</p>
 
-      <h1 className="text-4xl font-bold tracking-tight">
-        {blog.title}
-      </h1>
-
-      <p className="mt-2 text-xl text-muted-foreground">
-        {blog.subtitle}
-      </p>
-
-      <div className="flex items-center gap-4 mt-3 text-muted-foreground text-gray-500">
-
-
+      <div className="flex items-center gap-2 mt-3 text-muted-foreground text-gray-500">
         <Select>
           <SelectTrigger className="w-56 rounded-xl border shadow-sm">
             <SelectValue placeholder="İçindekiler" />
           </SelectTrigger>
-
+          {blog?.pdf?.url && (
+            <a
+              href={`${process.env.NEXT_PUBLIC_API_URL}${blog.pdf.url}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center cursor-pointer px-4 py-1 rounded-xl border border-gray-200 hover:bg-gray-50 transition"
+            >
+              📄 PDF Görüntüle
+            </a>
+          )}
           <SelectContent className="w-56 bg-white dark:bg-gray-900">
             <SelectGroup>
               {article?.tableOfContents?.map((item) => (
-                <SelectItem key={item._id} value={item.heading} >
+                <SelectItem key={item._id} value={item.heading}>
                   <a href={`#${item.heading}`} className="w-full block">
                     {item.heading}
                   </a>
@@ -57,7 +56,6 @@ export default function CardList({ article }) {
           </SelectContent>
         </Select>
 
-
         <Calendar size={16} />
         <span>
           {blog.createdAt
@@ -66,14 +64,9 @@ export default function CardList({ article }) {
         </span>
       </div>
 
-
       <div className="mt-6 rounded-3xl overflow-hidden">
         {imageUrl && (
-          <img
-            src={imageUrl}
-            alt="image"
-            className="w-full object-cover"
-          />
+          <img src={imageUrl} alt="image" className="w-full object-cover" />
         )}
       </div>
 
@@ -83,37 +76,29 @@ export default function CardList({ article }) {
         </p>
       )}
 
-
       <div className="mt-8">
         <p className="text-xl leading-9 text-muted-foreground">
           {blog.summary}
         </p>
       </div>
 
-
       <div className="mt-10 space-y-16">
         {blog.sections?.map((section) => (
           <section
             key={section._id}
-            id={section.heading || section._id}   
+            id={section.heading || section._id}
             className="scroll-mt-24"
           >
-            <h2 className="text-3xl font-bold">
-              {section.heading}
-            </h2>
+            <h2 className="text-3xl font-bold">{section.heading}</h2>
 
             {section.subtitle && (
-              <p className="text-muted-foreground mt-2">
-                {section.subtitle}
-              </p>
+              <p className="text-muted-foreground mt-2">{section.subtitle}</p>
             )}
 
             <div className="mt-4 space-y-6">
               {section.items.map((item) => (
                 <div key={item._id}>
-                  <p className="text-lg leading-8">
-                    {item.text}
-                  </p>
+                  <p className="text-lg leading-8">{item.text}</p>
 
                   {item.subItems?.length > 0 && (
                     <ul className="mt-3 space-y-2 list-disc pl-6 text-muted-foreground">
@@ -128,7 +113,6 @@ export default function CardList({ article }) {
           </section>
         ))}
       </div>
-
 
       <AdSenseAd />
     </div>
