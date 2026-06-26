@@ -227,10 +227,11 @@ export default function CardZone({ posts }) {
                   onClick={() => {
                     if (!tempNickname) return;
 
-           aria-label="kayıt edebilirsin"
+
                     saveNickname(tempNickname);
                     setShowModal(false);
                   }}
+                    aria-label="kayıt edebilirsin"
                   className="px-4 py-1 bg-black  text-white dark:text-gray-300 dark:bg-white  rounded-lg text-sm"
                 >
                   Kaydet
