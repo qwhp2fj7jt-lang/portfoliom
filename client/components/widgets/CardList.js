@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import Image from "next/image";
+
 import dynamic from "next/dynamic";
   const PdfMakers = dynamic(
   () => import("@/widgets/PdfMakers"),
@@ -85,13 +85,11 @@ export default function CardList({ article }) {
 
       <div className="mt-6 rounded-3xl overflow-hidden">
         {imageUrl && (
-          <Image
+<img
   src={imageUrl}
   alt="Blog görseli"
-  width={1200}
-  height={600}
-  priority
-  className="rounded-3xl object-cover"
+  className="w-full object-cover"
+  loading="eager"
 />
     
         )}
