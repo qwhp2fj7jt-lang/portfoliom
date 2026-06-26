@@ -63,7 +63,7 @@ export default function About() {
       baslik="Hizmetlerim"
       paragraf="React ve Next.js ile modern, hızlı ve ölçeklenebilir web uygulamaları geliştiriyorum. Ürününüz için teknik katkı sağlamak veya yeni bir proje başlatmak isterseniz iletişim bölümünden bana ulaşabilirsiniz"
       baglanti={
-        <a href="https://bionluk.com/zeynepbass" target="_blank">
+        <a href="https://bionluk.com/zeynepbass" target="_blank"   aria-label="Bionluk profilimi yeni sekmede aç">
           <img
             src="/images/icons/bionluk.png"
             width="20"
