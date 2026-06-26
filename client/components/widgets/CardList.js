@@ -11,6 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import Image from "next/image";
 import dynamic from "next/dynamic";
   const PdfMakers = dynamic(
   () => import("@/widgets/PdfMakers"),
@@ -29,6 +30,7 @@ export default function CardList({ article }) {
       <Link
         href="/blog"
         className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8"
+            aria-label="Blog yazılarına dön"
       >
         <ArrowLeft size={16} />
         Bloga Dön
@@ -45,6 +47,7 @@ export default function CardList({ article }) {
           </SelectTrigger>
           {blog?.pdf?.url && (
             <button
+     
               onClick={() => {
                 setPdfUrl(
                   `${process.env.NEXT_PUBLIC_API_URL}${blog.pdf.url}`
@@ -52,6 +55,7 @@ export default function CardList({ article }) {
                 setOpenPdf(true);
               }}
               className="inline-flex items-center text-xs sm:text-sm px-3 py-1 border rounded-xl hover:bg-gray-50"
+                  aria-label="Pdf görüntüle"
             >
               📄 PDF Görüntüle
             </button>
@@ -62,7 +66,7 @@ export default function CardList({ article }) {
             <SelectGroup>
               {article?.tableOfContents?.map((item) => (
                 <SelectItem key={item._id} value={item.heading}>
-                  <a href={`#${item.heading}`} className="w-full block">
+                  <a href={`#${item.heading}`} className="w-full block"                aria-label={`#${item.heading}`}>
                     {item.heading}
                   </a>
                 </SelectItem>
@@ -81,7 +85,15 @@ export default function CardList({ article }) {
 
       <div className="mt-6 rounded-3xl overflow-hidden">
         {imageUrl && (
-          <img src={imageUrl} alt="image" className="w-full object-cover" />
+          <Image
+  src={imageUrl}
+  alt="Blog görseli"
+  width={1200}
+  height={600}
+  priority
+  className="rounded-3xl object-cover"
+/>
+    
         )}
       </div>
 
