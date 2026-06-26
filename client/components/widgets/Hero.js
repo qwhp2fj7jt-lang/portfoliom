@@ -35,7 +35,7 @@ export default function Hero() {
 
 
           <div className="flex items-center space-x-4 mt-4 text-gray-600">
-            <a href="https://github.com/zeynepbass" className="hover:text-black" target="_blank">
+            <a href="https://github.com/zeynepbass" className="hover:text-black" target="_blank"         aria-label="github">>
               🐙
             </a>
             <a
@@ -43,13 +43,14 @@ export default function Hero() {
           target="_blank"
           className="hover:text-black" 
           rel="noopener noreferrer"
+              aria-label="e-Mail">
         >
               🔗
             </a>
-            <a href="https://bionluk.com/zeynepbass" className="hover:text-black" target="_blank">
+            <a href="https://bionluk.com/zeynepbass" className="hover:text-black" target="_blank" aria-label="Bionluk">
               🐦
             </a>
-            <a href="https://www.linkedin.com/in/zeynepbasss/" className="hover:text-black" target="_blank">
+            <a href="https://www.linkedin.com/in/zeynepbasss/" className="hover:text-black" target="_blank" aria-label="Linkedin">
               💼
             </a>
           </div>
@@ -58,9 +59,9 @@ export default function Hero() {
 
       <div className=" mt-10 text-start text-gray-700 leading-relaxed">
      <AboutCard  baslik="⚡ Teknik Yaklaşım" 
-     paragraf="React konusunda uzmanlaşmış bir Frontend geliştiricisiyim ve Redux, Zustand ve Tailwind CSS konularında deneyim sahibiyim. Temiz ve yeniden kullanılabilir kodlarla yüksek performanslı, responsive ve erişilebilir kullanıcı arayüzleri oluşturuyorum." 
-     paragrafOne="      RESTful API entegrasyonlarında deneyimliyim ve Azure DevOps ve JIRA gibi araçlarla Agile ekiplerde çalıştım. Bireysel ve takım projelerinde iki yılı aşkın tecrübeye sahibim; açık kaynak projelere katkıda bulunuyor ve yeteneklerimi sürekli geliştiriyorum."
-     paragrafTwo="      Analitik düşünme ve problem çözme odaklıyım; kullanıcı dostu ve sürdürülebilir çözümler yaratırken React ekosistemi ve modern web teknolojileri konusundaki uzmanlığımı ilerletmeyi hedefliyorum."
+     paragraf="React ekosisteminde uzmanlaşan bir Frontend Engineer olarak; Redux ve Zustand ile ölçeklenebilir state yönetimi çözümleri geliştiriyor, Tailwind CSS ile modern, duyarlı ve erişilebilir kullanıcı arayüzleri tasarlıyorum." 
+     paragrafOne="Temiz mimari prensiplerine uygun, yeniden kullanılabilir ve performans odaklı komponent yapıları oluşturmayı önemsiyorum. RESTful API entegrasyonlarında deneyimliyim ve Azure DevOps ile JIRA gibi araçları kullanarak Agile ekip süreçlerine aktif katkı sağlıyorum."
+     paragrafTwo="Analitik düşünme yaklaşımıyla, kullanıcı odaklı ve sürdürülebilir çözümler üretirken React ekosistemi ve modern frontend mimarileri alanında uzmanlığımı derinleştirmeyi amaçlıyorum."
      />
 
     <CustomButton text="Detaylı teknik bilgi &nbsp;→"  onClick={() => router.push(`/about`)}/>
