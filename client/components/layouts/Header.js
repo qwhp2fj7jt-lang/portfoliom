@@ -68,6 +68,7 @@ export default function Header({ posts }) {
                     <Link
                       key={item.href}
                       href={item.href}
+aria-label= {item.name}
                       className={`px-3 py-2 text-sm transition ${
                         isActive(item.href)
                           ? "text-black dark:text-gray-300 font-semibold"
@@ -94,6 +95,7 @@ export default function Header({ posts }) {
 
   <a
     href="https://linktr.ee/zeynepbas"
+ aria-label="linktr.ee sayfam"
     target="_blank"
     rel="noopener noreferrer"
     className="p-1 border border-gray-100 inline-flex items-center gap-1 dark:bg-zinc-900 rounded-md shadow-sm dark:border-zinc-700 cursor-pointer"
@@ -112,6 +114,7 @@ export default function Header({ posts }) {
 
   <button
     onClick={toggleTheme}
+ aria-label="dark-light mode"
     className="p-2 rounded-md hover:bg-zinc-50 dark:hover:bg-zinc-900"
   >
     {theme === "light" ? (
@@ -135,6 +138,7 @@ export default function Header({ posts }) {
             <div className="flex items-center p-2">
               <button
                 onClick={toggleTheme}
+        aria-label="dark-light mode"
                 className="p-2 rounded-md hover:bg-zinc-50 dark:hover:bg-zinc-900"
               >
                 {theme === "light" ? (
@@ -145,6 +149,7 @@ export default function Header({ posts }) {
               </button>
               <a
                 href="https://github.com/zeynepbass"
+                   aria-label="Github"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-900 dark:hover:text-white dark:text-gray-300 transition-colors"
@@ -158,8 +163,8 @@ export default function Header({ posts }) {
                 </svg>
               </a>
             </div>
-            <button onClick={() => setMobileOpen(false)}>
-              <XMarkIcon className="h-6 w-6" />
+            <button onClick={() => setMobileOpen(false)}         aria-label="Kapat">
+              <XMarkIcon className="h-6 w-6"/>
             </button>
           </div>
 
@@ -172,6 +177,7 @@ export default function Header({ posts }) {
               <Link
                 key={item.href}
                 href={item.href}
+             aria-label={item.name}
                 onClick={() => setMobileOpen(false)}
                 className={`px-3 py-2 text-sm transition  flex items-center ${
                   isActive(item.href)
