@@ -9,19 +9,11 @@ export default function Card({ project }) {
         baslik="Projelerim"
         paragraf={
           <>
-            Projelerimi modern React mimarisi ve ölçeklenebilir state yönetimi
-            yaklaşımlarıyla geliştiriyor, temiz ve sürdürülebilir kod
-            prensiplerini ön planda tutuyorum. Tüm çalışmalarımı düzenli
-            versiyon kontrolü ile yönetiyor ve{" "}
-            <a
-              href="https://github.com/zeynepbass"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Githubımı inceleyebilirsin"
-              className="font-semibold underline"
-            >
-              GitHub
-            </a>{" "}
+     Projelerimde modern React mimarisi ve ölçeklenebilir durum yönetimi yaklaşımlarını kullanarak, temiz,
+          sürdürülebilir ve yeniden kullanılabilir kod yapıları oluşturuyorum.
+          Geliştirme süreçlerimi Git ile versiyonlayarak GitHub üzerinden düzenli şekilde yayınlıyor
+          ve sürekli iyileştirme prensibiyle ilerliyorum.
+  
             üzerinden yayınlıyorum.
           </>
         }
