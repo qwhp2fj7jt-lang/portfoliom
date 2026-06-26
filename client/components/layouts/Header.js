@@ -9,10 +9,17 @@ import {
   MoonIcon,
   SunIcon,
 } from "@heroicons/react/24/outline";
-import { SearchBar } from "@/molecules";
+import dynamic from "next/dynamic";
 import navigation from "@/shared/json/navigation";
 import { usePathname } from "next/navigation";
 export default function Header({ posts }) {
+  const PdfMakers = dynamic(
+  () => import("@/molecules/SearchBar"),
+  {
+    loading: () => <p>PDF yükleniyor...</p>,
+  }
+);
+
   const [theme, setTheme] = useState("light");
   const [mobileOpen, setMobileOpen] = useState(false);
 
