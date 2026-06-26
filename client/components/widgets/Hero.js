@@ -31,7 +31,7 @@ export default function Hero() {
         <div>
           <h1 className="text-3xl font-semibold">Zeynep Baş</h1>
 
-          <p className="text-gray-500 mt-1">Modern Frontend Engineering: Architecture & Performance Focused</p>
+          <p className="text-gray-500 mt-1">React Frontend Engineer | Architecture & Performance Focused</p>
 
 
           <div className="flex items-center space-x-4 mt-4 text-gray-600">
