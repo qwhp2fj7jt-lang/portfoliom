@@ -12,6 +12,7 @@ className={`
 `}
         onClick={onClick}
         disabled={disabled}
+                        aria-label={text}
       >
         {text}
       </button>
