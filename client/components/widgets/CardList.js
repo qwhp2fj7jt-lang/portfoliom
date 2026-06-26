@@ -11,12 +11,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import dynamic from "next/dynmaic"
+import dynamic from "next/dynamic";
 export default function CardList({ article }) {
   const blog = article?.article;
   const imageUrl = blog?.image?.url;
   const [openPdf, setOpenPdf] = useState(false);
   const [pdfUrl, setPdfUrl] = useState("");
+  const PdfMakers = dynamic(
+  () => import("@/widgets/PdfMakers"),
+  {
+    loading: () => <p>PDF yükleniyor...</p>,
+  }
+);
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       <Link
