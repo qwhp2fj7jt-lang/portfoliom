@@ -13,7 +13,7 @@ import dynamic from "next/dynamic";
 import navigation from "@/shared/json/navigation";
 import { usePathname } from "next/navigation";
 export default function Header({ posts }) {
-  const PdfMakers = dynamic(
+  const SearchBar = dynamic(
   () => import("@/molecules/SearchBar"),
   {
     loading: () => <p>PDF yükleniyor...</p>,
