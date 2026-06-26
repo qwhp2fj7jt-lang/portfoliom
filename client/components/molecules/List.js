@@ -13,11 +13,13 @@ export default function List({ blog = [] }) {
           </span>
 
           <div className="flex-1">
-          <Link href={`/blog/${item.slug}`}
-              className="text-lg font-medium group-hover:underline"
-            >
-              {item.title && item.title}
-            </Link>
+    <Link
+  href={`/blog/${item.slug}`}
+  className="text-lg font-medium group-hover:underline"
+  aria-label={`Blog yazısını oku: ${item.title}`}
+>
+  {item.title}
+</Link>
 
             <p className="text-xs text-gray-500 dark:text-gray-300 mt-1">
               {item.createdAt
