@@ -31,7 +31,7 @@ export const postService = {
   postGet: async () => {
     return request("/posts", {
       method: "GET",
-      next: { revalidate: 60 }
+ next: "no-store",
     });
   },
 
@@ -46,7 +46,7 @@ export const postService = {
   postComment: async ({ postId, nickname, text }) => {
     return request(`/posts/comment/${postId}`, {
       method: "POST",
-      next: { revalidate: 0 },
+   next: "no-store",
       body: JSON.stringify({ nickname, text }),
     });
   },
