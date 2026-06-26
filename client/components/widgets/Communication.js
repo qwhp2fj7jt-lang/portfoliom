@@ -13,6 +13,7 @@ export default function Communication() {
       <a
         href="mailto:baszynpp@gmail.com"
         className="dark:text-gray-300 underline decoration-gray-150"
+            aria-label="emailimden bana ulaşabilirsin"
       >
         baszynpp@gmail.com
       </a>{" "}
@@ -25,6 +26,7 @@ export default function Communication() {
       <nav className="flex items-center mt-1   mb-10 md:mt-2 ">
         <a
           href="mailto:baszynpp@gmail.com"
+            aria-label="emailimden bana ulaşabilirsin"
           target="_blank"
           rel="noopener noreferrer"
                     className="inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 hover:dark:bg-zinc-900 transition"
@@ -48,9 +50,10 @@ export default function Communication() {
         </a>
         <a
           href="https://github.com/zeynepbass"
+            aria-label="github'umdaki kodları inceleyebilirsin"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="GitHub profilini ziyaret et"
+
           className="inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 hover:dark:bg-zinc-900 transition"
         >
           <svg
@@ -73,9 +76,10 @@ export default function Communication() {
         </a>
         <a
           href="https://www.linkedin.com/in/zeynepbasss/"
+
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="GitHub profilini ziyaret et"
+            aria-label="Linkedin'dan bana ulaşabilir kişisel deneyimlerimi inceleyebilirsin"
           className="inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 hover:dark:bg-zinc-900 transition"
         >
           <svg
