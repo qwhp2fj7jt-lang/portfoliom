@@ -116,6 +116,7 @@ export default function SearchBar({ navigation, posts }) {
                               setOpen(false);
                               setQuery("");
                             }}
+aria-label={item.name}
                             className="dark:text-gray-300 text-sm text-gray-500 font-semibold"
                           >
                             {item.name}
@@ -135,6 +136,7 @@ export default function SearchBar({ navigation, posts }) {
                   <div>
                     <Link
                       href={`/blog/${posts.slug}`}
+aria-label={posts.title}
                       className="dark:text-gray-300 flex gap-2 text-sm text-gray-500 font-semibold hover:underline cursor-context-menu"
                     >
                       <FileText size={15} /> {posts.title}
