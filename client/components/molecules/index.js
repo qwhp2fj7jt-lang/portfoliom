@@ -6,7 +6,7 @@ export { default as Skills } from "./Skills";
 export { default as SearchBar } from "./SearchBar";
 export {default as OpenSource} from "./OpenSource"
 export {default as List} from "./List"
-
+export {default as SearchBar} from "./SearchBar"
 
 
 
