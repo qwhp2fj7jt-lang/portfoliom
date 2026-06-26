@@ -10,15 +10,7 @@ export default function Footer() {
  
         <div className="flex flex-col gap-2 text-sm text-gray-500 dark:text-gray-300 md:items-center items-start">
           <p className="text-left">
-            <a
-              href="https://github.com/zeynepbass/milk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-yellow-500 underline "
-            >
-              @milk
-            </a>{" "}
-            Core Web Vitals ve feature-based alt yapısı kullanıldı.
+Core Web Vitals ve feature-based mimari yaklaşımıyla ölçeklenebilir şekilde tasarlanmıştır.
           </p>
 
           <p className="font-medium text-gray-600 dark:text-gray-300 underline">
