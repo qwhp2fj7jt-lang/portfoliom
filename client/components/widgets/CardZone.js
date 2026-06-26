@@ -33,7 +33,7 @@ export default function CardZone({ posts }) {
   return (
     <>
       <AboutHeader
-        baslik="    Zeynep Zone"
+        baslik="Zeynep Zone"
         paragraf="Zeynep Baş’ın paylaşımlarını keşfedebileceğin ve etkileşime geçebileceğin dijital alan."
       />
       <div className="mx-auto max-w-6xl py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -122,6 +122,7 @@ export default function CardZone({ posts }) {
                     <div className="flex gap-5">
 
                       <button
+    aria-label="Gönderimi beğenebilirsin"
                         onClick={() => handleLikeClick(post._id)}
                         className={`flex items-center gap-1  transition ${
                           post.likes?.includes(user.nickname)
@@ -136,6 +137,7 @@ export default function CardZone({ posts }) {
                       </button>
 
                       <button
+    aria-label="Yorumlara bakabilirsin"
                         onClick={() => setActiveCard(isOpen ? null : post._id)}
                         className="flex items-center gap-1 text-gray-600  hover:text-gray-400 transition"
                       >
@@ -186,6 +188,7 @@ export default function CardZone({ posts }) {
                     />
                     <button
                       onClick={() => handleComment(post._id)}
+    aria-label="Yorum yapabilirsin"
                       className="text-black dark:text-gray-300 hover:scale-110 transition"
                     >
                       <ArrowRightIcon className="w-5 h-5" />
@@ -215,6 +218,7 @@ export default function CardZone({ posts }) {
                 <button
                   onClick={() => setShowModal(false)}
                   className="px-3 py-1 text-sm text-gray-500"
+                        aria-label="İptal edebilirsin"
                 >
                   İptal
                 </button>
@@ -223,6 +227,7 @@ export default function CardZone({ posts }) {
                   onClick={() => {
                     if (!tempNickname) return;
 
+           aria-label="kayıt edebilirsin"
                     saveNickname(tempNickname);
                     setShowModal(false);
                   }}
