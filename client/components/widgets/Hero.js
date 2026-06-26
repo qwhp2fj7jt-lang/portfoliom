@@ -44,7 +44,7 @@ export default function Hero() {
           className="hover:text-black" 
           rel="noopener noreferrer"
               aria-label="e-Mail">
-        >
+        
               🔗
             </a>
             <a href="https://bionluk.com/zeynepbass" className="hover:text-black" target="_blank" aria-label="Bionluk">
