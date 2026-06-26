@@ -35,7 +35,7 @@ export default function Hero() {
 
 
           <div className="flex items-center space-x-4 mt-4 text-gray-600">
-            <a href="https://github.com/zeynepbass" className="hover:text-black" target="_blank"         aria-label="github">>
+            <a href="https://github.com/zeynepbass" className="hover:text-black" target="_blank"         aria-label="github">
               🐙
             </a>
             <a
