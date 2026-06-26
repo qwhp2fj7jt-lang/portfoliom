@@ -12,13 +12,14 @@ import {
 import dynamic from "next/dynamic";
 import navigation from "@/shared/json/navigation";
 import { usePathname } from "next/navigation";
-export default function Header({ posts }) {
   const SearchBar = dynamic(
   () => import("@/molecules/SearchBar"),
   {
     loading: () => <p>PDF yükleniyor...</p>,
   }
 );
+export default function Header({ posts }) {
+
 
   const [theme, setTheme] = useState("light");
   const [mobileOpen, setMobileOpen] = useState(false);
