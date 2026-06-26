@@ -19,8 +19,10 @@ export default function About() {
           icon="🎯"
           title="İlgi Alanlarım"
           items={[
-            "Kodlama ve yazılım geliştirme",
-            "Figma ile prototipi React'ta geliştirmek",
+            "Modern frontend engineering ve ölçeklenebilir web mimarileri",
+            "React ekosisteminde performans ve state management çözümleri geliştirme",
+              "UI/UX tasarımlarını (Figma) production-ready React uygulamalarına dönüştürme",
+            "Web performansı ve Core Web Vitals optimizasyonları",
           ]}
         />
 
@@ -28,10 +30,12 @@ export default function About() {
           icon="🛠"
           title="Teknoloji ve Araçlar"
           items={[
-            "Frontend: React, TypeScript, Next.js 14, Tailwind CSS, Zustand, Context API",
-            "Backend: Node.js, Express, MongoDB",
-            "Tasarım: Figma, UI/UX prototip tasarımı",
-            "Araçlar: Git, GitHub, VS Code, Postman",
+        "Frontend Engineering: React, Next.js 14, TypeScript, Tailwind CSS",
+  "State Management & Architecture: Zustand, Context API, scalable frontend architecture patterns",
+  "Performance & UX: Core Web Vitals optimization, responsive & accessible UI development",
+  "Backend Integration: Node.js, Express, MongoDB, RESTful API design & integration",
+  "UI/UX: Figma → production-ready component design and implementation",
+  "Tools & Workflow: Git, GitHub, VS Code, Postman, Agile (JIRA)"
           ]}
         />
       </div>
@@ -52,10 +56,10 @@ export default function About() {
       <div className="flex flex-col gap-4 md:flex-row">
   
   <div className="lg:p-6 p-4 rounded-2xl shadow-md dark:bg-zinc-900 bg-white flex items-start gap-4 dark:text-gray-300 text-gray-700 text-sm md:text-base">
-    <MyGoal
-      baslik="Hedeflerim"
-      paragraf="Senior frontend geliştirici olarak ilerlemek, daha büyük ve ölçeklenebilir projelerde sorumluluk alarak kendimi sürekli geliştirmek istiyorum."
-    />
+<MyGoal
+  baslik="Hedeflerim"
+  paragraf="Modern frontend engineering alanında uzmanlaşarak, ölçeklenebilir sistemler tasarlayan ve yüksek performanslı kullanıcı deneyimleri üreten ekiplerde aktif rol almayı; frontend mimarisi, performans optimizasyonu ve ürün ölçeklenebilirliği konularında derinleşmeyi hedefliyorum."
+/>
   </div>
 
   <div className="lg:p-6 p-4 rounded-2xl shadow-md dark:bg-zinc-900 bg-white flex items-start gap-4 dark:text-gray-300 text-gray-700 text-sm md:text-base">
