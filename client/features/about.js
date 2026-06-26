@@ -37,9 +37,9 @@ export default function About() {
       </div>
       <AboutCard
         baslik="⚡ Frontend Engineer | React Specialist"
-        paragraf="Modern web uygulamaları geliştiren, React ekosisteminde uzmanlaşmış bir Frontend Engineer’ım. Redux ve Zustand ile ölçeklenebilir state yönetimi çözümleri geliştiriyor, Tailwind CSS ile performanslı ve responsive arayüzler tasarlıyorum."
-        paragrafOne="Temiz, sürdürülebilir ve yeniden kullanılabilir kod yazımını önceliklendirerek yüksek performanslı kullanıcı deneyimleri oluşturuyorum. RESTful API entegrasyonlarında deneyimliyim ve Agile süreçlerde JIRA aracını etkin şekilde kullandım."
-        paragrafTwo="Analitik düşünme ve problem çözme odaklıyım; kullanıcı dostu ve maintainable çözümler üretirken React ekosistemindeki en iyi pratikleri uygulamayı ve sürekli gelişmeyi hedefliyorum."
+        paragraf="Modern Frontend Engineering yaklaşımıyla ölçeklenebilir ve performans odaklı web uygulamaları geliştiriyorum. React ekosisteminde Redux ve Zustand kullanarak state management çözümleri tasarlıyor, Tailwind CSS ile modern, erişilebilir ve responsive arayüzler oluşturuyorum."
+        paragrafOne="Temiz mimari prensiplerini (SOLID ve component-based architecture) dikkate alarak yeniden kullanılabilir, sürdürülebilir ve bakım kolaylığı yüksek kod yapıları kurmaya odaklanıyorum. RESTful API entegrasyonlarında deneyimliyim ve kullanıcı deneyimini performans metrikleri (Core Web Vitals) üzerinden optimize etmeyi önemsiyorum."
+        paragrafTwo="Agile süreçlerinde JIRA kullanarak ekip içi iş akışlarına aktif katkı sağlıyorum. Analitik düşünme ve problem çözme becerilerimle, sadece UI geliştiren değil aynı zamanda sistem tasarımını da düşünen bir frontend engineer olarak sürekli kendimi geliştiriyorum."
       />
 
       <Skills />
