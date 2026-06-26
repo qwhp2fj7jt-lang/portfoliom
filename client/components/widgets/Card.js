@@ -17,6 +17,7 @@ export default function Card({ project }) {
               href="https://github.com/zeynepbass"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Githubımı inceleyebilirsin"
               className="font-semibold underline"
             >
               GitHub
@@ -62,6 +63,7 @@ function ProjectCard({ item }) {
         <Button
            className="hover:text-yellow-400"
           onClick={() => setOpen(!open)}
+              aria-label="Açıklamamın devamını gör"
           text={open ? "Kapat" : "Devamını gör"}
         />
 
@@ -76,6 +78,7 @@ function ProjectCard({ item }) {
             <a
               href={item.adres}
               target="_blank"
+    aria-label="açık kaynak adresim"
               className="text-gray-700 dark:text-gray-300 font-medium hover:underline break-all"
             >
               {item.adres}
