@@ -249,15 +249,16 @@ export default function CardZone({ posts }) {
             <XMarkIcon className="w-8 h-8" />
           </button>
 
-          <div className="relative w-full max-w-5xl h-[80vh]">
-            <Image
-              src={selectedImage}
-              alt="Büyük görsel"
-              fill
-              unoptimized
-              className="object-contain rounded-xl"
-            />
-          </div>
+<div className="relative w-full max-w-5xl h-[80vh]">
+  <Image
+    src={selectedImage}
+    alt="Büyük görsel"
+    fill
+    loading="lazy"
+    sizes="(max-width: 768px) 100vw, 80vw"
+    className="object-contain rounded-xl"
+  />
+</div>
         </div>
       )}
     </>
