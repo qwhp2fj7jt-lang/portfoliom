@@ -12,7 +12,7 @@ export default function About() {
     <div className="mx-auto max-w-6xl px-4 py-10">
       <AboutHeader
         baslik="Hakkımda"
-        paragraf="Merhaba! Ben Zeynep, Yazılım Geliştiricisiyim. Kod ve tasarımı birleştirerek fikirleri hızlı ve etkili kullanıcı arayüzlerine dönüştürmeyi seviyorum."
+        paragraf="Merhaba, ben Zeynep — Frontend Engineer olarak modern web teknolojileriyle ölçeklenebilir, performans odaklı ve kullanıcı deneyimi yüksek arayüzler geliştiriyorum. Kod ve tasarımı bir araya getirerek fikirleri hızlı, etkili ve üretime hazır ürünlere dönüştürmeyi seviyorum."
       />
       <div className="pt-5">
         <InfoSection
