@@ -18,8 +18,7 @@ export async function generateMetadata() {
       "web development",
       "javascript",
     ],
-description:
-  "Merhaba! Ben Zeynep, ölçeklenebilir frontend mimarileri tasarlayan ve modern web uygulamaları geliştiren bir Frontend Engineer'ım. Next.js, React ve TypeScript ekosisteminde performans, erişilebilirlik (A11y), kullanıcı deneyimi ve temiz yazılım prensiplerini odağıma alarak sürdürülebilir dijital ürünler geliştiriyorum.",
+description: "Merhaba! Ben Zeynep, ölçeklenebilir frontend mimarileri tasarlayan ve modern web uygulamaları geliştiren bir Frontend Engineer'ım. Next.js, React ve TypeScript ekosisteminde performans, erişilebilirlik (A11y), kullanıcı deneyimi ve temiz yazılım prensiplerini odağıma alarak sürdürülebilir dijital ürünler geliştiriyorum.",
     authors: [{ name: "Zeynep Baş", url: baseUrl }],
     creator: "Zeynep Baş",
     alternates: { canonical: `${baseUrl}/projects` },
@@ -28,8 +27,7 @@ description:
     openGraph: {
       title: "Hakkımda – Zeynep Baş",
 
-        description:
-  "Merhaba! Ben Zeynep, ölçeklenebilir frontend mimarileri tasarlayan ve modern web uygulamaları geliştiren bir Frontend Engineer'ım. Next.js, React ve TypeScript ekosisteminde performans, erişilebilirlik (A11y), kullanıcı deneyimi ve temiz yazılım prensiplerini odağıma alarak sürdürülebilir dijital ürünler geliştiriyorum.",
+        description: "Merhaba! Ben Zeynep, ölçeklenebilir frontend mimarileri tasarlayan ve modern web uygulamaları geliştiren bir Frontend Engineer'ım. Next.js, React ve TypeScript ekosisteminde performans, erişilebilirlik (A11y), kullanıcı deneyimi ve temiz yazılım prensiplerini odağıma alarak sürdürülebilir dijital ürünler geliştiriyorum.",
       url: `${baseUrl}/about`,
       siteName: "Zeynep Baş",
       type: "website",
