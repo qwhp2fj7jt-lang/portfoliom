@@ -31,11 +31,7 @@ export async function generateMetadata() {
       default: "Zeynep Baş – Frontend Engineer",
       template: "%s | Zeynep Baş",
     },
-
-
-    description:"React konusunda uzmanlaşmış bir Frontend geliştiricisiyim ve Redux, Zustand ve Tailwind CSS konularında deneyim sahibiyim. Temiz ve yeniden kullanılabilir kodlarla yüksek performanslı, responsive ve erişilebilir kullanıcı arayüzleri oluşturuyorum.",
-
-
+description:"Frontend mimarisi, performans optimizasyonu ve kullanıcı deneyimi odağında modern web uygulamaları geliştiriyorum. React, Next.js ve TypeScript ekosisteminde temiz kod prensipleri, yeniden kullanılabilir bileşenler ve ölçeklenebilir yazılım yaklaşımlarını benimsiyorum.",
     authors: [
       {
         name: "Zeynep Baş",
@@ -53,8 +49,7 @@ export async function generateMetadata() {
 
     openGraph: {
       title: "Zeynep Baş – Frontend Engineer",
-      description:
-"React konusunda uzmanlaşmış bir Frontend geliştiricisiyim ve Redux, Zustand ve Tailwind CSS konularında deneyim sahibiyim. Temiz ve yeniden kullanılabilir kodlarla yüksek performanslı, responsive ve erişilebilir kullanıcı arayüzleri oluşturuyorum.",
+description:"Frontend mimarisi, performans optimizasyonu ve kullanıcı deneyimi odağında modern web uygulamaları geliştiriyorum. React, Next.js ve TypeScript ekosisteminde temiz kod prensipleri, yeniden kullanılabilir bileşenler ve ölçeklenebilir yazılım yaklaşımlarını benimsiyorum.",
       url: `${baseUrl}`,
       siteName: "Zeynep Baş",
       type: "website",
