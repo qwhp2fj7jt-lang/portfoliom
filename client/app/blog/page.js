@@ -18,7 +18,7 @@ export async function generateMetadata() {
       "web development",
       "javascript",
     ],
-    description: "Zeynep Baş'ın frontend, React, Next.js ve web geliştirme üzerine yazdığı blog yazıları.",
+description:"Zeynep Baş'ın frontend engineering, React, Next.js, yazılım mimarisi, performans optimizasyonu, erişilebilirlik (A11y), yapay zeka entegrasyonları ve modern web teknolojileri üzerine deneyimlerini paylaştığı teknik blog yazıları.",
     authors: [{ name: "Zeynep Baş", url: baseUrl }],
     creator: "Zeynep Baş",
     alternates: { canonical: `${baseUrl}/blog` },
@@ -26,7 +26,7 @@ export async function generateMetadata() {
 
     openGraph: {
       title: "Blog – Zeynep Baş",
-      description: "Zeynep Baş'ın frontend, React, Next.js ve web geliştirme üzerine yazdığı blog yazıları.",
+description:"Zeynep Baş'ın frontend engineering, React, Next.js, yazılım mimarisi, performans optimizasyonu, erişilebilirlik (A11y), yapay zeka entegrasyonları ve modern web teknolojileri üzerine deneyimlerini paylaştığı teknik blog yazıları.",
       url: `${baseUrl}/blog`,
       siteName: "Zeynep Baş",
       type: "website",
