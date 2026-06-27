@@ -18,8 +18,7 @@ export async function generateMetadata() {
       "web development",
       "javascript",
     ],
-    description:
-      "Temiz mimari, Performanslı React uygulamaları, Gerçek projelerde sürdürülebilir frontend yapıları",
+    description:"Modern frontend mimarileri, sistem tasarımı, performans mühendisliği ve kullanıcı odaklı web uygulamaları",
     authors: [{ name: "Zeynep Baş", url: baseUrl }],
     creator: "Zeynep Baş",
     alternates: { canonical: `${baseUrl}/about` },
@@ -27,8 +26,7 @@ export async function generateMetadata() {
 
     openGraph: {
       title: "Projelerim – Zeynep Baş",
-      description:
-        "Temiz mimari, Performanslı React uygulamaları, Gerçek projelerde sürdürülebilir frontend yapıları",
+      description:"Modern frontend mimarileri, sistem tasarımı, performans mühendisliği ve kullanıcı odaklı web uygulamaları",
       url: `${baseUrl}/projects`,
       siteName: "Zeynep Baş",
       type: "website",
