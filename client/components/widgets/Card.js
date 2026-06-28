@@ -74,7 +74,7 @@ function ProjectCard({ item }) {
     aria-label="açık kaynak adresim"
               className="text-gray-900 dark:text-gray-300 font-medium hover:underline break-all"
             >
-              Proje linki
+              Proje Linki
             </a>
             <p className="text-gray-500 text-xs">{item.date}</p>
           </div>
