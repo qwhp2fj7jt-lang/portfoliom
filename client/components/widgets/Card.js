@@ -20,7 +20,7 @@ export default function Card({ project }) {
         }
       />
 
-      <div className="mx-auto max-w-6xl  grid grid-cols-1  mt-5 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mx-auto max-w-4xl  grid grid-cols-1  mt-5 lg:grid-cols-3 gap-6">
         {project &&
           project.map((item, index) => <ProjectCard key={item._id} item={item} />)}
       </div>
