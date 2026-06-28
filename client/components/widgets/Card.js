@@ -12,7 +12,7 @@ export default function Card({ project }) {
      Projelerimde modern React mimarisi ve ölçeklenebilir durum yönetimi yaklaşımlarını kullanarak, temiz,
           sürdürülebilir ve yeniden kullanılabilir kod yapıları oluşturuyorum.
           <br/>
-          Geliştirme süreçlerimi Git ile versiyonlayarak <a href="https://github.com/zeynepbass" target="_blank" aria-label="github">GitHub </a>üzerinden düzenli şekilde yayınlıyor
+          Geliştirme süreçlerimi Git ile versiyonlayarak <a href="https://github.com/zeynepbass" target="_blank" aria-label="github" className="underline" ><b>GitHub</b> </a>üzerinden düzenli şekilde yayınlıyor
           ve sürekli iyileştirme prensibiyle ilerliyorum.
   
             üzerinden yayınlıyorum.
