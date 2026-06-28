@@ -36,15 +36,15 @@ export default function ProjectsAndExperience() {
 
         <div className="space-y-4">
           <div className="flex  gap-4 p-2 rounded-xl  transition cursor-pointer">
-            <div className="w-14 h-14 rounded-lg overflow-hidden bg-gray-100  md:block justify-center">
-              <Image
-                src="/images/exadus_logo.jpeg"
-                width={56}
-                height={56}
-                alt="Exadus Logo"
-                className="object-cover"
-              />
-            </div>
+         <div className="hidden md:block w-14 h-14 rounded-lg overflow-hidden bg-gray-100 justify-center">
+  <Image
+    src="/images/exadus_logo.jpeg"
+    width={56}
+    height={56}
+    alt="Exadus Logo"
+    className="object-cover"
+  />
+</div>
 
             <div>
               <MyGoal baslik="React Developer" paragraf="Exadus Teknolojileri A.Ş." paragrafOne="Eki 2024 – Şub 2025 · 5 ay"/>
@@ -70,15 +70,17 @@ export default function ProjectsAndExperience() {
           <hr className="border-gray-200 dark:border-gray-800 " />
 
           <div className="flex  gap-4 p-4 rounded-xl  transition cursor-pointer">
-          <div className="w-14 h-14 rounded-lg overflow-hidden bg-gray-100  md:block justify-center">
-                <Image
+         <div className="hidden md:block w-14 h-14 rounded-lg overflow-hidden bg-gray-100 justify-center">
+
+                 <Image
                 src="/images/ferofen_biliim_a__logo.jpeg"
                 width={56}
                 height={56}
                 alt="Ferofen Logo"
                 className="object-cover"
-              />
-            </div>
+              /> 
+</div>
+                  
 
             <div>
             <MyGoal baslik="Frontend Developer" paragraf="Ferofen Bilişim A.Ş." paragrafOne="Ara 2021 – Ara 2023 · 2 yıl 1 ay"/>
@@ -104,7 +106,8 @@ export default function ProjectsAndExperience() {
           <hr className="border-gray-200 dark:border-gray-800 " />
 
           <div className="flex  gap-4 p-4 rounded-xl  transition cursor-pointer">
-          <div className="w-14 h-14 rounded-lg overflow-hidden bg-gray-100  md:block justify-center">
+<div className="hidden md:block w-14 h-14 rounded-lg overflow-hidden bg-gray-100 justify-center">
+                    
                 <Image
                 src="/images/1631302268256.jpeg"
                 width={56}
