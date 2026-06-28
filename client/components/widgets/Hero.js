@@ -93,12 +93,12 @@ export default function Hero() {
           />
         </div>
 
-        <div className="mt-8 flex justify-center md:justify-start">
+
           <CustomButton
             text="Detaylı teknik bilgi →"
             onClick={() => router.push("/about")}
           />
-        </div>
+
       </section>
     </>
   );
