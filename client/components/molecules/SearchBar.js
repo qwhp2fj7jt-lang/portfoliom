@@ -58,7 +58,7 @@ export default function SearchBar({ navigation, posts }) {
              data-leave:duration-200 data-leave:ease-in
              sm:my-8 w-full sm:max-w-xl data-closed:sm:translate-y-0 data-closed:sm:scale-95"
             >
-              <div className=" dark:bg-zinc-900 border-b border-gray-50 px-4 py-4 flex items-center gap-2">
+              <div className=" dark:bg-zinc-900 border-b border-gray-400 px-4 py-4 flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="dark:text-gray-300 w-5 h-5 text-gray-400"
