@@ -11,22 +11,27 @@ export default function Hero() {
   return (
     <>
 
-      <div className="flex items-center gap-6">
 
+       
 
-        <div className="relative">
-          <img
-            src="/images/profile.jpeg"
-            alt="Avatar"
-            className="w-32 h-32 shadow-md rounded-full  p-1  border border-gray-100 dark:border-gray-800"
-          />
-          <span className="absolute bottom-0 left-2 w-6 h-6 p-1 bg-white shadow-md dark:bg-zinc-900 
- rounded-full flex items-center justify-center text-white dark:text-gray-300 text-xs">
-<CodeBracketIcon className="dark:text-yellow-500 text-primary w-4 h-4" />
+<div className="flex flex-col items-center gap-6 text-center md:flex-row md:items-center md:text-left">
+  <div className="relative shrink-0">
+    <img
+      src="/images/profile.jpeg"
+      alt="Avatar"
+      className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full p-1 shadow-md border border-gray-100 dark:border-gray-800"
+    />
 
-          </span>
-        </div>
+    <span
+      className="absolute bottom-0 left-1 sm:left-2
+      flex h-6 w-6 items-center justify-center rounded-full
+      bg-white shadow-md dark:bg-zinc-900"
+    >
+      <CodeBracketIcon className="w-4 h-4 text-primary dark:text-yellow-500" />
+    </span>
+  </div>
 
+  
    
         <div>
           <h1 className="text-3xl font-semibold">Zeynep Baş</h1>
