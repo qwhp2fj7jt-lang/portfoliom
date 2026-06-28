@@ -30,7 +30,7 @@ Core Web Vitals ve feature-based mimari yaklaşımıyla ölçeklenebilir şekild
         </div>
 
   
-        <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-300">
+        <div className="flex items-center gap-1 text-sm text-gray-500 dark:text-gray-300">
           <a
             href="https://github.com/zeynepbass"
             target="_blank"
