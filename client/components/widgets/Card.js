@@ -11,7 +11,8 @@ export default function Card({ project }) {
           <>
      Projelerimde modern React mimarisi ve ölçeklenebilir durum yönetimi yaklaşımlarını kullanarak, temiz,
           sürdürülebilir ve yeniden kullanılabilir kod yapıları oluşturuyorum.
-          Geliştirme süreçlerimi Git ile versiyonlayarak GitHub üzerinden düzenli şekilde yayınlıyor
+          <br/>
+          Geliştirme süreçlerimi Git ile versiyonlayarak <a href="https://github.com/zeynepbass" target="_blank" aria-label="github">GitHub </a>üzerinden düzenli şekilde yayınlıyor
           ve sürekli iyileştirme prensibiyle ilerliyorum.
   
             üzerinden yayınlıyorum.
@@ -71,9 +72,9 @@ function ProjectCard({ item }) {
               href={item.adres}
               target="_blank"
     aria-label="açık kaynak adresim"
-              className="text-gray-700 dark:text-gray-300 font-medium hover:underline break-all"
+              className="text-gray-900 dark:text-gray-300 font-medium hover:underline break-all"
             >
-              {item.adres}
+              Proje linki
             </a>
             <p className="text-gray-500 text-xs">{item.date}</p>
           </div>
