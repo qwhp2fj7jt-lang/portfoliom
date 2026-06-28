@@ -39,7 +39,7 @@ export default function Hero() {
             React Frontend Engineer | Architecture & Performance Focused
           </p>
 
-          <div className="mt-5 flex justify-center gap-5 text-2xl md:justify-start">
+          <div className="mt-3 flex justify-center gap-5 text-xl md:justify-start">
             <a
               href="https://github.com/zeynepbass"
               target="_blank"
