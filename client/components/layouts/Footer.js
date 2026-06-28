@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 lg:px-12 py-12 flex flex-col md:flex-row items-start  gap-8">
         
  
-        <div className="flex flex-col gap-2 text-sm text-gray-500 dark:text-gray-300 md:items-center items-start">
+        <div className="flex flex-col gap-2 text-sm text-gray-500 dark:text-gray-300  items-start">
           <p className="text-left">
 Core Web Vitals ve feature-based mimari yaklaşımıyla ölçeklenebilir şekilde tasarlanmıştır.
           </p>
