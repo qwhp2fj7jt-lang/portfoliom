@@ -255,9 +255,7 @@ export default function CardZone({ posts }) {
     src={selectedImage}
     alt="Büyük görsel"
     fill
-    loading="lazy"
-    sizes="(max-width: 768px) 100vw, 80vw"
-    className="object-contain rounded-xl"
+    className="object-contain"
   />
 </div>
         </div>
