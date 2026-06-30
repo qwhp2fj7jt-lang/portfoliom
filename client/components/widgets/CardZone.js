@@ -245,7 +245,7 @@ export default function CardZone({ posts }) {
         <div className="fixed inset-0 z-[999] bg-black/90 flex items-center justify-center p-4">
           <button
             onClick={() => setSelectedImage(null)}
-            className="absolute top-5 right-5 text-white dark:text-gray-300 hover:text-yellow-400 transition"
+            className="absolute top-5 bottom-5 right-5 text-white dark:text-gray-300 hover:text-yellow-400 transition"
           >
             <XMarkIcon className="w-8 h-8" />
           </button>
