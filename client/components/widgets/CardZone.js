@@ -251,11 +251,12 @@ export default function CardZone({ posts }) {
           </button>
 
 <div className="relative w-full max-w-5xl h-[80vh]">
-  <Image
+  <img
     src={selectedImage}
     alt="Büyük görsel"
-    fill
-    className="object-contain"
+    width={1200}
+    height={800}
+    className="max-w-full h-auto rounded-xl object-contain"
   />
 </div>
         </div>
