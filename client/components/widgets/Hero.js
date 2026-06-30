@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <>
       <section className="flex flex-col items-center gap-6 md:flex-row md:gap-10">
-        {/* Avatar */}
+
         <div className="relative shrink-0">
           <img
             src="/images/profile.jpeg"
@@ -29,7 +29,7 @@ export default function Hero() {
           </span>
         </div>
 
-        {/* Bilgiler */}
+ 
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-3xl font-semibold md:text-4xl">
             Zeynep Baş
