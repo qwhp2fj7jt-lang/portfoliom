@@ -53,7 +53,8 @@ export default function Papers({ articles }) {
 
   return (
     <>
-      <h2 className="text-3xl font-bold mb-6">Blog</h2>
+          <h2 className="text-xl dark:text-gray-300 md:text-2xl font-semibold mb-5  flex items-center">
+Blog</h2>
 
       <div className="flex justify-between gap-2">
         <BlogSubSelect
