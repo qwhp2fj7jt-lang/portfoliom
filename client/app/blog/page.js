@@ -2,7 +2,6 @@ import { postArticles } from "@/shared/services/postArticles";
 import SubBlog from "@/features/blog";
 export async function generateMetadata() {
   const baseUrl = "https://www.zeynepbas.dev";
-
   return {
     metadataBase: new URL(baseUrl),
     title: {
