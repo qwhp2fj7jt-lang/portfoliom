@@ -2,6 +2,7 @@
 import { useState } from "react";
 import {AboutHeader} from "@/molecules";
 import {Button} from "@/atoms"
+import Image from "next/image"
 export default function Card({ project }) {
   return (
     <>
@@ -61,11 +62,15 @@ function ProjectCard({ item }) {
         />
 
         <div className="flex items-center gap-3 mt-4">
-          <img
-            className="w-9 h-9 rounded-full"
-            src="/images/avatar.png"
-            alt="Avatar"
-          />
+
+              <Image
+  src="/images/avatar.png"
+  alt="Avatar"
+  width={36}
+  height={36}
+  className="w-9 h-9 rounded-full object-cover"
+/>
+          
 
           <div className="text-sm">
             <a
