@@ -1,11 +1,22 @@
 
 import { Header, Footer } from "@/components/layouts";
 import "./globals.css";
+import { Exo_2 } from "next/font/google";
 import Script from "next/script";
 import { postArticles } from "@/shared/services/postArticles";
 export async function generateMetadata() {
   const baseUrl = "https://portfoliom-4p84.onrender.com";
-
+const exo = Exo_2({
+  subsets: ["latin"],
+  weight: [
+    "400",
+    "500",
+    "600",
+    "700"
+  ],
+  variable: "--font-exo",
+  display: "swap",
+});
   return {
     metadataBase: new URL(baseUrl),
 
@@ -89,8 +100,10 @@ description:"Frontend mimarisi, performans optimizasyonu ve kullanıcı deneyimi
 export default async function LocaleLayout({ children}) {
   const posts = await postArticles.articlesGet();
   return (
-<html lang="tr">
-      <body className="antialiased bg-white dark:bg-gray-950 text-black dark:text-gray-300">
+<html lang="tr" className={exo.variable}>
+    <body
+  className={`${exo.className} antialiased bg-white dark:bg-gray-950 text-black dark:text-gray-300`}
+>
           <Header posts={posts}  />
           <main className="min-h-screen">{children}</main>
           <Footer />
