@@ -6,6 +6,7 @@ import {
   XMarkIcon
 } from "@heroicons/react/24/solid";
 import { AboutHeader } from "@/molecules";
+               import Image from "next/image";
 import { Button } from "@/atoms";
 import useZone from "@/shared/hooks/useZone";
 import Image from "next/image";
@@ -72,11 +73,16 @@ export default function CardZone({ posts }) {
 
                 <div className="p-4 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <img
-                      src="/images/avatar.png"
-                      className="w-9 h-9 rounded-full object-cover"
-                      alt="avatar"
-                    />
+         
+
+<Image
+  src="/images/avatar.png"
+  alt="Avatar"
+  width={36}
+  height={36}
+  className="w-9 h-9 rounded-full object-cover"
+/>
+          
                     <div className="w-full">
                       <div className="flex items-center justify-between w-full">
                         <p className="text-sm font-semibold text-black dark:text-gray-300">
