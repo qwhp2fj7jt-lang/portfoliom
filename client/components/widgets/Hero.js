@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { AboutCard } from "@/molecules";
 import { CustomButton } from "@/atoms";
 import { CodeBracketIcon } from "@heroicons/react/24/outline";
-
+import Image from "next/image";
 export default function Hero() {
   const router = useRouter();
 
@@ -13,13 +13,18 @@ export default function Hero() {
       <section className="flex flex-col items-center gap-6 md:flex-row md:gap-10">
 
         <div className="relative shrink-0">
-          <img
-            src="/images/profile.jpeg"
-            alt="Zeynep Baş"
-            className="h-24 w-24 rounded-full border border-gray-100 p-1 shadow-md dark:border-gray-800
-                       sm:h-28 sm:w-28
-                       md:h-32 md:w-32"
-          />
+<Image
+  src="/images/profile.jpeg"
+  alt="Zeynep Baş"
+  width={128}
+  height={128}
+  className="
+    h-24 w-24 rounded-full border border-gray-100 p-1 shadow-md object-cover
+    dark:border-gray-800
+    sm:h-28 sm:w-28
+    md:h-32 md:w-32
+  "
+/>
 
           <span
             className="absolute bottom-0 left-1 flex h-6 w-6 items-center justify-center
