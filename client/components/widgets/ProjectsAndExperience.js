@@ -9,7 +9,7 @@ export default function ProjectsAndExperience() {
   const router = useRouter();
 
   const renderTech = (
-    items: { name: string; icon: string }[]
+    items
   ) => (
     <div className="flex flex-wrap gap-2 mt-3">
       {items.map((item, index) => (
