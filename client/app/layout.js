@@ -94,12 +94,12 @@ export default async function LocaleLayout({ children}) {
           <Header posts={posts}  />
           <main className="min-h-screen">{children}</main>
           <Footer />
-          <Script
-          async
-          strategy="afterInteractive"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592493088244067"
-          crossOrigin="anonymous"
-        />
+    <Script
+  async
+  strategy="lazyOnload"
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592493088244067"
+  crossOrigin="anonymous"
+/>
       </body>
     </html>
   );
