@@ -52,12 +52,13 @@ export default function Header({ posts }) {
       <nav className="dark:bg-black bg-white/80 backdrop-blur-sm sticky top-0 z-20">
         <div className="mx-auto max-w-6xl ">
           <div className="flex h-16 items-center justify-between">
-            <button
-              onClick={() => setMobileOpen(true)}
-              className="sm:hidden rounded-md p-2 hover:bg-gray-100 dark:hover:bg-zinc-900"
-            >
-              <Bars3Icon className="h-6 w-6" />
-            </button>
+<button
+  onClick={() => setMobileOpen(true)}
+  aria-label="Menüyü aç"
+  className="sm:hidden rounded-md p-2 hover:bg-gray-100 dark:hover:bg-zinc-900"
+>
+  <Bars3Icon className="h-6 w-6" />
+</button>
 
             <div className="hidden sm:flex space-x-6">
               <div className="flex items-center justify-center gap-6">
