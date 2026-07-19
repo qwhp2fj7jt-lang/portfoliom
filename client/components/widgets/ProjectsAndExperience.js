@@ -67,7 +67,7 @@ export default function ProjectsAndExperience() {
         src={item.icon}
         alt={item.name}
         fill
-        className="rounded-lg object-contain"
+  className="w-4 h-4 rounded-lg object-contain"
       />
     </div>
 
@@ -108,8 +108,12 @@ export default function ProjectsAndExperience() {
                   { name: "Context API", icon: "/images/icons/contextApi.jpeg" },
                 ].map((item, index) => (
                        <div key={index} className=" dark:bg-zinc-900  dark:text-gray-300 flex items-center gap-2 p-2 bg-zinc-50 rounded-xl">
-                    <img src={item.icon} alt={item.name}
-  className="w-4 h-4 rounded-lg object-contain"/>
+                <Image
+        src={item.icon}
+        alt={item.name}
+        fill
+  className="w-4 h-4 rounded-lg object-contain"
+      />
 
                     <span className="text-gray-700 text-[12px] dark:text-gray-300">{item.name}</span>
                   </div>
@@ -128,7 +132,7 @@ export default function ProjectsAndExperience() {
                 width={56}
                 height={56}
                 alt="Atak Domain Logo"
-                className="object-cover"
+    className="w-4 h-4 rounded-lg object-contain"
               />
             </div>
 
@@ -144,7 +148,12 @@ export default function ProjectsAndExperience() {
                   { name: "bootstrap", icon: "/images/icons/bootstrap.png" },
                 ].map((item, index) => (
                   <div key={index} className=" dark:bg-zinc-900  dark:text-gray-300 flex items-center gap-2 p-2 bg-zinc-50 rounded-xl">
-                  <img src={item.icon} alt={item.name} className="w-4 h-4 rounded-lg" />
+        <Image
+        src={item.icon}
+        alt={item.name}
+        fill
+  className="w-4 h-4 rounded-lg object-contain"
+      />
                   <span className="text-gray-700 text-[12px] dark:text-gray-300">{item.name}</span>
                 </div>
                   ))}
