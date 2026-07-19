@@ -2,7 +2,6 @@
 import Abouts from "@/features/about";
 export async function generateMetadata() {
   const baseUrl = "https://www.zeynepbas.dev";
-
   return {
     metadataBase: new URL(baseUrl),
     title: {
@@ -23,7 +22,6 @@ description: "Merhaba! Ben Zeynep, ölçeklenebilir frontend mimarileri tasarlay
     creator: "Zeynep Baş",
     alternates: { canonical: `${baseUrl}/projects` },
     robots: { index: true, follow: true },
-
     openGraph: {
       title: "Hakkımda – Zeynep Baş",
 
