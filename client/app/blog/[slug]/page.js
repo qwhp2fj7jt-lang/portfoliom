@@ -6,7 +6,7 @@ async function getArticle(slug) {
 }
 
 export async function generateMetadata({ params }) {
-  const baseUrl = "https://portfoliom-4p84.onrender.com";
+  const baseUrl = "https://www.zeynepbas.dev";
 
   const data = await getArticle(params.slug);
 const article=data?.article
