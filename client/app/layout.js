@@ -89,7 +89,7 @@ description:"Frontend mimarisi, performans optimizasyonu ve kullanıcı deneyimi
 export default async function LocaleLayout({ children}) {
   const posts = await postArticles.articlesGet();
   return (
-    <html>
+<html lang="tr">
       <body className="antialiased bg-white dark:bg-gray-black text-black dark:text-gray-300">
           <Header posts={posts}  />
           <main className="min-h-screen">{children}</main>
