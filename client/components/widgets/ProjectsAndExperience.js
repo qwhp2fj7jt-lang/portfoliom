@@ -23,8 +23,8 @@ export default function ProjectsAndExperience() {
         <div className="flex items-center flex-col md:flex-row justify-between mt-10 mb-6">
        <div><h2 className="text-2xl font-bold">Deneyim</h2></div> 
 
-          <div className="flex items-center gap-2 text-green-600 text-sm">
-       
+
+       <div className="flex items-center gap-2 text-green-700 text-sm">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
