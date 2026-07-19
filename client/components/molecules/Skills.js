@@ -15,16 +15,18 @@ export default function Skills() {
         {chunkedSkills.map((group, groupIndex) => (
           <div key={groupIndex} className="flex gap-5">
             {group.map((skill, index) => (
+              
               <img
                 key={index}
                 src={skill.icon}
                 alt=""
-                style={{
-                  width: skill.width,
-                  height: skill.height,
-                  opacity: skill.opacity,
-                  borderRadius: skill.borderRadius || 0,
-                }}
+              style={{
+  width: skill.width,
+  height: skill.height,
+  objectFit: "contain",
+  opacity: skill.opacity,
+  borderRadius: skill.borderRadius ?? 0
+}}
                 className="animate-bounce-custom"
               />
             ))}
