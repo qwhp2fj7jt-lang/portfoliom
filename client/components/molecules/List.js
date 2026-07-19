@@ -8,7 +8,7 @@ export default function List({ blog = [] }) {
           key={item._id}
           className="flex items-start gap-4 rounded-lg transition group"
         >
-          <span className="w-10 text-xl text-gray-400 dark:text-gray-100 flex justify-center">
+          <span className="w-10 text-xl text-gray-600 dark:text-gray-100 flex justify-center">
             {String(index + 1).padStart(2, "0")}
           </span>
 
