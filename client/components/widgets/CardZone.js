@@ -6,7 +6,6 @@ import {
   XMarkIcon
 } from "@heroicons/react/24/solid";
 import { AboutHeader } from "@/molecules";
-               import Image from "next/image";
 import { Button } from "@/atoms";
 import useZone from "@/shared/hooks/useZone";
 import Image from "next/image";
