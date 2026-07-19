@@ -108,7 +108,9 @@ export default function ProjectsAndExperience() {
                   { name: "Context API", icon: "/images/icons/contextApi.jpeg" },
                 ].map((item, index) => (
                        <div key={index} className=" dark:bg-zinc-900  dark:text-gray-300 flex items-center gap-2 p-2 bg-zinc-50 rounded-xl">
-                    <img src={item.icon} alt={item.name} className="w-4 h-4 rounded-lg" />
+                    <img src={item.icon} alt={item.name}
+  className="w-4 h-4 rounded-lg object-contain"
+
                     <span className="text-gray-700 text-[12px] dark:text-gray-300">{item.name}</span>
                   </div>
                   ))}
