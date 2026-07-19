@@ -50,19 +50,32 @@ export default function ProjectsAndExperience() {
               <MyGoal baslik="React Developer" paragraf="Exadus Teknolojileri A.Ş." paragrafOne="Eki 2024 – Şub 2025 · 5 ay"/>
       
               <div className="flex flex-wrap gap-2 mt-3">
-                {[
-                  { name: "Next.js 14", icon: "/images/icons/next.png" },
-                  { name: "State Yönetimi", icon: "/images/icons/state-management.jpeg" },
-                  { name: "API Entegrasyonu", icon: "/images/icons/api.png" },
-                  { name: "Responsive tasarım", icon: "/images/icons/mobile.png" },
-                  { name: "Material-UI", icon: "/images/icons/blog-mui.png" },
-                  { name: "Agile ve Scrum", icon: "/images/icons/agile.png" },
-                ].map((item, index) => (
-                  <div key={index} className=" dark:bg-zinc-900  dark:text-gray-300 flex items-center gap-2 p-2 bg-zinc-50 rounded-xl">
-                  <img src={item.icon} alt={item.name} className="w-4 h-4 rounded-lg" />
-                  <span className="text-gray-700 text-[12px] dark:text-gray-300">{item.name}</span>
-                </div>
-                ))}
+          {[
+  { name: "Next.js 14", icon: "/images/icons/next.png" },
+  { name: "State Yönetimi", icon: "/images/icons/state-management.jpeg" },
+  { name: "API Entegrasyonu", icon: "/images/icons/api.png" },
+  { name: "Responsive tasarım", icon: "/images/icons/mobile.png" },
+  { name: "Material-UI", icon: "/images/icons/blog-mui.png" },
+  { name: "Agile ve Scrum", icon: "/images/icons/agile.png" },
+].map((item, index) => (
+  <div
+    key={index}
+    className="dark:bg-zinc-900 dark:text-gray-300 flex items-center gap-2 p-2 bg-zinc-50 rounded-xl"
+  >
+    <div className="relative w-4 h-4 shrink-0">
+      <Image
+        src={item.icon}
+        alt={item.name}
+        fill
+        className="rounded-lg object-contain"
+      />
+    </div>
+
+    <span className="text-gray-700 text-[12px] dark:text-gray-300">
+      {item.name}
+    </span>
+  </div>
+))}
               </div>
             </div>
           </div>
