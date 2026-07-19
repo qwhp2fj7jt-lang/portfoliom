@@ -75,7 +75,6 @@ export default function ProjectsAndExperience() {
       <div className="space-y-4">
 
 
-        {/* Exadus */}
 
         <div className="flex gap-4 p-2 rounded-xl">
 
@@ -136,7 +135,7 @@ export default function ProjectsAndExperience() {
 
 
 
-        {/* Ferofen */}
+    
 
 
         <div className="flex gap-4 p-4 rounded-xl">
@@ -203,7 +202,7 @@ export default function ProjectsAndExperience() {
 
 
 
-        {/* Atak Domain */}
+
 
 
         <div className="flex gap-4 p-4 rounded-xl">
