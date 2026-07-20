@@ -4,7 +4,7 @@
   "width": 200,
   "height": 200,
   "baslik": "PDOS",
-  "yakinda:"Yakında",
+  "yakinda":"Yakında",
   "description": "⚙️ Kullanılan Teknolojiler:\n Next.js (App Router)\n React\n Tailwind CSS\n Zustand\n React Hook Form\n TanStack Query\n Recharts\n Lucide React\n\n🏗️ Mimari:\n Feature-Based Architecture\n SSR / CSR / ISR\n Dynamic Imports\n Suspense & Streaming\n Optimistic UI\n Memoization\n Virtualization\n Route Groups\n\n♿ Accessibility:\n WCAG uyumlu\n Semantic HTML\n Keyboard Navigation\n Screen Reader desteği\n\n📦 Modüller:\nDashboard, Tasks, Knowledge Base, Documents, Calendar, Goals, Analytics ve Settings.\n📂 Ölçeklenebilir frontend mimarisi, performans optimizasyonları ve gelecekte AI özellikleri eklenebilecek şekilde geliştirilmektedir.",
   "adres": "https://github.com/zeynepbass/personal-data-operating-system"
 },
