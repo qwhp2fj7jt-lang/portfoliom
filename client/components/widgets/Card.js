@@ -71,7 +71,7 @@ function ProjectCard({ item }) {
   >
     {item.yakinda ? item.yakinda : ""}
   </span>
-
+    </div>
 
       <p
         className={`text-sm leading-7 text-gray-600 dark:text-gray-300 ${
