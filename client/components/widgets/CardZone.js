@@ -48,27 +48,44 @@ export default function CardZone({ posts }) {
   const isExpanded = expandedPost === post._id;
 
   return (
-    <div
-      key={post._id}
-      className="
-        group flex flex-col
-      
-      "
-    >
       <div
-        className={`
-          overflow-hidden
-          border border-gray-200
-          bg-white
-          dark:border-gray-800
-          dark:bg-zinc-900
-          ${
-            isOpen
-              ? "rounded-t-[22px]"
-              : "rounded-[22px]"
-          }
-        `}
+        key={post._id}
+        className="
+          group
+          relative
+          flex
+          flex-col
+          self-start
+          rounded-[28px]
+          bg-gradient-to-br
+          from-blue-500/30
+          via-purple-500/20
+          to-transparent
+          p-[1px]
+          transition-all
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-2xl
+          dark:from-blue-500/20
+          dark:via-purple-500/20
+        "
       >
+        <div
+          className={`
+            overflow-hidden
+            rounded-[27px]
+            border
+            bg-white
+            shadow-sm
+            dark:bg-zinc-900
+            dark:border-zinc-800
+            ${
+              isOpen
+                ? "rounded-b-none"
+                : ""
+            }
+          `}
+        >
 
      
         <div className="relative h-64 w-full overflow-hidden bg-gray-100 dark:bg-zinc-800 sm:h-72 md:h-80">
@@ -155,17 +172,16 @@ export default function CardZone({ posts }) {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="
-                  mt-1
-                  flex
-                  items-center
-                  gap-1
-                  text-sm
-                  text-gray-400
-                  transition
-                  hover:text-yellow-500
-                  dark:text-gray-500
-                "
+          className="
+                    mt-1
+                    flex
+                    items-center
+                    gap-1
+                    text-sm
+                    text-gray-400
+                    transition
+                    hover:text-yellow-500
+                  "
               >
                 <span>📍</span>
                 <span>
@@ -176,47 +192,43 @@ export default function CardZone({ posts }) {
             </div>
 
           </div>
+            <p
+              className={`
+                text-sm
+                leading-7
+                text-gray-700
+                dark:text-gray-300
+                ${
+                  isExpanded
+                    ? ""
+                    : "line-clamp-2"
+                }
+              `}
+            >
+              {post.description}
+            </p>
 
 
 
 
-          <p
-            className={`
-              text-sm
-              leading-7
-              text-gray-700
-              dark:text-gray-300
-              ${
-                isExpanded
-                  ? ""
-                  : "line-clamp-2"
+            <Button
+              onClick={() =>
+                setExpandedPost(
+                  isExpanded
+                    ? null
+                    : post._id
+                )
               }
-            `}
-          >
-            {post.description}
-          </p>
-
-
-
-          <Button
-            onClick={() =>
-              setExpandedPost(
+              text={
                 isExpanded
-                  ? null
-                  : post._id
-              )
-            }
-            text={
-              isExpanded
-                ? "Kapat"
-                : "Devamını gör"
-            }
-            className="
-              mt-3
-              hover:text-yellow-500
-            "
-          />
-
+                  ? "Kapat"
+                  : "Devamını gör"
+              }
+              className="
+                mt-3
+                hover:text-yellow-500
+              "
+            />
 
 
   
@@ -232,28 +244,41 @@ export default function CardZone({ posts }) {
           ">
 
 
-            <div className="flex gap-5">
+       <div
+              className="
+                mt-5
+                flex
+                items-center
+                justify-between
+                border-t
+                border-gray-200
+                pt-4
+                dark:border-gray-800
+              "
+            >
+
+              <div className="flex gap-5">
 
 
-              <button
-                aria-label="Beğen"
-                onClick={() =>
-                  handleLikeClick(post._id)
-                }
-                className={`
-                  group flex items-center gap-1
-                  transition-all
-                  ${
-                    post.likes?.includes(
-                      user.nickname
-                    )
-                    ?
-                    "text-red-500"
-                    :
-                    "text-gray-500 hover:text-red-500 dark:text-gray-400"
+                <button
+                  onClick={() =>
+                    handleLikeClick(post._id)
                   }
-                `}
-              >
+                  className={`
+                    flex
+                    items-center
+                    gap-1
+                    transition
+                    ${
+                      post.likes?.includes(
+                        user.nickname
+                      )
+                        ? "text-red-500"
+                        : "text-gray-500 hover:text-red-500"
+                    }
+                  `}
+                >
+
 
                 <HeartIcon
                   className="
@@ -324,20 +349,19 @@ export default function CardZone({ posts }) {
 
    
 
-      {isOpen && (
-
-        <div
-          className="
-            rounded-b-[22px]
-            border
-            border-t-0
-            border-gray-200
-            bg-white
-            p-4
-            dark:border-gray-800
-            dark:bg-zinc-900
-          "
-        >
+       {isOpen && (
+          <div
+            className="
+              rounded-b-[27px]
+              border
+              border-t-0
+              border-gray-200
+              bg-white
+              p-4
+              dark:border-zinc-800
+              dark:bg-zinc-900
+            "
+          >
 
           <div
             className="
