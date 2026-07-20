@@ -50,9 +50,9 @@ export default function CardList({ article }) {
         Blog
       </Link>
 
-      <h1 className="text-3xl font-bold tracking-tight">{blog.title}</h1>
+      <h1 className="text-2xl font-bold tracking-tight">{blog.title}</h1>
 
-      <p className="mt-2 text-xl text-muted-foreground">{blog.subtitle}</p>
+      <p className="mt-2 text-md text-muted-foreground">{blog.subtitle}</p>
       <div
         className="group 
         mt-6
