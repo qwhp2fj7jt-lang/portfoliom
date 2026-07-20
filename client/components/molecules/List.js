@@ -11,21 +11,21 @@ export default function List({ blog = [] }) {
             relative
             flex
             items-start
-            gap-4
+            gap-3
             rounded-2xl
             border
             border-gray-200
             bg-white
-            p-4
+            p-2
             shadow-sm
             transition-all
             duration-300
             hover:-translate-y-1
-            hover:border-blue-300
+            hover:border-gray-300
             hover:shadow-xl
             dark:border-gray-800
             dark:bg-zinc-900
-            dark:hover:border-blue-500/50
+            dark:hover:border-gray-500/50
           "
         >
 
@@ -40,7 +40,7 @@ export default function List({ blog = [] }) {
               justify-center
               rounded-xl
               bg-gradient-to-br
-              from-blue-500
+              from-gray-500
               to-indigo-600
               text-sm
               font-bold
@@ -69,9 +69,9 @@ export default function List({ blog = [] }) {
                 text-gray-900
                 transition-colors
                 duration-200
-                group-hover:text-blue-600
+                group-hover:text-gray-600
                 dark:text-gray-100
-                dark:group-hover:text-blue-400
+                dark:group-hover:text-gray-400
               "
             >
               {item.title}
@@ -90,7 +90,7 @@ export default function List({ blog = [] }) {
                 dark:text-gray-400
               "
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
+              <span className="h-1.5 w-1.5 rounded-full bg-gray-500" />
 
               {item.createdAt
                 ? new Date(item.createdAt).toLocaleDateString("tr-TR")
@@ -121,13 +121,13 @@ export default function List({ blog = [] }) {
                 items-center
                 text-xs
                 font-medium
-                text-blue-600
+                text-gray-600
                 opacity-0
                 transition-all
                 duration-300
                 group-hover:translate-x-1
                 group-hover:opacity-100
-                dark:text-blue-400
+                dark:text-gray-400
               "
             >
               Yazıyı oku →
