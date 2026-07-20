@@ -52,17 +52,7 @@ export default function CardZone({ posts }) {
       key={post._id}
       className="
         group flex flex-col
-        rounded-3xl
       
-        bg-gradient-to-b from-white to-gray-50
-        p-1
-        shadow-lg
-        transition-all duration-300
-        hover:-translate-y-1
-        hover:shadow-2xl
- 
-        dark:from-zinc-900
-        dark:to-zinc-950
       "
     >
       <div
