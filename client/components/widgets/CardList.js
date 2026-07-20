@@ -67,10 +67,9 @@ export default function CardList({ article }) {
     flex flex-col gap-4
     rounded-2xl
     border border-gray-200/70 dark:border-zinc-900/80
-    bg-white/80 dark:bg-zinc-900/80
+     dark:bg-zinc-900/80
     p-4
-    shadow-sm
-    backdrop-blur-sm
+
     lg:flex-row lg:items-center lg:justify-between
   "
         >
