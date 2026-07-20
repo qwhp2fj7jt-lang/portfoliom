@@ -55,10 +55,11 @@ export default function CardList({ article }) {
       <p className="mt-2 text-xl text-muted-foreground">{blog.subtitle}</p>
       <div
         className="group 
+        mt-6
     rounded-2xl border border-gray-200/70 dark:border-gray-200/20
     bg-gray-50
        dark:bg-transparent
-    p-1 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-gray-900 dark:from-zinc-900 dark:to-zinc-950"
+    p-1 shadow-lg  dark:border-gray-900 dark:from-zinc-900 dark:to-zinc-950"
       >
         <div
           className="
