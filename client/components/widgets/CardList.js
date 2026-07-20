@@ -53,8 +53,13 @@ export default function CardList({ article }) {
       <h1 className="text-3xl font-bold tracking-tight">{blog.title}</h1>
 
       <p className="mt-2 text-xl text-muted-foreground">{blog.subtitle}</p>
+      <div className="group 
+    rounded-2xl border border-gray-200/70 dark:border-gray-200/20
+    bg-gray-50
+       dark:bg-transparent
+    p-1 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-gray-800 dark:from-zinc-900 dark:to-zinc-950">
       <div
-  className="
+        className="
     mt-6
     flex flex-col gap-4
     rounded-2xl
@@ -65,57 +70,59 @@ export default function CardList({ article }) {
     backdrop-blur-sm
     lg:flex-row lg:items-center lg:justify-between
   "
->
-  <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-    <Select>
-      <SelectTrigger className="w-full sm:w-56 rounded-xl border-gray-200 bg-background shadow-sm dark:border-gray-900 dark:bg-gray-950">
-        <SelectValue placeholder="İçindekiler" />
-      </SelectTrigger>
+      >
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+          <Select>
+            <SelectTrigger className="w-full sm:w-56 rounded-xl border-gray-200 bg-background shadow-sm dark:border-gray-900 dark:bg-gray-950">
+              <SelectValue placeholder="İçindekiler" />
+            </SelectTrigger>
 
-      <PdfMakers
-        openPdf={openPdf}
-        setOpenPdf={setOpenPdf}
-        pdfUrl={pdfUrl}
-      />
+            <PdfMakers
+              openPdf={openPdf}
+              setOpenPdf={setOpenPdf}
+              pdfUrl={pdfUrl}
+            />
 
-      <SelectContent className="bg-white dark:bg-gray-950">
-        <SelectGroup>
-          {article?.tableOfContents?.map((item) => (
-            <SelectItem key={item._id} value={item.heading}>
-              <a href={`#${item.heading}`} className="block w-full">
-                {item.heading}
-              </a>
-            </SelectItem>
-          ))}
-        </SelectGroup>
-      </SelectContent>
-    </Select>
+            <SelectContent className="bg-white dark:bg-gray-950">
+              <SelectGroup>
+                {article?.tableOfContents?.map((item) => (
+                  <SelectItem key={item._id} value={item.heading}>
+                    <a href={`#${item.heading}`} className="block w-full">
+                      {item.heading}
+                    </a>
+                  </SelectItem>
+                ))}
+              </SelectGroup>
+            </SelectContent>
+          </Select>
 
-    <div className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-gray-600 shadow-sm dark:border-gray-900 dark:bg-gray-950 dark:text-gray-300">
-      <Calendar className="h-4 w-4" />
-      <span>
-        {blog.createdAt
-          ? new Date(blog.createdAt).toLocaleDateString("tr-TR")
-          : "-"}
-      </span>
-    </div>
-  </div>
+          <div className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-gray-600 shadow-sm dark:border-gray-900 dark:bg-gray-950 dark:text-gray-300">
+            <Calendar className="h-4 w-4" />
+            <span>
+              {blog.createdAt
+                ? new Date(blog.createdAt).toLocaleDateString("tr-TR")
+                : "-"}
+            </span>
+          </div>
+        </div>
 
-  <div className="flex items-center justify-between sm:justify-end gap-3">
-    <span className="text-sm font-medium text-gray-600 dark:text-gray-500 ">
-      Eklentiler
-    </span>
+        <div className="flex items-center justify-between sm:justify-end gap-3">
+          <span className="text-sm font-medium text-gray-600 dark:text-gray-500 ">
+            Eklentiler
+          </span>
 
-    <div className="flex items-center gap-2">
-      {blog?.pdf?.url && (
-        <button
-          onClick={() => {
-            setPdfUrl(`${process.env.NEXT_PUBLIC_API_URL}${blog.pdf.url}`);
-            setOpenPdf(true);
-          }}
-          aria-label="PDF Görüntüle"
-          title="PDF Görüntüle"
-          className="
+          <div className="flex items-center gap-2">
+            {blog?.pdf?.url && (
+              <button
+                onClick={() => {
+                  setPdfUrl(
+                    `${process.env.NEXT_PUBLIC_API_URL}${blog.pdf.url}`
+                  );
+                  setOpenPdf(true);
+                }}
+                aria-label="PDF Görüntüle"
+                title="PDF Görüntüle"
+                className="
             group
             flex h-11 w-11 items-center justify-center
             rounded-xl
@@ -131,16 +138,16 @@ export default function CardList({ article }) {
             dark:hover:border-gray-500
             dark:hover:bg-gray-950
           "
-        >
-          <Eye className="h-5 w-5 transition-all duration-300 group-hover:scale-110" />
-        </button>
-      )}
+              >
+                <Eye className="h-5 w-5 transition-all duration-300 group-hover:scale-110" />
+              </button>
+            )}
 
-      <button
-        onClick={handleShare}
-        aria-label="Paylaş"
-        title="Paylaş"
-        className="
+            <button
+              onClick={handleShare}
+              aria-label="Paylaş"
+              title="Paylaş"
+              className="
           group
           flex h-11 w-11 items-center justify-center
           rounded-xl
@@ -156,12 +163,12 @@ export default function CardList({ article }) {
           dark:hover:border-gray-500
           dark:hover:bg-gray-950
         "
-      >
-        <Share2 className="h-5 w-5 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
-      </button>
-    </div>
-  </div>
-</div>
+            >
+              <Share2 className="h-5 w-5 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
+            </button>
+          </div>
+        </div>
+      </div>      </div>
 
       <div className="mt-6 rounded-3xl overflow-hidden">
         {imageUrl && (
