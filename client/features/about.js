@@ -124,88 +124,10 @@ export default function About() {
         <Communication />
       </section>
 
-      <section
-        className="
-          mt-10
-          grid
-          gap-6
-          md:grid-cols-2
-        "
-      >
-
-        <div
-          className="
-            rounded-3xl
-            border
-            border-gray-200
-            bg-white
-            p-6
-            shadow-lg
-            transition
-            hover:-translate-y-1
-            hover:shadow-xl
-            dark:border-gray-800
-            dark:bg-zinc-900
-          "
-        >
-
-          <MyGoal
-            baslik="🎯 Hedeflerim"
-            paragraf="Modern frontend engineering alanında uzmanlaşarak ölçeklenebilir sistemler tasarlayan ve yüksek performanslı kullanıcı deneyimleri üreten ekiplerde aktif rol almayı hedefliyorum."
-          />
-
-        </div>
-
-
-
-        <div
-          className="
-            rounded-3xl
-            border
-            border-gray-200
-            bg-white
-            p-6
-            shadow-lg
-            transition
-            hover:-translate-y-1
-            hover:shadow-xl
-            dark:border-gray-800
-            dark:bg-zinc-900
-          "
-        >
-
-          <MyGoal
-            baslik="🚀 Hizmetlerim"
-            paragraf="React ve Next.js ile modern, hızlı ve ölçeklenebilir web uygulamaları geliştiriyorum. Yeni projeler veya teknik katkılar için iletişim bölümünden bana ulaşabilirsiniz."
-            baglanti={
-              <a
-                href="https://bionluk.com/zeynepbass"
-                target="_blank"
-                aria-label="Bionluk profilimi aç"
-                className="
-                  inline-flex
-                  rounded-full
-                  border
-                  p-1
-                  transition
-                  hover:scale-110
-                  dark:border-gray-700
-                "
-              >
-                <img
-                  src="/images/icons/bionluk.png"
-                  width="22"
-                  height="22"
-                  className="rounded-full"
-                />
-              </a>
-            }
-          />
-
-        </div>
-
-
-      </section>
+<div className="flex flex-col gap-4 md:flex-row"> 
+            <div className="lg:p-6 p-4 rounded-2xl shadow-md dark:bg-zinc-900 bg-white flex items-start gap-4 dark:text-gray-300 text-gray-700 text-sm md:text-base"> 
+            <MyGoal baslik="Hedeflerim" paragraf="Modern frontend engineering alanında uzmanlaşarak, ölçeklenebilir sistemler tasarlayan ve yüksek performanslı kullanıcı deneyimleri üreten ekiplerde aktif rol almayı; frontend mimarisi, performans optimizasyonu ve ürün ölçeklenebilirliği konularında derinleşmeyi hedefliyorum." /> </div> 
+            <div className="lg:p-6 p-4 rounded-2xl shadow-md dark:bg-zinc-900 bg-white flex items-start gap-4 dark:text-gray-300 text-gray-700 text-sm md:text-base"> <MyGoal baslik="Hizmetlerim" paragraf="React ve Next.js ile modern, hızlı ve ölçeklenebilir web uygulamaları geliştiriyorum. Ürününüz için teknik katkı sağlamak veya yeni bir proje başlatmak isterseniz iletişim bölümünden bana ulaşabilirsiniz" baglanti={ <a href="https://bionluk.com/zeynepbass" target="_blank" aria-label="Bionluk profilimi yeni sekmede aç"> <img src="/images/icons/bionluk.png" width="20" height="20" className="rounded-full" /> </a> } /> </div> </div> </div>
 
 
     </main>
