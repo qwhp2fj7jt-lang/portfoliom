@@ -33,58 +33,59 @@ function ProjectCard({ item }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full bg-white dark:bg-zinc-900 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-800">
-      <div
-        className="h-56 w-full bg-cover bg-center"
-        style={{ backgroundImage: `url(${item.icon})` }}
+    <div className="group rounded-2xl border border-gray-200/70 bg-gradient-to-b from-white to-gray-50 p-1 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-gray-800 dark:from-zinc-900 dark:to-zinc-950">
+  <div className="overflow-hidden rounded-[14px] border border-gray-200 bg-white dark:border-gray-800 dark:bg-zinc-900">
+    <div
+      className="h-56 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+      style={{ backgroundImage: `url(${item.icon})` }}
+    />
+
+    <div className="p-5">
+      <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
+        {item.baslik}
+      </h2>
+
+      <p
+        className={`text-sm leading-7 text-gray-600 dark:text-gray-300 ${
+          open ? "" : "line-clamp-2"
+        }`}
+      >
+        {item.description}
+      </p>
+
+      <Button
+        className="mt-3 hover:text-yellow-400"
+        onClick={() => setOpen(!open)}
+        aria-label="Açıklamanın devamını gör"
+        text={open ? "Kapat" : "Devamını Gör"}
       />
 
-      <div className="p-4">
-        <h2 className="text-gray-900 dark:text-gray-300 font-bold text-lg mb-2">
-          {item.baslik}
-        </h2>
+      <div className="mt-5 flex items-center justify-between border-t border-gray-100 pt-4 dark:border-gray-800">
+        <div className="flex items-center gap-3">
+          <Image
+            src="/images/avatar.png"
+            alt="Avatar"
+            width={36}
+            height={36}
+            className="rounded-full object-cover ring-2 ring-white dark:ring-zinc-800"
+          />
 
-        <p
-          className={`text-sm leading-relaxed ${
-            open
-              ? "text-gray-700 dark:text-gray-300"
-              : "text-gray-700 dark:text-gray-300 line-clamp-2"
-          }`}
-        >
-          {item.description}
-        </p>
-
-        <Button
-           className="hover:text-yellow-400"
-          onClick={() => setOpen(!open)}
-              aria-label="Açıklamamın devamını gör"
-          text={open ? "Kapat" : "Devamını gör"}
-        />
-
-        <div className="flex items-center gap-3 mt-4">
-
-              <Image
-  src="/images/avatar.png"
-  alt="Avatar"
-  width={36}
-  height={36}
-  className="w-9 h-9 rounded-full object-cover"
-/>
-          
-
-          <div className="text-sm">
+          <div>
             <a
               href={item.adres}
               target="_blank"
-    aria-label="açık kaynak adresim"
-              className="text-gray-900 dark:text-gray-300 font-medium hover:underline break-all"
+              aria-label="Açık kaynak proje adresi"
+              className="text-sm font-medium text-gray-900 transition-colors hover:text-blue-600 hover:underline dark:text-gray-100 dark:hover:text-blue-400"
             >
               Proje Linki
             </a>
-            <p className="text-gray-500 text-xs">{item.date}</p>
+
+            <p className="text-xs text-gray-500">{item.date}</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
   );
 }
