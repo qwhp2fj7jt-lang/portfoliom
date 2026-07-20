@@ -94,18 +94,20 @@ const handleShare = async () => {
         </Select>
 
         <Calendar size={16} />
-                <button
+
+
+        <span>
+          {blog.createdAt
+            ? new Date(blog.createdAt).toLocaleDateString("tr-TR")
+            : "-"}
+        </span>
+                          Paylaş:                <button
   onClick={handleShare}
   className="tooltip-trigger"
   title="Paylaş"
 >
   <Share2 size={18} />
 </button>
-        <span>
-          {blog.createdAt
-            ? new Date(blog.createdAt).toLocaleDateString("tr-TR")
-            : "-"}
-        </span>
       </div>
 
       <div className="mt-6 rounded-3xl overflow-hidden">
