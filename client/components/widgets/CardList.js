@@ -58,7 +58,7 @@ const handleShare = async () => {
       <h1 className="text-4xl font-bold tracking-tight">{blog.title}</h1>
 
       <p className="mt-2 text-xl text-muted-foreground">{blog.subtitle}</p>
-<div className="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-200/70 dark:border-gray-200/20 bg-white/80 p-4 shadow-sm backdrop-blur-sm dark:border-gray-800 dark:bg-gray-900">
+<div className="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-200 dark:border-gray-400 bg-white/80 p-4 shadow-sm backdrop-blur-sm dark:border-gray-800 dark:bg-gray-900">
 
   <div className="flex flex-wrap items-center gap-3">
     <Select>
