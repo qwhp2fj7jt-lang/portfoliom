@@ -424,7 +424,7 @@ export default function CardZone({ posts }) {
                 outline-none
                 transition
                 focus:border-gray-500
-                dark:border-gray-700
+                dark:border-gray-900
                 dark:bg-zinc-800
               "
             />
@@ -443,7 +443,7 @@ export default function CardZone({ posts }) {
                 transition
                 hover:bg-gray-50
                 hover:text-gray-600
-                dark:border-gray-700
+                dark:border-gray-900
                 dark:text-gray-300
                 dark:hover:bg-gray-950/30
               "
@@ -479,7 +479,7 @@ export default function CardZone({ posts }) {
                 placeholder="Nickname..."
                 value={tempNickname}
                 onChange={(e) => setTempNickname(e.target.value)}
-                className="w-full border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 mb-4 bg-white dark:bg-zinc-800 text-black dark:text-gray-300"
+                className="w-full border border-gray-300 dark:border-gray-900 rounded-lg px-3 py-2 mb-4 bg-white dark:bg-zinc-800 text-black dark:text-gray-300"
               />
 
               <div className="flex justify-end gap-2">
