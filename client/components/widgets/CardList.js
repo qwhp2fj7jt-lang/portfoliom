@@ -58,7 +58,7 @@ export default function CardList({ article }) {
     mt-6
     flex flex-col gap-4
     rounded-2xl
-    border border-gray-200/70 dark:border-gray-900
+    border border-gray-200/70 dark:border-gray-950
     bg-white/80 dark:bg-gray-950
     p-4
     shadow-sm
@@ -68,7 +68,7 @@ export default function CardList({ article }) {
 >
   <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
     <Select>
-      <SelectTrigger className="w-full sm:w-56 rounded-xl border-gray-200 bg-background shadow-sm dark:border-gray-700 dark:bg-gray-900">
+      <SelectTrigger className="w-full sm:w-56 rounded-xl border-gray-200 bg-background shadow-sm dark:border-gray-700 dark:bg-gray-950">
         <SelectValue placeholder="İçindekiler" />
       </SelectTrigger>
 
@@ -78,7 +78,7 @@ export default function CardList({ article }) {
         pdfUrl={pdfUrl}
       />
 
-      <SelectContent className="bg-white dark:bg-gray-900">
+      <SelectContent className="bg-white dark:bg-gray-950">
         <SelectGroup>
           {article?.tableOfContents?.map((item) => (
             <SelectItem key={item._id} value={item.heading}>
@@ -91,7 +91,7 @@ export default function CardList({ article }) {
       </SelectContent>
     </Select>
 
-    <div className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-gray-600 shadow-sm dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300">
+    <div className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-gray-600 shadow-sm dark:border-gray-700 dark:bg-gray-950 dark:text-gray-300">
       <Calendar className="h-4 w-4" />
       <span>
         {blog.createdAt
@@ -120,7 +120,7 @@ export default function CardList({ article }) {
             flex h-11 w-11 items-center justify-center
             rounded-xl
             border border-gray-200 dark:border-gray-700
-            bg-white dark:bg-gray-900
+            bg-white dark:bg-gray-950
             text-gray-600 dark:text-gray-300
             shadow-sm
             transition-all duration-300
@@ -145,7 +145,7 @@ export default function CardList({ article }) {
           flex h-11 w-11 items-center justify-center
           rounded-xl
           border border-gray-200 dark:border-gray-700
-          bg-white dark:bg-gray-900
+          bg-white dark:bg-gray-950
           text-gray-600 dark:text-gray-300
           shadow-sm
           transition-all duration-300
