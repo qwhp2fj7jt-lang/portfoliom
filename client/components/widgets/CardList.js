@@ -57,9 +57,9 @@ export default function CardList({ article }) {
         className="group 
         mt-6
     rounded-2xl border border-gray-200/70 
-    bg-gray-50
+ 
        dark:bg-transparent
-    p-1  dark:border-gray-900 dark:from-zinc-900 dark:to-zinc-950"
+    p-1  dark:border-gray-900 "
       >
         <div
           className="
