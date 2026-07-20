@@ -41,7 +41,7 @@ export default function List({ blog = [] }) {
               rounded-xl
               bg-gradient-to-br
               from-gray-500
-              to-indigo-600
+              to-gray-600
               text-sm
               font-bold
               text-white
