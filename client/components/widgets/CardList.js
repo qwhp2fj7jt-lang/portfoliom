@@ -50,7 +50,7 @@ export default function CardList({ article }) {
         Bloga Dön
       </Link>
 
-      <h1 className="text-4xl font-bold tracking-tight">{blog.title}</h1>
+      <h1 className="text-3xl font-bold tracking-tight">{blog.title}</h1>
 
       <p className="mt-2 text-xl text-muted-foreground">{blog.subtitle}</p>
       <div
@@ -68,7 +68,7 @@ export default function CardList({ article }) {
 >
   <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
     <Select>
-      <SelectTrigger className="w-full sm:w-56 rounded-xl border-gray-200 bg-background shadow-sm dark:border-gray-700 dark:bg-gray-950">
+      <SelectTrigger className="w-full sm:w-56 rounded-xl border-gray-200 bg-background shadow-sm dark:border-gray-900 dark:bg-gray-950">
         <SelectValue placeholder="İçindekiler" />
       </SelectTrigger>
 
@@ -91,7 +91,7 @@ export default function CardList({ article }) {
       </SelectContent>
     </Select>
 
-    <div className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-gray-600 shadow-sm dark:border-gray-700 dark:bg-gray-950 dark:text-gray-300">
+    <div className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-gray-600 shadow-sm dark:border-gray-900 dark:bg-gray-950 dark:text-gray-300">
       <Calendar className="h-4 w-4" />
       <span>
         {blog.createdAt
@@ -102,7 +102,7 @@ export default function CardList({ article }) {
   </div>
 
   <div className="flex items-center justify-between sm:justify-end gap-3">
-    <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+    <span className="text-sm font-medium text-gray-600 dark:text-gray-500 ">
       Eklentiler
     </span>
 
@@ -119,7 +119,7 @@ export default function CardList({ article }) {
             group
             flex h-11 w-11 items-center justify-center
             rounded-xl
-            border border-gray-200 dark:border-gray-700
+            border border-gray-200 dark:border-gray-900
             bg-white dark:bg-gray-950
             text-gray-600 dark:text-gray-300
             shadow-sm
@@ -144,7 +144,7 @@ export default function CardList({ article }) {
           group
           flex h-11 w-11 items-center justify-center
           rounded-xl
-          border border-gray-200 dark:border-gray-700
+          border border-gray-200 dark:border-gray-900
           bg-white dark:bg-gray-950
           text-gray-600 dark:text-gray-300
           shadow-sm
