@@ -75,7 +75,7 @@ const handleShare = async () => {
   title="PDF Görüntüle"
   className="rounded-full border border-gray-200 p-2 text-gray-600 transition-all hover:bg-gray-100 hover:text-black"
 >
-  <Eye className="h-5 w-5 rounded-xl border shadow-sm bg-white" />
+  <Eye className="h-5 w-5 rounded-md border shadow-md bg-white " />
 </button>
 )}
   <PdfMakers openPdf={openPdf} setOpenPdf={setOpenPdf} pdfUrl={pdfUrl}/>
@@ -106,7 +106,7 @@ const handleShare = async () => {
   className="tooltip-trigger"
   title="Paylaş"
 >
-  <Share2 className="h-5 w-5 rounded-xl border shadow-sm bg-white" />
+  <Share2 className="h-5 w-5 rounded-md border shadow-md bg-white " />
 </button>
       </div>
 
