@@ -64,10 +64,10 @@ export default function CardZone({ posts }) {
     bg-gray-50
     dark:bg-transparent
     rounded-2xl border border-gray-200/70
-    p-1 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-gray-800 dark:from-zinc-900 dark:to-zinc-950"
+    p-1 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-gray-900 dark:from-zinc-900 dark:to-zinc-950"
             >
               <div
-                className={`overflow-hidden rounded-[14px] border border-gray-200 bg-white dark:border-gray-800 dark:bg-zinc-900        ${
+                className={`overflow-hidden rounded-[14px] border border-gray-200 bg-white dark:border-gray-900 dark:bg-zinc-900        ${
                   isOpen ? "rounded-b-none" : ""
                 }
           `}
@@ -198,7 +198,7 @@ export default function CardZone({ posts }) {
             border-t
             border-gray-200
             pt-4
-            dark:border-gray-800
+            dark:border-gray-900
           "
                   >
                     <div className="flex gap-5">
@@ -322,7 +322,7 @@ export default function CardZone({ posts }) {
               border-t
               border-gray-200
               pt-3
-              dark:border-gray-800
+              dark:border-gray-900
             "
                   >
                     <input

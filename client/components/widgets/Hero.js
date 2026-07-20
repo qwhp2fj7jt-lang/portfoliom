@@ -20,7 +20,7 @@ export default function Hero() {
   height={128}
   className="
     h-24 w-24 rounded-full border border-gray-100 p-1 shadow-md object-cover
-    dark:border-gray-800
+    dark:border-gray-900
     sm:h-28 sm:w-28
     md:h-32 md:w-32
   "

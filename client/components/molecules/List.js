@@ -23,7 +23,7 @@ export default function List({ blog = [] }) {
             hover:-translate-y-1
             hover:border-gray-300
             hover:shadow-xl
-            dark:border-gray-800
+            dark:border-gray-900
             dark:bg-zinc-900
             dark:hover:border-gray-500/50
           "

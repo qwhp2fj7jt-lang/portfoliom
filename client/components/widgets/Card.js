@@ -47,8 +47,8 @@ function ProjectCard({ item }) {
     rounded-2xl border border-gray-200/70 dark:border-gray-200/20
     bg-gray-50
        dark:bg-transparent
-    p-1 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-gray-800 dark:from-zinc-900 dark:to-zinc-950">
-  <div className="overflow-hidden rounded-[14px] border border-gray-200 bg-white dark:border-gray-800 dark:bg-zinc-900">
+    p-1 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-gray-900 dark:from-zinc-900 dark:to-zinc-950">
+  <div className="overflow-hidden rounded-[14px] border border-gray-200 bg-white dark:border-gray-900 dark:bg-zinc-900">
     <div
       className="h-56 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
       style={{ backgroundImage: `url(${item.icon})` }}
@@ -100,7 +100,7 @@ function ProjectCard({ item }) {
         text={open ? "Kapat" : "Devamını Gör"}
       />
 
-      <div className="mt-5 flex items-center justify-between border-t border-gray-100 pt-4 dark:border-gray-800">
+      <div className="mt-5 flex items-center justify-between border-t border-gray-100 pt-4 dark:border-gray-900">
         <div className="flex items-center gap-3">
           <Image
             src="/images/avatar.png"
