@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowLeft, Calendar } from "lucide-react";
+import { ArrowLeft, Calendar,Share2 } from "lucide-react";
 import AdSenseAd from "@/components/AdSenseAd";
 import { useState } from "react";
 import {
@@ -25,6 +25,24 @@ export default function CardList({ article }) {
   const [openPdf, setOpenPdf] = useState(false);
   const [pdfUrl, setPdfUrl] = useState("");
 
+
+const handleShare = async () => {
+  const url = window.location.href;
+
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: document.title,
+        url,
+      });
+    } catch (err) {
+      console.log("Paylaşım iptal edildi.");
+    }
+  } else {
+    await navigator.clipboard.writeText(url);
+    
+  }
+};
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       <Link
@@ -76,6 +94,13 @@ export default function CardList({ article }) {
         </Select>
 
         <Calendar size={16} />
+                <button
+  onClick={handleShare}
+  className="tooltip-trigger"
+  title="Paylaş"
+>
+  <Share2 size={18} />
+</button>
         <span>
           {blog.createdAt
             ? new Date(blog.createdAt).toLocaleDateString("tr-TR")
