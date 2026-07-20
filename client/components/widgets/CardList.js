@@ -58,7 +58,7 @@ export default function CardList({ article }) {
     mt-6
     flex flex-col gap-4
     rounded-2xl
-    border border-gray-200/70 dark:border-gray-800
+    border border-gray-200/70 dark:border-gray-900
     bg-white/80 dark:bg-gray-950
     p-4
     shadow-sm
