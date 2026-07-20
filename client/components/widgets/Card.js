@@ -48,7 +48,7 @@ function ProjectCard({ item }) {
     {item.baslik}
   </h2>
 
-{item.yakinda && (
+
   <span
     className="
       inline-flex
@@ -56,23 +56,22 @@ function ProjectCard({ item }) {
       gap-1.5
       rounded-full
       border
-      border-amber-200
-      bg-amber-50
+      border-orange-200
+      bg-orange-50
       px-3
       py-1
       text-xs
       font-semibold
-      text-amber-700
-      dark:border-amber-900/50
-      dark:bg-amber-950/30
-      dark:text-amber-400
+      text-orange-700
+      shadow-sm
+      dark:border-orange-900/50
+      dark:bg-orange-950/30
+      dark:text-orange-400
     "
   >
-    <span className="h-1.5 w-1.5 rounded-full bg-amber-500 animate-pulse" />
-    {item.yakinda}
+    {item.yakinda ? item.yakinda : ""}
   </span>
-)}
- 
+
 
       <p
         className={`text-sm leading-7 text-gray-600 dark:text-gray-300 ${
