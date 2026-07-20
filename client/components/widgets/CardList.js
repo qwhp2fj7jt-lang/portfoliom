@@ -47,7 +47,7 @@ export default function CardList({ article }) {
         aria-label="Blog yazılarına dön"
       >
         <ArrowLeft size={16} />
-        Bloga Dön
+        Blog
       </Link>
 
       <h1 className="text-3xl font-bold tracking-tight">{blog.title}</h1>
