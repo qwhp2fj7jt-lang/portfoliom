@@ -36,7 +36,14 @@ export default function CardZone({ posts }) {
         baslik="Zeynep Zone"
         paragraf="Zeynep Baş’ın paylaşımlarını keşfedebileceğin ve etkileşime geçebileceğin dijital alan."
       />
-      <div className="mx-auto max-4xl py-4 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="mx-auto
+    max-w-4xl
+    py-4
+    grid
+    grid-cols-1
+    sm:grid-cols-2
+    gap-6
+    items-start">
         {localPosts.length === 0 && (
           <p className="text-center text-gray-400 col-span-full">
             Gönderi bulunamadı
@@ -54,7 +61,7 @@ export default function CardZone({ posts }) {
            <div
           key={post._id}
           className="group 
-           self-start
+
     rounded-2xl border border-gray-200/70
     p-1 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-gray-800 dark:from-zinc-900 dark:to-zinc-950">
   <div className={`overflow-hidden rounded-[14px] border border-gray-200 bg-white dark:border-gray-800 dark:bg-zinc-900        ${
