@@ -3,7 +3,7 @@
   "icon": "/images/project/pdos.png",
   "width": 200,
   "height": 200,
-  "baslik": "PDOS (Devam Ediyor)",
+  "baslik": "PDOS",
   "yakinda:"Yakında",
   "description": "⚙️ Kullanılan Teknolojiler:\n Next.js (App Router)\n React\n Tailwind CSS\n Zustand\n React Hook Form\n TanStack Query\n Recharts\n Lucide React\n\n🏗️ Mimari:\n Feature-Based Architecture\n SSR / CSR / ISR\n Dynamic Imports\n Suspense & Streaming\n Optimistic UI\n Memoization\n Virtualization\n Route Groups\n\n♿ Accessibility:\n WCAG uyumlu\n Semantic HTML\n Keyboard Navigation\n Screen Reader desteği\n\n📦 Modüller:\nDashboard, Tasks, Knowledge Base, Documents, Calendar, Goals, Analytics ve Settings.\n📂 Ölçeklenebilir frontend mimarisi, performans optimizasyonları ve gelecekte AI özellikleri eklenebilecek şekilde geliştirilmektedir.",
   "adres": "https://github.com/zeynepbass/personal-data-operating-system"
@@ -13,7 +13,7 @@
     "width": 200,
     "height": 200,
     "baslik": "Milk",
-        "yakinda:"",
+    "yakinda":"",
    "description": "⚙️ Kullanılan Teknolojiler:\nReact ile modern ve component tabanlı kullanıcı arayüzü\nZustand ile global state yönetimi\nTailwind CSS ile responsive ve modern tasarım\nAxios ile backend API iletişimi\nSocket.IO ile gerçek zamanlı mesajlaşma\nReact Router DOM ile sayfa yönlendirme\nNode.js ve Express ile backend geliştirme\nMongoDB ile veri yönetimi\nJWT ile güvenli kimlik doğrulama\n\n🔧 Bu projede ayrıca rol bazlı kullanıcı sistemi (Alıcı / Satıcı), profil yönetimi, profil güncelleme, hesap dondurma/silme, organik sertifika yükleme ile doğrulanmış satıcı sistemi, gönderi oluşturma, beğeni, yorum, takip/favori sistemi, şehir & ilçe bazlı filtreleme, keşfet alanı ve takip edilen kullanıcıların gönderilerini görüntüleme özellikleri geliştirilmiştir.\n\n💬 Gerçek zamanlı mesajlaşma Socket.IO ile sağlanmıştır.\n\n📂 Proje, ölçeklenebilir mimari, gerçek zamanlı iletişim ve kullanıcı deneyimi odaklı olarak tasarlanmış full-stack bir uygulamadır.",
     "adres": "https://github.com/zeynepbass/milk"
   },
@@ -22,7 +22,7 @@
     "width": 200,
     "height": 200,
     "baslik": "Hizmet Kap",
-           "yakinda:"",
+         "yakinda":"",
     "description": "⚙️ Kullanılan Teknolojiler:\nNext.js 14 ile hızlı ve SEO uyumlu sayfalar\nTailwind CSS ile modern ve responsive tasarım\nMaterial UI ve Icons ile zengin kullanıcı arayüzü\nAxios ile backend API iletişimi\nSocket.IO ile gerçek zamanlı mesajlaşma\nReact-Leaflet & Leaflet ile konum entegrasyonu\nReact-Toastify ile bildirim sistemi\nKullanıcı ve ilan verileri MongoDB üzerinden yönetiliyor\n🔧 Bu projede ayrıca localStorage ile sayfa kontrolleri, JWT ile güvenli giriş sistemi ve modern web geliştirme teknikleri uyguladım.\n📂 Gerçek kullanıcı ihtiyaçları için full-stack bir uygulama olarak tasarlandı.",
     "adres": "https://github.com/zeynepbass/HizmetKap"
   },
@@ -31,7 +31,7 @@
     "width": 200,
     "height": 200,
     "baslik": "Workist",
-           "yakinda:"",
+         "yakinda":"",
     "description": "⚙️ Kullanılan Teknolojiler:\nFrontend: React.js, Context API, Tailwind CSS, FontAwesome\nBackend: Node.js, Express.js\nGerçek Zamanlı İletişim: Socket.io\nHTTP İletişimi: Axios\nDepolama & Oturum: LocalStorage\nYardımcı Araçlar: useMemo, useRef gibi ileri React Hook'ları\nGüvenlik: Authentication & Authorization\n💡 Amaçlarım:\nTemiz ve sürdürülebilir kod yapısı kurmak\nKullanıcı merkezli arayüzler geliştirmek\nGerçek zamanlı etkileşimleri başarılı şekilde entegre etmek\nFull-stack yetkinliğimi geliştirmek",
     "adres": "https://github.com/zeynepbass/workist"
   },
@@ -40,7 +40,7 @@
     "width": 200,
     "height": 200,
     "baslik": "Stack Diyet",
-           "yakinda:"",
+         "yakinda":"",
     "description": "⚙️ Kullanılan Teknolojiler:\nFrontend: React.js, Tailwind CSS, FontAwesome\nBackend: Node.js\nState Management: Zustand\nEmail Gönderimi: React EmailJS\nVeri Yönetimi: MongoDB & Express.js\nBu proje ile kullanıcı deneyimi, interaktif gönderi sistemi ve gerçek zamanlı etkileşim özelliklerini uygulama fırsatı buldum.\n🧠 Her adımını öğrenerek ve deneyimleyerek geliştirdim.",
     "adres": "https://github.com/zeynepbass/stack-diyet"
   },
@@ -49,7 +49,7 @@
     "width": 200,
     "height": 200,
     "baslik": "Fatura Entegrasyonu",
-           "yakinda:"",
+         "yakinda":"",
     "description": "⚙️ Kullanılan Teknolojiler:\nBu projede şu özellikler bulunuyor:\nKullanıcı Yönetimi: Giriş & kayıt\nSipariş Yönetimi: Sepet, sipariş oluşturma, sipariş takibi\nFatura Entegrasyonu: Fatura oluşturma, yazdırma\nKategori & Ürün Yönetimi: CRUD işlemleri\nGeri bildirimlerinizi duymaktan memnuniyet duyarım! 💻🌟",
     "adres": "https://github.com/zeynepbass/react-fatura-application"
   }
