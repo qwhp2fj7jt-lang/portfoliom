@@ -33,7 +33,9 @@ function ProjectCard({ item }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="group rounded-2xl border border-gray-200/70 bg-gradient-to-b from-white to-gray-50 p-1 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-gray-800 dark:from-zinc-900 dark:to-zinc-950">
+    <div className="group 
+    rounded-2xl border border-gray-200/70
+    p-1 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-gray-800 dark:from-zinc-900 dark:to-zinc-950">
   <div className="overflow-hidden rounded-[14px] border border-gray-200 bg-white dark:border-gray-800 dark:bg-zinc-900">
     <div
       className="h-56 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
