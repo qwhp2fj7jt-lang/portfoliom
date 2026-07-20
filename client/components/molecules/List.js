@@ -2,35 +2,139 @@ import Link from "next/link";
 
 export default function List({ blog = [] }) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="space-y-4">
       {blog.map((item, index) => (
         <div
           key={item._id}
-          className="flex items-start gap-4 rounded-lg transition group"
+          className="
+            group
+            relative
+            flex
+            items-start
+            gap-4
+            rounded-2xl
+            border
+            border-gray-200
+            bg-white
+            p-4
+            shadow-sm
+            transition-all
+            duration-300
+            hover:-translate-y-1
+            hover:border-blue-300
+            hover:shadow-xl
+            dark:border-gray-800
+            dark:bg-zinc-900
+            dark:hover:border-blue-500/50
+          "
         >
-          <span className="w-10 text-xl text-gray-600 dark:text-gray-100 flex justify-center">
+
+
+          <div
+            className="
+              flex
+              h-11
+              w-11
+              shrink-0
+              items-center
+              justify-center
+              rounded-xl
+              bg-gradient-to-br
+              from-blue-500
+              to-indigo-600
+              text-sm
+              font-bold
+              text-white
+              shadow-md
+              transition-transform
+              duration-300
+              group-hover:scale-110
+            "
+          >
             {String(index + 1).padStart(2, "0")}
-          </span>
+          </div>
 
+
+
+     
           <div className="flex-1">
-    <Link
-  href={`/blog/${item.slug}`}
-  className="text-lg font-medium group-hover:underline"
-  aria-label={`Blog yazısını oku: ${item.title}`}
->
-  {item.title}
-</Link>
 
-            <p className="text-xs text-gray-500 dark:text-gray-300 mt-1">
+            <Link
+              href={`/blog/${item.slug}`}
+              aria-label={`Blog yazısını oku: ${item.title}`}
+              className="
+                line-clamp-2
+                text-lg
+                font-semibold
+                text-gray-900
+                transition-colors
+                duration-200
+                group-hover:text-blue-600
+                dark:text-gray-100
+                dark:group-hover:text-blue-400
+              "
+            >
+              {item.title}
+            </Link>
+
+
+
+            <div
+              className="
+                mt-2
+                flex
+                items-center
+                gap-2
+                text-xs
+                text-gray-500
+                dark:text-gray-400
+              "
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
+
               {item.createdAt
                 ? new Date(item.createdAt).toLocaleDateString("tr-TR")
                 : ""}
-            </p>
+            </div>
 
-            <p className="text-sm text-gray-700 dark:text-gray-100 mt-1">
+
+
+            <p
+              className="
+                mt-3
+                line-clamp-2
+                text-sm
+                leading-6
+                text-gray-600
+                dark:text-gray-300
+              "
+            >
               {item.subtitle}
             </p>
+
+
+
+            <div
+              className="
+                mt-4
+                flex
+                items-center
+                text-xs
+                font-medium
+                text-blue-600
+                opacity-0
+                transition-all
+                duration-300
+                group-hover:translate-x-1
+                group-hover:opacity-100
+                dark:text-blue-400
+              "
+            >
+              Yazıyı oku →
+            </div>
+
           </div>
+
         </div>
       ))}
     </div>
