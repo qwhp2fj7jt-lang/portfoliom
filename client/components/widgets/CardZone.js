@@ -48,44 +48,21 @@ export default function CardZone({ posts }) {
   const isExpanded = expandedPost === post._id;
 
   return (
-      <div
-        key={post._id}
-        className="
-          group
-          relative
-          flex
-          flex-col
-          self-start
-          rounded-[28px]
-          bg-gradient-to-br
-          from-gray-500/30
-          via-purple-500/20
-          to-transparent
-          p-[1px]
-          transition-all
-          duration-500
-          hover:-translate-y-1
-          hover:shadow-2xl
-          dark:from-gray-500/20
-          dark:via-purple-500/20
-        "
-      >
-        <div
-          className={`
-            overflow-hidden
-            rounded-[27px]
-            border
-            bg-white
-            shadow-sm
-            dark:bg-zinc-900
-            dark:border-zinc-800
-            ${
+ 
+
+ 
+           <div
+          key={post._id}
+          className="group 
+    rounded-2xl border border-gray-200/70
+    p-1 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-gray-800 dark:from-zinc-900 dark:to-zinc-950">
+  <div className={`overflow-hidden rounded-[14px] border border-gray-200 bg-white dark:border-gray-800 dark:bg-zinc-900        ${
               isOpen
                 ? "rounded-b-none"
                 : ""
             }
-          `}
-        >
+          `}>
+
 
      
         <div className="relative h-64 w-full overflow-hidden bg-gray-100 dark:bg-zinc-800 sm:h-72 md:h-80">
