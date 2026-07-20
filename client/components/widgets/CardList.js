@@ -59,7 +59,7 @@ const handleShare = async () => {
 
       <p className="mt-2 text-xl text-muted-foreground">{blog.subtitle}</p>
 <div className="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-200/70 bg-white/80 p-4 shadow-sm backdrop-blur-sm dark:border-gray-800 dark:bg-gray-900/80">
-  {/* Sol Taraf */}
+
   <div className="flex flex-wrap items-center gap-3">
     <Select>
       <SelectTrigger className="w-56 rounded-xl border-gray-200 bg-background shadow-sm dark:border-gray-700">
@@ -95,7 +95,7 @@ const handleShare = async () => {
     </div>
   </div>
 
-  {/* Sağ Taraf */}
+
   <div className="flex items-center gap-3">
     <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
       Eklentiler
@@ -119,13 +119,13 @@ const handleShare = async () => {
           shadow-sm
           transition-all duration-300
           hover:-translate-y-1
-          hover:border-red-400
-          hover:bg-red-50
-          hover:text-red-600
+          hover:border-gray-400
+          hover:bg-gray-50
+          hover:text-gray-600
           hover:shadow-lg
-          dark:hover:border-red-500
-          dark:hover:bg-red-950/30
-          dark:hover:text-red-400
+          dark:hover:border-gray-500
+          dark:hover:bg-gray-950/30
+          dark:hover:text-gray-400
         "
       >
         <Eye className="h-5 w-5 transition-all duration-300 group-hover:scale-110" />
@@ -146,13 +146,13 @@ const handleShare = async () => {
         shadow-sm
         transition-all duration-300
         hover:-translate-y-1
-        hover:border-blue-500
-        hover:bg-blue-50
-        hover:text-blue-600
+        hover:border-gray-500
+        hover:bg-gray-50
+        hover:text-gray-600
         hover:shadow-lg
-        dark:hover:border-blue-500
-        dark:hover:bg-blue-950/30
-        dark:hover:text-blue-400
+        dark:hover:border-gray-500
+        dark:hover:bg-gray-950/30
+        dark:hover:text-gray-400
       "
     >
       <Share2 className="h-5 w-5 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
