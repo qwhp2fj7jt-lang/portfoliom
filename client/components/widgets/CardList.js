@@ -73,9 +73,23 @@ const handleShare = async () => {
   }}
   aria-label="PDF görüntüle"
   title="PDF Görüntüle"
-  className="rounded-full border border-gray-200 p-2 text-gray-600 transition-all hover:bg-gray-100 hover:text-black"
+  className="
+    group
+    rounded-full
+    border border-gray-200 dark:border-gray-700
+    bg-white dark:bg-gray-900
+    p-2
+    text-gray-600 dark:text-gray-300
+    shadow-sm
+    transition-all duration-200
+    hover:scale-105
+    hover:bg-gray-100 dark:hover:bg-gray-800
+    hover:border-gray-300 dark:hover:border-gray-600
+    hover:text-black dark:hover:text-white
+    hover:shadow-md
+  "
 >
-  <Eye className="h-5 w-5 rounded-md border shadow-md bg-white " />
+  <Eye className="h-5 w-5 transition-transform duration-200 group-hover:scale-110" />
 </button>
 )}
   <PdfMakers openPdf={openPdf} setOpenPdf={setOpenPdf} pdfUrl={pdfUrl}/>
@@ -101,13 +115,37 @@ const handleShare = async () => {
             ? new Date(blog.createdAt).toLocaleDateString("tr-TR")
             : "-"}
         </span>
-                          Paylaş:                <button
-  onClick={handleShare}
-  className="tooltip-trigger"
-  title="Paylaş"
->
-  <Share2 className="h-5 w-5 rounded-md border shadow-md bg-white " />
-</button>
+<div className="flex items-center gap-2">
+  <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+    Paylaş:
+  </span>
+
+  <button
+    onClick={handleShare}
+    aria-label="Paylaş"
+    title="Paylaş"
+    className="
+      group
+      rounded-full
+      border border-gray-200 dark:border-gray-700
+      bg-white dark:bg-gray-900
+      p-2
+      text-gray-600 dark:text-gray-300
+      shadow-sm
+      transition-all duration-200
+      hover:scale-105
+      hover:border-blue-500
+      hover:bg-blue-50
+      hover:text-blue-600
+      dark:hover:border-blue-400
+      dark:hover:bg-blue-950/40
+      dark:hover:text-blue-300
+      hover:shadow-md
+    "
+  >
+    <Share2 className="h-5 w-5 transition-transform duration-200 group-hover:scale-110" />
+  </button>
+</div>
       </div>
 
       <div className="mt-6 rounded-3xl overflow-hidden">
