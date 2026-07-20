@@ -75,7 +75,7 @@ const handleShare = async () => {
   title="PDF Görüntüle"
   className="rounded-full border border-gray-200 p-2 text-gray-600 transition-all hover:bg-gray-100 hover:text-black"
 >
-  <Eye className="h-5 w-5" />
+  <Eye className="h-5 w-5 rounded-xl border shadow-sm bg-white" />
 </button>
 )}
   <PdfMakers openPdf={openPdf} setOpenPdf={setOpenPdf} pdfUrl={pdfUrl}/>
@@ -83,7 +83,8 @@ const handleShare = async () => {
             <SelectGroup>
               {article?.tableOfContents?.map((item) => (
                 <SelectItem key={item._id} value={item.heading}>
-                  <a href={`#${item.heading}`} className="w-full block"                aria-label={`#${item.heading}`}>
+                  <a href={`#${item.heading}`} className="w-full block"      
+  aria-label={`#${item.heading}`}>
                     {item.heading}
                   </a>
                 </SelectItem>
@@ -105,7 +106,7 @@ const handleShare = async () => {
   className="tooltip-trigger"
   title="Paylaş"
 >
-  <Share2 size={18} />
+  <Share2 className="h-5 w-5 rounded-xl border shadow-sm bg-white" />
 </button>
       </div>
 
