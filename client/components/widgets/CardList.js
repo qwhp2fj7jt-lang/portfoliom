@@ -203,7 +203,7 @@ export default function CardList({ article }) {
             id={section.heading || section._id}
             className="scroll-mt-24"
           >
-            <h2 className="text-3xl font-bold">{section.heading}</h2>
+            <h2 className="text-xl font-bold">{section.heading}</h2>
 
             {section.subtitle && (
               <p className="text-muted-foreground mt-2">{section.subtitle}</p>
