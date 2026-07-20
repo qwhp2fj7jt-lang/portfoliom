@@ -54,6 +54,7 @@ export default function CardZone({ posts }) {
            <div
           key={post._id}
           className="group 
+           self-start
     rounded-2xl border border-gray-200/70
     p-1 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-gray-800 dark:from-zinc-900 dark:to-zinc-950">
   <div className={`overflow-hidden rounded-[14px] border border-gray-200 bg-white dark:border-gray-800 dark:bg-zinc-900        ${
