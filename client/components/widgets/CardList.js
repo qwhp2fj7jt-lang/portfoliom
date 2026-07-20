@@ -191,7 +191,7 @@ export default function CardList({ article }) {
       )}
 
       <div className="mt-8">
-        <p className="text-xl leading-9 text-muted-foreground">
+        <p className="text-md leading-9 text-muted-foreground">
           {blog.summary}
         </p>
       </div>
@@ -212,7 +212,7 @@ export default function CardList({ article }) {
             <div className="mt-4 space-y-6">
               {section.items.map((item) => (
                 <div key={item._id}>
-                  <p className="text-lg leading-8">{item.text}</p>
+                  <p className="text-md leading-8">{item.text}</p>
 
                   {item.subItems?.length > 0 && (
                     <ul className="mt-3 space-y-2 list-disc pl-6 text-muted-foreground">
