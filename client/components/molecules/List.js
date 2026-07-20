@@ -30,30 +30,7 @@ export default function List({ blog = [] }) {
         >
 
 
-          <div
-            className="
-              flex
-              h-11
-              w-11
-              shrink-0
-              items-center
-              justify-center
-              rounded-xl
-              bg-gradient-to-br
-              from-gray-500
-              to-gray-600
-              text-sm
-              font-bold
-              text-white
-              shadow-md
-              transition-transform
-              duration-300
-              group-hover:scale-110
-            "
-          >
-            {String(index + 1).padStart(2, "0")}
-          </div>
-
+<span className="w-10 text-xl text-gray-600 dark:text-gray-100 flex justify-center"> {String(index + 1).padStart(2, "0")} </span>
 
 
      
