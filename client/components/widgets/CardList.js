@@ -75,7 +75,7 @@ export default function CardList({ article }) {
         >
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Select>
-              <SelectTrigger className="w-full sm:w-56 rounded-xl border-gray-200 bg-background shadow-sm dark:border-gray-900 dark:bg-gray-950">
+              <SelectTrigger className="w-full sm:w-56 rounded-xl border-gray-200/70 bg-background shadow-sm dark:border-gray-900 dark:bg-gray-950">
                 <SelectValue placeholder="İçindekiler" />
               </SelectTrigger>
 
