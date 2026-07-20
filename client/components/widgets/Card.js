@@ -75,7 +75,7 @@ function ProjectCard({ item }) {
               href={item.adres}
               target="_blank"
               aria-label="Açık kaynak proje adresi"
-              className="text-sm font-medium text-gray-900 transition-colors hover:text-blue-600 hover:underline dark:text-gray-100 dark:hover:text-blue-400"
+              className="text-sm font-medium text-gray-900 transition-colors hover:text-gray-600 hover:underline dark:text-gray-100 dark:hover:text-gray-400"
             >
               Proje Linki
             </a>
