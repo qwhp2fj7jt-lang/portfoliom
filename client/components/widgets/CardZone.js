@@ -244,18 +244,7 @@ export default function CardZone({ posts }) {
           ">
 
 
-       <div
-              className="
-                mt-5
-                flex
-                items-center
-                justify-between
-                border-t
-                border-gray-200
-                pt-4
-                dark:border-gray-800
-              "
-            >
+
 
               <div className="flex gap-5">
 
