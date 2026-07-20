@@ -49,7 +49,7 @@ export default function Header({ posts }) {
   };
   return (
     <>
-      <nav className="dark:bg-black bg-white/80 backdrop-blur-sm sticky top-0 z-20">
+      <nav className="dark:bg-black flex justify-center bg-white/80 backdrop-blur-sm sticky top-0 z-20">
         <div className="mx-auto max-w-6xl ">
           <div className="flex h-16 items-center justify-between">
 <button
