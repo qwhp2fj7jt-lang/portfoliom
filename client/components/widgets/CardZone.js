@@ -58,7 +58,7 @@ export default function CardZone({ posts }) {
           self-start
           rounded-[28px]
           bg-gradient-to-br
-          from-blue-500/30
+          from-gray-500/30
           via-purple-500/20
           to-transparent
           p-[1px]
@@ -66,7 +66,7 @@ export default function CardZone({ posts }) {
           duration-500
           hover:-translate-y-1
           hover:shadow-2xl
-          dark:from-blue-500/20
+          dark:from-gray-500/20
           dark:via-purple-500/20
         "
       >
@@ -303,7 +303,7 @@ export default function CardZone({ posts }) {
                   gap-1
                   text-gray-500
                   transition
-                  hover:text-blue-500
+                  hover:text-gray-500
                   dark:text-gray-400
                 "
               >
@@ -437,7 +437,7 @@ export default function CardZone({ posts }) {
                 text-sm
                 outline-none
                 transition
-                focus:border-blue-500
+                focus:border-gray-500
                 dark:border-gray-700
                 dark:bg-zinc-800
               "
@@ -455,11 +455,11 @@ export default function CardZone({ posts }) {
                 p-2
                 text-gray-600
                 transition
-                hover:bg-blue-50
-                hover:text-blue-600
+                hover:bg-gray-50
+                hover:text-gray-600
                 dark:border-gray-700
                 dark:text-gray-300
-                dark:hover:bg-blue-950/30
+                dark:hover:bg-gray-950/30
               "
             >
 
