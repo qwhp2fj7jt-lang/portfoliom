@@ -53,9 +53,20 @@ export default function CardList({ article }) {
       <h1 className="text-4xl font-bold tracking-tight">{blog.title}</h1>
 
       <p className="mt-2 text-xl text-muted-foreground">{blog.subtitle}</p>
-<div className="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-200/70 dark:border-gray-200/20 bg-white/80 p-4 shadow-sm backdrop-blur-sm dark:border-gray-800 dark:bg-gray-900/80">
-
-  <div className="flex flex-wrap items-center gap-3">
+      <div
+  className="
+    mt-6
+    flex flex-col gap-4
+    rounded-2xl
+    border border-gray-200/70 dark:border-gray-800
+    bg-white/80 dark:bg-gray-950
+    p-4
+    shadow-sm
+    backdrop-blur-sm
+    lg:flex-row lg:items-center lg:justify-between
+  "
+>
+  <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
     <Select>
       <SelectTrigger className="w-full sm:w-56 rounded-xl border-gray-200 bg-background shadow-sm dark:border-gray-700 dark:bg-gray-900">
         <SelectValue placeholder="İçindekiler" />
