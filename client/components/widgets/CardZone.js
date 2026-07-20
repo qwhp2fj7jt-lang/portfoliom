@@ -53,14 +53,14 @@ export default function CardZone({ posts }) {
       className="
         group flex flex-col
         rounded-3xl
-        border border-gray-200/70
+      
         bg-gradient-to-b from-white to-gray-50
         p-1
         shadow-lg
         transition-all duration-300
         hover:-translate-y-1
         hover:shadow-2xl
-        dark:border-gray-800
+ 
         dark:from-zinc-900
         dark:to-zinc-950
       "
@@ -80,7 +80,7 @@ export default function CardZone({ posts }) {
         `}
       >
 
-        {/* IMAGE */}
+     
         <div className="relative h-64 w-full overflow-hidden bg-gray-100 dark:bg-zinc-800 sm:h-72 md:h-80">
           <Image
             src={post?.image}
@@ -112,11 +112,11 @@ export default function CardZone({ posts }) {
         </div>
 
 
-        {/* CONTENT */}
+   
         <div className="flex flex-1 flex-col p-5">
 
 
-          {/* USER */}
+      
           <div className="mb-4 flex items-center gap-3">
 
             <Image
@@ -189,7 +189,7 @@ export default function CardZone({ posts }) {
 
 
 
-          {/* DESCRIPTION */}
+
           <p
             className={`
               text-sm
@@ -229,7 +229,7 @@ export default function CardZone({ posts }) {
 
 
 
-          {/* ACTIONS */}
+  
           <div className="
             mt-5
             flex
@@ -332,7 +332,7 @@ export default function CardZone({ posts }) {
 
 
 
-      {/* COMMENTS */}
+   
 
       {isOpen && (
 
