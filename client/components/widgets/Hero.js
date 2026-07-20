@@ -10,7 +10,7 @@ export default function Hero() {
 
   return (
     <>
-      <section className="flex flex-col items-center mt-10 gap-6 md:flex-row md:gap-10">
+      <section className="flex flex-col items-center mt-6 gap-6 md:flex-row md:gap-10">
 
         <div className="relative shrink-0">
 <Image
