@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import { ArrowLeft, Calendar,Share2 } from "lucide-react";
+import { ArrowLeft, Calendar,Share2,Eye } from "lucide-react";
+
 import AdSenseAd from "@/components/AdSenseAd";
 import { useState } from "react";
 import {
@@ -63,22 +64,20 @@ const handleShare = async () => {
           <SelectTrigger className="w-56 rounded-xl border shadow-sm">
             <SelectValue placeholder="İçindekiler" />
           </SelectTrigger>
-          {blog?.pdf?.url && (
-            <button
-     
-              onClick={() => {
-                setPdfUrl(
-                  `${process.env.NEXT_PUBLIC_API_URL}${blog.pdf.url}`
-                );
-                setOpenPdf(true);
-              }}
-              className="inline-flex items-center text-xs sm:text-sm px-3 py-1 border rounded-xl hover:bg-gray-50"
-                  aria-label="Pdf görüntüle"
-            >
-              📄 PDF Görüntüle
-            </button>
-          )}
 
+{blog?.pdf?.url && (
+<button
+  onClick={() => {
+    setPdfUrl(`${process.env.NEXT_PUBLIC_API_URL}${blog.pdf.url}`);
+    setOpenPdf(true);
+  }}
+  aria-label="PDF görüntüle"
+  title="PDF Görüntüle"
+  className="rounded-full border border-gray-200 p-2 text-gray-600 transition-all hover:bg-gray-100 hover:text-black"
+>
+  <Eye className="h-5 w-5" />
+</button>
+)}
   <PdfMakers openPdf={openPdf} setOpenPdf={setOpenPdf} pdfUrl={pdfUrl}/>
           <SelectContent className="w-56 bg-white dark:bg-gray-900">
             <SelectGroup>
