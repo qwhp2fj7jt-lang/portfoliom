@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowLeft, Calendar,Share2,Eye } from "lucide-react";
+import { ArrowLeft, Calendar, Share2, Eye } from "lucide-react";
 
 import AdSenseAd from "@/components/AdSenseAd";
 import { useState } from "react";
@@ -14,42 +14,37 @@ import {
 } from "@/components/ui/select";
 
 import dynamic from "next/dynamic";
-  const PdfMakers = dynamic(
-  () => import("@/widgets/PdfMakers"),
-  {
-    loading: () => <p>PDF yükleniyor...</p>,
-  }
-);
+const PdfMakers = dynamic(() => import("@/widgets/PdfMakers"), {
+  loading: () => <p>PDF yükleniyor...</p>,
+});
 export default function CardList({ article }) {
   const blog = article?.article;
   const imageUrl = blog?.image?.url;
   const [openPdf, setOpenPdf] = useState(false);
   const [pdfUrl, setPdfUrl] = useState("");
 
+  const handleShare = async () => {
+    const url = window.location.href;
 
-const handleShare = async () => {
-  const url = window.location.href;
-
-  if (navigator.share) {
-    try {
-      await navigator.share({
-        title: document.title,
-        url,
-      });
-    } catch (err) {
-      console.log("Paylaşım iptal edildi.");
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: document.title,
+          url,
+        });
+      } catch (err) {
+        console.log("Paylaşım iptal edildi.");
+      }
+    } else {
+      await navigator.clipboard.writeText(url);
     }
-  } else {
-    await navigator.clipboard.writeText(url);
-    
-  }
-};
+  };
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       <Link
         href="/blog"
         className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8"
-            aria-label="Blog yazılarına dön"
+        aria-label="Blog yazılarına dön"
       >
         <ArrowLeft size={16} />
         Bloga Dön
@@ -58,11 +53,22 @@ const handleShare = async () => {
       <h1 className="text-4xl font-bold tracking-tight">{blog.title}</h1>
 
       <p className="mt-2 text-xl text-muted-foreground">{blog.subtitle}</p>
-<div className="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-200/70 dark:border-gray-200/20 bg-white/80 p-4 shadow-sm backdrop-blur-sm dark:border-gray-800 dark:bg-gray-900/80">
-
-  <div className="flex flex-wrap items-center gap-3">
+      <div
+  className="
+    mt-6
+    flex flex-col gap-4
+    rounded-2xl
+    border border-gray-200/70 dark:border-gray-800
+    bg-white/80 dark:bg-gray-950
+    p-4
+    shadow-sm
+    backdrop-blur-sm
+    lg:flex-row lg:items-center lg:justify-between
+  "
+>
+  <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
     <Select>
-      <SelectTrigger className="w-56 rounded-xl border-gray-200 bg-background shadow-sm dark:border-gray-700">
+      <SelectTrigger className="w-full sm:w-56 rounded-xl border-gray-200 bg-background shadow-sm dark:border-gray-700 dark:bg-gray-900">
         <SelectValue placeholder="İçindekiler" />
       </SelectTrigger>
 
@@ -95,20 +101,45 @@ const handleShare = async () => {
     </div>
   </div>
 
-
-  <div className="flex items-center gap-3">
+  <div className="flex items-center justify-between sm:justify-end gap-3">
     <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
       Eklentiler
     </span>
 
-    {blog?.pdf?.url && (
+    <div className="flex items-center gap-2">
+      {blog?.pdf?.url && (
+        <button
+          onClick={() => {
+            setPdfUrl(`${process.env.NEXT_PUBLIC_API_URL}${blog.pdf.url}`);
+            setOpenPdf(true);
+          }}
+          aria-label="PDF Görüntüle"
+          title="PDF Görüntüle"
+          className="
+            group
+            flex h-11 w-11 items-center justify-center
+            rounded-xl
+            border border-gray-200 dark:border-gray-700
+            bg-white dark:bg-gray-900
+            text-gray-600 dark:text-gray-300
+            shadow-sm
+            transition-all duration-300
+            hover:-translate-y-1
+            hover:border-gray-400
+            hover:bg-gray-50
+            hover:shadow-lg
+            dark:hover:border-gray-500
+            dark:hover:bg-gray-950
+          "
+        >
+          <Eye className="h-5 w-5 transition-all duration-300 group-hover:scale-110" />
+        </button>
+      )}
+
       <button
-        onClick={() => {
-          setPdfUrl(`${process.env.NEXT_PUBLIC_API_URL}${blog.pdf.url}`);
-          setOpenPdf(true);
-        }}
-        aria-label="PDF Görüntüle"
-        title="PDF Görüntüle"
+        onClick={handleShare}
+        aria-label="Paylaş"
+        title="Paylaş"
         className="
           group
           flex h-11 w-11 items-center justify-center
@@ -119,56 +150,27 @@ const handleShare = async () => {
           shadow-sm
           transition-all duration-300
           hover:-translate-y-1
-          hover:border-gray-400
+          hover:border-gray-500
           hover:bg-gray-50
-          hover:text-gray-600
           hover:shadow-lg
           dark:hover:border-gray-500
-          dark:hover:bg-gray-950/30
-          dark:hover:text-gray-400
+          dark:hover:bg-gray-950
         "
       >
-        <Eye className="h-5 w-5 transition-all duration-300 group-hover:scale-110" />
+        <Share2 className="h-5 w-5 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
       </button>
-    )}
-
-    <button
-      onClick={handleShare}
-      aria-label="Paylaş"
-      title="Paylaş"
-      className="
-        group
-        flex h-11 w-11 items-center justify-center
-        rounded-xl
-        border border-gray-200 dark:border-gray-700
-        bg-white dark:bg-gray-900
-        text-gray-600 dark:text-gray-300
-        shadow-sm
-        transition-all duration-300
-        hover:-translate-y-1
-        hover:border-gray-500
-        hover:bg-gray-50
-        hover:text-gray-600
-        hover:shadow-lg
-        dark:hover:border-gray-500
-        dark:hover:bg-gray-950/30
-        dark:hover:text-gray-400
-      "
-    >
-      <Share2 className="h-5 w-5 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
-    </button>
+    </div>
   </div>
 </div>
 
       <div className="mt-6 rounded-3xl overflow-hidden">
         {imageUrl && (
-<img
-  src={imageUrl}
-  alt="Blog görseli"
-  className="w-full object-cover"
-  loading="eager"
-/>
-    
+          <img
+            src={imageUrl}
+            alt="Blog görseli"
+            className="w-full object-cover"
+            loading="eager"
+          />
         )}
       </div>
 
