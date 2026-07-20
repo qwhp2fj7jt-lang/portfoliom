@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@layer base {
+
 body {
   font-family: var(--font-exo), sans-serif;
   background-color: #ffffff;
@@ -12,13 +16,7 @@ body {
   background-color: black;
   color: #ededed;
 }
-
-@layer base {
-
-
-  * {
-    border-color: var(--border);
-  }
+ 
 
   html {
     font-family: var(--font-exo), Arial, Helvetica, sans-serif;
