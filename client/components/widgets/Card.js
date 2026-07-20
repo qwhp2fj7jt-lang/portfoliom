@@ -48,7 +48,7 @@ function ProjectCard({ item }) {
     {item.baslik}
   </h2>
 
-
+{item.yakinda && (
   <span
     className="
       inline-flex
@@ -69,8 +69,8 @@ function ProjectCard({ item }) {
       dark:text-orange-400
     "
   >
-    {item.yakinda ? item.yakinda : ""}
-  </span>
+    {item.yakinda}
+  </span> )}
     </div>
 
       <p
