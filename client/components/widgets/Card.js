@@ -41,9 +41,36 @@ function ProjectCard({ item }) {
     />
 
     <div className="p-5">
-      <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">
-        {item.baslik}
-      </h2>
+<div className="flex items-center justify-between gap-3">
+  <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+    {item.baslik}
+  </h2>
+
+{item.yakinda && (
+  <span
+    className="
+      inline-flex
+      items-center
+      gap-1.5
+      rounded-full
+      border
+      border-amber-200
+      bg-amber-50
+      px-3
+      py-1
+      text-xs
+      font-semibold
+      text-amber-700
+      dark:border-amber-900/50
+      dark:bg-amber-950/30
+      dark:text-amber-400
+    "
+  >
+    <span className="h-1.5 w-1.5 rounded-full bg-amber-500 animate-pulse" />
+    {item.yakinda}
+  </span>
+)}
+ 
 
       <p
         className={`text-sm leading-7 text-gray-600 dark:text-gray-300 ${
