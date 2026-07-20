@@ -36,9 +36,8 @@ export default function List({ blog = [] }) {
      
           <div className="flex-1">
 
-            <Link
-              href={`/blog/${item.slug}`}
-              aria-label={`Blog yazısını oku: ${item.title}`}
+            <p
+
               className="
                 line-clamp-2
                 text-lg
@@ -52,7 +51,7 @@ export default function List({ blog = [] }) {
               "
             >
               {item.title}
-            </Link>
+            </p>
 
 
 
@@ -89,8 +88,6 @@ export default function List({ blog = [] }) {
               {item.subtitle}
             </p>
 
-
-
             <div
               className="
                 mt-4
@@ -107,7 +104,17 @@ export default function List({ blog = [] }) {
                 dark:text-gray-400
               "
             >
-              Yazıyı oku →
+
+            <Link
+              href={`/blog/${item.slug}`}
+              aria-label={`Blog yazısını oku: ${item.title}`}
+   
+   
+            >
+               Yazıyı oku →
+            </Link>
+
+            
             </div>
 
           </div>
