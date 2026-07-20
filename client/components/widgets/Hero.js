@@ -10,7 +10,7 @@ export default function Hero() {
 
   return (
     <>
-      <section className="flex flex-col items-center gap-6 md:flex-row md:gap-10">
+      <section className="flex flex-col items-center mt-10 gap-6 md:flex-row md:gap-10">
 
         <div className="relative shrink-0">
 <Image
@@ -36,7 +36,7 @@ export default function Hero() {
 
  
         <div className="flex-1 text-center md:text-left">
-          <h1 className="text-3xl font-semibold md:text-4xl">
+          <h1 className="text-xl font-semibold md:text-3xl">
             Zeynep Baş
           </h1>
 

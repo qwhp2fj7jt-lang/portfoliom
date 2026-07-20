@@ -12,15 +12,10 @@ import {
 import dynamic from "next/dynamic";
 import navigation from "@/shared/json/navigation";
 import { usePathname } from "next/navigation";
-  const SearchBar = dynamic(
-  () => import("@/molecules/SearchBar"),
-  {
-    loading: () => <p>PDF yükleniyor...</p>,
-  }
-);
+const SearchBar = dynamic(() => import("@/molecules/SearchBar"), {
+  loading: () => <p>PDF yükleniyor...</p>,
+});
 export default function Header({ posts }) {
-
-
   const [theme, setTheme] = useState("light");
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -49,16 +44,89 @@ export default function Header({ posts }) {
   };
   return (
     <>
+
+<div
+  className="
+    fixed
+    top-1/3
+    right-0
+ 
+    ml-auto
+    flex
+    w-fit
+    flex-col
+    items-center
+    justify-center
+    gap-4
+    rounded-l-xl
+    bg-white
+    z-20
+    p-1
+    shadow-md
+    dark:bg-zinc-900
+  "
+>
+        <SearchBar navigation={navigation} posts={posts[posts.length - 1]} />
+
+        <span className="w-5 h-px bg-gray-200 dark:bg-zinc-700" />
+
+        <a
+          href="https://linktr.ee/zeynepbas"
+          aria-label="linktr.ee sayfam"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+        p-1
+
+        inline-flex
+        items-center
+        justify-center
+       
+        rounded-md
+    
+
+        cursor-pointer
+      "
+        >
+          <svg
+            viewBox="0 0 28 28"
+            className="w-4 h-4 text-gray-700 dark:text-gray-200"
+            fill="currentColor"
+          >
+            <path d="m15.76 6.83 4.67-4.8 2.71 2.77-4.9 4.67h6.89v3.86h-6.93l4.93 4.79-2.71 2.72-6.7-6.73-6.7 6.73-2.71-2.71 4.93-4.79H3.34v-3.87h6.89L5.34 4.8 8.05 2.02l4.67 4.81V0h4.05zm-4.05 12.02h4.05V28h-4.05z" />
+          </svg>
+        </a>
+
+        <span className="w-5 h-px bg-gray-200 dark:bg-zinc-700" />
+
+        <button
+          onClick={toggleTheme}
+          aria-label="dark-light mode"
+          className="
+        p-2
+        rounded-md
+        hover:bg-zinc-50
+        dark:hover:bg-zinc-900
+      "
+        >
+          {theme === "light" ? (
+            <MoonIcon className="h-5 w-5 text-gray-800" />
+          ) : (
+            <SunIcon className="h-5 w-5 text-yellow-300" />
+          )}
+        </button>
+      </div>  
+
       <nav className="dark:bg-black flex justify-center bg-white/80 backdrop-blur-sm sticky top-0 z-20">
         <div className="mx-auto max-w-6xl ">
           <div className="flex h-16 items-center justify-between">
-<button
-  onClick={() => setMobileOpen(true)}
-  aria-label="Menüyü aç"
-  className="sm:hidden rounded-md p-2 hover:bg-gray-100 dark:hover:bg-zinc-900"
->
-  <Bars3Icon className="h-6 w-6" />
-</button>
+            <button
+              onClick={() => setMobileOpen(true)}
+              aria-label="Menüyü aç"
+              className="sm:hidden rounded-md p-2 hover:bg-gray-100 dark:hover:bg-zinc-900"
+            >
+              <Bars3Icon className="h-6 w-6" />
+            </button>
 
             <div className="hidden sm:flex space-x-6">
               <div className="flex items-center justify-center gap-6">
@@ -69,7 +137,7 @@ export default function Header({ posts }) {
                     <Link
                       key={item.href}
                       href={item.href}
-aria-label= {item.name}
+                      aria-label={item.name}
                       className={`px-3 py-2 text-sm transition ${
                         isActive(item.href)
                           ? "text-black dark:text-gray-300 font-semibold"
@@ -82,51 +150,6 @@ aria-label= {item.name}
                 })}
               </div>
             </div>
-            <div className="flex items-center pr-3">
-
-<div className="flex items-center space-x-4">
-
-  <SearchBar
-    navigation={navigation}
-    posts={posts[posts.length-1]}
-  />
-
-
-  <span className="w-px h-5 bg-gray-200 dark:bg-zinc-700" />
-
-  <a
-    href="https://linktr.ee/zeynepbas"
- aria-label="linktr.ee sayfam"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="p-1 border border-gray-100 inline-flex items-center gap-1 dark:bg-zinc-900 rounded-md shadow-sm dark:border-zinc-700 cursor-pointer"
-  >
-    <svg
-      viewBox="0 0 28 28"
-      className="w-5 h-5 text-gray-700 dark:text-gray-200"
-      fill="currentColor"
-    >
-      <path d="m15.76 6.83 4.67-4.8 2.71 2.77-4.9 4.67h6.89v3.86h-6.93l4.93 4.79-2.71 2.72-6.7-6.73-6.7 6.73-2.71-2.71 4.93-4.79H3.34v-3.87h6.89L5.34 4.8 8.05 2.02l4.67 4.81V0h4.05zm-4.05 12.02h4.05V28h-4.05z" />
-    </svg>
-  </a>
-
-
-  <span className="w-px h-5 bg-gray-200 dark:bg-zinc-700" />
-
-  <button
-    onClick={toggleTheme}
- aria-label="dark-light mode"
-    className="p-2 rounded-md hover:bg-zinc-50 dark:hover:bg-zinc-900"
-  >
-    {theme === "light" ? (
-      <MoonIcon className="h-5 w-5 text-gray-800" />
-    ) : (
-      <SunIcon className="h-5 w-5 text-yellow-300" />
-    )}
-  </button>
-
-</div>
-</div>
           </div>
         </div>
       </nav>
@@ -136,27 +159,27 @@ aria-label= {item.name}
 
         <Dialog.Panel className="fixed bottom-0 left-0 right-0 bg-white dark:bg-zinc-900 rounded-t-3xl shadow-2xl p-3 space-y-2 z-50 animate-[slideUp_.3s_ease]">
           <div className="flex justify-between">
-            <div className="flex items-center p-2">
+            <div className="flex items-center p-2 gap-2">
               <button
                 onClick={toggleTheme}
-        aria-label="dark-light mode"
+                aria-label="dark-light mode"
                 className="p-2 rounded-md hover:bg-zinc-50 dark:hover:bg-zinc-900"
               >
                 {theme === "light" ? (
-                  <MoonIcon className="h-5 w-5 text-gray-800" />
+                  <MoonIcon className="h-4 w-4 text-gray-800" />
                 ) : (
-                  <SunIcon className="h-5 w-5 text-yellow-300" />
+                  <SunIcon className="h-4 w-4 text-yellow-300" />
                 )}
               </button>
               <a
                 href="https://github.com/zeynepbass"
-                   aria-label="Github"
+                aria-label="Github"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-900 dark:hover:text-white dark:text-gray-300 transition-colors"
               >
                 <svg
-                  className="w-5 h-5 "
+                  className="w-4 h-4 "
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -164,8 +187,8 @@ aria-label= {item.name}
                 </svg>
               </a>
             </div>
-            <button onClick={() => setMobileOpen(false)}         aria-label="Kapat">
-              <XMarkIcon className="h-6 w-6"/>
+            <button onClick={() => setMobileOpen(false)} aria-label="Kapat">
+              <XMarkIcon className="h-5 w-5" />
             </button>
           </div>
 
@@ -178,7 +201,7 @@ aria-label= {item.name}
               <Link
                 key={item.href}
                 href={item.href}
-             aria-label={item.name}
+                aria-label={item.name}
                 onClick={() => setMobileOpen(false)}
                 className={`px-3 py-2 text-sm transition  flex items-center ${
                   isActive(item.href)
@@ -187,7 +210,7 @@ aria-label= {item.name}
                 }`}
               >
                 <span
-                  className="mr-2 w-5 h-5"
+                  className="mr-2 w-4 h-4"
                   dangerouslySetInnerHTML={{ __html: item.svg }}
                 />
                 {item.name}

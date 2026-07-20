@@ -14,7 +14,7 @@ export default function List({ blog = [] }) {
             gap-3
             rounded-2xl
             border
-            border-gray-200
+            border-gray-50
             bg-white
             p-2
             shadow-sm
