@@ -132,7 +132,7 @@ export default function Header({ posts }) {
               <div className="flex items-center justify-center gap-3">
 
     <Link
-  
+   aria-label="Ana Sayfa"
                       href="/"
 <Image
   src="/images/navbar-logo.png"
