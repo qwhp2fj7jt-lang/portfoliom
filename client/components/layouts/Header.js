@@ -44,9 +44,8 @@ export default function Header({ posts }) {
   };
   return (
     <>
-
-<div
-  className="
+      <div
+        className="
     fixed
     top-1/3
     right-0
@@ -65,7 +64,7 @@ export default function Header({ posts }) {
     shadow-md
     dark:bg-zinc-900
   "
->
+      >
         <SearchBar navigation={navigation} posts={posts[posts.length - 1]} />
 
         <span className="w-5 h-px bg-gray-200 dark:bg-zinc-700" />
@@ -115,7 +114,7 @@ export default function Header({ posts }) {
             <SunIcon className="h-5 w-5 text-yellow-300" />
           )}
         </button>
-      </div>  
+      </div>
 
       <nav className="dark:bg-black flex justify-center bg-white/80 backdrop-blur-sm sticky top-0 z-20">
         <div className="mx-auto max-w-6xl ">
