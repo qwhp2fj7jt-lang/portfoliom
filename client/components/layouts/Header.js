@@ -135,7 +135,7 @@ export default function Header({ posts }) {
   <Image
     src="/images/navbar-logo.png"
     alt="Logo"
-    width={30}
+    width={25}
     height={30}
   />
 </Link>
