@@ -11,6 +11,7 @@ import {
 } from "@heroicons/react/24/outline";
 import dynamic from "next/dynamic";
 import navigation from "@/shared/json/navigation";
+  import Image from "next/image";
 import { usePathname } from "next/navigation";
 const SearchBar = dynamic(() => import("@/molecules/SearchBar"), {
   loading: () => <p>PDF yükleniyor...</p>,
@@ -129,6 +130,14 @@ export default function Header({ posts }) {
 
             <div className="hidden sm:flex space-x-6">
               <div className="flex items-center justify-center gap-6">
+
+
+<Image
+  src="/images/navbar-logo.png"
+  alt="Logo"
+  width={50}
+  height={50}
+/>
                 {navigation.map((item) => {
                   const isActive = (href) => pathname === href;
 
