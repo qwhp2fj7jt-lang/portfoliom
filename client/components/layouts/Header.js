@@ -129,14 +129,14 @@ export default function Header({ posts }) {
             </button>
 
             <div className="hidden sm:flex space-x-6">
-              <div className="flex items-center justify-center gap-6">
+              <div className="flex items-center justify-center gap-4">
 
 
 <Image
   src="/images/navbar-logo.png"
   alt="Logo"
-  width={50}
-  height={50}
+  width={30}
+  height={30}
 />
                 {navigation.map((item) => {
                   const isActive = (href) => pathname === href;
