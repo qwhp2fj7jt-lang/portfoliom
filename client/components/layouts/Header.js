@@ -131,15 +131,14 @@ export default function Header({ posts }) {
             <div className="hidden sm:flex space-x-6">
               <div className="flex items-center justify-center gap-3">
 
-    <Link
-   aria-label="Ana Sayfa"
-                      href="/"
-<Image
-  src="/images/navbar-logo.png"
-  alt="Logo"
-  width={30}
-  height={30}
-/>/>
+<Link href="/" aria-label="Ana Sayfa">
+  <Image
+    src="/images/navbar-logo.png"
+    alt="Logo"
+    width={30}
+    height={30}
+  />
+</Link>
                 {navigation.map((item) => {
                   const isActive = (href) => pathname === href;
 
