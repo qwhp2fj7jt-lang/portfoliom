@@ -74,7 +74,7 @@ export default function CardList({ article }) {
      dark:bg-zinc-900/80
     p-4
 
-    lg:flex-row lg:items-center lg:justify-between
+    sm:flex-row sm:items-center sm:justify-between
   "
           >
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
@@ -112,7 +112,7 @@ export default function CardList({ article }) {
               </div>
             </div>
 
-            <div className="flex items-center justify-between sm:justify-end gap-3">
+            <div className="flex items-center justify-center md:justify-between gap-3">
               <span className="text-sm font-medium text-gray-600 dark:text-gray-500 ">
                 Eklentiler
               </span>
@@ -130,7 +130,7 @@ export default function CardList({ article }) {
                     title="PDF Görüntüle"
                     className="
             group
-            flex h-11 w-11 items-center justify-center
+            flex h-9 w-9 md:h-11 md:w-11 items-center justify-center
             rounded-xl
             border border-gray-200 dark:border-gray-900
             bg-white dark:bg-gray-950
@@ -155,7 +155,7 @@ export default function CardList({ article }) {
                   title="Paylaş"
                   className="
           group
-          flex h-11 w-11 items-center justify-center
+          flex h-9 w-9 md:h-11 md:w-11 items-center justify-center
           rounded-xl
           border border-gray-200 dark:border-gray-900
           bg-white dark:bg-gray-950
@@ -177,7 +177,7 @@ export default function CardList({ article }) {
           </div>{" "}
         </div>
       </div>
-      <div className="max-w-4xl mx-auto ">
+      <div className="md:max-w-4xl mx-auto sm:max-w-3xl">
         <div className="mt-6 rounded-3xl overflow-hidden">
           {imageUrl && (
             <img
