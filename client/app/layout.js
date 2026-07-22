@@ -42,7 +42,7 @@ export async function generateMetadata() {
 
 
     title: {
-      default: "Zeynep Baş – Frontend Engineer",
+      default: "Zeynep Baş – Frontend Developer",
       template: "%s | Zeynep Baş",
     },
 description:"Frontend mimarisi, performans optimizasyonu ve kullanıcı deneyimi odağında modern web uygulamaları geliştiriyorum. React, Next.js ve TypeScript ekosisteminde temiz kod prensipleri, yeniden kullanılabilir bileşenler ve ölçeklenebilir yazılım yaklaşımlarını benimsiyorum.",
@@ -62,7 +62,7 @@ description:"Frontend mimarisi, performans optimizasyonu ve kullanıcı deneyimi
     },
 
     openGraph: {
-      title: "Zeynep Baş – Frontend Engineer",
+      title: "Zeynep Baş – Frontend Developer",
 description:"Frontend mimarisi, performans optimizasyonu ve kullanıcı deneyimi odağında modern web uygulamaları geliştiriyorum. React, Next.js ve TypeScript ekosisteminde temiz kod prensipleri, yeniden kullanılabilir bileşenler ve ölçeklenebilir yazılım yaklaşımlarını benimsiyorum.",
       url: `${baseUrl}`,
       siteName: "Zeynep Baş",
@@ -88,7 +88,7 @@ description:"Frontend mimarisi, performans optimizasyonu ve kullanıcı deneyimi
         "https://www.linkedin.com/in/zeynepbass",
         "https://github.com/zeynepbasss"
       ],
-      jobTitle: "Frontend Engineer",
+      jobTitle: "Frontend Developer",
       worksFor: {
         "@type": "Organization",
         name: "Zeynep Baş",
