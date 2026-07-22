@@ -41,7 +41,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-2 text-sm text-gray-500 sm:text-base">
-            React Frontend Engineer | Architecture & Performance Focused
+            React Frontend Developer | Architecture & Performance Focused
           </p>
 
           <div className="mt-3 flex justify-center gap-5 text-xl md:justify-start">
@@ -92,7 +92,7 @@ export default function Hero() {
         <div className="text-left text-gray-700 leading-7">
           <AboutCard
             baslik="⚡ Teknik Yaklaşım"
-            paragraf="React ekosisteminde uzmanlaşan bir Frontend Engineer olarak; Redux ve Zustand ile ölçeklenebilir state yönetimi çözümleri geliştiriyor, Tailwind CSS ile modern, duyarlı ve erişilebilir kullanıcı arayüzleri tasarlıyorum."
+            paragraf="React ekosisteminde uzmanlaşan bir Frontend Developer olarak; Redux ve Zustand ile ölçeklenebilir state yönetimi çözümleri geliştiriyor, Tailwind CSS ile modern, duyarlı ve erişilebilir kullanıcı arayüzleri tasarlıyorum."
             paragrafOne="Temiz mimari prensiplerine uygun, yeniden kullanılabilir ve performans odaklı komponent yapıları oluşturmayı önemsiyorum. RESTful API entegrasyonlarında deneyimliyim ve Azure DevOps ile JIRA gibi araçları kullanarak Agile ekip süreçlerine aktif katkı sağlıyorum."
             paragrafTwo="Analitik düşünme yaklaşımıyla, kullanıcı odaklı ve sürdürülebilir çözümler üretirken React ekosistemi ve modern frontend mimarileri alanında uzmanlığımı derinleştirmeyi amaçlıyorum."
           />
