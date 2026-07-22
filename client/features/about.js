@@ -15,7 +15,7 @@ export default function About() {
       className="
         mx-auto
         min-h-screen
-        max-w-4xl
+        max-w-3xl
         px-4
         py-12
         sm:px-6

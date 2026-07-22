@@ -11,7 +11,7 @@ import {
 } from "@heroicons/react/24/outline";
 import dynamic from "next/dynamic";
 import navigation from "@/shared/json/navigation";
-  import Image from "next/image";
+
 import { usePathname } from "next/navigation";
 const SearchBar = dynamic(() => import("@/molecules/SearchBar"), {
   loading: () => <p>PDF yükleniyor...</p>,
@@ -49,17 +49,15 @@ export default function Header({ posts }) {
         className="
     fixed
     top-1/3
-    right-0
- 
-    ml-auto
+    right-3
     flex
     w-fit
     flex-col
     items-center
     justify-center
-    gap-4
-    rounded-l-xl
-    bg-white
+    gap-3
+    rounded-xl
+    bg-white/90
     z-20
     p-1
     shadow-md
@@ -110,16 +108,16 @@ export default function Header({ posts }) {
       "
         >
           {theme === "light" ? (
-            <MoonIcon className="h-5 w-5 text-gray-800" />
+            <MoonIcon className="h-4 w-4 text-gray-800" />
           ) : (
-            <SunIcon className="h-5 w-5 text-yellow-300" />
+            <SunIcon className="h-4 w-4 text-yellow-300" />
           )}
         </button>
       </div>
 
-      <nav className="dark:bg-black flex justify-center bg-white/80 backdrop-blur-sm sticky top-0 z-20">
-        <div className="mx-auto max-w-6xl ">
-          <div className="flex h-16 items-center justify-between">
+      <nav className="sticky top-0 z-20 bg-white/80 backdrop-blur-sm dark:bg-black">
+        <div className="w-full max-w-6xl px-4 md:mx-auto">
+          <div className="flex h-16 items-center sm:justify-center xs:justify-start">
             <button
               onClick={() => setMobileOpen(true)}
               aria-label="Menüyü aç"
@@ -128,17 +126,8 @@ export default function Header({ posts }) {
               <Bars3Icon className="h-6 w-6" />
             </button>
 
-            <div className="hidden sm:flex space-x-6">
+            <div className="hidden sm:flex items-center gap-3">
               <div className="flex items-center justify-center gap-3">
-
-<Link href="/" aria-label="Ana Sayfa">
-  <Image
-    src="/images/navbar-logo.png"
-    alt="Logo"
-    width={25}
-    height={30}
-  />
-</Link>
                 {navigation.map((item) => {
                   const isActive = (href) => pathname === href;
 
@@ -168,11 +157,11 @@ export default function Header({ posts }) {
 
         <Dialog.Panel className="fixed bottom-0 left-0 right-0 bg-white dark:bg-zinc-900 rounded-t-3xl shadow-2xl p-3 space-y-2 z-50 animate-[slideUp_.3s_ease]">
           <div className="flex justify-between">
-            <div className="flex items-center p-2 gap-2">
+            <div className="flex items-center gap-2 rounded-xl bg-white shadow-md dark:bg-zinc-900 p-1">
               <button
                 onClick={toggleTheme}
                 aria-label="dark-light mode"
-                className="p-2 rounded-md hover:bg-zinc-50 dark:hover:bg-zinc-900"
+                className="p-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
               >
                 {theme === "light" ? (
                   <MoonIcon className="h-4 w-4 text-gray-800" />
@@ -180,15 +169,16 @@ export default function Header({ posts }) {
                   <SunIcon className="h-4 w-4 text-yellow-300" />
                 )}
               </button>
+
               <a
                 href="https://github.com/zeynepbass"
                 aria-label="Github"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-900 dark:hover:text-white dark:text-gray-300 transition-colors"
+                className="p-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors hover:text-gray-900 dark:hover:text-white dark:text-gray-300"
               >
                 <svg
-                  className="w-4 h-4 "
+                  className="w-4 h-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >

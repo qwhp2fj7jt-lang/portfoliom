@@ -9,8 +9,8 @@ export default function Hero() {
   const router = useRouter();
 
   return (
-    <>
-      <section className="flex flex-col items-center mt-5 gap-6 md:flex-row md:gap-10">
+    <div className="mx-auto max-w-3xl px-4">
+      <section className="flex flex-col items-center mt-2 gap-6 md:flex-row md:gap-10">
 
         <div className="relative shrink-0">
 <Image
@@ -105,6 +105,6 @@ export default function Hero() {
           />
 
       </section>
-    </>
+    </div>
   );
 }

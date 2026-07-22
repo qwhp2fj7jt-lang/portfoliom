@@ -43,7 +43,7 @@ export default function ProjectsAndExperience() {
 
 
   return (
-    <>
+    <div className="mx-auto max-w-3xl px-4 py-10">
       <Card project={project} />
 
       <div className="mb-0">
@@ -54,7 +54,7 @@ export default function ProjectsAndExperience() {
       </div>
 
 
-      <div className="flex items-center flex-col md:flex-row justify-between mt-10 mb-6">
+      <div className="flex items-center flex-col md:flex-row justify-between mt-20 mb-6">
 
         <h2 className="text-2xl font-bold">
           Deneyim
@@ -259,6 +259,6 @@ export default function ProjectsAndExperience() {
 
       </div>
 
-    </>
+    </div>
   );
 }

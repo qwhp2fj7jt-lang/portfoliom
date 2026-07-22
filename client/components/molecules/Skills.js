@@ -1,56 +1,60 @@
-"use client"
-import  skills  from "@/shared/json/skills";
+"use client";
 
+import skills from "@/shared/json/skills";
 
 export default function Skills() {
-  const chunkedSkills = [];
-  for (let i = 0; i < skills.length; i += 4) {
-    chunkedSkills.push(skills.slice(i, i + 4));
-  }
-
   return (
-    <>
+    <section className="mx-auto max-w-6xl px-4 py-10">
+    <div className="mb-10 text-center">
+    <h2 className="text-xl dark:text-gray-300 md:text-2xl font-semibold mb-5 text-center">
+    Tech Stack
+      </h2>
+      <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-2 leading-relaxed">
+      Günlük geliştirme süreçlerimde kullandığım teknolojiler.
+      </p>
 
-      <div className="flex flex-wrap justify-center gap-5 py-10 ">
-        {chunkedSkills.map((group, groupIndex) => (
-          <div key={groupIndex} className="flex gap-5">
-            {group.map((skill, index) => (
-              
-              <img
-                key={index}
-                src={skill.icon}
-                alt=""
-              style={{
-  width: skill.width,
-  height: skill.height,
-  objectFit: "contain",
-  opacity: skill.opacity,
-  borderRadius: skill.borderRadius ?? 0
-}}
-                className="animate-bounce-custom"
-              />
-            ))}
-          </div>
-        ))}
 
-        <style jsx>{`
-          .animate-bounce-custom {
-            animation: bounceY 2s ease-in-out infinite;
-          }
-          @keyframes bounceY {
-            0%,
-            100% {
-              transform: translateY(0);
-            }
-            50% {
-              transform: translateY(-10px);
-            }
-          }
-        `}</style>
       </div>
 
+      <div className="grid grid-cols-2 gap-7 mt-4 sm:grid-cols-5 lg:grid-cols-5 xl:grid-cols-10">
+        {skills.map((skill, index) => (
+       <div
+       className="group flex h-33 w-auto items-center justify-center overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-900"
+     >
+       <img
+         src={skill.icon}
+         alt={skill.name}
+         className="animate-float object-contain transition-transform duration-300 group-hover:scale-110"
+         style={{
+           width: skill.width,
+           height: skill.height,
+           opacity: skill.opacity,
+           borderRadius: skill.borderRadius ?? 0,
+           animationDelay: `${index * 120}ms`,
+         }}
+       />
+     </div>
+        ))}
+      </div>
 
-  
-    </>
+      <style jsx>{`
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0);
+               
+          }
+
+          50% {
+            transform: translateY(-8px);
+
+          }
+        }
+      `}</style>
+    </section>
   );
 }
