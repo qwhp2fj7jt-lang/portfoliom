@@ -56,12 +56,11 @@ export default function CardList({ article }) {
         </Link>
 
         <h1 className="text-2xl font-bold tracking-tight">{blog.title}</h1>
-        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mt-5">
+        <div className="mt-6 grid grid-cols-3 gap-4 sm:flex sm:items-center sm:justify-between">
 
-<div className="flex items-center gap-2">
-  <span>
+  <div className="col-span-3 w-full sm:w-72">
     <Select>
-      <SelectTrigger className="w-full sm:w-56 rounded-xl border-gray-200/70 bg-background shadow-sm dark:border-gray-900 dark:bg-gray-950">
+      <SelectTrigger className="w-full rounded-xl border-gray-200/70 bg-background shadow-sm dark:border-gray-900 dark:bg-gray-950">
         <SelectValue placeholder="İçindekiler" />
       </SelectTrigger>
 
@@ -83,77 +82,50 @@ export default function CardList({ article }) {
         </SelectGroup>
       </SelectContent>
     </Select>
-  </span>
-  <span>•</span>
-  <Calendar className="h-4 w-4" />
+  </div>
 
-  <span>
-    {blog.createdAt
-      ? new Date(blog.createdAt).toLocaleDateString("tr-TR")
-      : "-"}
-  </span>
-</div>
 
-<span>•</span>
+  <div className="flex items-center justify-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+    <Calendar className="h-4 w-4" />
+    <span>
+      {blog.createdAt
+        ? new Date(blog.createdAt).toLocaleDateString("tr-TR")
+        : "-"}
+    </span>
+  </div>
 
-<span>{blog.category}</span>
 
-<span>•</span>
+  <div className="flex items-center justify-center text-sm text-gray-500 dark:text-gray-400">
+    {blog.category}
+  </div>
 
-<div className="flex items-center gap-1">
-  Eklentiler:{" "}
-  {blog?.pdf?.url && (
+
+  <div className="flex items-center justify-center gap-3">
+    <span className="text-sm text-gray-500 dark:text-gray-400">
+      Eklentiler
+    </span>
+
+    {blog?.pdf?.url && (
+      <button
+        onClick={() => {
+          setPdfUrl(`${process.env.NEXT_PUBLIC_API_URL}${blog.pdf.url}`);
+          setOpenPdf(true);
+        }}
+        className="group text-gray-600 transition-all duration-300 hover:-translate-y-1 dark:text-gray-300"
+      >
+        <Eye className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+      </button>
+    )}
+
     <button
-      onClick={() => {
-        setPdfUrl(
-          `${process.env.NEXT_PUBLIC_API_URL}${blog.pdf.url}`
-        );
-        setOpenPdf(true);
-      }}
-      aria-label="PDF Görüntüle"
-      title="PDF Görüntüle"
-      className="
-  group
-
-
-
-  text-gray-600 dark:text-gray-300
-
-  transition-all duration-300
-  hover:-translate-y-1
-  hover:border-gray-400
-
-
-  dark:hover:border-gray-500
-
-"
+      onClick={handleShare}
+      className="group text-gray-600 transition-all duration-300 hover:-translate-y-1 dark:text-gray-300"
     >
-      <Eye className="h-4 w-4 transition-all duration-300 group-hover:scale-110" />
+      <Share2 className="h-5 w-5 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
     </button>
-  )}
-  <button
-    onClick={handleShare}
-    aria-label="Paylaş"
-    title="Paylaş"
-    className="            group
-
-
-
-  text-gray-600 dark:text-gray-300
-
-  transition-all duration-300
-  hover:-translate-y-1
-  hover:border-gray-400
-
-
-  dark:hover:border-gray-500"
-  >
-    <Share2 className="h-4 w-4 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
-  </button>
-</div>
+  </div>
 </div>
         <p className="mt-5 text-md text-muted-foreground">{blog.subtitle}</p>
-     
       </div>
       <div className="md:max-w-4xl mx-auto sm:max-w-3xl">
         <div className="mt-6 rounded-3xl overflow-hidden">
