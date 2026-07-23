@@ -129,7 +129,8 @@ export default function Header({ posts }) {
             <div className="hidden sm:flex items-center gap-3">
               <div className="flex items-center justify-center gap-3">
                 {navigation.map((item) => {
-                  const isActive = (href) => pathname === href;
+                  const isActive = (href) => pathname === href ;
+                  const active = item.active;
 
                   return (
                     <Link
@@ -137,8 +138,10 @@ export default function Header({ posts }) {
                       href={item.href}
                       aria-label={item.name}
                       className={`px-3 py-2 text-sm transition ${
-                        isActive(item.href)
-                          ? "text-black dark:text-gray-300 font-semibold"
+                        active
+                          ? "text-yellow-400"
+                          : isActive(item.href)
+                          ? "text-black dark:text-gray-300 font-semibold underline"
                           : "text-gray-400 hover:text-black dark:hover:text-white dark:text-gray-300"
                       }`}
                     >

@@ -30,7 +30,7 @@ export default function Card({ project }) {
     sm:grid-cols-2
     items-start
     gap-6
-    mt-5
+    
   ">
         {project &&
           project.map((item) => <ProjectCard key={item._id} item={item} />)}
