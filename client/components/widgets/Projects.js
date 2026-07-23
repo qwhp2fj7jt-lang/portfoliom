@@ -42,8 +42,9 @@ export default function Projects() {
               </div>
 
               <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-500 dark:text-gray-400">
-                {project.description}
-              </p>
+  {project.description.split(" ").slice(0, 20).join(" ")}
+  {project.description.split(" ").length > 20 && "..."}
+</p>
             </div>
 
             <ChevronRight

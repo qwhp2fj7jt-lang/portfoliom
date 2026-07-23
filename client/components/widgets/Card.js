@@ -27,7 +27,7 @@ export default function Card({ project }) {
     max-w-4xl
     grid
     grid-cols-1
-    lg:grid-cols-2
+    sm:grid-cols-2
     items-start
     gap-6
     mt-5
