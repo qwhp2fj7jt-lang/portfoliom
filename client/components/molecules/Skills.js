@@ -3,6 +3,7 @@
 import skills from "@/shared/json/skills";
 
 export default function Skills() {
+
   return (
     <section className="mx-auto max-w-6xl px-4 py-10">
     <div className="mb-10 text-center">

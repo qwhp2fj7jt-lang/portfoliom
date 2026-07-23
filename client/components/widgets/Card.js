@@ -33,7 +33,7 @@ export default function Card({ project }) {
     mt-5
   ">
         {project &&
-          project.map((item, index) => <ProjectCard key={item._id} item={item} />)}
+          project.map((item) => <ProjectCard key={item._id} item={item} />)}
       </div>
     </>
   );

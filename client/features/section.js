@@ -1,4 +1,4 @@
-import { Hero, ProjectsAndExperience, Blog } from "@/widgets";
+import { Hero, Projects, Blog } from "@/widgets";
 import { Skills } from "@/components/molecules";
 export default function HomeRoute({ articles }) {
   return (
@@ -9,7 +9,7 @@ export default function HomeRoute({ articles }) {
       <br/>
       <Blog articles={articles} />
 
-      <ProjectsAndExperience />
+      <Projects />
     </div>
   );
 }

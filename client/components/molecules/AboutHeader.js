@@ -1,15 +1,21 @@
 "use client";
 
-export default function AboutHeader({baslik,paragraf}) {
-
+export default function AboutHeader({
+  baslik,
+  paragraf,
+  className = "",
+}) {
   return (
-    <>
-          <h2 className="text-xl dark:text-gray-300 md:text-2xl font-semibold mb-5  flex items-center">
-      {baslik}
+    <div className={`mb-3 ${className}`}>
+      <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        {baslik}
       </h2>
-      <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-2 leading-relaxed">
-{paragraf}
-      </p>
-    </>
+
+      {paragraf && (
+        <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-600 dark:text-gray-400">
+          {paragraf}
+        </p>
+      )}
+    </div>
   );
 }
