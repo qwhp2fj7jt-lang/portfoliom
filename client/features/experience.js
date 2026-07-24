@@ -30,7 +30,7 @@ export default function ExperiencePage() {
               {item.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full bg-zinc-100 px-3 py-1 text-xs dark:bg-zinc-800"
+                  className="rounded-full bg-white shadow-sm px-3 py-1 text-xs dark:bg-zinc-800"
                 >
                   {tech}
                 </span>
@@ -38,17 +38,16 @@ export default function ExperiencePage() {
             </div>
 
             <div className="mt-8 space-y-4">
-              <ul className="mt-8 space-y-4">
-                {item.responsibilities.map((text) => (
-                  <li key={text} className="flex items-start gap-3">
-                    <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full " />
-
-                    <span className="leading-7 text-zinc-600 dark:text-zinc-400">
-                      {text}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+            <ul className="mt-8 list-disc space-y-3 pl-5">
+  {item.responsibilities.map((text) => (
+    <li
+      key={text}
+      className="leading-7 text-zinc-600 dark:text-zinc-400"
+    >
+      {text}
+    </li>
+  ))}
+</ul>
             </div>
           </div>
         ))}
