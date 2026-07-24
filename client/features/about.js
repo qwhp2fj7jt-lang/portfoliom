@@ -67,7 +67,7 @@ export default function About() {
           <Skills />
         </section>
 
-
+ 
 
       
       </div>
@@ -78,8 +78,8 @@ export default function About() {
         <section className="relative mb-10">
           <div className="absolute -left-[7px] sm:-left-[9px] top-2 h-4 w-4 rounded-full bg-blue-500 ring-8 ring-blue-500/10" />
 
-          <p className="text-xs uppercase tracking-[0.25em] text-blue-500 font-semibold">
-            Kariyer Vizyonu
+          <p className="text-xs lowercase tracking-[0.25em] text-gray-500 font-semibold">
+            kariyer Vizyonu
           </p>
 
           <div className="mt-2">
@@ -93,8 +93,8 @@ export default function About() {
         <section className="relative">
           <div className="absolute -left-[7px] sm:-left-[9px] top-2 h-4 w-4 rounded-full bg-violet-500 ring-8 ring-violet-500/10" />
 
-          <p className="text-xs uppercase tracking-[0.25em] text-violet-500 font-semibold">
-            Hizmetler
+          <p className="text-xs lowercase tracking-[0.25em] text-gray-500 font-semibold">
+            hizmetler
           </p>
 
           <div className="mt-2">

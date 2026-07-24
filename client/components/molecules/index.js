@@ -5,6 +5,7 @@ export { default as MyGoal } from "./MyGoal";
 export { default as Skills } from "./Skills";
 export { default as SearchBar } from "./SearchBar";
 export {default as List} from "./List"
+export {default as Experience} from "./Experience"
 
 
 

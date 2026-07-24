@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "year": "2024",
+      "title": "Frontend Developer",
+      "company": "Exadus Teknoloji",
+      "location": "Kocaeli",
+      "employmentType": "Full Time",
+      "date": "Ekim 2024 - Şubat 2025",
+      "technologies": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "REST API",
+        "Git"
+      ],
+      "responsibilities": [
+        "React.js ve Next.js ile ölçeklenebilir web uygulamaları geliştirdim.",
+        "Yeniden kullanılabilir component mimarileri oluşturarak geliştirme sürecini hızlandırdım.",
+        "REST API entegrasyonları gerçekleştirerek kullanıcı deneyimini geliştirdim.",
+        "Backend ekibiyle Agile/Scrum süreçlerinde aktif olarak çalıştım.",
+        "Performans optimizasyonları yaparak sayfa yüklenme sürelerini iyileştirdim."
+      ]
+    },
+    {
+      "id": 2,
+      "year": "2021",
+      "title": "Frontend Developer",
+      "company": "Ferofen Bilişim",
+      "location": "Kocaeli",
+      "employmentType": "Full Time",
+      "date": "Aralık 2021 - Ocak 2023",
+      "technologies": [
+        "React.js",
+        "Tailwind CSS",
+        "REST API",
+        "Postman",
+        "Git"
+      ],
+      "responsibilities": [
+        "Müşteri panelleri ve yönetim arayüzleri geliştirdim.",
+        "Responsive ve kullanıcı dostu arayüzler tasarladım.",
+        "REST API entegrasyonları gerçekleştirdim.",
+        "Postman ile API testleri yaptım.",
+        "UI/UX iyileştirmeleri ile kullanıcı deneyimini artırdım.",
+        "Kod incelemelerine ve Git workflow süreçlerine katkı sağladım."
+      ]
+    },
+    {
+      "id": 3,
+      "year": "2020",
+      "title": "Frontend Developer Intern",
+      "company": "Atak Domain",
+      "location": "Kocaeli",
+      "employmentType": "Internship",
+      "date": "Temmuz 2020 - Eylül 2020",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React.js",
+        "REST API"
+      ],
+      "responsibilities": [
+        "Dashboard ve yönetim paneli geliştirme süreçlerinde frontend ekibine destek verdim.",
+        "Dinamik veri akışı ve REST API entegrasyonları gerçekleştirdim.",
+        "Component yapısı ve state yönetimi konusunda deneyim kazandım.",
+        "Responsive tasarım geliştirme süreçlerine katkı sağladım."
+      ]
+    }
+  ]

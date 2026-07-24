@@ -18,14 +18,8 @@ Core Web Vitals ve feature-based mimari yaklaşımıyla ölçeklenebilir şekild
           </p>
 
           <p className="flex items-center gap-2">
-            Keyifle kodlanmıştır
-            <img
-              src="/images/footer/latte.png"
-              width="18"
-              height="18"
-              className="animate-bounce"
-              alt="latte"
-            />
+            Keyifle kodlanmıştır.
+   
           </p>
         </div>
 
