@@ -56,11 +56,13 @@ export default function Header({ posts }) {
     items-center
     justify-center
     gap-3
-    rounded-xl
-    bg-white/90
+    rounded-full
+    bg-white
+    border
+    border-gray-100
     z-20
     p-1
-    shadow-md
+    shadow-xl
     dark:bg-zinc-900
   "
       >
@@ -129,7 +131,7 @@ export default function Header({ posts }) {
             <div className="hidden sm:flex items-center gap-3">
               <div className="flex items-center justify-center gap-3">
                 {navigation.map((item) => {
-                  const isActive = (href) => pathname === href ;
+                  const isActive = (href) => pathname === href;
                   const active = item.active;
 
                   return (
@@ -139,7 +141,7 @@ export default function Header({ posts }) {
                       aria-label={item.name}
                       className={`px-3 py-2 text-sm transition ${
                         active
-                          ? "text-yellow-400 font-bold"
+                          ? "text-amber-700 font-bold"
                           : isActive(item.href)
                           ? "text-black dark:text-gray-300 font-semibold underline"
                           : "text-gray-400 hover:text-black dark:hover:text-white dark:text-gray-300"

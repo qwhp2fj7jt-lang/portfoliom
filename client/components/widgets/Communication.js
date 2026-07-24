@@ -53,16 +53,7 @@ export default function Communication() {
       </span>
     </a>
 
-    <a
-      href="/cv.pdf"
-      target="_blank"
-      className="group flex items-center justify-between rounded-xl px-4 py-4 transition hover:bg-zinc-100 dark:hover:bg-zinc-800"
-    >
-      <span>&gt; Download CV</span>
-      <span className="opacity-0 transition group-hover:opacity-100">
-        ↓
-      </span>
-    </a>
+
 
   </div>
 
