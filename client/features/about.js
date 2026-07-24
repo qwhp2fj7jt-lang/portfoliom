@@ -22,7 +22,7 @@ export default function About() {
         lg:px-8
       "
     >
-      <div className="max-w-3xl mx-auto">
+  <div className="mx-auto max-w-3xl px-4 py-5">
         <AboutHeader
           baslik="Hakkımda"
           paragraf="Merhaba, ben Zeynep — Frontend Developer olarak modern web teknolojileriyle ölçeklenebilir, performans odaklı ve kullanıcı deneyimi yüksek arayüzler geliştiriyorum. Kod ve tasarımı bir araya getirerek fikirleri hızlı, etkili ve üretime hazır ürünlere dönüştürmeyi seviyorum."
@@ -72,7 +72,7 @@ export default function About() {
       
       </div>
 
-      <div className="relative mt-10 pl-0 sm:pl-10 max-w-5xl sm:max-w-5xl  ">
+      <div className="relative py-10  px-4 sm:px-0 mx-auto sm:max-w-5xl  ">
 
 
         <section className="relative mb-10">
@@ -139,7 +139,7 @@ export default function About() {
           </div>
         </section>
       </div>
-      <section className="mt-20 max-w-3xl mx-auto">
+      <section className="mx-auto max-w-3xl px-4 py-10">
           <Communication />
         </section>
     </main>

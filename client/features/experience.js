@@ -2,7 +2,7 @@ import experiences from "@/shared/json/experience";
 
 export default function ExperiencePage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10">
+    <div className="mx-auto max-w-3xl px-5 py-10">
       <header className="mb-12">
         <div className="flex justify-between">
 

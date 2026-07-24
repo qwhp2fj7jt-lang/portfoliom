@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 export default function Projects() {
   const router = useRouter();
   return (
-    <section className="mx-auto max-w-3xl px-4">
+    <div className="mx-auto max-w-3xl px-4 py-5">
 
     <div className="mb-5 text-center">
     <h2 className="text-xl dark:text-gray-300 md:text-2xl font-semibold mb-5 text-center">
@@ -60,6 +60,6 @@ export default function Projects() {
                 />
               </div>
       </div>
-    </section>
+    </div>
   );
 }

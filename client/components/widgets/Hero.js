@@ -9,7 +9,7 @@ export default function Hero() {
   const router = useRouter();
 
   return (
-    <div className="mx-auto max-w-3xl px-4">
+    <div className="mx-auto max-w-3xl px-4 py-5">
       <section className="flex flex-col items-center mt-2 gap-6 md:flex-row md:gap-10">
 
         <div className="relative shrink-0">
@@ -19,10 +19,10 @@ export default function Hero() {
   width={128}
   height={128}
   className="
-    h-24 w-24 rounded-full border border-gray-100 p-1 shadow-md object-cover
+    h-28 w-28 rounded-full border border-gray-100 p-1 shadow-md object-cover
     dark:border-gray-900
-    sm:h-28 sm:w-28
-    md:h-32 md:w-32
+    sm:h-32 sm:w-32
+
   "
 />
 

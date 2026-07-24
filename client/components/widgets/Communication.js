@@ -1,65 +1,60 @@
 "use client";
 
-
+const linkClass =
+  "group flex items-center gap-1 rounded-lg px-3 py-2 transition-colors duration-200 hover:bg-zinc-100 dark:hover:bg-zinc-800";
 
 export default function Communication() {
   return (
-    <>
+    <section className="overflow-hidden rounded-2xl border border-zinc-100 bg-white dark:border-zinc-800 dark:bg-zinc-900">
 
-<div className="rounded-xl dark:border-zinc-800 overflow-hidden bg-white dark:bg-zinc-900">
+      <div className="flex flex-col gap-4 border-b border-zinc-100 px-5 py-5 md:flex-row md:items-center md:justify-between dark:border-zinc-800">
+        <h2 className="text-lg font-semibold text-zinc-900 dark:text-white">
+          ⌘ İletişim
+        </h2>
 
-  <div className="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 px-5 py-4">
-    <h2 className="font-semibold tracking-wide">
-      ⌘ İletişim
-    </h2>
-
-    <span className="text-xs text-green-500 flex items-center gap-2">
-      <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-      Benimle iletişime geçmek için
-    </span>
-  </div>
-
-  <div className="p-3">
-
-    <a
-      href="mailto:baszynpp@gmail.com"
-      className="group flex items-center justify-between rounded-xl px-4 py-4 transition hover:bg-zinc-100 dark:hover:bg-zinc-800"
-    >
-      <span>&gt; Email gönder</span>
-      <span className="opacity-0 transition group-hover:opacity-100">
-        ↗
-      </span>
-    </a>
-
-    <a
-      href="https://github.com/zeynepbass"
-      target="_blank"
-      className="group flex items-center justify-between rounded-xl px-4 py-4 transition hover:bg-zinc-100 dark:hover:bg-zinc-800"
-    >
-      <span>&gt; Github</span>
-      <span className="opacity-0 transition group-hover:opacity-100">
-        ↗
-      </span>
-    </a>
-
-    <a
-      href="https://linkedin.com/in/zeynepbasss"
-      target="_blank"
-      className="group flex items-center justify-between rounded-xl px-4 py-4 transition hover:bg-zinc-100 dark:hover:bg-zinc-800"
-    >
-      <span>&gt; LinkedIn</span>
-      <span className="opacity-0 transition group-hover:opacity-100">
-        ↗
-      </span>
-    </a>
+        <span className="flex items-center gap-2 text-sm text-green-500">
+          <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+          İletişime açığım
+        </span>
+      </div>
 
 
+      <div className="flex flex-wrap items-center gap-2 p-5 text-sm text-zinc-600 dark:text-zinc-400">
+        <a href="mailto:baszynpp@gmail.com" className={linkClass}>
+          <span>Email</span>
+          <span className="opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
+            ↗
+          </span>
+        </a>
 
-  </div>
+        <span className="text-zinc-300 dark:text-zinc-600">•</span>
 
-</div>
-  
-   
-    </>
+        <a
+          href="https://github.com/zeynepbass"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={linkClass}
+        >
+          <span>GitHub</span>
+          <span className="opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
+            ↗
+          </span>
+        </a>
+
+        <span className="text-zinc-300 dark:text-zinc-600">•</span>
+
+        <a
+          href="https://linkedin.com/in/zeynepbasss"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={linkClass}
+        >
+          <span>LinkedIn</span>
+          <span className="opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100">
+            ↗
+          </span>
+        </a>
+      </div>
+    </section>
   );
 }

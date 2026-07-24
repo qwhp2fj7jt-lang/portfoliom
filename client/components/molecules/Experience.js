@@ -4,8 +4,8 @@ import { CustomButton } from "../atoms";
 export default function Experience() {
   const router=useRouter()
   return (
-    <section className="mt-12 flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-6">
-      <div>
+    <div className="mx-auto max-w-3xl px-5 py-10 ">
+      <div >
         <p className="text-xs lowercase tracking-[0.25em] text-gray-500 font-semibold">
           Kariyer
         </p>
@@ -14,18 +14,19 @@ export default function Experience() {
           Deneyimler
         </h2>
 
-        <p className="mt-2 max-w-lg text-sm text-zinc-600 dark:text-zinc-400">
+
+      </div>
+
+      <div className="mb-0 flex justify-between items-center">
+      <p className="mt-2 max-w-lg text-sm text-zinc-600 dark:text-zinc-400">
           Kariyer yolculuğum boyunca edindiğim deneyimler, çalıştığım
           teknolojiler ve geliştirdiğim projeler.
         </p>
-      </div>
-
-      <div className="mb-0">
         <CustomButton
           text="→"
           onClick={() => router.push("/experience")}
         />
       </div>
-    </section>
+    </div>
   );
 }
