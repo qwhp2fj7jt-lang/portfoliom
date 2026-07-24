@@ -25,7 +25,7 @@
     "opacity": 1
   },
   {
-    "icon": "/images/icons/npm.png",
+    "icon": "/images/icons/logo.svg",
     "width": 64,
     "height": 36,
     "opacity": 0.7
@@ -42,20 +42,33 @@
     "height": 37,
     "opacity": 0.7
   },
+
   {
-    "icon": "/images/icons/react-native.png",
-    "width": 64,
-    "height": 36,
-    "opacity": 0.7
-  },
-  {
-    "icon": "/images/icons/react.svg",
+    "icon": "/images/icons/react.png",
     "width": 64,
     "height": 64,
     "opacity": 0.7
   },
   {
-    "icon": "/images/icons/tailwindcss-logo.png",
+    "icon": "/images/icons/query.png",
+    "width": 64,
+    "height": 64,
+    "opacity": 0.7
+  },
+  {
+    "icon": "/images/icons/zustand.png",
+    "width": 64,
+    "height": 64,
+    "opacity": 0.7
+  },
+  {
+    "icon": "/images/icons/design.png",
+    "width": 64,
+    "height": 64,
+    "opacity": 0.7
+  },
+  {
+    "icon": "/images/icons/tailwindcss.png",
     "width": 64,
     "height": 39,
     "opacity": 0.7

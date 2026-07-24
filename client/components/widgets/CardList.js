@@ -92,7 +92,7 @@ export default function CardList({ article }) {
             </span>
           </div>
 
-          <div className="flex items-center justify-center text-sm text-gray-500 dark:text-gray-400">
+          <div className="flex items-center capitalize justify-center text-sm text-yellow-400 dark:text-gray-400 underline">
             {blog.category}
           </div>
 

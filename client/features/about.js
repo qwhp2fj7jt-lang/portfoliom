@@ -3,7 +3,7 @@ import {
   AboutCard,
   AboutHeader,
   Skills,
-  OpenSource,
+
   MyGoal,
 } from "@/molecules";
 
@@ -67,20 +67,12 @@ export default function About() {
           <Skills />
         </section>
 
-        <section className="mt-10 mb-10">
-          <OpenSource
-            baslik="Proje Geliştirme Yaklaşımı"
-            paragraf="Modern frontend yaklaşımlarını uygulamalı projelere dönüştürerek açık kaynak ekosistemine katkı sağlıyorum. Özellikle Next.js tabanlı boilerplate yapıları ve çeşitli yardımcı araçlar geliştirerek geliştiricilerin işini kolaylaştırmayı hedefliyorum."
-            paragrafOne="Kişisel blogumda ise frontend teknikleri, pratik çözümler ve proje deneyimlerimi paylaşarak toplulukla bilgi ve deneyim alışverişinde bulunuyorum."
-          />
-        </section>
 
-        <section className="mt-10">
-          <Communication />
-        </section>
+
+      
       </div>
 
-      <div className="relative pl-0 sm:pl-10 max-w-5xl sm:max-w-5xl  ">
+      <div className="relative mt-10 pl-0 sm:pl-10 max-w-5xl sm:max-w-5xl  ">
 
 
         <section className="relative mb-10">
@@ -147,6 +139,9 @@ export default function About() {
           </div>
         </section>
       </div>
+      <section className="mt-10 max-w-3xl mx-auto">
+          <Communication />
+        </section>
     </main>
   );
 }

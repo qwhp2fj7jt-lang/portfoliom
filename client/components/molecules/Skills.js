@@ -17,7 +17,7 @@ export default function Skills() {
 
       </div>
 
-      <div className="grid grid-cols-2 gap-7 mt-4 sm:grid-cols-5 lg:grid-cols-5 xl:grid-cols-10">
+      <div className="grid grid-cols-2 gap-7 mt-4 sm:grid-cols-5 lg:grid-cols-5 xl:grid-cols-6">
         {skills.map((skill, index) => (
        <div
        className="group flex h-33 w-auto items-center justify-center overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-900"
