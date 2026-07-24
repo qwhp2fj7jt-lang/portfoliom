@@ -141,7 +141,7 @@ export default function Header({ posts }) {
                       aria-label={item.name}
                       className={`px-3 py-2 text-sm transition ${
                         active
-                          ? "text-amber-700 font-bold"
+                          ? "text-[#A23A44] font-bold"
                           : isActive(item.href)
                           ? "text-black dark:text-gray-300 font-semibold underline"
                           : "text-gray-400 hover:text-black dark:hover:text-white dark:text-gray-300"

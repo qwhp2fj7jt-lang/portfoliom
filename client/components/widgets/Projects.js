@@ -35,7 +35,7 @@ export default function Projects() {
                 </h3>
 
                 {project.yakinda && (
-                  <span className="rounded-full border border-amber-200 bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-700 dark:border-amber-900 dark:bg-amber-900/20 dark:text-amber-300">
+                  <span className="rounded-full border border-amber-200 bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-[#A23A44] dark:border-amber-900 dark:bg-amber-900/20 dark:text-[#A23A44]">
                     Yakında
                   </span>
                 )}

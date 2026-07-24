@@ -139,7 +139,7 @@ export default function About() {
           </div>
         </section>
       </div>
-      <section className="mt-10 max-w-3xl mx-auto">
+      <section className="mt-20 max-w-3xl mx-auto">
           <Communication />
         </section>
     </main>
