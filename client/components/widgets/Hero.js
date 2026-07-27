@@ -45,7 +45,7 @@ export default function Hero() {
                 JIRA gibi araçları kullanarak Agile ekip süreçlerine aktif katkı
                 sağlıyorum. Projelerimi incelemek için{" "}
                 <a
-                  href="https://github.com/zeynepbasss"
+                  href="https://github.com/zeynepbass"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center dark:text-yellow-400 italic gap-1 text-gray-600 underline hover:text-gray-600"
@@ -55,7 +55,7 @@ export default function Hero() {
                 </a>{" "}
                 profilime, profesyonel bağlantılar için{" "}
                 <a
-                  href="https://linkedin.com/in/zeynepbass"
+                  href="https://linkedin.com/in/zeynepbasss"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center dark:text-yellow-400  italic gap-1 text-gray-600 underline hover:text-gray-600"
