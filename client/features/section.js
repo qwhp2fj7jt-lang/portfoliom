@@ -5,10 +5,11 @@ export default function HomeRoute({ articles }) {
     <div className="mx-auto max-w-5xl px-4 py-10">
       <Hero />
       <br/>
-      <Skills />
-      <br/>
       <Experience/>
       <br/>
+      <Skills />
+      <br/>
+     
       <Blog articles={articles} />
 
       <Projects />

@@ -72,10 +72,10 @@ export default function CardList({ article }) {
         p-2
         rounded-full
         shadow-md
-        text-gray-700
+        text-gray-700  dark:text-gray-400 
    hover:scale-110
         dark:text-gray-400
-        text-muted-foreground hover:text-foreground mb-8"
+         hover:text-foreground mb-8"
           aria-label="Blog yazılarına dön"
         >
           <CornerUpLeft size={16} />
@@ -83,7 +83,7 @@ export default function CardList({ article }) {
         <div className="hidden lg:block">
           <div className="fixed left-4 top-100 w-72">
             <div className="rounded-xl pl-0">
-              <div className="mb-4 flex items-center gap-2 text-gray-700 dark:text-white">
+              <div className="mb-4 flex items-center gap-2 text-gray-700  dark:text-gray-400  dark:text-white">
                 <Menu className="h-4 w-4" />
                 <span className="text-sm font-medium">İçindekiler</span>
               </div>
@@ -104,8 +104,8 @@ export default function CardList({ article }) {
                         href={`#${item.heading}`}
                         className={`text-sm transition-colors ${
                           activeHeading === item.heading
-                            ? "pl-2 font-medium text-black dark:text-white"
-                            : "text-gray-500 hover:text-black dark:hover:text-white"
+                            ? "pl-2 font-medium text-gray-600 dark:text-white"
+                            : "text-gray-500 hover:text-gray-600 dark:hover:text-white"
                         }`}
                       >
                         {item.heading}
@@ -117,7 +117,7 @@ export default function CardList({ article }) {
             </div>
           </div>
         </div>
-        <h1 className="text-2xl font-bold tracking-tight">{blog.title}</h1>
+        <h1 className="text-2xl tracking-tight  text-gray-700  dark:text-gray-400  dark:text-white">{blog.title}</h1>
         <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
           <div className="block lg:hidden">
             <Select>
@@ -144,7 +144,7 @@ export default function CardList({ article }) {
               </SelectContent>
             </Select>
           </div>
-          <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+          <div className="flex items-center gap-2 text-sm text-gray-700  dark:text-gray-400  dark:text-gray-400">
             <Calendar className="h-4 w-4 shrink-0" />
             <span>
               {blog.createdAt
@@ -153,12 +153,12 @@ export default function CardList({ article }) {
             </span>
           </div>
 
-          <div className="text-sm capitalize text-yellow-400 underline dark:text-gray-400">
+          <div className="text-sm capitalize text-yellow-400 underline ">
             {blog.category}
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="text-sm text-gray-500 dark:text-gray-400">
+            <span className="text-sm text-gray-700  dark:text-gray-400  dark:text-gray-400">
               Eklentiler
             </span>
 
@@ -184,7 +184,7 @@ export default function CardList({ article }) {
             </button>
           </div>
         </div>
-        <p className="mt-5 text-md text-muted-foreground">{blog.subtitle}</p>
+        <p className="mt-5 text-md         text-gray-700   dark:text-gray-400">{blog.subtitle}</p>
       </div>
       <div className="md:max-w-4xl mx-auto sm:max-w-3xl">
         <div className="mt-6 rounded-3xl overflow-hidden">
@@ -199,13 +199,13 @@ export default function CardList({ article }) {
         </div>
       </div>
       {blog.image?.caption && (
-        <p className="text-center text-sm text-muted-foreground mt-3">
+        <p className="text-center text-sm  mt-3 text-gray-700   dark:text-gray-400">
           {blog.image.caption}
         </p>
       )}
       <div className="max-w-2xl mx-auto ">
         <div className="mt-8">
-          <p className="text-md leading-9 text-muted-foreground">
+          <p className="text-md leading-9  text-gray-700   dark:text-gray-400 ">
             {blog.summary}
           </p>
         </div>
@@ -218,21 +218,21 @@ export default function CardList({ article }) {
               id={section.heading || section._id}
               className="scroll-mt-24"
             >
-              <h2 className="text-xl font-bold" id={section.heading}>
+              <h2 className="text-xl  underline text-gray-700   dark:text-gray-400" id={section.heading}>
                 {section.heading}
               </h2>
 
               {section.subtitle && (
-                <p className="text-muted-foreground mt-2">{section.subtitle}</p>
+                <p className=" mt-2 text-gray-700   dark:text-gray-400">{section.subtitle}</p>
               )}
 
               <div className="mt-4 space-y-6">
                 {section.items.map((item) => (
                   <div key={item._id}>
-                    <p className="text-md leading-8">{item.text}</p>
+                    <p className="text-md leading-8 text-gray-700   dark:text-gray-400 ">{item.text}</p>
 
                     {item.subItems?.length > 0 && (
-                      <ul className="mt-3 space-y-2 list-disc pl-6 text-muted-foreground">
+                      <ul className="mt-3 space-y-2 list-disc pl-6 text-gray-700  dark:text-gray-400 ">
                         {item.subItems.map((subItem, i) => (
                           <li key={i}>{subItem}</li>
                         ))}

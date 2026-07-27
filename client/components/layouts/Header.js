@@ -143,8 +143,8 @@ export default function Header({ posts }) {
                         active
                           ? "text-[#A23A44] font-bold"
                           : isActive(item.href)
-                          ? "text-black dark:text-gray-300 font-semibold underline"
-                          : "text-gray-400 hover:text-black dark:hover:text-white dark:text-gray-300"
+                          ? "text-gray-600 dark:text-gray-300 font-semibold underline"
+                          : "text-gray-400 hover:text-gray-600 dark:hover:text-white dark:text-gray-300"
                       }`}
                     >
                       {item.name}
@@ -209,8 +209,8 @@ export default function Header({ posts }) {
                 onClick={() => setMobileOpen(false)}
                 className={`px-3 py-2 text-sm transition  flex items-center ${
                   isActive(item.href)
-                    ? "text-black dark:text-gray-300 font-semibold "
-                    : "text-gray-400 hover:text-black dark:hover:text-white dark:text-gray-300"
+                    ? "text-gray-600 dark:text-gray-300 font-semibold "
+                    : "text-gray-400 hover:text-gray-600 dark:hover:text-white dark:text-gray-300"
                 }`}
               >
                 <span

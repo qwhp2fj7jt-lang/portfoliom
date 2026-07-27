@@ -68,7 +68,7 @@ function ProjectCard({ item }) {
 
         <div className="p-5">
           <div className="flex items-center justify-between gap-3">
-            <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+            <h2 className="text-lg underline text-gray-700 dark:text-gray-100">
               {item.baslik}
             </h2>
 

@@ -33,19 +33,23 @@ export default function CardZone({ posts }) {
 
   return (
     <>
+    <div className="mx-auto max-w-3xl px-4 py-5">
       <AboutHeader
         baslik="Zeynep Zone"
         paragraf="Zeynep Baş’ın paylaşımlarını keşfedebileceğin ve etkileşime geçebileceğin dijital alan."
       />
+      </div>
       <div
-        className="mx-auto
-    max-w-4xl
-    py-4
+        className="
+    mx-auto
+    max-w-5xl
     grid
     grid-cols-1
-    sm:grid-cols-2
-    gap-6
-    items-start"
+    sm:grid-cols-3
+
+    gap-4
+    
+  "
       >
         {localPosts.length === 0 && (
           <p className="text-center text-gray-400 col-span-full">
@@ -132,8 +136,6 @@ export default function CardZone({ posts }) {
                         >
                           {post.name}
                         </p>
-
-          
                       </div>
 
                       <a
@@ -376,7 +378,7 @@ export default function CardZone({ posts }) {
         {showModal && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
             <div className="bg-white dark:bg-zinc-900 p-5 rounded-xl w-80">
-              <h2 className="text-lg font-semibold mb-3 text-black dark:text-gray-300">
+              <h2 className="text-lg font-semibold mb-3 text-gray-600 dark:text-gray-300">
                 Nickname Gir
               </h2>
 
@@ -385,7 +387,7 @@ export default function CardZone({ posts }) {
                 placeholder="Nickname..."
                 value={tempNickname}
                 onChange={(e) => setTempNickname(e.target.value)}
-                className="w-full border border-gray-300 dark:border-gray-900 rounded-lg px-3 py-2 mb-4 bg-white dark:bg-zinc-800 text-black dark:text-gray-300"
+                className="w-full border border-gray-300 dark:border-gray-900 rounded-lg px-3 py-2 mb-4 bg-white dark:bg-zinc-800 text-gray-600 dark:text-gray-300"
               />
 
               <div className="flex justify-end gap-2">
@@ -434,6 +436,6 @@ export default function CardZone({ posts }) {
           </div>
         </div>
       )}
-    </>
+</>
   );
 }

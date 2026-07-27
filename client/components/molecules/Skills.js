@@ -7,7 +7,7 @@ export default function Skills() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-10">
     <div className="mb-10 text-center">
-    <h2 className="text-xl dark:text-gray-300 md:text-2xl font-semibold mb-5 text-center">
+    <h2 className="text-xl dark:text-gray-300 md:text-2xl text-gray-700 mb-2 text-center">
     Tech Stack
       </h2>
       <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-2 leading-relaxed">

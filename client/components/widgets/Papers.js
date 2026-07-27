@@ -10,7 +10,6 @@ export default function Papers({ articles }) {
 
   const sortOptions = [
     {
-
       slug: "sort",
       subCategories: [
         {
@@ -24,7 +23,6 @@ export default function Papers({ articles }) {
           name: "Yeniden Eskiye",
           slug: "yeniden eskiye",
           label: "Yeniden Eskiye",
-    
         },
       ],
     },
@@ -53,17 +51,20 @@ export default function Papers({ articles }) {
 
   return (
     <>
-          <h2 className="text-xl dark:text-gray-300 md:text-2xl font-semibold mb-5  flex items-center">
-Blog</h2>
 
-      <div className="flex justify-between gap-2">
+      <h2 className="text-xl dark:text-gray-300 md:text-2xl  py-5 text-gray-700 mb-2 text-left">
+        Blog
+      </h2>
+
+
+
+      <div className="flex justify-between gap-2 mt-3">
         <BlogSubSelect
           title="Kategori"
           filtrele={categories}
           value={selectedCategory}
           onChange={setSelectedCategory}
         />
-
 
         <BlogSubSelect
           title="Sırala"

@@ -12,7 +12,7 @@ export default function Projects() {
     <div className="mx-auto max-w-3xl px-4 py-5">
 
     <div className="mb-5 text-center">
-    <h2 className="text-xl dark:text-gray-300 md:text-2xl font-semibold mb-5 text-center">
+    <h2 className="text-xl dark:text-gray-300 md:text-2xl text-gray-700 mb-2 text-center">
     Projelerim
       </h2>
       <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-2 leading-relaxed">
@@ -30,7 +30,7 @@ export default function Projects() {
           >
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-3">
-                <h3 className="text-lg font-semibold text-gray-900 transition-colors  dark:text-white">
+                <h3 className="text-lg  text-gray-700 transition-colors  dark:text-white">
                   {project.baslik}
                 </h3>
 

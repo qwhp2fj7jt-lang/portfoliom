@@ -8,7 +8,7 @@ export default function Communication() {
     <section className="overflow-hidden rounded-2xl border border-zinc-100 bg-white dark:border-zinc-800 dark:bg-zinc-900">
 
       <div className="flex flex-col gap-4 border-b border-zinc-100 px-5 py-5 md:flex-row md:items-center md:justify-between dark:border-zinc-800">
-        <h2 className="text-lg font-semibold text-zinc-900 dark:text-white">
+        <h2 className="text-lg  text-gray-700 dark:text-white">
           ⌘ İletişim
         </h2>
 

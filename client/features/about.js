@@ -30,7 +30,7 @@ export default function About() {
 
         <section className="mt-10 space-y-6">
           <InfoSection
-            icon="🎯"
+            icon=""
             title="İlgi Alanlarım"
             items={[
               "Modern frontend developer ve ölçeklenebilir web mimarileri",
@@ -41,7 +41,7 @@ export default function About() {
           />
 
           <InfoSection
-            icon="🛠"
+            icon=""
             title="Teknoloji ve Araçlar"
             items={[
               "Frontend Developer: React, Next.js 14, TypeScript, Tailwind CSS",
@@ -56,7 +56,7 @@ export default function About() {
 
         <section className="mt-10">
           <AboutCard
-            baslik="⚡ Modern Frontend Developer: Architecture & Performance Focused"
+            baslik="Modern Frontend Developer: Architecture & Performance Focused"
             paragraf="Modern Frontend Developer yaklaşımıyla ölçeklenebilir ve performans odaklı web uygulamaları geliştiriyorum. React ekosisteminde Redux ve Zustand kullanarak state management çözümleri tasarlıyor, Tailwind CSS ile modern, erişilebilir ve responsive arayüzler oluşturuyorum."
             paragrafOne="Temiz mimari prensiplerini (SOLID ve component-based architecture) dikkate alarak yeniden kullanılabilir, sürdürülebilir ve bakım kolaylığı yüksek kod yapıları kurmaya odaklanıyorum. RESTful API entegrasyonlarında deneyimliyim ve kullanıcı deneyimini performans metrikleri (Core Web Vitals) üzerinden optimize etmeyi önemsiyorum."
             paragrafTwo="Agile süreçlerinde JIRA kullanarak ekip içi iş akışlarına aktif katkı sağlıyorum. Analitik düşünme ve problem çözme becerilerimle, sadece UI geliştiren değil aynı zamanda sistem tasarımını da düşünen bir frontend developer olarak sürekli kendimi geliştiriyorum."
@@ -78,7 +78,7 @@ export default function About() {
         <section className="relative mb-10">
           <div className="absolute -left-[7px] sm:-left-[9px] top-2 h-4 w-4 rounded-full bg-blue-500 ring-8 ring-blue-500/10" />
 
-          <p className="text-xs lowercase tracking-[0.25em] text-gray-500 font-semibold">
+          <p className="text-xs lowercase tracking-[0.25em] text-gray-500 dark:text-white">
             kariyer Vizyonu
           </p>
 
@@ -93,7 +93,7 @@ export default function About() {
         <section className="relative">
           <div className="absolute -left-[7px] sm:-left-[9px] top-2 h-4 w-4 rounded-full bg-violet-500 ring-8 ring-violet-500/10" />
 
-          <p className="text-xs lowercase tracking-[0.25em] text-gray-500 font-semibold">
+          <p className="text-xs lowercase tracking-[0.25em] text-gray-500  dark:text-white">
             hizmetler
           </p>
 
@@ -116,9 +116,9 @@ export default function About() {
               ].map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900 py-1 px-2 text-sm font-medium transition "
+                  className="rounded-full border text-gray-700 dark:text-gray-400 border-zinc-300 dark:border-gray-800 bg-zinc-50 dark:bg-zinc-900 py-1 px-2 text-sm font-medium transition "
                 >
-                  {item}
+                  {item.toLowerCase()}
                 </span>
               ))}
             </div>

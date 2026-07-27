@@ -7,7 +7,7 @@ export default function AboutHeader({
 }) {
   return (
     <div className={`mb-3 ${className}`}>
-      <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+      <h2 className="text-2xl tracking-tight text-gray-700 dark:text-white">
         {baslik}
       </h2>
 

@@ -41,8 +41,8 @@ export default function List({ blog = [] }) {
               className="
                 line-clamp-2
                 text-lg
-                font-semibold
-                text-gray-900
+
+                text-gray-700
                 transition-colors
                 duration-200
                 group-hover:text-gray-600
