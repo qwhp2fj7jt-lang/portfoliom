@@ -23,6 +23,7 @@ export default function CardList({ article }) {
   const [openPdf, setOpenPdf] = useState(false);
   const [pdfUrl, setPdfUrl] = useState("");
   const [activeHeading, setActiveHeading] = useState("");
+
   const handleShare = async () => {
     const url = window.location.href;
 
@@ -39,29 +40,8 @@ export default function CardList({ article }) {
       await navigator.clipboard.writeText(url);
     }
   };
-  useEffect(() => {
-    const headings = document.querySelectorAll("h2[id], h3[id]");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveHeading(entry.target.id);
-          }
-        });
-      },
-      {
-        rootMargin: "-100px 0px -60% 0px",
-        threshold: 0,
-      }
-    );
-
-    headings.forEach((heading) => observer.observe(heading));
-
-    return () => observer.disconnect();
-  }, []);
   return (
-    <div className="max-w-4xl lg:ml-[30%] pr-3 lg:mx-auto ml-[5%]">
+    <div className="max-w-4xl mx-auto px-6 py-12">
       <div className="max-w-2xl mx-auto ">
         <Link
           href="/blog"
@@ -72,80 +52,19 @@ export default function CardList({ article }) {
         p-2
         rounded-full
         shadow-md
-        text-gray-700
-   hover:scale-110
+        text-gray-400
         dark:text-gray-400
         text-muted-foreground hover:text-foreground mb-8"
           aria-label="Blog yazılarına dön"
         >
           <CornerUpLeft size={16} />
         </Link>
-        <div className="hidden lg:block">
-          <div className="fixed left-4 top-100 w-72">
-            <div className="rounded-xl pl-0">
-              <div className="mb-4 flex items-center gap-2 text-gray-700 dark:text-white">
-                <Menu className="h-4 w-4" />
-                <span className="text-sm font-medium">İçindekiler</span>
-              </div>
 
-              <nav>
-                <ul className="space-y-3">
-                  {article?.tableOfContents?.map((item) => (
-                    <li key={item._id} className="flex items-start gap-3">
-                      <span
-                        className={`mt-3 h-px w-6 shrink-0 transition-colors ${
-                          activeHeading === item.heading
-                            ? "bg-black dark:bg-white"
-                            : "bg-gray-200 dark:bg-gray-500"
-                        }`}
-                      />
-
-                      <a
-                        href={`#${item.heading}`}
-                        className={`text-sm transition-colors ${
-                          activeHeading === item.heading
-                            ? "pl-2 font-medium text-black dark:text-white"
-                            : "text-gray-500 hover:text-black dark:hover:text-white"
-                        }`}
-                      >
-                        {item.heading}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
         <h1 className="text-2xl font-bold tracking-tight">{blog.title}</h1>
-        <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
-          <div className="block lg:hidden">
-            <Select>
-              <SelectTrigger className="w-full rounded-xl border-gray-200/70 bg-background shadow-sm dark:border-gray-900 dark:bg-gray-950">
-                <SelectValue placeholder="İçindekiler" />
-              </SelectTrigger>
-
-              <PdfMakers
-                openPdf={openPdf}
-                setOpenPdf={setOpenPdf}
-                pdfUrl={pdfUrl}
-              />
-
-              <SelectContent className="bg-white dark:bg-gray-950">
-                <SelectGroup>
-                  {article?.tableOfContents?.map((item) => (
-                    <SelectItem key={item._id} value={item.heading}>
-                      <a href={`#${item.heading}`} className="block w-full">
-                        {item.heading}
-                      </a>
-                    </SelectItem>
-                  ))}
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-          </div>
-          <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-            <Calendar className="h-4 w-4 shrink-0" />
+    
+        <div className="mt-6 grid grid-cols-3 gap-4 sm:flex sm:items-center sm:justify-between">
+          <div className="flex items-center justify-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+            <Calendar className="h-4 w-4" />
             <span>
               {blog.createdAt
                 ? new Date(blog.createdAt).toLocaleDateString("tr-TR")
@@ -153,11 +72,11 @@ export default function CardList({ article }) {
             </span>
           </div>
 
-          <div className="text-sm capitalize text-yellow-400 underline dark:text-gray-400">
+          <div className="flex items-center capitalize justify-center text-sm text-yellow-400 dark:text-gray-400 underline">
             {blog.category}
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3">
             <span className="text-sm text-gray-500 dark:text-gray-400">
               Eklentiler
             </span>
