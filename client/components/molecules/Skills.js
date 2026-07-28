@@ -4,7 +4,7 @@ import {Form} from "lucide-react"
 
 export default function Skills() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-10">
+    <section className="mx-auto max-w-3xl px-4 py-5">
       <div className="mb-10 text-center">
         <h2 className="text-xl dark:text-gray-300 md:text-2xl text-gray-700 mb-2 text-center">
           Tech Stack
