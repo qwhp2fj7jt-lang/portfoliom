@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function ListBlog({ blog = [] }) {
   return (
     <div className="space-y-4">
-      {blog.slice(0,3).map((item, index) => (
+      {blog.map((item, index) => (
         <div
           key={item._id}
           className="
