@@ -74,7 +74,7 @@ export default function CardList({ article }) {
         shadow-md
         text-gray-700  dark:text-gray-400 
    hover:scale-110
-        dark:text-gray-400
+
          hover:text-foreground mb-8"
           aria-label="Blog yazılarına dön"
         >
@@ -83,7 +83,7 @@ export default function CardList({ article }) {
         <div className="hidden lg:block">
           <div className="fixed left-4 top-100 w-72">
             <div className="rounded-xl pl-0">
-              <div className="mb-4 flex items-center gap-2 text-gray-700  dark:text-gray-400  dark:text-white">
+              <div className="mb-4 flex items-center gap-2 text-gray-700   dark:text-white">
                 <Menu className="h-4 w-4" />
                 <span className="text-sm font-medium">İçindekiler</span>
               </div>
@@ -117,7 +117,7 @@ export default function CardList({ article }) {
             </div>
           </div>
         </div>
-        <h1 className="text-2xl tracking-tight  text-gray-700  dark:text-gray-400  dark:text-white">{blog.title}</h1>
+        <h1 className="text-2xl tracking-tight  text-gray-700   dark:text-white">{blog.title}</h1>
         <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
           <div className="block lg:hidden">
             <Select>
@@ -144,7 +144,7 @@ export default function CardList({ article }) {
               </SelectContent>
             </Select>
           </div>
-          <div className="flex items-center gap-2 text-sm text-gray-700  dark:text-gray-400  dark:text-gray-400">
+          <div className="flex items-center gap-2 text-sm text-gray-700  dark:text-gray-400 ">
             <Calendar className="h-4 w-4 shrink-0" />
             <span>
               {blog.createdAt
@@ -158,7 +158,7 @@ export default function CardList({ article }) {
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="text-sm text-gray-700  dark:text-gray-400  dark:text-gray-400">
+            <span className="text-sm text-gray-700  dark:text-gray-400 ">
               Eklentiler
             </span>
 
