@@ -110,7 +110,7 @@ export default async function LocaleLayout({ children }) {
       >
         <Header posts={posts} />
 
-        <main className="flex min-h-screen font-sans dark:bg-black py-10 ">
+        <main className="flex min-h-screen font-sans dark:bg-zinc-950 py-0 sm:py-10">
           {children}
         </main>
 
