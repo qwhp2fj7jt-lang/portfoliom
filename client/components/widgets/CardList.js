@@ -62,7 +62,7 @@ export default function CardList({ article }) {
   }, []);
   return (
     <div className="max-w-4xl lg:ml-[26%] pr-3 lg:mx-auto ml-[5%]">
-      <div className="max-w-2xl mx-auto py-10">
+      <div className="max-w-2xl mx-auto pt-10">
         <Link
           href="/blog"
           className="inline-flex 
@@ -118,77 +118,85 @@ export default function CardList({ article }) {
             </div>
           </div>
         </div>
-        <h1 className="text-2xl tracking-tight  text-gray-700   dark:text-white">{blog.title}</h1>
-        <div className="mt-6 flex flex-row  gap-5  tems-center justify-center">
-          <div className="block lg:hidden">
-            <Select>
-              <SelectTrigger className="w-full rounded-xl border-gray-200/70 bg-background shadow-sm dark:border-gray-900 dark:bg-gray-950">
-                <SelectValue placeholder="İçindekiler" />
-              </SelectTrigger>
+        <h1 className="text-2xl tracking-tight  text-gray-700 pt-5   dark:text-white">{blog.title}</h1>
+        <div className="m-4 grid grid-col gap-4 lg:flex lg:items-center lg:justify-center">
 
-              <PdfMakers
-                openPdf={openPdf}
-                setOpenPdf={setOpenPdf}
-                pdfUrl={pdfUrl}
-              />
 
-              <SelectContent className="bg-white dark:bg-gray-950">
-                <SelectGroup>
-                  {article?.tableOfContents?.map((item) => (
-                    <SelectItem key={item._id} value={item.heading}>
-                      <a href={`#${item.heading}`} className="block w-full">
-                        {item.heading}
-                      </a>
-                    </SelectItem>
-                  ))}
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-          </div>
-          <div className="flex items-center gap-2 text-sm text-gray-700  dark:text-gray-400 ">
-            <Calendar className="h-4 w-4 shrink-0" />
-            <span>
-              {blog.createdAt
-                ? new Date(blog.createdAt).toLocaleDateString("tr-TR")
-                : "-"}
-            </span>
-          </div>
 
-          <div className="text-sm capitalize text-yellow-400 underline ">
-            {blog.category}
-          </div>
+  <div className="w-full lg:hidden">
+    <Select>
+      <SelectTrigger className="w-full rounded-xl border-gray-200/70 bg-background shadow-sm dark:border-gray-900 dark:bg-gray-950">
+        <SelectValue placeholder="İçindekiler" />
+      </SelectTrigger>
 
-          <div className="flex items-center gap-3">
-            <span className="text-sm text-gray-700  dark:text-gray-400 ">
-              Eklentiler
-            </span>
+      <PdfMakers
+        openPdf={openPdf}
+        setOpenPdf={setOpenPdf}
+        pdfUrl={pdfUrl}
+      />
 
-            {blog?.pdf?.url && (
-              <button
-                onClick={() => {
-                  setPdfUrl(
-                    `${process.env.NEXT_PUBLIC_API_URL}${blog.pdf.url}`
-                  );
-                  setOpenPdf(true);
-                }}
-                className="group text-gray-600 transition-all duration-300 hover:-translate-y-1 dark:text-gray-300"
-              >
-                <Eye className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
-              </button>
-            )}
+      <SelectContent className="bg-white dark:bg-gray-950">
+        <SelectGroup>
+          {article?.tableOfContents?.map((item) => (
+            <SelectItem key={item._id} value={item.heading}>
+              <a href={`#${item.heading}`} className="block w-full">
+                {item.heading}
+              </a>
+            </SelectItem>
+          ))}
+        </SelectGroup>
+      </SelectContent>
+    </Select>
+  </div>
 
-            <button
-              onClick={handleShare}
-              className="group text-gray-600 transition-all duration-300 hover:-translate-y-1 dark:text-gray-300"
-            >
-              <Link2 className="h-5 w-5 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
-            </button>
-          </div>
-        </div>
-        <p className="mt-5 text-md         text-gray-700   dark:text-gray-400">{blog.subtitle}</p>
+<div className="flex gap-4 justify-center">
+
+
+  <div className="flex items-center justify-center lg:justify-start">
+    <span className="text-sm capitalize text-yellow-400 underline">
+      {blog.category}
+    </span>
+  </div>
+<span className="text-gray-200">|</span>
+  <div className="flex items-center justify-center gap-2 text-sm text-gray-700 dark:text-gray-400 lg:justify-start">
+    <Calendar className="h-4 w-4 shrink-0" />
+    <span>
+      {blog.createdAt
+        ? new Date(blog.createdAt).toLocaleDateString("tr-TR")
+        : "-"}
+    </span>
+  </div>
+
+  <span className="text-gray-200">|</span>
+  <div className="flex items-center justify-center gap-3 lg:justify-start">
+    <span className="text-sm text-gray-700 dark:text-gray-400">
+      Eklentiler
+    </span>
+
+    {blog?.pdf?.url && (
+      <button
+        onClick={() => {
+          setPdfUrl(`${process.env.NEXT_PUBLIC_API_URL}${blog.pdf.url}`);
+          setOpenPdf(true);
+        }}
+        className="group text-gray-600 transition-all duration-300 hover:-translate-y-1 dark:text-gray-300"
+      >
+        <Eye className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+      </button>
+    )}
+
+    <button
+      onClick={handleShare}
+      className="group text-gray-600 transition-all duration-300 hover:-translate-y-1 dark:text-gray-300"
+    >
+      <Link2 className="h-5 w-5 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
+    </button>
+  </div></div>
+</div>
+        <p className="mt-2 text-md    pt-6 pb-3     text-gray-700   dark:text-gray-400">{blog.subtitle}</p>
       </div>
       <div className="md:max-w-4xl mx-auto sm:max-w-3xl">
-        <div className="mt-6 rounded-3xl overflow-hidden">
+        <div className="rounded-3xl overflow-hidden">
           {imageUrl && (
             <img
               src={imageUrl}
