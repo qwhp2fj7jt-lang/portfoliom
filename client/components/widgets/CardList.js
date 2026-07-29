@@ -61,12 +61,13 @@ export default function CardList({ article }) {
     return () => observer.disconnect();
   }, []);
   return (
-    <div className="max-w-4xl lg:ml-[30%] pr-3 lg:mx-auto ml-[5%]">
-      <div className="max-w-2xl mx-auto ">
+    <div className="max-w-4xl lg:ml-[26%] pr-3 lg:mx-auto ml-[5%]">
+      <div className="max-w-2xl mx-auto py-10">
         <Link
           href="/blog"
           className="inline-flex 
         items-center gap-2 
+        
         bg-gray-50
         dark:bg-zinc-900
         p-2
@@ -118,7 +119,7 @@ export default function CardList({ article }) {
           </div>
         </div>
         <h1 className="text-2xl tracking-tight  text-gray-700   dark:text-white">{blog.title}</h1>
-        <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
+        <div className="mt-6 flex flex-row  gap-5  tems-center justify-center">
           <div className="block lg:hidden">
             <Select>
               <SelectTrigger className="w-full rounded-xl border-gray-200/70 bg-background shadow-sm dark:border-gray-900 dark:bg-gray-950">
