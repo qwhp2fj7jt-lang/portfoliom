@@ -118,7 +118,7 @@ export default function CardList({ article }) {
             </div>
           </div>
         </div>
-        <h1 className="text-2xl tracking-tight  text-gray-700 pt-5   dark:text-white">{blog.title}</h1>
+        <h1 className="text-2xl tracking-tight  text-gray-700 pt-5   dark:text-white text-center">{blog.title}</h1>
         <div className="m-4 grid grid-col gap-4 lg:flex lg:items-center lg:justify-center">
 
 
