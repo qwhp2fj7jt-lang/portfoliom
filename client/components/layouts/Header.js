@@ -13,9 +13,8 @@ import dynamic from "next/dynamic";
 import navigation from "@/shared/json/navigation";
 
 import { usePathname } from "next/navigation";
-const SearchBar = dynamic(() => import("@/molecules/SearchBar"), {
-  loading: () => <p>PDF yükleniyor...</p>,
-});
+ import SearchBar from "@/molecules/SearchBar"
+
 export default function Header({ posts }) {
   const [theme, setTheme] = useState("light");
   const [mobileOpen, setMobileOpen] = useState(false);

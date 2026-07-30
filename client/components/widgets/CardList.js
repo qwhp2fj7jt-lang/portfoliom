@@ -12,7 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import PdfMakers from "@/widgets/PdfMakers"
+
 import dynamic from "next/dynamic";
 
 export default function CardList({ article }) {
@@ -37,6 +37,9 @@ export default function CardList({ article }) {
       await navigator.clipboard.writeText(url);
     }
   };
+  const PdfMakers = dynamic(() => import("@/widgets/PdfMakers"), {
+    loading: () => <p>PDF yükleniyor...</p>,
+  });
   useEffect(() => {
     const headings = document.querySelectorAll("h2[id], h3[id]");
 
