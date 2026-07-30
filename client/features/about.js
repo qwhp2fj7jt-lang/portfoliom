@@ -40,18 +40,7 @@ export default function About() {
             ]}
           />
 
-          <InfoSection
-            icon=""
-            title="Teknoloji ve Araçlar"
-            items={[
-              "Frontend Developer: React, Next.js 14, TypeScript, Tailwind CSS",
-              "State Management & Architecture: Zustand, Context API, scalable frontend architecture patterns",
-              "Performance & UX: Core Web Vitals optimization, responsive & accessible UI development",
-              "Backend Integration: Node.js, Express, MongoDB, RESTful API design & integration",
-              "UI/UX: Figma → production-ready component design and implementation",
-              "Tools & Workflow: Git, GitHub, VS Code, Postman, Agile (JIRA)",
-            ]}
-          />
+
         </section>
 
         <section className="mt-10">
