@@ -23,10 +23,14 @@ export default function About() {
       "
     >
   <div className="mx-auto max-w-3xl px-4 py-5">
-        <AboutHeader
-          baslik="Hakkımda"
-          paragraf="Merhaba, ben Zeynep — Frontend Developer olarak modern web teknolojileriyle ölçeklenebilir, performans odaklı ve kullanıcı deneyimi yüksek arayüzler geliştiriyorum. Kod ve tasarımı bir araya getirerek fikirleri hızlı, etkili ve üretime hazır ürünlere dönüştürmeyi seviyorum."
-        />
+        <section className="mt-10">
+          <AboutCard
+            baslik="Modern Frontend Developer: Architecture & Performance Focused"
+            paragraf="Modern Frontend Developer yaklaşımıyla ölçeklenebilir ve performans odaklı web uygulamaları geliştiriyorum. React ekosisteminde Redux ve Zustand kullanarak state management çözümleri tasarlıyor, Tailwind CSS ile modern, erişilebilir ve responsive arayüzler oluşturuyorum."
+            paragrafOne="Temiz mimari prensiplerini (SOLID ve component-based architecture) dikkate alarak yeniden kullanılabilir, sürdürülebilir ve bakım kolaylığı yüksek kod yapıları kurmaya odaklanıyorum. RESTful API entegrasyonlarında deneyimliyim ve kullanıcı deneyimini performans metrikleri (Core Web Vitals) üzerinden optimize etmeyi önemsiyorum."
+            paragrafTwo="Agile süreçlerinde JIRA kullanarak ekip içi iş akışlarına aktif katkı sağlıyorum. Analitik düşünme ve problem çözme becerilerimle, sadece UI geliştiren değil aynı zamanda sistem tasarımını da düşünen bir frontend developer olarak sürekli kendimi geliştiriyorum."
+          />
+        </section>
 
         <section className="mt-10 space-y-6">
           <InfoSection
@@ -43,14 +47,7 @@ export default function About() {
 
         </section>
 
-        <section className="mt-10">
-          <AboutCard
-            baslik="Modern Frontend Developer: Architecture & Performance Focused"
-            paragraf="Modern Frontend Developer yaklaşımıyla ölçeklenebilir ve performans odaklı web uygulamaları geliştiriyorum. React ekosisteminde Redux ve Zustand kullanarak state management çözümleri tasarlıyor, Tailwind CSS ile modern, erişilebilir ve responsive arayüzler oluşturuyorum."
-            paragrafOne="Temiz mimari prensiplerini (SOLID ve component-based architecture) dikkate alarak yeniden kullanılabilir, sürdürülebilir ve bakım kolaylığı yüksek kod yapıları kurmaya odaklanıyorum. RESTful API entegrasyonlarında deneyimliyim ve kullanıcı deneyimini performans metrikleri (Core Web Vitals) üzerinden optimize etmeyi önemsiyorum."
-            paragrafTwo="Agile süreçlerinde JIRA kullanarak ekip içi iş akışlarına aktif katkı sağlıyorum. Analitik düşünme ve problem çözme becerilerimle, sadece UI geliştiren değil aynı zamanda sistem tasarımını da düşünen bir frontend developer olarak sürekli kendimi geliştiriyorum."
-          />
-        </section>
+
 
         <section className="mt-10">
           <Skills />
