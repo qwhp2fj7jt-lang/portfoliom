@@ -1,15 +1,1 @@
-export default function InfoSection  ({ title, items, icon }) {
-  return (
-    <div className="mb-6">
-      <h3 className="dark:text-white text-xl md:text-2xl mb-5 text-gray-700 flex items-center gap-2">
-        {icon} {title}
-      </h3>
-
-      <ul className="dark:text-gray-400 list-disc list-inside text-gray-700 text-sm md:text-base space-y-1">
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+export default function InfoSection({ title, items, icon }) { return ( <section className="mb-8"> <h3 className="mb-5 flex items-center gap-2 text-xl font-semibold text-gray-800 dark:text-white md:text-2xl"> {icon && <span>{icon}</span>} {title} </h3> <ul className="space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400 md:text-base"> {items.map((item, index) => ( <li key={index} className="flex items-start gap-3"> <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400 dark:bg-gray-500" /> <span>{item}</span> </li> ))} </ul> </section> ); }
