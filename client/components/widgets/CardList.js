@@ -38,7 +38,7 @@ export default function CardList({ article }) {
     }
   };
   const PdfMakers = dynamic(() => import("@/widgets/PdfMakers"), {
-    loading: () => <p>PDF yükleniyor...</p>,
+    loading: () => <p className="text-center">PDF yükleniyor...</p>,
   });
   useEffect(() => {
     const headings = document.querySelectorAll("h2[id], h3[id]");
