@@ -33,16 +33,7 @@ export default function About() {
         </section>
 
         <section className="mt-10 space-y-6">
-          <InfoSection
-            icon=""
-            title="İlgi Alanlarım"
-            items={[
-              "Modern frontend developer ve ölçeklenebilir web mimarileri",
-              "React ekosisteminde performans ve state management çözümleri geliştirme",
-              "UI/UX tasarımlarını (Figma) production-ready React uygulamalarına dönüştürme",
-              "Web performansı ve Core Web Vitals optimizasyonları",
-            ]}
-          />
+  <InfoSection icon="" title="İlgi Alanlarım" items={[ "Modern frontend mimarileri ve ölçeklenebilir web uygulamaları geliştirmek", "React ve Next.js ekosisteminde performans, state management ve sürdürülebilirlik", "Figma tasarımlarını pixel-perfect ve production-ready React arayüzlerine dönüştürmek", "Web performansı, Core Web Vitals ve kullanıcı deneyimi optimizasyonları", "Clean Architecture, Feature-Based Architecture ve yeniden kullanılabilir component yapıları", ]} />
 
 
         </section>
