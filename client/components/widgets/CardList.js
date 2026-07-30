@@ -119,6 +119,11 @@ export default function CardList({ article }) {
             </div>
           </div>
         </div>
+        <PdfMakers
+        openPdf={openPdf}
+        setOpenPdf={setOpenPdf}
+        pdfUrl={pdfUrl}
+      />
         <h1 className="text-2xl tracking-tight  text-gray-700 pt-5 pb-2   dark:text-white text-center">{blog.title}</h1>
         <div className="m-4 grid grid-col gap-4 lg:flex lg:items-center lg:justify-center">
 
@@ -130,11 +135,7 @@ export default function CardList({ article }) {
         <SelectValue placeholder="İçindekiler" />
       </SelectTrigger>
 
-      <PdfMakers
-        openPdf={openPdf}
-        setOpenPdf={setOpenPdf}
-        pdfUrl={pdfUrl}
-      />
+
 
       <SelectContent className="bg-white dark:bg-gray-950">
         <SelectGroup>
