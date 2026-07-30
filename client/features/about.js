@@ -23,7 +23,7 @@ export default function About() {
       "
     >
   <div className="mx-auto max-w-3xl px-4 py-5">
-        <section className="mt-10">
+        <section className="">
           <AboutCard
             baslik="Modern Frontend Developer: Architecture & Performance Focused"
             paragraf="Modern Frontend Developer yaklaşımıyla ölçeklenebilir ve performans odaklı web uygulamaları geliştiriyorum. React ekosisteminde Redux ve Zustand kullanarak state management çözümleri tasarlıyor, Tailwind CSS ile modern, erişilebilir ve responsive arayüzler oluşturuyorum."
