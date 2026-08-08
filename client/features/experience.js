@@ -31,7 +31,7 @@ export default function ExperiencePage() {
 
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div>
-                <h2 className="text-2xl font-bold dark:text-white">
+                <h2 className="text-xl font-bold dark:text-white">
                   {item.title}
                 </h2>
 
