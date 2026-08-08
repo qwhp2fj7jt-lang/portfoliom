@@ -10,7 +10,7 @@ export default function ExperiencePage() {
         <p className="text-xs font-semibold tracking-[0.25em] lowercase text-zinc-500">
           Kariyer
         </p>
-        <span className="text-xs text-green-500 flex items-center gap-2">
+        <span className="text-xs text-[#A23A44] flex items-center gap-2">
       <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
       Yeni Fırsatlara Açığım
     </span>        </div>
