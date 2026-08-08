@@ -14,9 +14,9 @@ export default function ExperiencePage() {
       <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
       Yeni Fırsatlara Açığım
     </span>        </div>
-        <h1 className="mt-2 text-3xl font-bold dark:text-white">Deneyimler</h1>
+        <h1 className=" text-3xl font-bold dark:text-white">Deneyimler</h1>
 
-        <p className="mt-3 max-w-xl text-sm leading-7 text-zinc-600 dark:text-zinc-400">
+        <p className=" max-w-xl text-sm leading-7 text-zinc-600 dark:text-zinc-400">
           Kariyer yolculuğum boyunca edindiğim deneyimler, kullandığım
           teknolojiler ve geliştirdiğim projeler.
         </p>
