@@ -7,7 +7,7 @@ export default function ExperiencePage() {
         <div className="flex justify-between">
 
 
-        <p className="text-xs font-semibold tracking-[0.25em] lowercase text-zinc-500">
+        <p className="text-md font-semibold tracking-[0.25em] lowercase text-zinc-500">
           Kariyer
         </p>
         <span className="text-xs text-[#A23A44] flex items-center gap-2">
