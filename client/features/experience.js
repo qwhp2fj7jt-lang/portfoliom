@@ -11,7 +11,7 @@ export default function ExperiencePage() {
           Kariyer
         </p>
         <span className="text-xs text-[#A23A44] flex items-center gap-2">
-      <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+      <span className="h-2 w-2 rounded-full bg-[#A23A44] animate-pulse" />
       Yeni Fırsatlara Açığım
     </span>        </div>
         <h1 className=" text-4xl font-bold dark:text-white">Deneyimler</h1>
