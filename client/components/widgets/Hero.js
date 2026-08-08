@@ -48,25 +48,25 @@ export default function Hero() {
                   href="https://github.com/zeynepbass"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center dark:text-yellow-400 italic gap-1 text-gray-600 underline hover:text-gray-600"
+                  className="inline-flex items-center dark:text-yellow-400  gap-1 font-bold text-gray-600 underline hover:text-gray-600"
                 >
                   <FaGithub className="h-4 w-4" />
-                  GitHub
+                  github
                 </a>{" "}
                 profilime, profesyonel bağlantılar için{" "}
                 <a
                   href="https://linkedin.com/in/zeynepbasss"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center dark:text-yellow-400  italic gap-1 text-gray-600 underline hover:text-gray-600"
+                  className="inline-flex items-center dark:text-yellow-400  font-bold gap-1 text-gray-600 underline hover:text-gray-600"
                 >
                   <FaLinkedin className="h-4 w-4" />
-                  LinkedIn
+                  linkedIn
                 </a>{" "}
                 hesabıma veya doğrudan iletişim için{" "}
                 <a
                   href="mailto:baszynpp@gmail.com"
-                  className="inline-flex items-center italic gap-1 text-gray-600 underline hover:text-gray-600 dark:text-yellow-400"
+                  className="inline-flex items-center gap-1 text-gray-600 underline font-bold hover:text-gray-600 dark:text-yellow-400"
                 >
                   <FaEnvelope className="h-4 w-4" />
                   email
