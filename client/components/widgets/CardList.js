@@ -63,26 +63,7 @@ export default function CardList({ article }) {
   }, []);
   return (
     <div className="max-w-4xl lg:ml-[26%] pr-3 lg:mx-auto ml-[5%]">
-      <div className="max-w-2xl mx-auto pt-10">
-        <Link
-          href="/blog"
-          className="inline-flex 
-        items-center gap-2 
-        
-        bg-gray-50
-        dark:bg-zinc-900
-        p-2
-        rounded-full
-        shadow-md
-        text-gray-700  dark:text-gray-400 
-   hover:scale-110
-
-         hover:text-foreground mb-8"
-          aria-label="Blog yazılarına dön"
-        >
-          <CornerUpLeft size={16} />
-        </Link>
-        <div className="hidden lg:block">
+          <div className="hidden lg:block">
           <div className="fixed left-4 top-100 w-72">
             <div className="rounded-xl pl-0">
               <div className="mb-4 flex items-center gap-2 text-gray-700   dark:text-white">
@@ -119,6 +100,26 @@ export default function CardList({ article }) {
             </div>
           </div>
         </div>
+      <div className="max-w-2xl mx-auto pt-10">
+        <Link
+          href="/blog"
+          className="inline-flex 
+        items-center gap-2 
+        
+        bg-gray-50
+        dark:bg-zinc-900
+        p-2
+        rounded-full
+        shadow-md
+        text-gray-700  dark:text-gray-400 
+   hover:scale-110
+
+         hover:text-foreground mb-8"
+          aria-label="Blog yazılarına dön"
+        >
+          <CornerUpLeft size={16} />
+        </Link>
+  
         <PdfMakers
         openPdf={openPdf}
         setOpenPdf={setOpenPdf}
