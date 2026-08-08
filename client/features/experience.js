@@ -7,14 +7,14 @@ export default function ExperiencePage() {
         <div className="flex justify-between">
 
 
-        <p className="text-md font-semibold tracking-[0.25em] lowercase text-zinc-500">
+        <p className="text-sm font-semibold tracking-[0.25em] lowercase text-zinc-500">
           Kariyer
         </p>
         <span className="text-xs text-[#A23A44] flex items-center gap-2">
       <span className="h-2 w-2 rounded-full bg-[#A23A44] animate-pulse" />
       Yeni Fırsatlara Açığım
     </span>        </div>
-        <h1 className=" text-4xl font-bold dark:text-white">Deneyimler</h1>
+        <h1 className=" text-xl font-bold dark:text-white">Deneyimler</h1>
 
         <p className=" max-w-xl text-sm leading-7 text-zinc-600 dark:text-zinc-400">
           Kariyer yolculuğum boyunca edindiğim deneyimler, kullandığım
@@ -31,7 +31,7 @@ export default function ExperiencePage() {
 
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div>
-                <h2 className="text-xl font-bold dark:text-white">
+                <h2 className="text-md font-bold dark:text-white">
                   {item.title}
                 </h2>
 
