@@ -65,7 +65,7 @@ export default function Header({ posts }) {
     dark:bg-zinc-900
   "
       >
-        <SearchBar navigation={navigation} posts={posts[posts.length - 1]} />
+        <SearchBar navigation={navigation} posts={posts[posts.length -1]} />
 
         <span className="w-5 h-px bg-gray-200 dark:bg-zinc-700" />
 
