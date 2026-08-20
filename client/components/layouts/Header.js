@@ -166,7 +166,7 @@ export default function Header({ posts }) {
 
       <Dialog open={mobileOpen} onClose={setMobileOpen} className="sm:hidden">
         <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40" />
-      <div className="w-4 h-1 bg-gray-300 rounded-full mx-auto"></div>
+
         <Dialog.Panel className="fixed bottom-0 left-0 right-0 bg-white dark:bg-zinc-900 rounded-t-3xl shadow-2xl p-3 space-y-2 z-50 animate-[slideUp_.3s_ease]">
           <div className="flex justify-between">
             <div className="flex items-center gap-2 rounded-xl bg-gray-50 shadow-md dark:bg-zinc-900 p-1">
@@ -203,7 +203,7 @@ export default function Header({ posts }) {
             </button>
           </div>
 
-
+      <div className="w-4 h-1 bg-gray-300 rounded-full mx-auto"></div>
     
 
           {navigation?.map((item) => {
