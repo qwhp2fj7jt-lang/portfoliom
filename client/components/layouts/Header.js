@@ -64,7 +64,7 @@ export default function Header({ posts }) {
     border
     border-gray-100
     z-20
-    p-1
+ 
     shadow-xl
     dark:bg-zinc-900
   "
