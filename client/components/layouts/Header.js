@@ -203,7 +203,7 @@ export default function Header({ posts }) {
             </button>
           </div>
 
-      <div className="w-4 h-1 bg-gray-300 rounded-full mx-auto"></div>
+      <div className="w-10 h-1 bg-gray-300 p-4 rounded-full mx-auto"></div>
     
 
           {navigation?.map((item) => {
