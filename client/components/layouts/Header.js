@@ -75,34 +75,7 @@ export default function Header({ posts }) {
   posts={latestPost}
 />
 
-        <span className="w-5 h-px bg-gray-200 dark:bg-zinc-700" />
-
-        <a
-          href="https://linktr.ee/zeynepbas"
-          aria-label="linktr.ee sayfam"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-        p-1
-
-        inline-flex
-        items-center
-        justify-center
-       
-        rounded-md
-    
-
-        cursor-pointer
-      "
-        >
-          <svg
-            viewBox="0 0 28 28"
-            className="w-4 h-4 text-gray-700 dark:text-gray-200"
-            fill="currentColor"
-          >
-            <path d="m15.76 6.83 4.67-4.8 2.71 2.77-4.9 4.67h6.89v3.86h-6.93l4.93 4.79-2.71 2.72-6.7-6.73-6.7 6.73-2.71-2.71 4.93-4.79H3.34v-3.87h6.89L5.34 4.8 8.05 2.02l4.67 4.81V0h4.05zm-4.05 12.02h4.05V28h-4.05z" />
-          </svg>
-        </a>
+ 
 
         <span className="w-5 h-px bg-gray-200 dark:bg-zinc-700" />
 
