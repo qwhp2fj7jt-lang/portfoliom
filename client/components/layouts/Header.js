@@ -50,6 +50,7 @@ export default function Header({ posts }) {
     <>
       <div
         className="
+          py-2
     fixed
     top-1/3
     right-3
