@@ -49,7 +49,7 @@ export default function Projects() {
 
             <ChevronRight
               size={18}
-              className="ml-6 shrink-0 text-gray-400 transition-all duration-300 group-hover:translate-x-1 group-hover:text-purple"
+              className="ml-6 shrink-0 text-gray-400 transition-all duration-300 group-hover:translate-x-1 group-hover:text-purple-500"
             />
           </Link>
         ))}
