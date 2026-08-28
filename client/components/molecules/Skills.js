@@ -122,14 +122,7 @@ Web Vitals, Edge Case Testing
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-4">
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-700">
-            <Form color="gray"/>
-            </div>
-          </div>
 
-        </div>
       </div>
 
       <style jsx>{`
