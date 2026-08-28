@@ -28,12 +28,45 @@ export default function Skills() {
             </p>
 
             <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-              React, Next.js, TypeScript, JavaScript, Tailwind CSS, Redux,
-              Zustand, Context API
+  TypeScript, HTML5, CSS3, React.js, Next.js
+   
             </p>
           </div>
         </div>
+            <div className="flex items-center gap-4">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-700">
+            <Form color="gray"/>
+            </div>
+          </div>
 
+          <div>
+            <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+        State Management
+            </p>
+
+            <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+           Redux, Zustand, Context API, tanstack-query
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center gap-4">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-700">
+            <Form color="gray"/>
+            </div>
+          </div>
+
+          <div>
+            <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+             UI Frameworks
+            </p>
+
+            <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+      TailwindCSS, Material UI, Bootstrap, Ant Design, Shadcn UI
+            </p>
+          </div>
+        </div>
         <div className="flex items-center gap-4">
         <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-700">
@@ -47,10 +80,9 @@ export default function Skills() {
             </p>
 
             <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-              Protected Routes, Role-Based Access Control (RBAC), Scalable
-              Folder Structure, API Layer / Service Layer Separation,
-              Component-Driven Architecture, Repository Pattern, Composition
-              Pattern, Custom Hook Pattern, Adapter Pattern, Observer Pattern
+             Protected Routes, Role-Based Access Control (RBAC)
+Feauture Based Architecture, API Layer, Adapter Pattern
+Provider Pattern, Repository Pattern, Custom Hook Pattern...
             </p>
           </div>
         </div>
@@ -64,11 +96,11 @@ export default function Skills() {
 
           <div>
             <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
-              Tools
+          Araçlar
             </p>
 
             <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-              Git, GitHub, JIRA, Docker, Postman, Claude
+             Git, GitHub, JIRA, Claude
             </p>
           </div>
         </div>
@@ -85,8 +117,8 @@ export default function Skills() {
             </p>
 
             <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-            Responsive Design, SSR, CSR, Git Workflow,
-            Açık Kaynak Katkı
+Responsive Design, SSR, CSR, Git Workflow, Lazy Loading, Açık Kaynak Katkı, Atomic Design, Component Driven, Core
+Web Vitals, Edge Case Testing
             </p>
           </div>
         </div>
@@ -97,16 +129,6 @@ export default function Skills() {
             </div>
           </div>
 
-          <div>
-            <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
-              API & Veri
-            </p>
-
-            <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-            RESTAPI,Axios, Postman, TanStack Query (React Query),
-            LazyLoading
-            </p>
-          </div>
         </div>
       </div>
 
