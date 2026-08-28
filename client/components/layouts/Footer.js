@@ -24,7 +24,7 @@ Core Web Vitals ve Feature Based Architecture yaklaşımıyla ölçeklenebilir �
         </div>
 
   
-        <div className="flex items-center gap-2 text-sm font-bold text-[#A23A44] ">
+        <div className="flex items-center gap-2 text-sm font-bold text-purple ">
 
 
           <p>© {nowYear} | Zeynep Baş</p>
