@@ -22,10 +22,10 @@
     "icon": "/images/project/hizmetKap.jpeg",
     "width": 200,
     "height": 200,
-    "baslik": "Hizmet Kap",
+    "baslik": "Service Port",
          "yakinda":"",
   "description": "Hizmet Kap – Kişiye Özel Hizmet İlan Platformu\n\nHizmet Kap, kullanıcıların ihtiyaçlarına göre ilan oluşturabildiği, yönetebildiği ve hizmet değerlendirmesi yapabildiği bir web uygulamasıdır.",
-  "adres": "https://github.com/zeynepbass/HizmetKap"
+  "adres": "https://github.com/zeynepbass/service-Port"
 },
   {
     "icon": "/images/project/workist.jpeg",
@@ -40,16 +40,16 @@
     "icon": "/images/project/StackDiyet.jpeg",
     "width": 200,
     "height": 200,
-    "baslik": "Stack Diyet",
+    "baslik": "Stack Diet",
          "yakinda":"",
 "description": "STACK Diyet, kullanıcıların sağlıklı yaşam odaklı içerikler paylaşabildiği, gönderileri beğenip yorumlayabildiği, diğer kullanıcılarla etkileşim kurabildiği ve profillerini yönetebildiği sosyal bir web uygulamasıdır.",
-"adres": "https://github.com/zeynepbass/stack-diyet"
+"adres": "https://github.com/zeynepbass/stack-diet"
   },
   {
     "icon": "/images/project/fatura.jpeg",
     "width": 200,
     "height": 200,
-    "baslik": "Fatura Entegrasyonu",
+    "baslik": "Invoice Application",
          "yakinda":"",
 "description": "React Fatura Application, kullanıcıların ürünleri sepete ekleyerek sipariş oluşturabildiği, siparişlerini takip edebildiği ve fatura oluşturup yazdırabildiği kapsamlı bir e-ticaret ve faturalandırma web uygulamasıdır. Ürün ve kategori yönetimi için CRUD işlemleri sunmaktadır.",
 "adres": "https://github.com/zeynepbass/invoice-application"
