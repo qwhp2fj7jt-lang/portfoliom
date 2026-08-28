@@ -24,16 +24,16 @@
     "height": 200,
     "baslik": "Hizmet Kap",
          "yakinda":"",
-    "description": "Kullanılan Teknolojiler:\nNext.js 14 ile hızlı ve SEO uyumlu sayfalar\nTailwind CSS ile modern ve responsive tasarım\nMaterial UI ve Icons ile zengin kullanıcı arayüzü\nAxios ile backend API iletişimi\nSocket.IO ile gerçek zamanlı mesajlaşma\nReact-Leaflet & Leaflet ile konum entegrasyonu\nReact-Toastify ile bildirim sistemi\nKullanıcı ve ilan verileri MongoDB üzerinden yönetiliyor\n Bu projede ayrıca localStorage ile sayfa kontrolleri, JWT ile güvenli giriş sistemi ve modern web geliştirme teknikleri uyguladım.\n Gerçek kullanıcı ihtiyaçları için full-stack bir uygulama olarak tasarlandı.",
-    "adres": "https://github.com/zeynepbass/HizmetKap"
-  },
+  "description": "Hizmet Kap – Kişiye Özel Hizmet İlan Platformu\n\nHizmet Kap, kullanıcıların ihtiyaçlarına göre ilan oluşturabildiği, yönetebildiği ve hizmet değerlendirmesi yapabildiği bir web uygulamasıdır.",
+  "adres": "https://github.com/zeynepbass/HizmetKap"
+},
   {
     "icon": "/images/project/workist.jpeg",
     "width": 200,
     "height": 200,
     "baslik": "Workist",
          "yakinda":"",
-    "description": "Kullanılan Teknolojiler:\nFrontend: React.js, Context API, Tailwind CSS, FontAwesome\nBackend: Node.js, Express.js\nGerçek Zamanlı İletişim: Socket.io\nHTTP İletişimi: Axios\nDepolama & Oturum: LocalStorage\nYardımcı Araçlar: useMemo, useRef gibi ileri React Hook'ları\nGüvenlik: Authentication & Authorization\n Amaçlarım:\nTemiz ve sürdürülebilir kod yapısı kurmak\nKullanıcı merkezli arayüzler geliştirmek\nGerçek zamanlı etkileşimleri başarılı şekilde entegre etmek\nFull-stack yetkinliğimi geliştirmek",
+"description": "WORKIST, kullanıcıların ihtiyaçlarına yönelik freelance hizmet ilanları oluşturabildiği, ilanlarını yönetebildiği, diğer kullanıcılarla sohbet edebildiği ve sunulan hizmetler hakkında değerlendirme yapabildiği modern bir freelance platformudur.",
     "adres": "https://github.com/zeynepbass/workist"
   },
   {
