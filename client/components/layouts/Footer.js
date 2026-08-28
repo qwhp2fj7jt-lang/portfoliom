@@ -10,7 +10,7 @@ export default function Footer() {
  
         <div className="flex flex-col gap-2 text-sm text-gray-500 dark:text-gray-300  items-start">
           <p className="text-left">
-Core Web Vitals ve feature-based mimari yaklaşımıyla ölçeklenebilir şekilde tasarlanmıştır.
+Core Web Vitals ve Feature Based Architecture yaklaşımıyla ölçeklenebilir şekilde tasarlanmıştır.
           </p>
 
           <p className="font-medium text-gray-600 dark:text-gray-300 underline">
