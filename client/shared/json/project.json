@@ -4,11 +4,8 @@
   "width": 200,
   "height": 200,
   "baslik": "PDOS",
-  "yakinda":"Yakında",
-  "description": "PDOS (Personal Data Operating System), görevleri, notları, hedefleri, dokümanları ve günlük aktiviteleri tek bir platform üzerinden yönetmek için geliştirilmiş kişisel çalışma ve verimlilik uygulamasıdır.
-Proje; modern frontend mimarileri, temiz kod prensipleri, component-driven development ve ölçeklenebilir bir uygulama yapısı üzerine kurulmuştur.
-
-",
+      "yakinda":"",
+  "description": "PDOS (Personal Data Operating System), görevleri, notları, hedefleri, dokümanları ve günlük aktiviteleri tek bir platform üzerinden yönetmek için geliştirilmiş kişisel çalışma ve verimlilik uygulamasıdır.\nProje; modern frontend mimarileri, temiz kod prensipleri, component-driven development ve ölçeklenebilir bir uygulama yapısı üzerine kurulmuştur.",
   "adres": "https://github.com/zeynepbass/personal-data-operating-system"
 },
     {
@@ -17,9 +14,8 @@ Proje; modern frontend mimarileri, temiz kod prensipleri, component-driven devel
     "height": 200,
     "baslik": "Milk",
     "yakinda":"",
-   "description": "MILK – Yerel Pazar Platformu
+    "description": "MILK – Yerel Pazar Platformu\nMILK, yerel üreticiler ile tüketicileri buluşturan, gerçek zamanlı mesajlaşma ve sosyal etkileşim özelliklerine sahip bir pazar platformudur.",
 
-MILK, yerel üreticiler ile tüketicileri buluşturan, gerçek zamanlı mesajlaşma ve sosyal etkileşim özelliklerine sahip bir pazar platformudur.",
     "adres": "https://github.com/zeynepbass/milk"
   },
   {
