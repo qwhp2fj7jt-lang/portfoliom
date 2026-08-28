@@ -22,7 +22,7 @@
     "icon": "/images/project/hizmetKap.jpeg",
     "width": 200,
     "height": 200,
-    "baslik": "Service Port",
+    "baslik": "Hizmet Kap",
          "yakinda":"",
   "description": "Hizmet Kap – Kişiye Özel Hizmet İlan Platformu\n\nHizmet Kap, kullanıcıların ihtiyaçlarına göre ilan oluşturabildiği, yönetebildiği ve hizmet değerlendirmesi yapabildiği bir web uygulamasıdır.",
   "adres": "https://github.com/zeynepbass/service-Port"
@@ -33,7 +33,7 @@
     "height": 200,
     "baslik": "Workist",
          "yakinda":"",
-"description": "WORKIST, kullanıcıların ihtiyaçlarına yönelik freelance hizmet ilanları oluşturabildiği, ilanlarını yönetebildiği, diğer kullanıcılarla sohbet edebildiği ve sunulan hizmetler hakkında değerlendirme yapabildiği modern bir freelance platformudur.",
+"description": "Workist, kullanıcıların ihtiyaçlarına yönelik freelance hizmet ilanları oluşturabildiği, ilanlarını yönetebildiği, diğer kullanıcılarla sohbet edebildiği ve sunulan hizmetler hakkında değerlendirme yapabildiği modern bir freelance platformudur.",
     "adres": "https://github.com/zeynepbass/workist"
   },
   {
@@ -42,7 +42,7 @@
     "height": 200,
     "baslik": "Stack Diet",
          "yakinda":"",
-"description": "STACK Diyet, kullanıcıların sağlıklı yaşam odaklı içerikler paylaşabildiği, gönderileri beğenip yorumlayabildiği, diğer kullanıcılarla etkileşim kurabildiği ve profillerini yönetebildiği sosyal bir web uygulamasıdır.",
+"description": "Stack Diet, kullanıcıların sağlıklı yaşam odaklı içerikler paylaşabildiği, gönderileri beğenip yorumlayabildiği, diğer kullanıcılarla etkileşim kurabildiği ve profillerini yönetebildiği sosyal bir web uygulamasıdır.",
 "adres": "https://github.com/zeynepbass/stack-diet"
   },
   {
@@ -51,7 +51,7 @@
     "height": 200,
     "baslik": "Invoice Application",
          "yakinda":"",
-"description": "React Fatura Application, kullanıcıların ürünleri sepete ekleyerek sipariş oluşturabildiği, siparişlerini takip edebildiği ve fatura oluşturup yazdırabildiği kapsamlı bir e-ticaret ve faturalandırma web uygulamasıdır. Ürün ve kategori yönetimi için CRUD işlemleri sunmaktadır.",
+"description": "Invoice Application, kullanıcıların ürünleri sepete ekleyerek sipariş oluşturabildiği, siparişlerini takip edebildiği ve fatura oluşturup yazdırabildiği kapsamlı bir e-ticaret ve faturalandırma web uygulamasıdır. Ürün ve kategori yönetimi için CRUD işlemleri sunmaktadır.",
 "adres": "https://github.com/zeynepbass/invoice-application"
   }
 ]
