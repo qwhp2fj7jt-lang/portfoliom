@@ -42,8 +42,8 @@
     "height": 200,
     "baslik": "Stack Diyet",
          "yakinda":"",
-    "description": "Kullanılan Teknolojiler:\nFrontend: React.js, Tailwind CSS, FontAwesome\nBackend: Node.js\nState Management: Zustand\nEmail Gönderimi: React EmailJS\nVeri Yönetimi: MongoDB & Express.js\nBu proje ile kullanıcı deneyimi, interaktif gönderi sistemi ve gerçek zamanlı etkileşim özelliklerini uygulama fırsatı buldum.\n Her adımını öğrenerek ve deneyimleyerek geliştirdim.",
-    "adres": "https://github.com/zeynepbass/stack-diyet"
+"description": "STACK Diyet, kullanıcıların sağlıklı yaşam odaklı içerikler paylaşabildiği, gönderileri beğenip yorumlayabildiği, diğer kullanıcılarla etkileşim kurabildiği ve profillerini yönetebildiği sosyal bir web uygulamasıdır.",
+"adres": "https://github.com/zeynepbass/stack-diyet"
   },
   {
     "icon": "/images/project/fatura.jpeg",
@@ -51,7 +51,7 @@
     "height": 200,
     "baslik": "Fatura Entegrasyonu",
          "yakinda":"",
-    "description": "Kullanılan Teknolojiler:\nBu projede şu özellikler bulunuyor:\nKullanıcı Yönetimi: Giriş & kayıt\nSipariş Yönetimi: Sepet, sipariş oluşturma, sipariş takibi\nFatura Entegrasyonu: Fatura oluşturma, yazdırma\nKategori & Ürün Yönetimi: CRUD işlemleri\nGeri bildirimlerinizi duymaktan memnuniyet duyarım! ",
-    "adres": "https://github.com/zeynepbass/react-fatura-application"
+"description": "React Fatura Application, kullanıcıların ürünleri sepete ekleyerek sipariş oluşturabildiği, siparişlerini takip edebildiği ve fatura oluşturup yazdırabildiği kapsamlı bir e-ticaret ve faturalandırma web uygulamasıdır. Ürün ve kategori yönetimi için CRUD işlemleri sunmaktadır.",
+"adres": "https://github.com/zeynepbass/react-fatura-application"
   }
 ]
