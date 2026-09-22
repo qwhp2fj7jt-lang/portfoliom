@@ -116,7 +116,7 @@ export default function CardZone({ posts }) {
                       width={40}
                       height={30}
                       className="
-                rounded-full
+                rounded-md
                 object-cover
                 ring-2
                 ring-white
