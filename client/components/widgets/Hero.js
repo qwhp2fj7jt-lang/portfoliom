@@ -15,7 +15,7 @@ export default function Hero() {
             width={128}
             height={128}
             className="
-    h-[100px] w-[100px] rounded-full border border-gray-100 p-1 shadow-md object-cover
+    h-[100px] w-[100px] rounded-lg border border-gray-100 p-1 shadow-md object-cover
     dark:border-gray-900
     sm:h-[100px] sm:w-[100px]
 
