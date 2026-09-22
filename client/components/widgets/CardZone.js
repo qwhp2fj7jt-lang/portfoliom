@@ -114,7 +114,7 @@ export default function CardZone({ posts }) {
                       src="/images/avatar.png"
                       alt="Avatar"
                       width={40}
-                      height={40}
+                      height={30}
                       className="
                 rounded-full
                 object-cover
