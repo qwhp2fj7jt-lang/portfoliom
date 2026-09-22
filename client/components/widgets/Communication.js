@@ -12,8 +12,8 @@ export default function Communication() {
           ⌘ İletişim
         </h2>
 
-        <span className="flex items-center gap-2 text-sm text-purple-500">
-          <span className="h-2 w-2 rounded-full bg-purple-500 animate-pulse" />
+        <span className="flex items-center gap-2 text-sm text-[#C71518]">
+          <span className="h-2 w-2 rounded-full bg-[#C71518] animate-pulse" />
           İletişime geçebilirsin.
         </span>
       </div>
