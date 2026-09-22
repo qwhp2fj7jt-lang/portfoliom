@@ -120,7 +120,7 @@ function ProjectCard({ item }) {
                 alt="Avatar"
                 width={36}
                 height={36}
-                className="rounded-full object-cover ring-2 ring-white dark:ring-zinc-800"
+                className="rounded-lg object-cover ring-2 ring-white dark:ring-zinc-800"
               />
 
               <div>
