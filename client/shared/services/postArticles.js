@@ -35,7 +35,7 @@ export const postArticles = {
   
     return request(`/articles?${params.toString()}`, {
       method: "GET",
-     cache: "no-store"
+      next: { revalidate: 60 },
     });
   },
   articlesGetSlug: ({ slug }) => {
