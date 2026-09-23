@@ -26,8 +26,8 @@ export default function Hero() {
         <div className="flex-1 text-center md:text-left">
           <h5 className="text-sm font-semibold md:text-xl">Zeynep Baş</h5>
 
-          <p className="mt-0 text-sm text-gray-500 sm:text-base">
-            React Frontend Developer | Architecture & Performance Focused
+          <p className="mt-0 text-sm text-[#C71518] sm:text-base">
+            Frontend Developer | React.js, Next.js | Architecture & Performance Focused
           </p>
         </div>
       </section>
