@@ -5,8 +5,7 @@ import { useCallback, useId, useMemo, useState, useSyncExternalStore } from "rea
 import { Button } from "@/components/atoms/Button";
 import { LikeButton } from "@/components/molecules/LikeButton";
 import { getVisitorNickname } from "@/lib/visitor";
-import { postService } from "@/services";
-import { refreshZonePosts } from "../../actions/refresh";
+import { addZoneComment, toggleZoneLike } from "../../actions/interactions";
 import { toZoneComment } from "../../lib/comments";
 import type { ZoneComment } from "../../types";
 import { CommentForm } from "../molecules/CommentForm";
@@ -27,6 +26,7 @@ export function ZoneInteractions({ postId, remote, likes, likedBy = NO_LIKES, co
   const [open, setOpen] = useState(false);
   const [comments, setComments] = useState(seed);
   const [announce, setAnnounce] = useState("");
+  const [error, setError] = useState("");
   const nickname = useSyncExternalStore(noopSubscribe, getVisitorNickname, () => undefined);
   const panelId = useId();
 
@@ -34,9 +34,9 @@ export function ZoneInteractions({ postId, remote, likes, likedBy = NO_LIKES, co
     () =>
       remote
         ? async () => {
-            const res = await postService.like(postId, getVisitorNickname());
-            void refreshZonePosts();
-            return { liked: res.liked, count: res.likes };
+            const res = await toggleZoneLike(postId, getVisitorNickname());
+            if (!res.ok) throw new Error(res.message);
+            return { liked: res.data.liked, count: res.data.likes };
           }
         : undefined,
     [postId, remote],
@@ -51,15 +51,15 @@ export function ZoneInteractions({ postId, remote, likes, likedBy = NO_LIKES, co
       setAnnounce("Yorumun eklendi");
       return;
     }
-    try {
-      const saved = await postService.addComment(postId, { nickname: comment.name, text: comment.text });
-      setComments(saved.map(toZoneComment));
-      void refreshZonePosts();
+    setError("");
+    const res = await addZoneComment(postId, { nickname: comment.name, text: comment.text }).catch(() => null);
+    if (res?.ok) {
+      setComments(res.data.map(toZoneComment));
       setAnnounce("Yorumun eklendi");
-    } catch {
-      setComments((list) => list.filter((c) => c !== comment));
-      setAnnounce("Yorum gönderilemedi, lütfen tekrar dene");
+      return;
     }
+    setComments((list) => list.filter((c) => c !== comment));
+    setError(`Yorum gönderilemedi: ${res?.message ?? "sunucuya ulaşılamadı"}. Lütfen tekrar dene.`);
   }, [postId, remote]);
 
   return (
@@ -95,6 +95,11 @@ export function ZoneInteractions({ postId, remote, likes, likedBy = NO_LIKES, co
               </li>
             ))}
           </ul>
+        )}
+        {error && (
+          <p role="alert" className="text-sm text-accent">
+            {error}
+          </p>
         )}
         <CommentForm onSubmit={addComment} />
       </div>

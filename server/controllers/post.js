@@ -1,8 +1,13 @@
+const mongoose = require("mongoose");
 const Post = require("../models/Post");
 const { cleanString } = require("../middleware/validate");
 
 const NICKNAME_MAX = 40;
 const COMMENT_MAX = 280;
+
+// Paylaşım hem Mongo _id'si hem de slug (ör. "z1") ile bulunabilir.
+const findPost = (ref) =>
+  mongoose.isValidObjectId(ref) ? Post.findById(ref) : Post.findOne({ slug: String(ref) });
 
 exports.createPost = async (req, res) => {
   try {
@@ -36,7 +41,7 @@ exports.likePost = async (req, res) => {
       return res.status(400).json({ message: "Nickname gerekli" });
     }
 
-    const post = await Post.findById(postId);
+    const post = await findPost(postId);
 
     if (!post) {
       return res.status(404).json({ message: "Post bulunamadı" });
@@ -85,7 +90,7 @@ exports.addComment = async (req, res) => {
       return res.status(400).json({ message: "Yorum boş olamaz" });
     }
 
-    const post = await Post.findById(postId);
+    const post = await findPost(postId);
 
     if (!post) {
       return res.status(404).json({ message: "Post bulunamadı" });
