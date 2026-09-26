@@ -20,12 +20,28 @@ const SectionSchema = new mongoose.Schema({
   items: [ContentItemSchema],
 });
 
+// Blog sayfasının doğrudan render ettiği içerik blokları (başlık, paragraf, liste, kod, not).
+const ContentBlockSchema = new mongoose.Schema(
+  {
+    type: { type: String, enum: ["heading", "paragraph", "list", "code", "note"], required: true },
+    text: String,
+    items: { type: [String], default: undefined },
+    file: String,
+    language: String,
+    code: String,
+  },
+  { _id: false }
+);
+
 const ArticleSchema = new mongoose.Schema(
   {
     title: String,
-    slug:String,
+    slug: { type: String, unique: true, sparse: true },
     subtitle: String,
     summary: String,
+    readingTime: String,
+    tags: [String],
+    content: [ContentBlockSchema],
     category: {
       type: String,
       required: true,

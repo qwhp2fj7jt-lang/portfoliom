@@ -73,20 +73,31 @@ app.get("/test", (req, res) => {
   res.send("OK");
 });
 
+app.get("/health", (req, res) => {
+  const connected = mongoose.connection.readyState === 1;
+  res.status(connected ? 200 : 503).json({ api: "ok", database: connected ? "connected" : "disconnected" });
+});
+
 app.use(notFound);
 app.use(errorHandler);
 
-if (!process.env.MONGO_URI) {
-  console.error("MONGO_URI tanımlı değil. Render > Environment bölümüne ekleyin.");
-  process.exit(1);
+const RETRY_MS = 10_000;
+
+// Port hemen açılır (Render port taramasını geçer); MongoDB bağlantısı arka planda denenir.
+app.listen(PORT, "0.0.0.0", () => console.log(`API ${PORT} portunda çalışıyor`));
+
+async function connectDatabase() {
+  if (!process.env.MONGO_URI) {
+    console.error("MONGO_URI tanımlı değil. Render > Environment bölümüne ekleyin.");
+    return;
+  }
+  try {
+    await mongoose.connect(process.env.MONGO_URI, { serverSelectionTimeoutMS: 15_000 });
+    console.log("MongoDB bağlantısı kuruldu");
+  } catch (error) {
+    console.error(`MongoDB bağlantısı başarısız: ${error.message} (${RETRY_MS / 1000} sn sonra tekrar denenecek)`);
+    setTimeout(connectDatabase, RETRY_MS);
+  }
 }
 
-mongoose
-  .connect(process.env.MONGO_URI, { serverSelectionTimeoutMS: 15_000 })
-  .then(() => {
-    app.listen(PORT, () => console.log(`API ${PORT} portunda çalışıyor`));
-  })
-  .catch((error) => {
-    console.error("MongoDB bağlantısı başarısız:", error.message);
-    process.exit(1);
-  });
+connectDatabase();

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BlogExplorer, getPosts } from "@/features/blog";
+import { BlogExplorer, getCategories, getPosts } from "@/features/blog";
 import { PageTemplate } from "@/components/templates";
 import { ogImage } from "@/config/images";
 import { site } from "@/config/site";
@@ -29,9 +29,10 @@ export const metadata: Metadata = {
 
 export default async function BlogPage() {
   const posts = await getPosts();
+  const categories = await getCategories(posts);
   return (
     <PageTemplate eyebrow="Blog" title="Yazılar" lead={lead}>
-      <BlogExplorer posts={posts} layout="list" />
+      <BlogExplorer posts={posts} categories={categories} layout="list" />
     </PageTemplate>
   );
 }

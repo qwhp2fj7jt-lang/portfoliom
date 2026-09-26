@@ -5,7 +5,7 @@ import { SearchField } from "@/components/molecules/SearchField";
 import { ALL_CATEGORIES } from "../../constants";
 import { useSearchFocus } from "../../hooks/useSearchFocus";
 import { categoriesOf, filterPosts, type CategoryFilterValue } from "../../lib/filter-posts";
-import type { Post } from "../../types";
+import type { Post, PostCategory } from "../../types";
 import { CategoryFilter } from "../molecules/CategoryFilter";
 import { NoResults } from "../molecules/NoResults";
 import { PostCard } from "../molecules/PostCard";
@@ -14,17 +14,22 @@ import { SortToggle } from "../molecules/SortToggle";
 
 interface BlogExplorerProps {
   posts: Post[];
+  /** /category API'sinden gelen kategori başlıkları; verilmezse yazılardan türetilir. */
+  categories?: PostCategory[];
   layout?: "list" | "grid";
 }
 
-export function BlogExplorer({ posts, layout = "list" }: BlogExplorerProps) {
+export function BlogExplorer({ posts, categories: categoryList, layout = "list" }: BlogExplorerProps) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<CategoryFilterValue>(ALL_CATEGORIES);
   const [newestFirst, setNewestFirst] = useState(true);
   const searchRef = useSearchFocus();
   const deferredQuery = useDeferredValue(query);
 
-  const categories = useMemo(() => categoriesOf(posts), [posts]);
+  const categories = useMemo(
+    () => (categoryList ? [ALL_CATEGORIES, ...categoryList] : categoriesOf(posts)),
+    [categoryList, posts],
+  );
   const visible = useMemo(
     () => filterPosts(posts, { query: deferredQuery, category, newestFirst }),
     [posts, deferredQuery, category, newestFirst],

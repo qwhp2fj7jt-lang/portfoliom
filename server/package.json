@@ -8,6 +8,7 @@
   "scripts": {
     "start": "node server.js",
     "seed:zone": "node scripts/seedZonePosts.js",
+    "seed:blog": "node --experimental-strip-types --no-warnings scripts/seedBlog.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -26,6 +26,24 @@ const toImage = (image) =>
     ? { url: cleanString(image.url, 500), alt: cleanString(image.alt, 300), caption: cleanString(image.caption, 500) }
     : undefined;
 
+const BLOCK_TYPES = new Set(["heading", "paragraph", "list", "code", "note"]);
+
+const toBlock = (block) => {
+  if (!BLOCK_TYPES.has(block?.type)) return undefined;
+  if (block.type === "list") {
+    const items = Array.isArray(block.items) ? block.items.map((i) => cleanString(i, 2000)).filter(Boolean) : [];
+    return items.length ? { type: "list", items } : undefined;
+  }
+  if (block.type === "code") {
+    const code = typeof block.code === "string" ? block.code.slice(0, 20000) : "";
+    return code
+      ? { type: "code", code, file: cleanString(block.file, 200), language: cleanString(block.language, 50) }
+      : undefined;
+  }
+  const text = cleanString(block.text, 5000);
+  return text ? { type: block.type, text } : undefined;
+};
+
 exports.getAllArticles = async (req, res) => {
   try {
     const sort = req.query.sort === "asc" ? "asc" : "desc";
@@ -86,6 +104,8 @@ exports.createArticle = async (req, res) => {
   try {
     const body = req.body ?? {};
     const sections = parseJson(body.sections);
+    const content = parseJson(body.content);
+    const tags = parseJson(body.tags);
 
     const articleData = {
       title: cleanString(body.title, 300),
@@ -95,6 +115,9 @@ exports.createArticle = async (req, res) => {
       category: cleanString(body.category, 100),
       image: toImage(parseJson(body.image)),
       sections: Array.isArray(sections) ? sections.map(toSection) : [],
+      content: Array.isArray(content) ? content.map(toBlock).filter(Boolean) : [],
+      tags: Array.isArray(tags) ? tags.map((t) => cleanString(t, 60)).filter(Boolean) : [],
+      readingTime: cleanString(body.readingTime, 20) || undefined,
     };
 
     if (!articleData.title || !articleData.category || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(articleData.slug)) {

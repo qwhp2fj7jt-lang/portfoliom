@@ -15,13 +15,22 @@ export interface ApiSection {
   items?: ApiContentItem[];
 }
 
+export type ApiContentBlock =
+  | { type: "heading" | "paragraph" | "note"; text: string }
+  | { type: "list"; items: string[] }
+  | { type: "code"; file: string; language: string; code: string };
+
 export interface ApiArticle {
   _id: string;
   title: string;
   slug: string;
   subtitle?: string;
   summary?: string;
+  /** Kategori slug'ı; başlığı /category API'sinden gelir. */
   category: string;
+  readingTime?: string;
+  tags?: string[];
+  content?: ApiContentBlock[];
   pdf?: { url?: string; name?: string };
   image?: ApiImage;
   sections?: ApiSection[];
