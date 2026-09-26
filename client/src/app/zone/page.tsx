@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { ZoneGrid } from "@/features/zone";
+import { Suspense } from "react";
+import { ZoneGrid, ZoneGridSkeleton } from "@/features/zone";
 import { PageTemplate } from "@/components/templates";
 import { ogImage } from "@/config/images";
 import { site } from "@/config/site";
@@ -28,7 +29,9 @@ export const metadata: Metadata = {
 export default function ZonePage() {
   return (
     <PageTemplate eyebrow="Zeynep Zone" title="Kodun dışındaki anlar" lead={lead}>
-      <ZoneGrid />
+      <Suspense fallback={<ZoneGridSkeleton />}>
+        <ZoneGrid />
+      </Suspense>
     </PageTemplate>
   );
 }

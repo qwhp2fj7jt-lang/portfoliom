@@ -37,7 +37,7 @@ export function ZoneCard({ post, eager }: ZoneCardProps) {
           <Avatar src={images.avatar.src} alt="" size={32} />
           <div className="flex flex-col gap-0.5">
             <span className="text-sm font-medium">{site.name}</span>
-            <a href={mapUrl} rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs">
+            <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs">
               <MapPinIcon size={14} aria-hidden />
               {post.place}
               <span className="sr-only"> (Google Haritalar)</span>

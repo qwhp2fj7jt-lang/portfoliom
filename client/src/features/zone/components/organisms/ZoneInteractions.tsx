@@ -6,6 +6,7 @@ import { Button } from "@/components/atoms/Button";
 import { LikeButton } from "@/components/molecules/LikeButton";
 import { getVisitorNickname } from "@/lib/visitor";
 import { postService } from "@/services";
+import { refreshZonePosts } from "../../actions/refresh";
 import { toZoneComment } from "../../lib/comments";
 import type { ZoneComment } from "../../types";
 import { CommentForm } from "../molecules/CommentForm";
@@ -34,6 +35,7 @@ export function ZoneInteractions({ postId, remote, likes, likedBy = NO_LIKES, co
       remote
         ? async () => {
             const res = await postService.like(postId, getVisitorNickname());
+            void refreshZonePosts();
             return { liked: res.liked, count: res.likes };
           }
         : undefined,
@@ -52,6 +54,7 @@ export function ZoneInteractions({ postId, remote, likes, likedBy = NO_LIKES, co
     try {
       const saved = await postService.addComment(postId, { nickname: comment.name, text: comment.text });
       setComments(saved.map(toZoneComment));
+      void refreshZonePosts();
       setAnnounce("Yorumun eklendi");
     } catch {
       setComments((list) => list.filter((c) => c !== comment));

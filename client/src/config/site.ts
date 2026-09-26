@@ -7,7 +7,7 @@ export const site = {
   name: "Zeynep Baş",
   role: "Frontend Developer",
 
-  tagline: "Frontend Developer | React.js, Next.js | Architecture & Performance Focused",
+  tagline: "Frontend Developer · React.js, Next.js · Architecture & Performance Focused",
   url: (process.env.NEXT_PUBLIC_SITE_URL || "https://www.zeynepbas.dev").replace(/\/+$/, ""),
   description:
     "React, Next.js ve TypeScript ekosisteminde temiz kod prensipleri, yeniden kullanılabilir bileşenler ve ölçeklenebilir yazılım yaklaşımlarıyla modern web uygulamaları geliştiriyorum.",

@@ -66,6 +66,7 @@ export interface ApiComment {
 
 export interface ApiPost {
   _id: string;
+  slug?: string;
   name: string;
   nickname: string;
   image: string;

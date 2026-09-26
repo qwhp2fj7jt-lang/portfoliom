@@ -1,8 +1,14 @@
 import { apiClient } from "./apiClient";
 import type { ApiComment, ApiLikeResponse, ApiPost } from "./types";
 
+export const POSTS_TAG = "posts";
+
 export const postService = {
-  getAll: () => apiClient.get<ApiPost[]>("/posts", { cache: "no-store" }),
+  getAll: () =>
+    apiClient.get<ApiPost[]>("/posts", {
+      signal: AbortSignal.timeout(3_000),
+      next: { revalidate: 60, tags: [POSTS_TAG] },
+    }),
 
   like: (postId: string, nickname: string) =>
     apiClient.post<ApiLikeResponse>(`/posts/like/${encodeURIComponent(postId)}`, { nickname }),

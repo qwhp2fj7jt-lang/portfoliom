@@ -46,8 +46,16 @@ export function ButtonLink({
 }: BaseProps & AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }) {
   const cls = classes(variant, iconOnly, className);
   if (isExternal(href)) {
-    const rel = href.startsWith("http") ? "noopener noreferrer" : undefined;
-    return <a href={href} rel={rel} className={cls} {...rest} />;
+    const isWeb = href.startsWith("http");
+    return (
+      <a
+        href={href}
+        target={isWeb ? "_blank" : undefined}
+        rel={isWeb ? "noopener noreferrer" : undefined}
+        className={cls}
+        {...rest}
+      />
+    );
   }
   return <Link href={href} className={cls} {...rest} />;
 }

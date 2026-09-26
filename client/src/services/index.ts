@@ -2,5 +2,5 @@ export { API_URL, ApiError, apiClient, isApiAsset, resolveAssetUrl } from "./api
 export { articleService } from "./articleService";
 export { authService } from "./authService";
 export { categoryService } from "./categoryService";
-export { postService } from "./postService";
+export { POSTS_TAG, postService } from "./postService";
 export type * from "./types";
