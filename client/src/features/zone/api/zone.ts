@@ -6,9 +6,6 @@ import type { ZonePost } from "../types";
 
 const localBySlug = new Map(fallbackPosts.map((post) => [post.id, post]));
 
-// API'ye ulaşılamazsa yerel paylaşımlar gösterilir; id'leri slug olduğu için yorumlar yine API'ye gider.
-const offlinePosts: ZonePost[] = fallbackPosts.map((post) => ({ ...post, remote: true }));
-
 function toZonePost(post: ApiPost): ZonePost {
   const interactions = {
     id: post._id,
@@ -34,9 +31,9 @@ function toZonePost(post: ApiPost): ZonePost {
 export async function getZonePosts(): Promise<ZonePost[]> {
   try {
     const posts = await postService.getAll();
-    return posts.length > 0 ? posts.map(toZonePost) : offlinePosts;
+    return posts.length > 0 ? posts.map(toZonePost) : fallbackPosts;
   } catch (error) {
     unstable_rethrow(error);
-    return offlinePosts;
+    return fallbackPosts;
   }
 }

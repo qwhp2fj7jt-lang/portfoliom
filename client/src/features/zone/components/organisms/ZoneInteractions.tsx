@@ -47,10 +47,6 @@ export function ZoneInteractions({ postId, remote, likes, likedBy = NO_LIKES, co
 
   const addComment = useCallback(async (comment: ZoneComment) => {
     setComments((list) => [...list, comment]);
-    if (!remote) {
-      setAnnounce("Yorumun eklendi");
-      return;
-    }
     setError("");
     const res = await addZoneComment(postId, { nickname: comment.name, text: comment.text }).catch(() => null);
     if (res?.ok) {
@@ -60,7 +56,7 @@ export function ZoneInteractions({ postId, remote, likes, likedBy = NO_LIKES, co
     }
     setComments((list) => list.filter((c) => c !== comment));
     setError(`Yorum gönderilemedi: ${res?.message ?? "sunucuya ulaşılamadı"}. Lütfen tekrar dene.`);
-  }, [postId, remote]);
+  }, [postId]);
 
   return (
     <>
@@ -101,7 +97,11 @@ export function ZoneInteractions({ postId, remote, likes, likedBy = NO_LIKES, co
             {error}
           </p>
         )}
-        <CommentForm onSubmit={addComment} />
+        {remote ? (
+          <CommentForm onSubmit={addComment} />
+        ) : (
+          <p className="text-sm text-neutral-400">Yorumlar şu an yüklenemedi. Lütfen daha sonra tekrar dene.</p>
+        )}
       </div>
       <p role="status" className="sr-only">
         {announce}
