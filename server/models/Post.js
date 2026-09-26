@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 
 const postSchema = new mongoose.Schema(
   {
-    slug: { type: String, unique: true, sparse: true },
     name: String,
     nickname: String,
     image: String,

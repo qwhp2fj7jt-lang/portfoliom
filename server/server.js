@@ -4,66 +4,23 @@ const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
 const cors = require("cors");
-const crypto = require("crypto");
-const helmet = require("helmet");
-const { rateLimit } = require("express-rate-limit");
 
 const categoryRoutes = require("./routes/categoryRoutes");
 const postRoutes = require("./routes/postRoutes");
 const userRoutes = require("./routes/userRoutes");
 const articleRoutes = require("./routes/articleRoutes");
-const { notFound, errorHandler } = require("./middleware/errorHandler");
-
-process.env.JWT_SECRET ||= crypto.randomBytes(48).toString("hex");
-
-mongoose.set("sanitizeFilter", true);
-mongoose.set("strictQuery", true);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const allowedOrigins = [
-  "https://www.zeynepbas.dev",
-  "https://zeynepbas.dev",
-  "http://localhost:3000",
-];
+// Middleware
+app.use(cors());
+app.use(express.json());
 
-app.use(
-  helmet({
-    crossOriginResourcePolicy: { policy: "cross-origin" },
-  })
-);
+// Static files
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-app.use(
-  cors({
-    origin: (origin, cb) => cb(null, !origin || allowedOrigins.includes(origin)),
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type", "Authorization", "Accept"],
-    maxAge: 600,
-  })
-);
-
-app.use(
-  rateLimit({
-    windowMs: 15 * 60 * 1000,
-    limit: 600,
-    standardHeaders: "draft-8",
-    legacyHeaders: false,
-  })
-);
-
-app.use(express.json({ limit: "200kb" }));
-
-app.use(
-  "/uploads",
-  express.static(path.join(__dirname, "uploads"), {
-    dotfiles: "deny",
-    index: false,
-    maxAge: "7d",
-    setHeaders: (res) => res.setHeader("X-Content-Type-Options", "nosniff"),
-  })
-);
-
+// Routes
 app.use("/articles", articleRoutes);
 app.use("/category", categoryRoutes);
 app.use("/posts", postRoutes);
@@ -73,31 +30,16 @@ app.get("/test", (req, res) => {
   res.send("OK");
 });
 
-app.get("/health", (req, res) => {
-  const connected = mongoose.connection.readyState === 1;
-  res.status(connected ? 200 : 503).json({ api: "ok", database: connected ? "connected" : "disconnected" });
-});
+// MongoDB Connect
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log("MongoDB connected");
 
-app.use(notFound);
-app.use(errorHandler);
-
-const RETRY_MS = 10_000;
-
-// Port hemen açılır (Render port taramasını geçer); MongoDB bağlantısı arka planda denenir.
-app.listen(PORT, "0.0.0.0", () => console.log(`API ${PORT} portunda çalışıyor`));
-
-async function connectDatabase() {
-  if (!process.env.MONGO_URI) {
-    console.error("MONGO_URI tanımlı değil. Render > Environment bölümüne ekleyin.");
-    return;
-  }
-  try {
-    await mongoose.connect(process.env.MONGO_URI, { serverSelectionTimeoutMS: 15_000 });
-    console.log("MongoDB bağlantısı kuruldu");
-  } catch (error) {
-    console.error(`MongoDB bağlantısı başarısız: ${error.message} (${RETRY_MS / 1000} sn sonra tekrar denenecek)`);
-    setTimeout(connectDatabase, RETRY_MS);
-  }
-}
-
-connectDatabase();
+    app.listen(PORT, () => {
+      console.log(`Server running on http://localhost:${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error("MongoDB connection error:", err);
+  });

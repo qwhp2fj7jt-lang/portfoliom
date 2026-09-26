@@ -3,14 +3,14 @@ const jwt = require("jsonwebtoken");
 exports.authMiddleware = (req, res, next) => {
   const authHeader = req.headers.authorization;
 
-  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+  if (!authHeader) {
     return res.status(401).json({ message: "Token yok" });
   }
 
-  const token = authHeader.slice(7).trim();
+  const token = authHeader.split(" ")[1];
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET, { algorithms: ["HS256"] });
+    const decoded = jwt.verify(token, "SECRET_KEY");
     req.user = decoded;
     next();
   } catch (error) {

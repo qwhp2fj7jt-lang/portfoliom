@@ -1,14 +1,8 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "server.js",
-  "engines": {
-    "node": ">=20.19"
-  },
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "seed:zone": "node scripts/seedZonePosts.js",
-    "seed:blog": "node --experimental-strip-types --no-warnings scripts/seedBlog.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,8 +13,6 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.1",
     "express": "^5.2.1",
-    "express-rate-limit": "^8.7.0",
-    "helmet": "^8.3.0",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.4.1",
     "multer": "^2.2.0",

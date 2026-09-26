@@ -1,50 +1,44 @@
-const mongoose = require("mongoose");
 const Post = require("../models/Post");
-const { cleanString } = require("../middleware/validate");
-
-const NICKNAME_MAX = 40;
-const COMMENT_MAX = 280;
-
-// Paylaşım hem Mongo _id'si hem de slug (ör. "z1") ile bulunabilir.
-const findPost = (ref) =>
-  mongoose.isValidObjectId(ref) ? Post.findById(ref) : Post.findOne({ slug: String(ref) });
-
 exports.createPost = async (req, res) => {
   try {
+    const { description, konum } = req.body;
+
     if (!req.file) {
       return res.status(400).json({ message: "Image is required" });
     }
 
+    const imageUrl = `${req.protocol}://${req.get("host")}/uploads/${req.file.filename}`;
+
     const post = await Post.create({
-      userId: req.user.id,
+      userId: req.user.id, // 👈 login user
       name: "Zeynep Baş",
       nickname: "frontend engineer",
-      image: `/uploads/${req.file.filename}`,
-      description: cleanString(req.body?.description, 2000),
-      konum: cleanString(req.body?.konum, 120),
+      image: imageUrl,
+      description,
+      konum: konum,
       likes: [],
       comments: [],
     });
 
     res.status(201).json(post);
   } catch (error) {
-    res.status(500).json({ message: "Sunucu hatası" });
+    console.error(error);
+    res.status(500).json({ message: "Server error", error: error.message });
   }
 };
-
 exports.likePost = async (req, res) => {
   try {
     const { postId } = req.params;
-    const nickname = cleanString(req.body?.nickname, NICKNAME_MAX);
+    const { nickname } = req.body;
 
-    if (!nickname) {
-      return res.status(400).json({ message: "Nickname gerekli" });
-    }
-
-    const post = await findPost(postId);
+    const post = await Post.findById(postId);
 
     if (!post) {
       return res.status(404).json({ message: "Post bulunamadı" });
+    }
+
+    if (!nickname) {
+      return res.status(400).json({ message: "Nickname gerekli" });
     }
 
     const alreadyLiked = post.likes.includes(nickname);
@@ -62,25 +56,23 @@ exports.likePost = async (req, res) => {
       likes: post.likes.length,
       liked: !alreadyLiked,
     });
+
   } catch (error) {
-    return res.status(500).json({ message: "Sunucu hatası" });
+    return res.status(500).json({ message: "Server error", error });
   }
 };
-
 exports.getPosts = async (req, res) => {
   try {
-    const posts = await Post.find().sort({ createdAt: -1 }).lean();
+    const posts = await Post.find().sort({ createdAt: -1 });
     res.json(posts);
   } catch (error) {
-    res.status(500).json({ message: "Sunucu hatası" });
+    res.status(500).json({ message: "Server error", error: error.message });
   }
 };
-
 exports.addComment = async (req, res) => {
   try {
     const { postId } = req.params;
-    const nickname = cleanString(req.body?.nickname, NICKNAME_MAX);
-    const text = cleanString(req.body?.text, COMMENT_MAX);
+    const { nickname, text } = req.body;
 
     if (!nickname) {
       return res.status(400).json({ message: "Nickname gerekli" });
@@ -90,7 +82,7 @@ exports.addComment = async (req, res) => {
       return res.status(400).json({ message: "Yorum boş olamaz" });
     }
 
-    const post = await findPost(postId);
+    const post = await Post.findById(postId);
 
     if (!post) {
       return res.status(404).json({ message: "Post bulunamadı" });
@@ -98,13 +90,13 @@ exports.addComment = async (req, res) => {
 
     post.comments.push({
       text,
-      nickname,
+      nickname, // istersen schema’ya ekleyebilirsin
     });
 
     await post.save();
 
     return res.status(200).json(post.comments);
   } catch (error) {
-    return res.status(500).json({ message: "Sunucu hatası" });
+    return res.status(500).json({ message: "Server error" });
   }
 };
