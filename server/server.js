@@ -76,11 +76,17 @@ app.get("/test", (req, res) => {
 app.use(notFound);
 app.use(errorHandler);
 
+if (!process.env.MONGO_URI) {
+  console.error("MONGO_URI tanımlı değil. Render > Environment bölümüne ekleyin.");
+  process.exit(1);
+}
+
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI, { serverSelectionTimeoutMS: 15_000 })
   .then(() => {
-    app.listen(PORT);
+    app.listen(PORT, () => console.log(`API ${PORT} portunda çalışıyor`));
   })
-  .catch(() => {
+  .catch((error) => {
+    console.error("MongoDB bağlantısı başarısız:", error.message);
     process.exit(1);
   });

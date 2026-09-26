@@ -1,8 +1,12 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20.19"
+  },
   "scripts": {
+    "start": "node server.js",
     "seed:zone": "node scripts/seedZonePosts.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
