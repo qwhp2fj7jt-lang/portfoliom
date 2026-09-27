@@ -1,6 +1,5 @@
 import { unstable_rethrow } from "next/navigation";
 import { articleService, categoryService, resolveAssetUrl, type ApiArticle } from "@/services";
-import { posts as fallbackPosts } from "../data/posts";
 import type { ContentBlock, Post, PostCategory } from "../types";
 
 const WORDS_PER_MINUTE = 200;
@@ -27,7 +26,7 @@ function readingTime(blocks: ContentBlock[]) {
 
 function toPost(article: ApiArticle, categories: CategoryTitles): Post {
   const content = toBlocks(article);
-  const category = categories.get(article.category) ?? article.category;
+  const category = categories.get(article.category) ?? humanize(article.category);
   return {
     slug: article.slug,
     date: article.createdAt,
@@ -47,23 +46,35 @@ function toPost(article: ApiArticle, categories: CategoryTitles): Post {
 
 const byNewest = (list: Post[]) => [...list].sort((a, b) => b.date.localeCompare(a.date));
 
-// /category API'si: slug → başlık. Ulaşılamazsa boş döner, yazılar slug ile gösterilir.
+// /category API'si: yazının category alanı çoğunlukla bir alt kategori slug'ıdır (ör. "react.js" → "React").
 async function getCategoryTitles(): Promise<CategoryTitles> {
   try {
-    return new Map((await categoryService.getAll()).map((c) => [c.slug, c.title]));
+    const titles: CategoryTitles = new Map();
+    for (const category of await categoryService.getAll()) {
+      titles.set(category.slug, category.title);
+      for (const sub of category.subCategories ?? []) titles.set(sub.slug, sub.label || sub.name);
+    }
+    return titles;
   } catch (error) {
     unstable_rethrow(error);
     return new Map();
   }
 }
 
+// Kategori API'de yoksa slug okunur hale getirilir: "software architecture" → "Software Architecture".
+const humanize = (slug: string) => slug.replace(/[-_]+/g, " ").replace(/(^|\s)\p{L}/gu, (c) => c.toLocaleUpperCase("tr-TR"));
+
+// Aynı slug'a sahip birden fazla yazı varsa yalnızca en yenisi listelenir (detay sayfası tek yazı açabilir).
+const uniqueBySlug = (list: Post[]) => [...new Map(list.map((p) => [p.slug, p])).values()];
+
 export async function getPosts(): Promise<Post[]> {
   try {
     const [articles, categories] = await Promise.all([articleService.getAll({ sort: "desc" }), getCategoryTitles()]);
-    return articles.length > 0 ? byNewest(articles.map((a) => toPost(a, categories))) : byNewest(fallbackPosts);
+    // uniqueBySlug son görüleni tutar; eskiden yeniye sıralayıp aynı slug'da en yeniyi bırakırız.
+    return byNewest(uniqueBySlug(byNewest(articles.map((a) => toPost(a, categories))).reverse()));
   } catch (error) {
     unstable_rethrow(error);
-    return byNewest(fallbackPosts);
+    return [];
   }
 }
 
@@ -80,8 +91,7 @@ export async function getPost(slug: string): Promise<Post | undefined> {
     return toPost(article, categories);
   } catch (error) {
     unstable_rethrow(error);
-    if ((error as { status?: number }).status === 404) return undefined;
-    return fallbackPosts.find((p) => p.slug === slug);
+    return undefined;
   }
 }
 

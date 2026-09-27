@@ -12,13 +12,17 @@ export async function LatestPosts({ count = 3 }: { count?: number }) {
         id="latest-title"
         link={{ href: "/blog", label: "Tüm yazıları göster" }}
       />
-      <ul role="list">
-        {posts.map((post) => (
-          <li key={post.slug}>
-            <PostRow post={post} headingLevel="h3" />
-          </li>
-        ))}
-      </ul>
+      {posts.length === 0 ? (
+        <p className="py-6 text-neutral-400">Yazı bulunamadı</p>
+      ) : (
+        <ul role="list">
+          {posts.map((post) => (
+            <li key={post.slug}>
+              <PostRow post={post} headingLevel="h3" />
+            </li>
+          ))}
+        </ul>
+      )}
     </section>
   );
 }

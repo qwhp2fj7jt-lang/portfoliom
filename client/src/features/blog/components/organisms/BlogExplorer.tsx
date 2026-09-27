@@ -44,6 +44,10 @@ export function BlogExplorer({ posts, categories: categoryList, layout = "list" 
   const changeQuery = useCallback((e: ChangeEvent<HTMLInputElement>) => setQuery(e.target.value), []);
   const toggleSort = useCallback(() => setNewestFirst((v) => !v), []);
 
+  if (posts.length === 0) {
+    return <p className="py-12 text-lg font-medium">Yazı bulunamadı</p>;
+  }
+
   return (
     <>
       <SearchField

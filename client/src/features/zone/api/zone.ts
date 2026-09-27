@@ -1,39 +1,26 @@
 import { unstable_rethrow } from "next/navigation";
 import { postService, resolveAssetUrl, type ApiPost } from "@/services";
-import { zonePosts as fallbackPosts } from "../data/zone";
 import { toZoneComment } from "../lib/comments";
 import type { ZonePost } from "../types";
 
-const localBySlug = new Map(fallbackPosts.map((post) => [post.id, post]));
-
 function toZonePost(post: ApiPost): ZonePost {
-  const interactions = {
+  const place = post.konum ?? "";
+  return {
     id: post._id,
+    image: { src: resolveAssetUrl(post.image), alt: place ? `${place} paylaşımı` : "Paylaşım görseli" },
+    place,
     likes: post.likes.length,
     likedBy: post.likes,
     comments: post.comments.map(toZoneComment),
-    remote: true,
-  };
-
-  // Seed'lenmiş paylaşımlarda yerel görsel (boyut + blur) kullanılır; beğeni ve yorumlar API'den gelir.
-  const local = post.slug ? localBySlug.get(post.slug) : undefined;
-  if (local) return { ...local, ...interactions };
-
-  const place = post.konum ?? "";
-  return {
-    ...interactions,
-    image: { src: resolveAssetUrl(post.image), alt: place ? `${place} paylaşımı` : "Paylaşım görseli" },
-    place,
     text: post.description ?? "",
   };
 }
 
 export async function getZonePosts(): Promise<ZonePost[]> {
   try {
-    const posts = await postService.getAll();
-    return posts.length > 0 ? posts.map(toZonePost) : fallbackPosts;
+    return (await postService.getAll()).map(toZonePost);
   } catch (error) {
     unstable_rethrow(error);
-    return fallbackPosts;
+    return [];
   }
 }

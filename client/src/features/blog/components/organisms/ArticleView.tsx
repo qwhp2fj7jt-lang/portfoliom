@@ -12,7 +12,7 @@ export function ArticleView({ post }: { post: Post }) {
         <ArticleBody blocks={post.content} />
       ) : (
         <div className="mt-10">
-          <Callout>Bu yazının tam metni yakında yayınlanacak.</Callout>
+          <Callout>Bu yazının içeriği bulunamadı.</Callout>
         </div>
       )}
     </ArticleTemplate>

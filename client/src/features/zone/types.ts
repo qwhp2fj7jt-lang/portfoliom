@@ -20,5 +20,4 @@ export interface ZonePost {
   likedBy?: string[];
   comments: ZoneComment[];
   text: string;
-  remote?: boolean;
 }

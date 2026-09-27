@@ -6,6 +6,7 @@ export { Eyebrow } from "./Eyebrow";
 export { Heading } from "./Heading";
 export { InitialAvatar } from "./InitialAvatar";
 export { Input } from "./Input";
+export { Skeleton } from "./Skeleton";
 export { SkipLink } from "./SkipLink";
 export { Tag } from "./Tag";
 export { Text } from "./Text";

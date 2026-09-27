@@ -5,7 +5,7 @@ export async function ZoneGrid() {
   const posts = await getZonePosts();
 
   if (posts.length === 0) {
-    return <p className="text-neutral-400">Henüz paylaşım yok.</p>;
+    return <p className="text-neutral-400">Paylaşım bulunamadı</p>;
   }
 
   return (

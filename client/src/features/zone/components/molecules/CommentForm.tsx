@@ -6,19 +6,17 @@ import { Button } from "@/components/atoms/Button";
 import { Input } from "@/components/atoms/Input";
 import type { ZoneComment } from "../../types";
 
-const GUEST_NAME = "Misafir";
-
 export function CommentForm({ onSubmit }: { onSubmit: (comment: ZoneComment) => void }) {
   const [name, setName] = useState("");
   const [text, setText] = useState("");
   const id = useId();
-  const cantSend = !text.trim();
+  const cantSend = !name.trim() || !text.trim();
 
   const submit = useCallback(
     (e: FormEvent) => {
       e.preventDefault();
       if (cantSend) return;
-      onSubmit({ name: name.trim() || GUEST_NAME, when: "şimdi", text: text.trim() });
+      onSubmit({ name: name.trim(), when: "şimdi", text: text.trim() });
       setText("");
     },
     [cantSend, name, text, onSubmit],
@@ -27,12 +25,14 @@ export function CommentForm({ onSubmit }: { onSubmit: (comment: ZoneComment) => 
   return (
     <form onSubmit={submit} className="flex flex-col gap-2">
       <label htmlFor={`${id}-name`} className="sr-only">
-        Adın (isteğe bağlı)
+        Adın
       </label>
       <Input
         id={`${id}-name`}
-        placeholder="Adın (isteğe bağlı)"
+        placeholder="Adın *"
         autoComplete="given-name"
+        required
+        aria-required="true"
         maxLength={40}
         value={name}
         onChange={(e) => setName(e.target.value)}

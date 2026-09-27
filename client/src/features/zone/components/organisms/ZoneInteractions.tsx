@@ -13,7 +13,6 @@ import { CommentItem } from "../molecules/CommentItem";
 
 interface ZoneInteractionsProps {
   postId: string;
-  remote?: boolean;
   likes: number;
   likedBy?: string[];
   comments: ZoneComment[];
@@ -22,7 +21,7 @@ interface ZoneInteractionsProps {
 const noopSubscribe = () => () => {};
 const NO_LIKES: string[] = [];
 
-export function ZoneInteractions({ postId, remote, likes, likedBy = NO_LIKES, comments: seed }: ZoneInteractionsProps) {
+export function ZoneInteractions({ postId, likes, likedBy = NO_LIKES, comments: seed }: ZoneInteractionsProps) {
   const [open, setOpen] = useState(false);
   const [comments, setComments] = useState(seed);
   const [announce, setAnnounce] = useState("");
@@ -30,17 +29,11 @@ export function ZoneInteractions({ postId, remote, likes, likedBy = NO_LIKES, co
   const nickname = useSyncExternalStore(noopSubscribe, getVisitorNickname, () => undefined);
   const panelId = useId();
 
-  const toggleLike = useMemo(
-    () =>
-      remote
-        ? async () => {
-            const res = await toggleZoneLike(postId, getVisitorNickname());
-            if (!res.ok) throw new Error(res.message);
-            return { liked: res.data.liked, count: res.data.likes };
-          }
-        : undefined,
-    [postId, remote],
-  );
+  const toggleLike = useCallback(async () => {
+    const res = await toggleZoneLike(postId, getVisitorNickname());
+    if (!res.ok) throw new Error(res.message);
+    return { liked: res.data.liked, count: res.data.likes };
+  }, [postId]);
 
   const initialLiked = useMemo(() => !!nickname && likedBy.includes(nickname), [nickname, likedBy]);
   const toggleComments = useCallback(() => setOpen((v) => !v), []);
@@ -97,11 +90,7 @@ export function ZoneInteractions({ postId, remote, likes, likedBy = NO_LIKES, co
             {error}
           </p>
         )}
-        {remote ? (
-          <CommentForm onSubmit={addComment} />
-        ) : (
-          <p className="text-sm text-neutral-400">Yorumlar şu an yüklenemedi. Lütfen daha sonra tekrar dene.</p>
-        )}
+        <CommentForm onSubmit={addComment} />
       </div>
       <p role="status" className="sr-only">
         {announce}

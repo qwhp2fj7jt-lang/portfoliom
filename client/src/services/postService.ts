@@ -6,7 +6,6 @@ export const POSTS_TAG = "posts";
 export const postService = {
   getAll: () =>
     apiClient.get<ApiPost[]>("/posts", {
-      signal: AbortSignal.timeout(3_000),
       next: { revalidate: 60, tags: [POSTS_TAG] },
     }),
 

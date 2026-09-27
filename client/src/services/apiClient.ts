@@ -20,8 +20,12 @@ type RequestOptions = Omit<RequestInit, "body"> & {
   next?: { revalidate?: number | false; tags?: string[] };
 };
 
+// Yüklenen dosyalar (/uploads) API'den, diğer yollar (ör. /images) sitenin public klasöründen sunulur.
 export function resolveAssetUrl(path: string) {
-  if (!/^https?:\/\//i.test(path)) return `${API_URL}${path.startsWith("/") ? "" : "/"}${path}`;
+  if (!/^https?:\/\//i.test(path)) {
+    const normalized = path.startsWith("/") ? path : `/${path}`;
+    return normalized.startsWith("/uploads/") ? `${API_URL}${normalized}` : normalized;
+  }
   try {
     const { pathname } = new URL(path);
     return pathname.startsWith("/uploads/") ? `${API_URL}${pathname}` : path;

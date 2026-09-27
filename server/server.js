@@ -32,7 +32,8 @@ app.get("/test", (req, res) => {
 
 // MongoDB Connect
 mongoose
-  .connect(process.env.MONGO_URI)
+  // Bağlantı adresinde veritabanı adı olmadığında varsayılan "test" yerine gerçek veritabanı kullanılır.
+  .connect(process.env.MONGO_URI, { dbName: process.env.MONGO_DB_NAME || "milkdb" })
   .then(() => {
     console.log("MongoDB connected");
 

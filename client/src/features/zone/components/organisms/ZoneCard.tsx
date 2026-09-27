@@ -45,7 +45,7 @@ export function ZoneCard({ post, eager }: ZoneCardProps) {
           </div>
         </div>
         <ExpandableText text={post.text} />
-        <ZoneInteractions postId={post.id} remote={post.remote} likes={post.likes} likedBy={post.likedBy} comments={post.comments} />
+        <ZoneInteractions postId={post.id} likes={post.likes} likedBy={post.likedBy} comments={post.comments} />
       </div>
     </article>
   );
