@@ -14,7 +14,7 @@ export const projects: Project[] = [
     num: "02",
     name: "Milk",
     subtitle: "Yerel Üretici ve Tüketici Pazar Platformu",
-    url: "https://github.com/zeynepbas/milk",
+    url: "https://github.com/zeynepbass/milk",
     description:
       "Yerel üreticileri tüketicilerle doğrudan buluşturan pazar platformu. Gerçek zamanlı mesajlaşma ve sosyal etkileşim özellikleriyle alıcı ile satıcı arasındaki iletişimi aracısız ve anlık hale getirir.",
     features: ["Gerçek zamanlı mesajlaşma", "Ürün listeleme", "Sosyal etkileşim"],
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     num: "03",
     name: "Workist",
     subtitle: "Freelance Hizmet ve İlan Platformu",
-    url: "https://github.com/zeynepbas/workist",
+    url: "https://github.com/zeynepbass/workist",
     description:
       "Kullanıcıların freelance hizmet ilanı oluşturup yönetebildiği, hizmet verenlerle doğrudan yazışabildiği ve aldıkları hizmeti değerlendirebildiği uçtan uca bir freelance platformu.",
     features: ["İlan yönetimi", "Kullanıcılar arası sohbet", "Hizmet değerlendirme"],
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     num: "04",
     name: "Hizmet Kap",
     subtitle: "Kişiye Özel Hizmet İlan Platformu",
-    url: "https://github.com/zeynepbas/service-Port",
+    url: "https://github.com/zeynepbass/service-Port",
     description:
       "İhtiyaca göre hizmet ilanı oluşturma, ilanları yönetme ve hizmet sağlayıcıları değerlendirme süreçlerini tek bir akışta birleştiren web uygulaması.",
     features: ["İlan oluşturma", "İlan yönetimi", "Değerlendirme sistemi"],
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     num: "05",
     name: "Stack Diet",
     subtitle: "Sağlıklı Yaşam Odaklı Sosyal Platform",
-    url: "https://github.com/zeynepbas/stack-diet",
+    url: "https://github.com/zeynepbass/stack-diet",
     description:
       "Sağlıklı yaşam içeriklerinin paylaşıldığı sosyal platform. Kullanıcılar gönderi paylaşabilir, içerikleri beğenip yorumlayabilir, birbirini takip edebilir ve profillerini yönetebilir.",
     features: ["Gönderi paylaşımı", "Beğeni ve yorum", "Takip sistemi", "Profil yönetimi"],
