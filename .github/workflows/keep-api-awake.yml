@@ -1,0 +1,16 @@
+# Render ücretsiz planı 15 dk istek almayan servisi uyutur; uyanması 30-60 sn sürer.
+# Bu görev API'ye 10 dakikada bir istek atarak blog ve Zone'un hızlı açılmasını sağlar.
+name: Keep API awake
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Ping API
+        run: curl --fail --silent --show-error --max-time 90 --retry 2 https://portfoliom-4p84.onrender.com/test

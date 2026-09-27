@@ -78,3 +78,13 @@ export const apiClient = {
   post: <T>(path: string, body?: unknown, options?: RequestOptions) =>
     request<T>(path, { ...options, method: "POST", body }),
 };
+
+/**
+ * API'ye ulaşılamadığında (ör. Render uykudan uyanırken) çalışma anında hatayı fırlatır; Next.js böylece
+ * önbellekteki son başarılı sayfayı sunmaya devam eder. Build sırasında ise sayfanın boş da olsa üretilmesi için
+ * verilen yedek değer döner.
+ */
+export function keepCachedOr<T>(fallback: T, error: unknown): T {
+  if (process.env.NEXT_PHASE === "phase-production-build") return fallback;
+  throw error;
+}

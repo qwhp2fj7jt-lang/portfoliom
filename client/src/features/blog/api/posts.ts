@@ -1,5 +1,5 @@
 import { unstable_rethrow } from "next/navigation";
-import { articleService, categoryService, resolveAssetUrl, type ApiArticle } from "@/services";
+import { articleService, categoryService, keepCachedOr, resolveAssetUrl, type ApiArticle } from "@/services";
 import type { ContentBlock, Post, PostCategory } from "../types";
 
 const WORDS_PER_MINUTE = 200;
@@ -44,6 +44,8 @@ function toPost(article: ApiArticle, categories: CategoryTitles): Post {
   };
 }
 
+const isNotFound = (error: unknown) => (error as { status?: number }).status === 404;
+
 const byNewest = (list: Post[]) => [...list].sort((a, b) => b.date.localeCompare(a.date));
 
 // /category API'si: yazının category alanı çoğunlukla bir alt kategori slug'ıdır (ör. "react.js" → "React").
@@ -71,10 +73,12 @@ export async function getPosts(): Promise<Post[]> {
   try {
     const [articles, categories] = await Promise.all([articleService.getAll({ sort: "desc" }), getCategoryTitles()]);
     // uniqueBySlug son görüleni tutar; eskiden yeniye sıralayıp aynı slug'da en yeniyi bırakırız.
-    return byNewest(uniqueBySlug(byNewest(articles.map((a) => toPost(a, categories))).reverse()));
+    // Liste sayfaları metnin tamamına ihtiyaç duymaz; içerik çıkarılarak tarayıcıya giden veri küçültülür.
+    const list = articles.map((a) => ({ ...toPost(a, categories), content: undefined }));
+    return byNewest(uniqueBySlug(byNewest(list).reverse()));
   } catch (error) {
     unstable_rethrow(error);
-    return [];
+    return keepCachedOr([], error);
   }
 }
 
@@ -91,7 +95,8 @@ export async function getPost(slug: string): Promise<Post | undefined> {
     return toPost(article, categories);
   } catch (error) {
     unstable_rethrow(error);
-    return undefined;
+    if (isNotFound(error)) return undefined;
+    return keepCachedOr(undefined, error);
   }
 }
 
